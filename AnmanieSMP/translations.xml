@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>anmanie</Name>
+        <Summary xml:lang="de">Bilder bzw Fotos stauchen, verzerren, verwirbeln oder verschlanken.</Summary>
+        <Description xml:lang="de">Mit Anmanie kann man in Minutenschnelle aus einem freundlich blickenden Zeitgenossen einen Zombie machen – und umgekehrt. Als besonderer Clou lassen sich diese Deformierungen auch als AVI-Film zusammenfassen. Bilder der Formate JPEG, TIFF (unkomprimiert) und BMP werden unterstützt und dienen als Quelle. </Description>
+    </Source>
+</PISI>

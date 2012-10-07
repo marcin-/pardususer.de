@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>sk1</Name>
+        <Homepage>http://sk1project.org/index.php</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Icon>sk1</Icon>
+        <IsA>app:gui</IsA>
+	<PartOf>multimedia.graphics</PartOf>
+        <Summary>Vector graphics editor</Summary>
+        <Description>sK1 is an open source vector graphics editor similar to CorelDRAW(tm)</Description>
+        <Archive sha1sum="c754d95ed3fe90a27d82cd26d9e6381c972789a8" type="targz">http://sk1.googlecode.com/files/sk1-0.9.1pre2_rev1383.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>tcltk-devel</Dependency>
+            <Dependency>tcl-devel</Dependency>
+            <Dependency>python-tk</Dependency>
+            <Dependency>python-cairo-devel</Dependency>
+            <Dependency>python-sk1libs</Dependency>
+            <Dependency>python-sk1sdk</Dependency>
+	    <Dependency>libXext-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>sk1</Name>
+        <RuntimeDependencies>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>tcl</Dependency>
+            <Dependency>tcltk</Dependency>
+            <Dependency>python-tk</Dependency>
+            <Dependency>python-cairo</Dependency>
+            <Dependency>python-sk1libs</Dependency>
+            <Dependency>python-sk1sdk</Dependency>
+	    <Dependency>libXext-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/sk1</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+        <!-- AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/sk1.desktop">sk1.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/sk1.png">sk1.png</AdditionalFile>
+        </AdditionalFiles> -->
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-03-2</Date>
+            <Version>0.9.1_1383</Version>
+            <Comment>Update</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

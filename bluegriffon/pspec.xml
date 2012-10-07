@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>BlueGriffon</Name>
+        <Homepage>http://www.bluegriffon.org</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>MPL-1.1</License>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <Icon>bluegriffon</Icon>
+        <PartOf>editor.web</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>BlueGriffon is a new WYSIWYG content editor for the World Wide Web</Summary>
+        <Description>BlueGriffon is an intuitive application that provides Web authors with a simple User Interface allowing to create attractive Web sites without requiring extensive technical knowledge about Web Standards. Powered by gecko it is using the same rendering Engine as Firefox.</Description>
+        <Archive sha1sum="ee22c627348ba3c42836764c84219ef7795f5543" type="binary">http://bluegriffon.org/freshmeat/1.3.1/BlueGriffon-1.3.1-Linux-x86.tar.bz2</Archive>
+        <Archive sha1sum="c56917ee69c35a3258d4fec3a449d57afcffc785" type="binary">http://bluegriffon.org/freshmeat/1.3.1/BlueGriffon-1.3.1-Linux-x86_64.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>BlueGriffon</Name>
+        <RuntimeDependencies>
+            <Dependency>firefox</Dependency>
+            <Dependency>xulrunner</Dependency>
+            <Dependency>libpng12-pardususerde</Dependency>
+            <Dependency>jpeg6</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/opt/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/bluegriffon">bluegriffon.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/bluegriffon.png">bluegriffon.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/bluegriffon.desktop">bluegriffon.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2011-12-02</Date>
+            <Version>1.3.1</Version>
+            <Comment>move runtimedep libpng12 to libpng12-pardususerde</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-11-25</Date>
+            <Version>1.3.1</Version>
+            <Comment>version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-11-22</Date>
+            <Version>1.3</Version>
+            <Comment>version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-02-24</Date>
+            <Version>1.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-02-24</Date>
+            <Version>0.9</Version>
+            <Comment>Added dependency libpng12</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-02-23</Date>
+            <Version>0.9</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

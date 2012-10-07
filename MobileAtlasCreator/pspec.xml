@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>MobileAtlasCreator</Name>
+        <Homepage>http://mobac.dnsalias.org/</Homepage>
+        <Packager>
+            <Name>Klaus WINKLBAUER</Name>
+            <Email>alaska@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>MobileAtlasCreator</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>science.gis</PartOf>
+        <Summary>MobileAtlasCreator creates offline atlases for a large number of different (mobile) applications and GPS handhelds</Summary>
+        <Description>Mobile Atlas Creator (formerly known as TrekBuddy Atlas Creator) is an open source (GPL) program which creates offline atlases for GPS handhelds and cell phone applications like TrekBuddy, AndNav and other Android and WindowsCE based applications.</Description>
+        <Archive type="zip" sha1sum="4a0deb06aafb154cdd3b337860a265dd1b940976">http://garr.dl.sourceforge.net/project/mobac/Mobile%20Atlas%20Creator/MOBAC%201.9/Mobile%20Atlas%20Creator%201.9%20beta%204.zip</Archive>
+        <Archive type="binary" sha1sum="71e8ef10830b0d08c55f7d5d45697ed1d602e473">http://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib.zip</Archive>
+        <Archive type="binary" sha1sum="ba5206d1202877e94c417736d079ee83611a9ace">http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar</Archive>
+    </Source>
+    <Package>
+        <Name>MobileAtlasCreator</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/</Path>
+            <Path fileType="data">/usr/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/opt/MobileAtlasCreator/MobileAtlasCreator.sh">MobileAtlasCreator.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/MobileAtlasCreator.desktop">MobileAtlasCreator.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/MobileAtlasCreator.png">MobileAtlasCreator.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-05-07</Date>
+            <Version>1.9.4</Version>
+            <Comment>First release for Pardus 2011 and new Version: 1.9 beta 4; Added application for help for KDE's help center; Improved the routines in some PiSi build files.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-07-12</Date>
+            <Version>1.8.11</Version>
+            <Comment>First release.</Comment>
+            <Name>Klaus WINKLBAUER</Name>
+            <Email>alaska@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

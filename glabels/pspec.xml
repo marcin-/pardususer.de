@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>glabels</Name>
+        <Homepage>http://www.glabels.org</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <PartOf>office.misc</PartOf>
+        <License>GPLv2</License>
+        <Icon>glabels</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Program to create labels and business cards</Summary>
+        <Description>gLabels is a lightweight and easy to use program for creating labels, barcodes and business cards.</Description>
+        <Archive sha1sum="65884fde0744fe6b8aaf5bb39deee427d292dce3" type="tarbz2">http://caesar.acc.umu.se/pub/GNOME/sources/glabels/2.2/glabels-2.2.8.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libgnomeui-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>pkgconfig</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>glabels</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libgnomeui</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+        </RuntimeDependencies>
+
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/applications/</Path>
+            <Path fileType="data">/usr/share/glabels/</Path>
+            <Path fileType="data">/usr/share/application-registry/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="help">/usr/share/gnome/help/</Path>
+            <Path fileType="locale">/usr/share/locale/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+            <Path fileType="data">/usr/share/mime-info/</Path>		
+            <Path fileType="data">/usr/share/omf/</Path>
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="include">/usr/include/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-03-23</Date>
+            <Version>2.2.8</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

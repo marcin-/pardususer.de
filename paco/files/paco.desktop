@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Pardus Converter
+GenericName=Converting Audio & Video
+GenericName[de]=Audio- und Video konvertieren
+Comment=easy GUI for FFmpeg
+Comment[de]=einfach zu bedienende grafische Oberfläche für FFmpeg
+Exec=paco
+Terminal=false
+Type=Application
+Icon=paco.png
+Categories=Application;Video;AudioVideo;Video;
+
+
+

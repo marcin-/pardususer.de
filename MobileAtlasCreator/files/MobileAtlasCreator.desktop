@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Mobile Atlas Creator
+Comment=Creates atlases for mobile devices
+GenericName=Mobile Atlas Creator
+Comment[de]=Atlanten für Mobilgeräte erstellen
+GenericName[de]=Mobile Atlas Creator
+Icon=MobileAtlasCreator
+Exec=MobileAtlasCreator
+Categories=KDE;Application;Utility
+Type=Application
+Terminal=false
+MultipleArgs=false
+DocPath=file:///usr/share/doc/MobileAtlasCreator/README.HTM

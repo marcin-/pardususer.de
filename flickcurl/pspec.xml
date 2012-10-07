@@ -1,0 +1,61 @@
+<PISI>
+    <Source>
+        <Name>flickcurl</Name>
+        <Homepage>http://librdf.org/flickcurl/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1+</License>
+        <License>GPLv2+</License>
+        <License>Apache-2.0+</License>
+        <PartOf>network.misc</PartOf>
+        <IsA>library</IsA>
+        <Summary>C library for the Flickr API</Summary>
+        <Description>Flickcurl is a C library for the Flickr API, handling creating the requests, signing, token management, calling the API, marshalling request parameters and decoding responses. It uses libcurl to call the REST web service and libxml2 to manipulate the XML responses. The current version supports part of the API (see Flickcurl API coverage) primarily the functions for reading photo, people and tags description, uploading photos, changing tags and comments.</Description>
+        <BuildDependencies>
+            <Dependency>raptor-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="38f427262bc76c23ac4ab31ed4df6c6022c5d3ec" type="targz">http://download.dajobe.org/flickcurl/flickcurl-1.22.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>flickcurl</Name>
+        <RuntimeDependencies>
+            <Dependency>raptor</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/flickcurl</Path>
+            <Path fileType="executable">/usr/bin/flickrdf</Path>
+            <Path fileType="all">/usr/lib/libflickcurl.so.*</Path>
+            <Path fileType="doc">/usr/share/doc/flickcurl/*</Path>
+            <Path fileType="man">/usr/share/man/man1/flickcurl.1</Path>
+            <Path fileType="man">/usr/share/man/man1/flickrdf.1</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>flickcurl-devel</Name>
+        <Summary>Development files for flickcurl</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">flickcurl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/flickcurl-config</Path>
+            <Path fileType="header">/usr/include/flickcurl.h</Path>
+            <Path fileType="all">/usr/lib/libflickcurl.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/flickcurl.pc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/flickcurl/*</Path>
+            <Path fileType="man">/usr/share/man/man1/flickcurl-config.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-06-02</Date>
+            <Version>1.22</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

@@ -1,0 +1,47 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+
+source /etc/sabnzbd.config
+
+HOSTNAME='localhost'
+
+if [[ -z "$USERNAME" ]];
+   then 
+      echo "You must define the default username & co before starting SABnzbd (/etc/sabnzbd.config)"
+      exit 0
+fi
+
+if [ "$USE_SSL" == "true" ];
+   then 
+      PROTOCOL="https"
+      PORT="$PORT_SSL"
+   else 
+      PROTOCOL="http"
+      PORT="$PORT"
+fi
+
+# Grab API key
+API_KEY=`cat /home/$USERNAME/.sabnzbd/sabnzbd.ini | grep ^api_key | sed s/"api_key = "//`
+
+case "$1" in
+
+   start)
+      echo "Starting SABnzbd."
+      su $USERNAME -c "python /usr/share/sabnzbd/SABnzbd.py -d -f /home/$USERNAME/.sabnzbd/sabnzbd.ini -s $HOSTNAME"
+   ;;
+   
+   stop)
+      echo "Shutting down SABnzbd."
+      
+      if [ -z "$LOGIN" ];      
+         then /usr/bin/wget --timeout=30 --no-check-certificate -q --delete-after "$PROTOCOL://$HOSTNAME:$PORT/api?mode=shutdown&apikey=$API_KEY"
+         else /usr/bin/wget --timeout=30 --no-check-certificate -q --delete-after "$PROTOCOL://$HOSTNAME:$PORT/api?mode=shutdown&apikey=$API_KEY&ma_username=$LOGIN&ma_password=$PASSWORD"
+      fi
+   ;;
+   
+   *)
+      echo "Usage: $0 {start|stop}"
+      exit 1
+   esac
+
+exit 0

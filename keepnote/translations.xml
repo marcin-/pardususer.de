@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>keepnote</Name>
+        <Summary xml:lang="pl">Przechowuje twoje notatki w łatwym do przetwarzania formacie pliku (HTML i XML).</Summary>
+        <Description xml:lang="pl">Z KeepNote archiwizowanie i przekazywanie notatek jest tak proste jak skompresowanie lub kopiowanie folderu.</Description>
+    </Source>
+</PISI>
+

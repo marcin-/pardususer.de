@@ -1,0 +1,49 @@
+diff -Naur mozilla-release.orig/browser/base/content/browser.xul mozilla-release/browser/base/content/browser.xul
+--- mozilla-release.orig/browser/base/content/browser.xul	2012-06-01 14:03:47.000000000 +0200
++++ mozilla-release/browser/base/content/browser.xul	2012-06-09 17:11:04.462000003 +0200
+@@ -1004,12 +1004,6 @@
+       <toolbarbutton id="inspector-inspect-toolbutton"
+                      class="devtools-toolbarbutton"
+                      command="Inspector:Inspect"/>
+-      <toolbarbutton id="inspector-treepanel-toolbutton"
+-                     class="devtools-toolbarbutton"
+-                     label="&htmlPanel.label;"
+-                     accesskey="&htmlPanel.accesskey;"
+-                     tooltiptext="&htmlPanel.tooltiptext;"
+-                     command="Inspector:HTMLPanel"/>
+       <arrowscrollbox id="inspector-breadcrumbs"
+                       flex="1" orient="horizontal"
+                       clicktoscroll="true"/>
+diff -Naur mozilla-release.orig/browser/devtools/highlighter/TreePanel.jsm mozilla-release/browser/devtools/highlighter/TreePanel.jsm
+--- mozilla-release.orig/browser/devtools/highlighter/TreePanel.jsm	2012-06-01 14:03:48.000000000 +0200
++++ mozilla-release/browser/devtools/highlighter/TreePanel.jsm	2012-06-09 17:13:46.521000003 +0200
+@@ -79,29 +79,6 @@
+   },
+ 
+   /**
+-   * Main TreePanel boot-strapping method. Initialize the TreePanel with the
+-   * originating context and the InspectorUI global.
+-   * @param aContext nsIDOMWindow (xulwindow)
+-   * @param aIUI global InspectorUI object
+-   */
+-  _init: function TP__init(aContext, aIUI)
+-  {
+-    this.IUI = aIUI;
+-    this.window = aContext;
+-    this.document = this.window.document;
+-    this.button =
+-     this.IUI.chromeDoc.getElementById("inspector-treepanel-toolbutton");
+-
+-    domplateUtils.setDOM(this.window);
+-
+-    this.DOMHelpers = new DOMHelpers(this.window);
+-
+-    let isOpen = this.isOpen.bind(this);
+-
+-    this.editingEvents = {};
+-  },
+-
+-  /**
+    * Initialization function for the TreePanel.
+    */
+   initializeIFrame: function TP_initializeIFrame()

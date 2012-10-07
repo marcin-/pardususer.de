@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>qmetro</Name>
+        <Homepage>http://qmetro.sf.net/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>qmetro</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.misc</PartOf>
+        <Summary>Vector metro (subway) map for calculating route and getting information about transport nodes.</Summary>
+        <Description>Maps have an open format and can easily be edited or create. About 200 maps of subways are available. The package includes only one map of Moscow city subway, but you can easy download your maps from within the app.</Description>
+        <Archive sha1sum="017e4d1ac980378af5a2904149b11fa0466e3855" type="zip">mirrors://sourceforge/qmetro/qmetro-0.5.5.zip</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>qmetro</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	    <!-- <Path fileType="header">/usr/include</Path>-->
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2012-05-12</Date>
+            <Version>0.5.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-23</Date>
+            <Version>0.5.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

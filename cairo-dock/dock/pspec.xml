@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cairo-dock</Name>
+        <Homepage>http://www.glx-dock.org/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <PartOf>desktop.lookandfeel</PartOf>
+        <License>GPLv2</License>
+        <Icon>cairo-dock</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Very nice looking appstarter with animation.</Summary>
+        <Description>cairo/glx-dock is an animated application launch bar displayed on the desktop comparable to MacOS-X Dock.</Description>
+        <Archive sha1sum="140670d97985a8a623bc126fa86eed00e7b5a69e" type="targz">http://launchpad.net/cairo-dock-core/2.4/2.4.0/+download/cairo-dock-2.4.0~2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>gtkglext-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>freeglut-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>cairo-dock</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>gtkglext</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libXtst</Dependency>
+        </RuntimeDependencies>
+
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/cairo-dock</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>cairo-dock-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">cairo-dock</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/libgldi.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2011-10-07</Date>
+            <Version>2.4.0</Version>
+            <Comment>version bump from 2.4.0~1 to 2.4.0~2</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-10-03</Date>
+            <Version>2.4.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-07-28</Date>
+            <Version>2.3.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-02-22</Date>
+            <Version>2.2.0</Version>
+            <Comment>cairo-dock is now glx-dock</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+        <Name>fluxbox</Name>
+        <Homepage>http://fluxbox.org</Homepage>
+        <Packager>
+            <Name>mpie</Name>
+            <Email>michael.kyne-phillips@sky.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>GPLv3</License>
+	<IsA>app:gui</IsA>
+	<PartOf>xsessions</PartOf>
+        <Summary>Lightweight Window Manager</Summary>
+	<Description>Fluxbox is a windowmanager for X that was based on the Blackbox 0.61.1 code. It is very light on resources and easy to handle but yet full of features to make an easy, and extremely fast, desktop experience. It is built using C++ and licensed under the MIT-License</Description>
+	<Archive sha1sum="6d49deb6c4c7d73f7567e1cf7d2575c7edc4825f" type="tarbz2">http://sourceforge.net/projects/fluxbox/files/fluxbox/1.1.1/fluxbox-1.1.1.tar.bz2</Archive>
+	<BuildDependencies>
+	    <Dependency>libXpm-devel</Dependency>
+	    <Dependency>libXi-devel</Dependency>
+	    <Dependency>libXfixes-devel</Dependency>
+	    <Dependency>libXrandr-devel</Dependency>
+	    <Dependency>imlib2-devel</Dependency>
+	</BuildDependencies>
+  </Source>
+  
+  <Package>
+      <Name>fluxbox</Name>
+      <RuntimeDependencies>
+	<Dependency>libXpm</Dependency>
+	    <Dependency>libXi</Dependency>
+	    <Dependency>libXfixes</Dependency>
+	    <Dependency>libXrandr</Dependency>
+	    <Dependency>imlib2</Dependency>
+	  
+      </RuntimeDependencies>
+      <Files>
+	    <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="header">/usr/include</Path>
+	    <Path fileType="library">/usr/lib/fbpanel</Path>
+	    <Path fileType="data">/usr/share/</Path>
+	    <Path fileType="doc">/usr/share/doc/fbpanel</Path>
+	    <Path fileType="data">/usr/libexec/fbpanel</Path>
+      </Files>
+      <AdditionalFiles>
+	      <AdditionalFile  target="/usr/share/xsessions/Fluxbox.desktop">Fluxbox.desktop</AdditionalFile>
+	    </AdditionalFiles>
+  </Package>
+  
+    <History>
+      <Update release="1">
+            <Date>2011-01-28</Date>
+            <Version>1.1.1</Version>
+            <Comment>Initial package</Comment>
+            <Name>mpie</Name>
+            <Email>michael.kyne-phillips@sky.com.com</Email>
+      </Update>
+    </History>
+</PISI>

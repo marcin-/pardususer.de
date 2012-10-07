@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>clit</Name>
+        <Homepage>http://www.convertlit.com/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>office.misc</PartOf>
+        <Summary>Microsoft Reader format eBooks converter</Summary>
+        <Description>Allows you to convert Microsoft Reader format eBooks into open format for use with software or devices which are not directly compatible with Microsoft Reader.</Description>
+        <Archive sha1sum="0fa9aead468bd8640c49374d46d78d2a3e79489f" type="zip">http://www.convertlit.com/clit18src.zip</Archive>
+        <Archive sha1sum="9b192701cf62b85e9bd65fbb4d622d04cfa5ee0d" type="tarbz2">ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ltm-0.42.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>sed</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>clit</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-03-25</Date>
+            <Version>1.8</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

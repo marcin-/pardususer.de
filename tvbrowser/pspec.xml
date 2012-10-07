@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+
+    <Source>
+        <Name>tvbrowser</Name> 
+        <Homepage>http://www.tvbrowser.org</Homepage> 
+-       <Packager>
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Packager>
+        <License>GPLv3</License> 
+        <Icon>tvbrowser</Icon>
+        <PartOf>multimedia.video</PartOf>
+        <IsA>app:gui</IsA> 
+        <Summary>Digital TV Guide</Summary> 
+        <Description>TVBrowser is a java-based TV guide which is easily extensible using plugins.</Description> 
+        <Archive sha1sum="e41a4461f2d093545062341648374f7df53f2ffd" type="targz">mirrors://sourceforge/tvbrowser/tvbrowser_3.1_bin.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>tvbrowser</Name> 
+-       <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+        </RuntimeDependencies>
+    -   <Files>
+            <Path fileType="executable">/usr/bin/</Path> 
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path> 
+            <Path fileType="data">/opt/tvbrowser/</Path>
+        </Files>
+        <AdditionalFiles>       
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/tvbrowser">tvbrowser</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/tvbrowser.desktop">tvbrowser.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/tvbrowser.png">tvbrowser.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+-       <Update release="2">
+            <Date>2011-11-03</Date> 
+            <Version>3.1</Version> 
+            <Comment>Version bump</Comment> 
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+-       <Update release="1">
+            <Date>2011-04-28</Date> 
+            <Version>3.0.1</Version> 
+            <Comment>First release</Comment> 
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Update>
+    </History>
+
+</PISI>

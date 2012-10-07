@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>AutoStitch</Name>
+        <Summary xml:lang="de">Propritäre Grafiksoftware zum Erstellen von Panoramabildern mittels Stitching</Summary>
+        <Description xml:lang="de">AutoStitch ist eine propritäre Grafiksoftware für Stitching. Es synthetisiert Panoramabilder aus geeigneten Einzelaufnahmen insbesondere von Digitalkameras. Zurzeit ist eine Demonstrationsversion für Microsoft Windows erhältlich, welche zusätzlich unter WINE lauffähig ist. Dieses Softwarepakte macht es möglich, AutoStitch unter Pardus GNU/Linux zu starten.</Description>
+    </Source>
+</PISI>

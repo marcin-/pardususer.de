@@ -1,0 +1,218 @@
+diff -Naur kdenlive-0.9.2.orig/po/tr/kdenlive.po kdenlive-0.9.2/po/tr/kdenlive.po
+--- kdenlive-0.9.2.orig/po/tr/kdenlive.po	2012-05-29 23:41:53.000000000 +0200
++++ kdenlive-0.9.2/po/tr/kdenlive.po	2012-07-03 11:44:41.029000022 +0200
+@@ -755,7 +755,6 @@
+ msgstr "Bu proje biçimi desteklenmiyor (sürüm %1) ve yüklenemiyor."
+ 
+ #: src/documentvalidator.cpp:794
+-#, fuzzy
+ msgid ""
+ "Some of your text clips were saved with size in points, which means "
+ "different sizes on different displays. Do you want to convert them to pixel "
+@@ -1660,7 +1659,7 @@
+ 
+ #: src/wizard.cpp:369
+ msgid "QImage module"
+-msgstr ""
++msgstr "QImage modülü"
+ 
+ #: src/wizard.cpp:370 src/wizard.cpp:375
+ msgid "Required to work with images"
+@@ -2104,12 +2103,10 @@
+ msgstr "Projeye uygun ölçekle"
+ 
+ #: src/mainwindow.cpp:1057
+-#, fuzzy
+ msgid "Zoom Out"
+ msgstr "Uzaklaş"
+ 
+ #: src/mainwindow.cpp:1070
+-#, fuzzy
+ msgid "Zoom In"
+ msgstr "Yaklaş"
+ 
+@@ -2657,7 +2654,7 @@
+ #, fuzzy
+ #| msgid "Cannot find your Mlt profiles, please give the path"
+ msgid "Cannot find your MLT profiles, please give the path"
+-msgstr "MLT profilleriniz bulunamıyor, lütfen yolu tanımlayın"
++msgstr "Mlt profilleriniz bulunamıyor, lütfen yolu tanımlayın"
+ 
+ #: src/mainwindow.cpp:2297
+ #, fuzzy
+@@ -2966,7 +2963,7 @@
+ 
+ #: src/monitor.cpp:280
+ msgid "Monitor overlay infos"
+-msgstr ""
++msgstr "Ekran katman bilgileri"
+ 
+ #: src/monitor.cpp:285
+ msgid "Real time (drop frames)"
+@@ -3030,7 +3027,7 @@
+ #, fuzzy
+ #| msgid "Pan and Zoom"
+ msgid "Pan and zoom"
+-msgstr "Çevirme ve Ölçekleme"
++msgstr "Pan ve Yakınlaşma"
+ 
+ #: src/clipproperties.cpp:315 src/slideshowclip.cpp:67
+ #, fuzzy
+@@ -3459,7 +3456,6 @@
+ msgstr "Geçiş kesilemez"
+ 
+ #: src/customtrackview.cpp:2530 src/commands/addtimelineclipcommand.cpp:38
+-#, fuzzy
+ msgid "Add timeline clip"
+ msgstr "Zamançizgisi klibi ekle"
+ 
+@@ -6011,7 +6007,7 @@
+ 
+ #: src/unicodedialog.cpp:120
+ msgid "<small>(no character selected)</small>"
+-msgstr ""
++msgstr "<small>(karakter seçilmemiş)</small>"
+ 
+ #: src/unicodedialog.cpp:126
+ msgid ""
+@@ -6168,7 +6164,7 @@
+ 
+ #: src/unicodedialog.cpp:176
+ msgid "<small>No additional information available for this character.</small>"
+-msgstr ""
++msgstr "<small>Bu karakter çin ek bilgi yok.</small>"
+ 
+ #: src/noteswidget.cpp:38
+ #, fuzzy
+@@ -6211,15 +6207,14 @@
+ msgstr "Profili Düzenle"
+ 
+ #: src/titledocument.cpp:365
+-#, fuzzy
+ msgid ""
+ "Some of your text clips were saved with size in points, which means "
+ "different sizes on different displays. They will be converted to pixel size, "
+ "making them portable, but you could have to adjust their size."
+ msgstr ""
+ "Bazı metin klipleriniz farklı ekranlarda farklı boyutlar alacak nokta "
+-"ölçüsüyle saklandı. Bunlar taşınabilirlik için piksel ölçüsüne çevrilecek, "
+-"bununla birlikte kliplerin ölçülerini değiştirebilirsiniz."
++"ölçüsüyle saklandı. Bunlar taşınabilirlik için piksel ölçüsüne çevrilecek. Bu "
++"çevrimden sonra boyutlarını tekrar gözden geçirmeniz gerekebilir."
+ 
+ #: src/titledocument.cpp:365
+ msgid "Text Clips Updated"
+@@ -6813,9 +6808,8 @@
+ 
+ #. i18n: file: effects/boxblur.xml:10
+ #: rc.cpp:40
+-#, fuzzy
+ msgid "Vertical multiplicator"
+-msgstr "Dikey çarpılan"
++msgstr "Dikey çarpan"
+ 
+ #. i18n: file: effects/boxblur.xml:13
+ #: rc.cpp:42
+@@ -6892,9 +6886,8 @@
+ 
+ #. i18n: file: effects/chroma_hold.xml:3
+ #: rc.cpp:76
+-#, fuzzy
+ msgid "Chroma Hold"
+-msgstr "Renk Parlaklığı Tutma"
++msgstr "Chroma Hold"
+ 
+ #. i18n: file: effects/chroma_hold.xml:4
+ #: rc.cpp:78
+@@ -7134,7 +7127,7 @@
+ #: rc.cpp:168 rc.cpp:178
+ #, fuzzy
+ msgid "Start Gain"
+-msgstr "İlerlemeyi Başlat"
++msgstr "Kazancı Başlat"
+ 
+ #. i18n: file: effects/fadein.xml:16
+ #. i18n: file: effects/fadeout.xml:16
+@@ -7951,9 +7944,8 @@
+ #. i18n: file: effects/frei0r_distort0r.xml:7
+ #. i18n: file: effects/wave.xml:7
+ #: rc.cpp:559 rc.cpp:1768
+-#, fuzzy
+ msgid "Amplitude"
+-msgstr "Genişlik"
++msgstr "Genlik"
+ 
+ #. i18n: file: effects/frei0r_edgeglow.xml:3
+ #: rc.cpp:563
+@@ -9021,15 +9013,13 @@
+ 
+ #. i18n: file: effects/frei0r_scale0tilt.xml:25
+ #: rc.cpp:1065
+-#, fuzzy
+ msgid "Tilt X"
+-msgstr "Eğim X"
++msgstr "X eksenini eğ"
+ 
+ #. i18n: file: effects/frei0r_scale0tilt.xml:28
+ #: rc.cpp:1067
+-#, fuzzy
+ msgid "Tilt Y"
+-msgstr "Eğim Y"
++msgstr "Y eksenini eğ"
+ 
+ #. i18n: file: effects/frei0r_scanline0r.xml:3
+ #: rc.cpp:1069
+@@ -10088,14 +10078,14 @@
+ #, fuzzy
+ #| msgid "Animate Rotate X"
+ msgid "Animate Shear X"
+-msgstr "Döndürme canlandırması (X)"
++msgstr "Kesilme Canlandırması (X)"
+ 
+ #. i18n: file: effects/rotation.xml:34
+ #: rc.cpp:1566
+ #, fuzzy
+ #| msgid "Animate Rotate Y"
+ msgid "Animate Shear Y"
+-msgstr "Döndürme canlandırması (Y)"
++msgstr "Kesilme Canlandırması (Y)"
+ 
+ #. i18n: file: effects/rotoscoping.xml:3
+ #: rc.cpp:1572
+@@ -10198,10 +10188,9 @@
+ 
+ #. i18n: file: effects/sox_band.xml:7
+ #: rc.cpp:1616
+-#, fuzzy
+ #| msgid "Frequency"
+ msgid "Center Frequency"
+-msgstr "Frekans"
++msgstr "Merkez Frekans"
+ 
+ #. i18n: file: effects/sox_band.xml:10
+ #. i18n: file: effects/sox_flanger.xml:16
+@@ -13720,7 +13709,7 @@
+ #. i18n: ectx: property (text), widget (QTreeWidget, markers_list)
+ #: rc.cpp:3571 rc.cpp:5688
+ msgid "Time"
+-msgstr "Zaman kodu"
++msgstr "Zaman"
+ 
+ #. i18n: file: src/widgets/clipproperties_ui.ui:458
+ #. i18n: ectx: property (text), widget (QToolButton, marker_edit)
+@@ -14125,7 +14114,6 @@
+ #. i18n: file: src/widgets/renderwidget_ui.ui:397
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+ #: rc.cpp:3922 rc.cpp:6039
+-#, fuzzy
+ msgid "to"
+ msgstr "şuna"
+ 
+@@ -14182,7 +14170,6 @@
+ #. i18n: file: src/widgets/renderwidget_ui.ui:689
+ #. i18n: ectx: property (text), widget (QPushButton, start_script)
+ #: rc.cpp:3967 rc.cpp:6084
+-#, fuzzy
+ msgid "Start Script"
+ msgstr "Betiği Başlat"
+ 

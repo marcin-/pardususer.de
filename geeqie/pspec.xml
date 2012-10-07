@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>geeqie</Name>
+        <Homepage>http://geeqie.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <PartOf>multimedia.graphics</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>A lightweight image browser and viewer (fork of GQview)</Summary>
+        <Description>Geeqie is a lightweight Gtk+ based image viewer for Unix like operating systems.</Description>
+        <BuildDependencies>
+            <Dependency>exiv2-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>lcms-devel</Dependency>
+            <Dependency>lirc-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="8494a557d67d20e6ad720645ec789dd2b33a3266" type="targz">mirrors://sourceforge/geeqie/geeqie-1.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>geeqie</Name>
+        <RuntimeDependencies>
+            <Dependency>exiv2-libs</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>lcms</Dependency>
+            <Dependency>lirc</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/geeqie</Path>
+            <Path fileType="library">/usr/lib/geeqie/*</Path>
+            <Path fileType="data">/usr/share/applications/geeqie.desktop</Path>
+            <Path fileType="doc">/usr/share/doc/geeqie/*</Path>
+            <Path fileType="data">/usr/share/geeqie/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="man">/usr/share/man/man1/geeqie.1</Path>
+            <Path fileType="data">/usr/share/pixmaps/geeqie.png</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-12-02</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

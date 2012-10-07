@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gyachi</Name>
+        <Homepage>http://gyachi.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>gyachi</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Yahoo! client for</Summary>
+        <Description>GyachE Improved (GyachI) is a fork from Gyach Enhanced Yahoo! client for Linux operating systems. It supports almost all of the features you would expect to find on the official Windows Yahoo! client</Description>
+        <Archive sha1sum="1be890154f2f0ce5b164587b2f2e99a4b86cea2c" type="targz">mirrors://sourceforge/gyachi/gyachi-1.2.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtkhtml2</Dependency>
+            <Dependency>wine-devel</Dependency>
+            <Dependency>gtkspell-devel</Dependency>
+            <Dependency>libv4l-devel</Dependency>
+            <Dependency>libmcrypt-devel</Dependency>
+            <Dependency>gpgme-devel</Dependency>
+            <Dependency>imagemagick-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>notify-python</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>jasper-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">desktop.patch</Patch>
+            <Patch level="1">disable_doc_install.patch</Patch>
+            <Patch level="1">use_xdg.patch</Patch>
+            <Patch level="1">gpgme_header.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gyachi</Name>
+        <RuntimeDependencies>
+            <Dependency>gtkhtml2</Dependency>
+            <Dependency>wine</Dependency>
+            <Dependency>gtkspell</Dependency>
+            <Dependency>libv4l</Dependency>
+            <Dependency>libmcrypt</Dependency>
+            <Dependency>gpgme</Dependency>
+            <Dependency>imagemagick</Dependency>
+            <Dependency>pulseaudio</Dependency>
+            <Dependency>notify-python</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>jasper</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/gyachi</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>   
+       <Update release="4">
+            <Date>2011-03-05</Date>
+            <Version>1.2.2</Version>
+            <Comment>added libv4l-devel as BuildDependency to get webcam working</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>      
+      <Update release="3">
+            <Date>2011-03-04</Date>
+            <Version>1.2.2</Version>
+            <Comment>changed dependency names to fit for P2011</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-08-15</Date>
+            <Version>1.2.2</Version>
+            <Comment>New stable release: enable wine for gyvoice, fix gpgme_header path and enable gpgme plugin, optimise actions.py</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-04-10</Date>
+            <Version>1.1.63</Version>
+            <Comment>First Release.</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

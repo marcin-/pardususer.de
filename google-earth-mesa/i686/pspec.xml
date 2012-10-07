@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>GoogleEarth</Name>
+	<Homepage>earth.google.com/ </Homepage>
+        <Packager>
+            <Name>Bahadır Özdemir</Name>
+            <Email>baho888@hotmail.com.com</Email>
+        </Packager>
+        <License>EULA</License>
+        <IsA>app:network</IsA>
+        <PartOf>applications.network</PartOf>
+        <Summary>Google Earth for mesa video driver.</Summary>
+        <Description>Google Earth for Linux for mesa video driver</Description>
+	<Summary xml:lang="tr">Google Earth linux sürümü</Summary>
+	<Archive sha1sum="ceb2b16a1cd9ba26c003c8f774054b31a3b53033" type="binary">http://dl.google.com/earth/client/current/GoogleEarthLinux.bin</Archive>
+    </Source>
+
+    <Package>
+        <Name>GoogleEarth-mesa</Name>
+        <Conflicts>
+            <Package>GoogleEarth</Package>
+        </Conflicts>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>imagemagick</Dependency>
+        </RuntimeDependencies>
+        <Files>
+             <Path fileType="executable">/usr/bin</Path>
+	     <Path fileType="install">/usr/lib</Path>
+             <Path fileType="library">/lib</Path>
+             <Path fileType="library">/usr/lib/googleearth</Path>
+	     <Path fileType="data">/usr/share</Path>
+	     <Path fileType="data">/usr/kde</Path>
+        </Files>
+        <AdditionalFiles>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/kde/4/share/mimelnk/application/vnd.google-earth.kml+xml.desktop">vnd.google-earth.kml+xml.desktop</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/kde/4/share/mimelnk/application/vnd.google-earth.kmz.desktop">vnd.google-earth.kmz.desktop</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/share/mime/packages/googleearth-mimetypes.xml">googleearth-mimetypes.xml</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/Google-googleearth.desktop">Google-googleearth.desktop</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0755" target="/usr/bin/googleearth">googleearth</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2012-03-09</Date>
+	    <Version>6.0.3.2197</Version>
+	    <Comment>name change GoogleEarth>GoogleEarth-mesa based on bin file</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-06-13</Date>
+	    <Version>6.0.3.2197</Version>
+            <Comment>version update</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-03-30</Date>
+	    <Version>6.0.2.2074</Version>
+            <Comment>new version and icon path changed</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-03-21</Date>
+	    <Version>6.0.1.2032</Version>
+            <Comment>To make equal version i686 and x86_64</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-01-27</Date>
+	    <Version>6.0.1.2032</Version>
+            <Comment>v_up</Comment>
+            <Name>Bahadır Özdemir</Name>
+            <Email>baho888@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

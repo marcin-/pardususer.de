@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Violetland
+GenericName=violetland
+Comment=A game similar to Crimsonland
+Icon=violetland
+Exec=violetland
+Terminal=false
+StartupNotify=false
+Categories=Application;Game;ActionGame;

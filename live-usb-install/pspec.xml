@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>live-usb-install</Name>
+        <Homepage>http://live.learnfree.eu/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <Summary>With LiveUSB Install you can effortlessly install various Linux distributions on your thumbdrive.</Summary>
+	<Description>This way, you can always carry your favourite distro in your pocket – on your bootable thumb drive!</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>util</PartOf>
+        <License>GPLv3</License>
+        <Archive sha1sum="f63c316ef2f6701452851c0e9388a4dc01ee8ad4" type="targz">http://download.learnfree.eu/lfu-usb/live-usb-install-2.3.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>live-usb-install</Name>
+        <RuntimeDependencies>
+	    <Dependency>libglade</Dependency>
+	    <Dependency>libtorrent</Dependency>
+	    <Dependency>p7zip</Dependency>
+	    <Dependency>parted</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>syslinux</Dependency>
+	    <Dependency>udev</Dependency>
+	    <Dependency>unrar</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+	<AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/live-usb-install.desktop" permission="0644" owner="root">live-usb-install.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-11-19</Date>
+            <Version>2.3.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

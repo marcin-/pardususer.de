@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>gsmartcontrol</Name>
+        <Homepage>http://gsmartcontrol.berlios.de/home/index.php/en/Home</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>hardware.disk</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>A graphical user interface for the smartctl hard disk drive health inspection tool.</Summary>
+        <Description>GSmartControl is a graphical user interface for smartctl, which is a tool for querying and controlling SMART (Self-Monitoring, Analysis, and Reporting Technology) data on modern hard disk drives. It allows you to inspect the drive's SMART data to determine its health, as well as run various tests on it.</Description>
+        <BuildDependencies>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtkmm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>pangomm-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="e05dda2815921aa0d2aa18850e2e715c1a5e00e0" type="tarbz2">http://download.berlios.de/gsmartcontrol/gsmartcontrol-0.8.6.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>gsmartcontrol</Name>
+        <RuntimeDependencies>
+            <Dependency>glibmm</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtkmm</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>smartmontools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="data">/usr/share/applications/gsmartcontrol.desktop</Path>
+            <Path fileType="doc">/usr/share/doc/gsmartcontrol/*</Path>
+            <Path fileType="data">/usr/share/gsmartcontrol/*</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/*</Path>
+            <Path fileType="man">/usr/share/man/man1/*</Path>
+            <Path fileType="data">/usr/share/pixmaps/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-11-21</Date>
+            <Version>0.8.6</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>epson-alc1100</Name>
+        <Summary xml:lang="tr">Epson AcuLaser C1100 yazıcı sürücüsü</Summary>
+        <Description xml:lang="tr">epson-alc1100, Epson AcuLaser C1100 için CUPS yazıcı filtreleri ve PPD dosyaları sunan bir sürücü paketidir.</Description>
+    </Source>
+    <Source>
+        <Name>epson-alc1100</Name>
+        <Summary xml:lang="de">Cups Treiber für Epson AcuLaser C1100</Summary>
+        <Description xml:lang="de">epson-alc1100 liefert CUPS Treiber und PPD-Dateien für den Epson AcuLaser C1100.</Description>
+    </Source>
+</PISI>
+

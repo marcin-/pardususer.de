@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>jes</Name>
+        <Homepage>http://www.jes-eur.de/</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPL</License>
+        <Icon>jes</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>office.misc</PartOf>
+        <Summary>Software for German cash basis accounting</Summary>
+        <Description>Jes is a Java based software for cash basis accounting. Formelly known as "OpenOffice.org EÜR". It's designed with an very easy usability - which gives you the ability to reorganize your cash for bookkeeping in German finance system.</Description>
+        <Archive sha1sum="012961c4eab1936db2bac25dcb77587480fa268b" type="zip">http://dl.dropbox.com/u/2628626/jes/jes00026.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>jes</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/jes/jes.sh">jes.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/jes.desktop">jes.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/jes/jes-help.html">jes-help.html</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/jes/jes-dokumentation-und-faq.pdf">jes-dokumentation-und-faq.pdf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-05-06</Date>
+            <Version>0.00.26</Version>
+            <Comment>First release for Pardus 2011</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-12-26</Date>
+            <Version>0.00.18</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

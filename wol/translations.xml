@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>wol</Name>
+        <Summary xml:lang="de">Tool für Wake On LAN</Summary>
+        <Description xml:lang="de">WOL (=Wake On LAN) sendet einen String (MagicPaket) und startet einen Computer über das lokale Netzwerk.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,14 @@
+Index: shotwell-0.11.2/Makefile
+===================================================================
+--- shotwell-0.11.2.orig/Makefile
++++ shotwell-0.11.2/Makefile
+@@ -10,7 +10,8 @@ VALAC := valac
+ endif
+ VALAC_VERSION := `$(VALAC) --version | awk '{print $$2}'`
+ MIN_VALAC_VERSION := 0.11.7
+-MAX_VALAC_VERSION := 0.13.0
++# 0.13.x works fine, thanks to https://bugzilla.gnome.org/show_bug.cgi?id=656266
++#MAX_VALAC_VERSION := 0.13.0
+ INSTALL_PROGRAM := install
+ INSTALL_DATA := install -m 644
+ 

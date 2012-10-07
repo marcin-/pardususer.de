@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>picasa</Name>
+        <Summary xml:lang="de">Picasa für Linux</Summary>
+        <Description xml:lang="de">Picasa ist eine Fotoverwaltung von Google, zum Ordnen, Archivieren und Bearbeiten Ihrer Fotos. Es ermöglicht auch die Erstellung von Webalben.</Description>
+        <Summary xml:lang="tr">Linux İçin Picasa</Summary>
+        <Description xml:lang="tr">Picasa, dijital fotoğraflarınızı aramaya, düzenlemeye, üzerinde değişiklik yapmaya, ve internet aracı'ile paylaşmak için bir Google programıdır.</Description>
+    </Source>
+</PISI>

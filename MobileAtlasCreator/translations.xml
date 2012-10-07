@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>MobileAtlasCreator</Name>
+        <Summary xml:lang="de">MobileAtlasCreator erstellt Karten für J2ME Geräte (Android, OziExplorer, usw.)</Summary>
+        <Description xml:lang="de">Diese Anwendung erzeugt Atlanten für die J2ME-Anwendungen TrekBuddy und Mobile Trail Explorer (MTE), die Android-Anwendungen OruxMaps, AndNav, Maverick, BigPlanet-Maps, RMaps, die Pocket PC-Anwendung Glopus und die kommerzielle Windows-Anwendung OziExplorer.</Description>
+    </Source>
+</PISI>

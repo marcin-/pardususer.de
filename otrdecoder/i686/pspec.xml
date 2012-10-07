@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>otrdecoder</Name>
+        <Homepage>http://www.onlinetvrecorder.com</Homepage>
+        <Packager>
+            <Name>Gregor Tätzner</Name>
+            <Email>yellowcake-@gmx.net</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>applications.multimedia</PartOf>
+        <Icon>otrdecoder</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Otr-Decoder is a converter to convert *.otrkey files into *.avi video files.</Summary>
+        <Description>With Otr-Decoder you are able to decode movies from OnlineTvRecorder. In some countries (i.e. Germany) you have to decode movie clips into  AVI, MP4, MKV aso. ...</Description>
+        <Archive sha1sum="a4190899af5c6e04c8154f4a7502e9b8c406fde9" type="tarbz2">http://onlinetvrecorder.com/downloads/otrdecoder-bin-linux-Ubuntu_8.04-i686-0.4.1132.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>otrdecoder</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>python-gtk</Dependency>
+         </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="2">
+            <Date>2011-02-20</Date>
+            <Version>0.4.1132</Version>
+            <Comment>Release for Pardus 2011</Comment>
+            <Name>Gregor Tätzner</Name>
+            <Email>yellowcake-@gmx.net</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-02-18</Date>
+            <Version>0.4.592</Version>
+            <Comment>First release.</Comment>
+            <Name>Klaus WINKLBAUER</Name>
+            <Email>alaska@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>synkron</Name>
+        <Summary xml:lang="tr">Qt tabanlı dizin eşleyici</Summary>
+        <Summary xml:lang="de">Werkzeug um Ordner zu synchronisieren.</Summary>
+        <Description xml:lang="tr">Synkron, dizinlerinizi eşleştirmek için gelişmiş seçenekler sunan, kolay kullanımlı bir uygulamadır.</Description>
+        <Description xml:lang="de">Mit Synkron kann ein Planer eingerichtet werden, der z.B. alle 15 Minuten eine Synchronisation durchführen kann. Es können dabei einzelne Verzeichnisse bis hin zu ganzen Festplatten angegeben werden. Die Software läuft dabei im Hintergrund.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>mrim-prpl</Name>
+        <Summary xml:lang="pl">plugin komunikatora Mail.ru</Summary>
+        <Description xml:lang="pl">Plugin MRIM dla komunikatorów bazujących na libpurple , takich jak Pidgin, Audium itp.</Description>
+        <Summary xml:lang="ru">плагин мгновенных сообщений Mail.ru</Summary>
+        <Description xml:lang="ru">Плагин к Pidgin и libpurple реализующий протокол MMP (Mail.RU) </Description>
+    </Source>
+</PISI>

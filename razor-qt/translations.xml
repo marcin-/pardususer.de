@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>razor-qt</Name>
+        <Summary xml:lang="de">Alternative Desktopumgebung basierend auf qt</Summary>
+        <Description xml:lang="de">Razor-Qt ist eine schlanke und einfache Desktopumgebung, die für langsamere Rechner geeignet ist.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,41 @@
+<PISI>
+    <Source>
+        <Name>python-rope</Name>
+        <Homepage>http://rope.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>a python refactoring library</Summary>
+        <Description>Rope is a python refactoring library.</Description>
+        <Archive sha1sum="61f4c4f93ebe080e6a2c56da6087673197a316dd" type="targz">http://pypi.python.org/packages/source/r/rope/rope-0.9.4.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>python-rope</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/*</Path>
+            <Path fileType="doc">/usr/share/doc/python-rope/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2012-06-02</Date>
+            <Version>0.9.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-01-22</Date>
+            <Version>0.9.3</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

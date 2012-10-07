@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+    <Name>ibus-anthy</Name>
+    <Homepage>http://code.google.com/p/ibus/</Homepage>
+    <Packager>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Packager>
+    <License>LGPL</License>
+    <IsA>library</IsA>
+    <PartOf>util</PartOf>
+    <Summary>Japanese input method Anthy IMEngine for IBus Framework.</Summary>
+    <Description>Japanese input method Anthy IMEngine for IBus Framework.</Description>
+    <Archive sha1sum="cdfbc440d7a5069b99e565c3b6e8d9e8b62e7af6" type="targz">http://ibus.googlecode.com/files/ibus-anthy-1.2.7.tar.gz</Archive>
+    <BuildDependencies>
+        <Dependency>git</Dependency>
+        <Dependency>ibus</Dependency>
+        <Dependency>anthy</Dependency>
+        <Dependency>python</Dependency>
+    </BuildDependencies>
+    <Patches>
+        <Patch level="1">fixpyo.patch</Patch>
+    </Patches>
+</Source>
+
+<Package>
+    <Name>ibus-anthy</Name>
+    <RuntimeDependencies>
+        <Dependency>ibus</Dependency>
+        <Dependency>anthy</Dependency>
+    </RuntimeDependencies>
+    <Files>
+        <Path fileType="library">/usr/lib</Path>
+        <Path fileType="library">/usr/libexec</Path>
+        <Path fileType="localedata">/usr/share/locale</Path>
+        <Path fileType="doc">/usr/share/doc/ibus-anthy</Path>
+        <Path fileType="data">/usr/share/ibus-anthy</Path>
+        <Path fileType="data">/usr/share/ibus</Path>
+    </Files>
+</Package>
+
+    <History>
+        <Update release="3">
+            <Date>2012-06-09</Date>
+            <Version>1.2.7</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    <Update release="2">
+        <Date>2011-06-07</Date>
+        <Version>1.2.6</Version>
+        <Comment>fixed some errors</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+    <Update release="1">
+        <Date>2011-05-27</Date>
+        <Version>1.2.6</Version>
+        <Comment>First release.</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+</History>
+</PISI>

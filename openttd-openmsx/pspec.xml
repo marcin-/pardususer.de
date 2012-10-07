@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>openttd-openmsx</Name>
+        <Homepage>http://dev.openttdcoop.org/projects/openmsx</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>CCSP1.0</License>
+        <IsA>data</IsA>
+	<PartOf>game</PartOf>
+        <Summary>OpenMSX is an open source replacement for the original Transport Tycoon Deluxe (TTD) music.</Summary>
+	<Description>OpenMSX is the first release of base music files from the Music Replacement Project. The goal of this project is to release a full set of 31 MIDI files in the jazz and blues styles of the TTD music set that can be freely distributed with the game, with a secondary goal of having all of the music come from within the OpenTTD community itself. Version 0.1.0 was released on February 27, 2010 with a small set of files to start the project off. As of version 0.3.0 the project was released with 31 MIDI files, although many of the files came from two contributors outside of the community. More information about OpenMSX can be found on the OpenTTD wiki, http://wiki.openttd.org/OpenMSX</Description>
+	<Archive sha1sum="e36af3d76e736d6628fa45b8a945c7b4fc838877" type="targz">http://binaries.openttd.org/extra/openmsx/0.3.1/openmsx-0.3.1-source.tar.gz</Archive>
+        <BuildDependencies>
+	  <Dependency>python</Dependency>
+	</BuildDependencies>
+</Source>
+
+    <Package>
+        <Name>openttd-openmsx</Name>
+        <RuntimeDependencies>
+	  <!-- <Dependency>openttd-data</Dependency>   # <class 'pisi.graph.CycleException'>: Encountered cycle?-->
+	  <Dependency>timidity</Dependency>
+        </RuntimeDependencies>
+        <Files>
+	  <Path fileType="data">/usr/share/openttd/gm</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-23</Date>
+	    <Version>0.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

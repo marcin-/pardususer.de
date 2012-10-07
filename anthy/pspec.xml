@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+    <Name>anthy</Name>
+    <Homepage>http://anthy.sourceforge.jp/</Homepage>
+    <Packager>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Packager>
+    <License>GPLv2</License>
+    <License>LGPL</License>
+    <PartOf>util</PartOf>
+    <IsA>app:console</IsA>
+    <PartOf></PartOf>
+    <Summary>Free and secure Japanese input system. </Summary>
+    <Description>Anthy is a system for Japanese input method. It converts Hiragana text to Kana Kanji mixed text.</Description>
+    <Archive sha1sum="bfea9e74e208c4b976b6bd7ac6784cd290c636fd" type="targz">http://dl.sourceforge.jp/anthy/37536/anthy-9100h.tar.gz</Archive>
+    <BuildDependencies>
+        <Dependency>python</Dependency>
+    </BuildDependencies>
+</Source>
+
+<Package>
+    <Name>anthy</Name>
+    <RuntimeDependencies>
+        <Dependency>python</Dependency>
+    </RuntimeDependencies>
+    <Files>
+        <Path fileType="config">/etc</Path>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="header">/usr/include/anthy</Path>
+        <Path fileType="library">/usr/lib</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+        <Path fileType="data">/usr/share/anthy</Path>
+    </Files>
+</Package>
+
+<History>
+    <Update release="2">
+        <Date>2011-06-07</Date>
+        <Version>9100h</Version>
+        <Comment>fixed some errors</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+    <Update release="1">
+        <Date>2011-05-25</Date>
+        <Version>9100h</Version>
+        <Comment>First release.</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+</History>
+</PISI>

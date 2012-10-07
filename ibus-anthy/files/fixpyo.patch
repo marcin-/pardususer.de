@@ -1,0 +1,39 @@
+--- ibus-anthy-1.2.6.orig/py-compile	2010-11-01 09:19:38.000000000 +0100
++++ ibus-anthy-1.2.6/py-compile	2011-05-26 21:48:08.349000087 +0200
+@@ -119,21 +119,21 @@
+ sys.stdout.write('\n')" || exit $?
+ 
+ # this will fail for python < 1.5, but that doesn't matter ...
+-$PYTHON -O -c "
+-import sys, os, py_compile
+-
+-files = '''$files'''
+-sys.stdout.write('Byte-compiling python modules (optimized versions) ...\n')
+-for file in files.split():
+-    $pathtrans
+-    $filetrans
+-    if not os.path.exists(filepath) or not (len(filepath) >= 3
+-                                            and filepath[-3:] == '.py'):
+-	    continue
+-    sys.stdout.write(file)
+-    sys.stdout.flush()
+-    py_compile.compile(filepath, filepath + 'o', path)
+-sys.stdout.write('\n')" 2>/dev/null || :
++#$PYTHON -O -c "
++#import sys, os, py_compile
++#
++#files = '''$files'''
++#sys.stdout.write('Byte-compiling python modules (optimized versions) ...\n')
++#for file in files.split():
++#    $pathtrans
++#    $filetrans
++#    if not os.path.exists(filepath) or not (len(filepath) >= 3
++#                                            and filepath[-3:] == '.py'):
++#	    continue
++#    sys.stdout.write(file)
++#    sys.stdout.flush()
++#    py_compile.compile(filepath, filepath + 'o', path)
++#sys.stdout.write('\n')" 2>/dev/null || :
+ 
+ # Local Variables:
+ # mode: shell-script

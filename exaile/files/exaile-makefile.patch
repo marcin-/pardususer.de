@@ -1,0 +1,22 @@
+--- Makefile	2010-03-15 21:52:51.872482718 -0400
++++ Makefile.new	2010-03-20 11:00:04.279672661 -0400
+@@ -2,7 +2,7 @@
+ LIBINSTALLDIR 	?= /lib
+ XDGCONFDIR 	?= /etc/xdg
+ 
+-EXAILELIBDIR 	= $(DESTDIR)$(PREFIX)$(LIBINSTALLDIR)/exaile
++EXAILELIBDIR 	= $(DESTDIR)$(LIBINSTALLDIR)/exaile
+ EXAILESHAREDIR 	= $(DESTDIR)$(PREFIX)/share/exaile
+ EXAILECONFDIR 	= $(DESTDIR)$(XDGCONFDIR)/exaile
+ 
+--- tools/generate-launcher	2010-04-07 16:09:52.092922850 -0400
++++ tools/generate-launcher.new	2010-04-09 10:55:18.284684154 -0400
+@@ -30,7 +30,7 @@
+ fi
+ XDG_DATA_DIRS="\$EXAILE_PREFIX/share/:\$XDG_DATA_DIRS"
+ export XDG_DATA_DIRS
+-exec python \$EXAILE_PREFIX$LIBDIR/exaile/exaile.py --datadir=\$EXAILE_PREFIX/share/exaile/data --startgui "\$@"
++exec python $LIBDIR/exaile/exaile.py --datadir=\$EXAILE_PREFIX/share/exaile/data --startgui "\$@"
+ exit \$?
+ 
+ EOF

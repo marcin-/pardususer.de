@@ -1,0 +1,48 @@
+<PISI>
+    <Source>
+        <Name>LaCie-LightScribe-Host</Name>
+        <Homepage>http://www.lacie.com/products/product.htm?id=10204</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>hardware.misc</PartOf>
+        <IsA>library</IsA>
+        <Summary>LaCie LightScribe Host for Linux</Summary>
+        <Description>Required to enable LaCie LightScribe functionality, and needs to be loaded as the first LightScribe application.</Description>
+        <BuildDependencies>
+            <Dependency>rpm2targz</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="85080159e380a405c9c3c52b00daf89b24c7f928" type="binary">http://www.lacie.com/download/drivers/LightScribe%20Host%20Software%201.8.15.1%20Linux.rpm</Archive>
+    </Source>
+    <Package>
+        <Name>LaCie-LightScribe-Host</Name>
+        <Conflicts>
+            <Package>lightscribe-system</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="data">/etc/*</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2012-01-09</Date>
+            <Version>1.18.24.1</Version>
+            <Comment>added conflict deps</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-01-08</Date>
+            <Version>1.18.24.1</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

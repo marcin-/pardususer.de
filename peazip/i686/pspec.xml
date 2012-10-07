@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>PeaZip</Name>
+	<Homepage>http://peazip.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Bahadır Özdemir</Name>
+            <Email>baho888@hotmail.com</Email>
+        </Packager>
+        <License>GPL-2</License>
+	<IsA>app:gui</IsA>
+	<PartOf>util.archive</PartOf>
+	<Summary>PeaZip free archiver utility is a portable, open source archiving, encryption and file split tool</Summary>
+	<Description>PeaZip free archiver utility is a portable, open source archiving, encryption and file split tool</Description>
+	<Archive sha1sum="cc27037ec32eb0c7d71d6de0055f3fb1fc7e139a" type="targz">http://peazip.googlecode.com/files/peazip-4.3.LINUX.GTK2.tgz</Archive>
+	<Patches>
+            <Patch>desktop.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>PeaZip</Name>
+	<RuntimeDependencies>
+            <Dependency>freetype</Dependency>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2012-01-19</Date>
+            <Version>4.3</Version>
+            <Comment>updated_version</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-10-05</Date>
+            <Version>4.0</Version>
+            <Comment>updated_version</Comment>
+            <Name>Bahadır Özdemir</Name>
+            <Email>baho888@hotmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-01-23</Date>
+            <Version>3.6</Version>
+            <Comment>updated_version</Comment>
+            <Name>Bahadır Özdemir</Name>
+            <Email>baho888@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

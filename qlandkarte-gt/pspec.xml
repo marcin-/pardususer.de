@@ -1,0 +1,117 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>qlandkarte-gt</Name>
+        <Homepage>http://www.qlandkarte.org/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>qlandkarte</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.misc</PartOf>
+        <Summary>GPS device mapping tool</Summary>
+        <Description>QLandkarte GT is the ultimate outdoor aficionado's tool for GPS maps in GeoTiff format as well as Garmin's img vector map format. Additional it is the PC side frontend to QLandkarte M, a moving map application for mobile devices. And it fills the gap Garmin leaves in refusing to support Linux. QLandkarte GT is the proof that writing portable applications for Unix, Windows and OSX is feasible with a minimum of overhead. No excuses!</Description>
+	<Archive sha1sum="68107e1865ff1328f93caf1f18b10777ecc3195d" type="targz">mirrors://sourceforge/qlandkartegt/qlandkartegt-1.2.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>proj-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>gdal-devel</Dependency>
+	    	 <Dependency>gpsd-devel</Dependency>
+            <Dependency>qt-webkit-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>qlandkarte-gt</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>proj</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>gdal</Dependency>
+	    	 <Dependency>gpsd</Dependency>
+            <Dependency>qt-webkit</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+	    	<Package>qlandkarte</Package>
+		</Replaces>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+    	<Update release="5">
+			<Date>2011-09-30</Date>
+			<Version>1.2.4</Version>
+            <Comment> 
+				Bug #321: Fixed: Diary does not save comments on waypoints and tracks
+				Bug #322: Fixed: Bad coordinates for georef. pics on big endian systems
+				Request #323: Add stages of a track to track edit dialog
+				Request #324: Add tool button for filter dialog to track edit dialog
+				Request #325: Convert checkboxes for reset and delete trackpoints to toolbuttons
+				Request #326: Add support for mime links on OS X
+				Request #327: Automatically move map while drawing distance polyline
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+      	<Update release="4">
+			<Date>2011-09-04</Date>
+			<Version>1.2.3</Version>
+            <Comment> 
+				Request #310: Preserve track color on split operations
+				Request #311: Optimize map creation dialogs for small screens.
+				Request #312: Add option to save workspace every X seconds
+				Request #313: Change edit mode for track name (edit and return will take over the change)
+				Request #314: Ask before closing edited diary.
+				Request #315: Make map an option in diary printout
+				Request #316: Add elevation median filter to track filter dialog.
+				Request #317: Add time on the move to track info.
+				Request #318: Change average speed in graph from linear averaging filter to median filter.
+				Request #319: Show trackpoint information on large profile plots, too.
+				Request #320: Remove some abundant entries from waypoint and track menu.
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+     	<Update release="3">
+			<Date>2011-07-13</Date>
+		    <Version>1.2.2</Version>
+            <Comment> 
+				Request #297: Add import/export for OZI data.
+				Request #298: Add track profiles to diary
+				Request #299: Add import of WBT201 data
+				Bug #300: Diary: comments do not match their items
+				Request #301: Add option for southern hemisphere in projection wizzard
+				Request #302: Enhance coordinate / pixel query on canvas
+				Request #303: Iterate over reference points with n and b key for finetunig
+				Request #304: Add overview levels to reference process
+				Request #305: Add on-the-fly quadratic zoom option to qmap
+				Request #306: Add cachename to geocaches on the map
+				Request #307: Add selection of multiple waypoints via checkboxes
+				Request #308: Enhance delete, icon and proximity funtions for new waypoint selection
+				Request #309: Show track point under cursor in profile preview and vice versa
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="2">
+			<Date>2011-06-16</Date>
+			<Version>1.2.0</Version>
+            <Comment>Update.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-05-24</Date>
+			<Version>1.1.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

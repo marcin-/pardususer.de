@@ -1,0 +1,46 @@
+<PISI>
+    <Source>
+        <Name>phatch</Name>
+        <Homepage>http://photobatch.stani.be/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>GPLv3</License>
+        <Summary>Phatch is a simple to use cross-platform GUI Photo Batch Processor.</Summary>
+        <Description>Handles all popular image formats and can duplicate (sub)folder hierarchies. Phatch can batch resize, rotate, apply perspective, shadows, rounded corners, ... and more in minutes instead of hours or days if you do it manually. Phatch allows you to use EXIF and IPTC tags for renaming and data stamping. Phatch also supports a console version to batch photos on webservers.</Description>
+        <Archive sha1sum="15674c11b36b75c9c680086ea362d17911ab9037" type="targz">http://photobatch.stani.be/download/package/phatch-0.2.7.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>phatch</Name>
+        <RuntimeDependencies>
+            <Dependency>mlocate</Dependency>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>wxPython</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/phatch</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/site-packages/phatch/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/*</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/phatch/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/icons/hicolor/*</Path>
+            <Path fileType="localedata" permanent="0">/usr/share/locale/*</Path>
+            <Path fileType="man" permanent="0">/usr/share/man/man1/phatch.1</Path>
+            <Path fileType="data" permanent="0">/usr/share/mime/packages/phatch.xml</Path>
+            <Path fileType="data" permanent="0">/usr/share/phatch/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-09-04</Date>
+            <Version>0.2.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

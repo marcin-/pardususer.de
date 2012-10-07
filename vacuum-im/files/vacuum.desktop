@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Name=Vacuum-IM
+GenericName=Jabber Client
+GenericName[ru]=Jabber клиент
+Comment=Communicate over the Jabber network
+Comment[ru]=Общение в сети Jabber
+Exec=/usr/bin/vacuum
+Icon=/usr/share/pixmaps/vacuum.png
+StartupNotify=true
+Type=Application
+Terminal=false
+Categories=Network;InstantMessaging;Qt;

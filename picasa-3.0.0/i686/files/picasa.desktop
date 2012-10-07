@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Picasa
+GenericName=Photo Organizer
+GenericName[de]=Fotoverwaltung
+GenericName[tr]=Fotoğraf Yönetimi
+Comment=Picasa is a photo organizer from Google
+Comment[de]=Picasa ist eine Fotoverwaltungssoftware von  Google
+Comment[tr]=Googel'den Picasa fotoğraf yönetme programı
+Exec=picasa
+Terminal=false
+MultipleArgs=false
+Type=Application
+Icon=picasa
+Categories=Application;Graphics;2DGraphics;RasterGraphics;GTK;

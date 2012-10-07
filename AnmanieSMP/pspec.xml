@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>anmanie</Name>
+        <Homepage>http://www.digitalkamera.de/Software/Anmanie/1355.aspx</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>as-is</License>
+        <Icon>anmanie</Icon>
+        <PartOf>multimedia.graphics</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Skew and warp pictures to create caricatures.</Summary>
+        <Description>With AnmanieSMP You can change the face from a friendly looking person into a zombie. You can also export this animation to an AVI-film. The german tool is although it is not translated very intuitive to use!</Description>
+        <Archive type="targz" sha1sum="01b6a787408cf675d1a6e67089d24e212606e168">http://pakete.pardususer.de/source-files/AnmanieSMP.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>wine</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>anmanie</Name>
+        <RuntimeDependencies>
+            <Dependency>wine</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/opt/anmanie/</Path>
+            <Path fileType="executable">/usr/bin/</Path>   
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="data">/usr/share/applications/</Path> 
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/anmanie">anmanie</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/anmanie.png">anmanie.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/anmanie.desktop">anmanie.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+            <Update release="1">
+            <Date>2010-09-11</Date>
+            <Version>2.4</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

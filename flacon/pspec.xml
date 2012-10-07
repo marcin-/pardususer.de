@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+	<Name>flacon</Name>
+	<Homepage>http://code.google.com/p/flacon/</Homepage>
+	<Packager>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Packager>
+	<Summary>Flacon</Summary>
+	<Description>Flacon extracts individual tracks from one big audio file containing the entire album of music and saves them as separate audio files. To do this, it uses information from the appropriate CUE file. Besides, Flacon makes it possible to conveniently revise or specify tags both for all tracks at once or for each tag separately.</Description>
+	<IsA>app:gui</IsA>
+	<PartOf>multimedia.sound</PartOf>
+	<License>GPLv3</License>
+	<Archive sha1sum="7e210797d178f27de74063e0833c88f2cb31df4c" type="targz">http://flacon.googlecode.com/files/flacon-0.6.0.tgz</Archive>
+	<BuildDependencies>
+	    <Dependency>python-devel</Dependency>
+	    <Dependency>python-qt-devel</Dependency>
+	    <Dependency>qt-devel</Dependency>
+	</BuildDependencies>
+    </Source>
+    <Package>
+	<Name>flacon</Name>
+	<RuntimeDependencies>
+	    <Dependency>python</Dependency>
+	    <Dependency>python-qt</Dependency>
+	    <Dependency>qt</Dependency>
+	    <Dependency>shntool</Dependency>
+	    <Dependency>vorbis-tools</Dependency>
+	    <Dependency>wavpack</Dependency>
+	    <Dependency>mp3gain</Dependency>
+	    <Dependency>vorbisgain</Dependency>
+	    <Dependency>lame</Dependency>
+	    <Dependency>ttaenc</Dependency>
+	</RuntimeDependencies>
+	<Files>
+	    <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="data">/usr/share</Path>
+	</Files>
+    </Package>
+    <History>
+	<Update release="2">
+	    <Date>2011-12-02</Date>
+	    <Version>0.6.0</Version>
+	    <Comment>Version bump.</Comment>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Update>
+	<Update release="1">
+	    <Date>2011-02-28</Date>
+	    <Version>0.5.6_20110225</Version>
+	    <Comment>First release.</Comment>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Update>
+    </History>
+</PISI>

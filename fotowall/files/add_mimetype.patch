@@ -1,0 +1,9 @@
+diff -Naur fotowall-0.3.1.orig/fotowall.desktop fotowall-0.3.1/fotowall.desktop
+--- fotowall-0.3.1.orig/fotowall.desktop	2009-03-13 18:03:08.000000000 +0200
++++ fotowall-0.3.1/fotowall.desktop	2009-03-13 19:06:29.000000000 +0200
+@@ -7,3 +7,5 @@
+ Terminal=false
+ Type=Application
+ Categories=Graphics;Publishing;
++MimeType=application/x-fotowall-layout;
++

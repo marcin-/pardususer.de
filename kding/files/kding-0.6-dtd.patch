@@ -1,0 +1,24 @@
+diff -Naur kding-0.6_orig/doc/de/index.docbook /home/papa/kding-0.6/doc/de/index.docbook
+--- /doc/de/index.docbook      2009-09-20 14:09:37.000000000 +0200
++++ /doc/de/index.docbook   2011-01-28 19:28:37.967000069 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
++<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+     <!ENTITY kding "<application>KDing</application>">
+     <!ENTITY kappname "&kding;"><!-- Do *not* replace kappname-->
+     <!ENTITY % addindex "IGNORE">
+
+
+
+
+diff -Naur kding-0.6_orig/doc/en/index.docbook /home/papa/kding-0.6/doc/en/index.docbook
+--- /doc/en/index.docbook      2009-09-20 14:09:37.000000000 +0200
++++ /doc/en/index.docbook   2011-01-28 19:22:40.700000068 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" ?>
+-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
++<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+     <!ENTITY kding "<application>KDing</application>">
+     <!ENTITY kappname "&kding;"><!-- Do *not* replace kappname-->
+     <!ENTITY % addindex "IGNORE">

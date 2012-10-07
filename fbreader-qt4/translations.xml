@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<PISI>
+    <Source>
+        <Name>fbreader</Name>
+        <Summary xml:lang="en">FBReader is a free and open source e-book reader for GNU/Linux.</Summary>
+        <Description xml:lang="en">Supported formats include EPUB, FictionBook, HTML, plucker, PalmDoc, zTxt, TCR, CHM, RTF, OEB, non-DRM'ed mobipocket, and plain-text.</Description>
+        <Summary xml:lang="en">FBReader — свободная программа для чтения электронных книг в различных форматах в среде ОС Linux. </Summary>
+        <Description xml:lang="en">FBReader поддерживает большинство распространённых форматов электронных книг: ePub, FB2, PalmDoc, zTXT, TCR, TXT. Заявлена поддержка HTML, CHM и RTF, но при чтении книг в этих форматах не отображаются таблицы. Форматы PDF и DjVu не поддерживаются. FBReader умеет открывать файлы книг внутри архивов форматов ZIP, tar, gzip и bzip2.</Description>
+    </Source>
+</PISI>

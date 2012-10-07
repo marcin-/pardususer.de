@@ -1,0 +1,87 @@
+<PISI>
+    <Source>
+        <Name>openttd-opengfx</Name>
+        <Homepage>http://dev.openttdcoop.org/projects/opengfx</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>game</PartOf>
+        <IsA>data</IsA>
+        <Summary>OpenGFX is an open source graphics base set designed to be used by OpenTTD.</Summary>
+        <Description>The OpenGFX project for OpenTTD: a free replacement of the base graphics so that OpenTTD can be shipped finally fully functional without the need for additional downloads.</Description>
+        <BuildDependencies>
+            <Dependency>gimp</Dependency>
+            <Dependency>grfcodec</Dependency>
+            <Dependency>nml</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="0e2ebbef646caa8421303c32d2d22fdefc4ea681" type="tarxz">http://binaries.openttd.org/extra/opengfx/0.4.4/opengfx-0.4.4-source.tar.xz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>openttd-opengfx</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/openttd/data/opengfx</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="8">
+            <Date>2012-04-22</Date>
+            <Version>0.4.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2012-02-11</Date>
+            <Version>0.4.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2012-01-20</Date>
+            <Version>0.4.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-12-27</Date>
+            <Version>0.4.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-09-24</Date>
+            <Version>0.3.7</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-09-24</Date>
+            <Version>0.3.6</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-06-01</Date>
+            <Version>0.3.4</Version>
+            <Comment>Version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-23</Date>
+            <Version>0.3.3</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

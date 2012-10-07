@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+
+- 	<Source>
+		<Name>kdirstat-git</Name> 
+		<Homepage>http://grumpypenguin.org</Homepage> 
+- 			<Packager>
+				<Name>Stefan Wilhelm</Name> 
+				<Email>sw@pardususer.de</Email> 
+			</Packager>
+		<License>GPLv2</License> 
+		<Icon>kdirstat</Icon> 
+		<IsA>app:gui</IsA>
+		<PartOf>hardware.disk</PartOf>
+		<Summary>A graphical disk usage utility for KDE4</Summary> 
+		<Description>kdirstat allows you to understand exactly where your diskspace is being used by graphically representating your filesystem as a set of balloons.</Description> 
+        <Archive type="targz" sha1sum="b9b9a1d03b00ff586549223fd1be626468bfb8b3">http://pakete.pardususer.de/source-files/kdirstat.tar.gz</Archive>
+- 		<BuildDependencies>
+			<Dependency>git</Dependency>
+			<Dependency>docbook-xsl</Dependency>
+			<Dependency>automoc4</Dependency>
+			<Dependency>cmake</Dependency>
+			<Dependency>kdebase-devel</Dependency>
+			<Dependency>kdelibs-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+- <Package>
+	<Name>kdirstat-git</Name> 
+- 		<RuntimeDependencies>
+			<Dependency>kdebase-runtime</Dependency>
+			<Dependency>kdelibs</Dependency>
+		</RuntimeDependencies>
+- 	<Files>
+		<Path fileType="executable">/usr/bin/</Path> 
+		<Path fileType="data">/usr/share/applications/</Path>
+		<Path fileType="data">/usr/share/pixmaps/</Path> 
+		<Path fileType="data">/usr/share/kde4/apps/</Path>
+		<Path fileType="data">/usr/share/icons/hicolor/</Path>
+		<Path fileType="data">/usr/share/config.kcfg/</Path>
+		<Path fileType="doc">/usr/share/doc/</Path>
+		
+	</Files>
+	    <AdditionalFiles>	  
+	    </AdditionalFiles>
+  </Package>
+    
+- 		<History>
+- 			<Update release="1">
+			<Date>2011-04-29</Date> 
+			<Version>20110429</Version> 
+			<Comment>First release</Comment> 
+			<Name>Stefan Wilhelm</Name> 
+			<Email>sw@pardususer.de</Email> 
+			</Update>
+		</History>
+  </PISI>

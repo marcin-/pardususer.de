@@ -1,0 +1,75 @@
+<PISI>
+    <Source>
+        <Name>milena-data</Name>
+        <Homepage>http://milena.polip.com/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>LGPLv2</License>
+        <PartOf>multimedia.sound</PartOf>
+        <IsA>data</IsA>
+        <Summary>Milena is a Polish speech synthesizer for Linux (data)</Summary>
+        <Description>Milena is a Polish speech synthesizer for Linux (data)</Description>
+        <Archive sha1sum="5b6ec73da68f276a30087199eec3bc70007e099c" type="targz">http://tts.polip.com/files/milena-data-0.2.52.2.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>milena-data</Name>
+        <Files>
+            <Path fileType="data">/usr/share/milena/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="7">
+            <Date>2012-02-11</Date>
+            <Version>0.2.52.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2012-01-20</Date>
+            <Version>0.2.52</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2012-01-06</Date>
+            <Version>0.2.51</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-12-31</Date>
+            <Version>0.2.50.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-11-24</Date>
+            <Version>0.2.50.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-09-29</Date>
+            <Version>0.2.48.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-08-28</Date>
+            <Version>0.2.48.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

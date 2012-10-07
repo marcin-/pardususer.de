@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>motion</Name>
+        <Homepage>http://www.lavrsen.dk/twiki/bin/view/Motion</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>A software motion detector for webcam streams.</Summary>
+        <Description>Motion monitors the video signal from one or more cameras (video4linux interface) and is able to detect if a significant part of the picture has changed. Features: interval snapshots, live streaming webcam, mpeg generation, database interface, OSD etc.</Description>
+        <Archive sha1sum="dc59b36e45e7626baa65ce62c961af918fea76bd" type="targz">mirrors://sourceforge/motion/motion-3.2.12.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>jpeg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>motion</Name>
+        <RuntimeDependencies>
+            <Dependency>jpeg</Dependency>
+            <Dependency>bash</Dependency>
+            <Dependency>ffmpeg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc/</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+      <Update release="2">
+            <Date>2010-01-30</Date>
+            <Version>3.2.12</Version>
+            <Comment>Added dependencies for P2011</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-09-01</Date>
+            <Version>3.2.12</Version>
+            <Comment>First release.</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

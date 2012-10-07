@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>makemkv_bin</Name>
+        <Summary xml:lang="de">Konvertiert Blueray und DVD ins Matroska (mkv) Videoformat.</Summary>
+        <Summary xml:lang="pl">Konwertuje Blueray i DVD do formatu wideo Matroska (mkv).</Summary>
+        <Description xml:lang="de">MakeMKV ist die "ein-Klick-Lösung" um eigene Blueray, DVD und AVCHD in MKV zu konvertieren. MKV ist ein universelles Videoformat und viele aktuelle Player können MKV abspielen. Die Funktionalität für DVD ist und bleibt kostenlos. Für das Auslesen von Blueray benötigt man einen Schlüssel! Solange das Programm im Beta Status ist, kann es kostenlos getestet werden.</Description>
+        <Description xml:lang="pl">MakeMKV jest program służącym do konwersji filmów Blu-ray, AVCHD, HD DVD lub DVD bezpośrednio do formatu MKV. Program jest prosty w obsłudze i podczas pracy nie rekompresuje ścieżek video jak i również audio. Dopóki program jest w fazie beta można go testować za darmo, potem testowanie będzie ograniczone do 30 dni.</Description>
+    </Source>
+</PISI>

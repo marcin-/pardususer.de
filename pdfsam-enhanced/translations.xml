@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pdfsam-enhanced</Name>
+        <Summary xml:lang="de">Programm zum einfachen Bearbeiten von PDF-Dateien</Summary>
+        <Description xml:lang="de">Mit PDFSam können PDF-Dateien bearbeitet werden. Zum Funktionsumfang von gehört das Teilen und Zusammensetzen mehrseitiger PDFs, sortieren und visuelles Bearbeiten (ähnlich wie in OpenOffice). Dies ist die erweiterte Version (PDFSam-Enhanced) - mit mit noch mehr Bearbeitungsfunktion.</Description>
+    </Source>
+</PISI>

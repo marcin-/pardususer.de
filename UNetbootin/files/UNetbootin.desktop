@@ -1,0 +1,18 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=UNetbootin
+GenericName=Live-USB for Linux
+GenericName[de]=Live-USB für Linux
+GenericName[pl]=Live-USB dla Linuxa
+GenericName[ru]=Live-USB для Linux
+Comment=Run Copy Linux ISO images into USB sticks
+Comment[de]=Linux ISO-Abbild in USB-Sticks kopieren
+Comment[pl]=Nagrywa obraz iso Linuxa na nośnikach USB
+Comment[ru]=Загрузка Linux прямо с USB флешки
+Icon=UNetbootin
+Exec=xdg-su -c unetbootin
+Categories=KDE;Application;Utility
+Type=Application
+Terminal=false
+MultipleArgs=false

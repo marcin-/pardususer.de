@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>mrim-prpl</Name>
+        <Summary xml:lang="pl">plugin komunikatora Mail.ru</Summary>
+        <Summary xml:lang="ru">плагин мгновенных сообщений Mail.ru</Summary>
+        <Description xml:lang="pl">plugin komunikatora Mail.ru dla Pidgin</Description>
+        <Description xml:lang="ru">Плагин мгновенных сообщений Mail.ru для Pidgin</Description>
+    </Source>
+</PISI>

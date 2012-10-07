@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>myagent-im</Name>
+        <Summary xml:lang="pl">Agent Mail.ru</Summary>
+        <Description xml:lang="pl">Komunikator dla protokołu Mail.ru</Description>
+        <Summary xml:lang="ru">Mail.ru Агент</Summary>
+        <Description xml:lang="ru">Мессенджер для протокола Mail.ru.</Description>
+    </Source>
+</PISI>

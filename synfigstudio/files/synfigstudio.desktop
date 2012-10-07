@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Synfig Studio
+Comment=Create and edit 2D animations and compositions
+Comment[de]=Erstelle 2D Animationen
+Exec=synfigstudio %F
+Terminal=false
+Type=Application
+Icon=synfig_icon
+Categories=GTK;Graphics;2DGraphics;VectorGraphics;
+StartupNotify=true
+MimeType=image/sif;

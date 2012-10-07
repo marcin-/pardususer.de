@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>Dustismo-fonts</Name>
+        <Summary xml:lang="de">Nützliche Tools für die Entwicklung von PiSi-Paketen</Summary>
+        <Description xml:lang="de">Freie Schriftarten aus dustismo.com. Dustismo und Dustismo Roman sind Sans Serif und Roman ähnliche TrueType-Schriftarten. Sie alle enthalten Europäische Schriftzeichen. Die restlichen Schriftarten eignen sich hervorragend für dekorative Überschriften (nur im ASCII Zeichensätz). Dieses Paket stellt folgende Schriftarten (fonts) zur Verfügung: Balker, Domestic Manners, Dustismo, El Abogado Loco, Flatline, It wasn't me, Junkyard, Marked Fool, Penguin Attack, Progenesis, Swift, Wargames and Winks</Description>
+    </Source>
+</PISI>

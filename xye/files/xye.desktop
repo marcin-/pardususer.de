@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Version=0.11.1
+Encoding=UTF-8
+Name=Xye
+GenericName=Xye
+Comment=Xye is similar to other puzzle games like sokoban or boulderdash, yet it also includes some arcade elements.
+Icon=/usr/share/pixmaps/xye.png
+Exec=xye
+Terminal=false
+StartupNotify=false
+Categories=Game;BoardGame;

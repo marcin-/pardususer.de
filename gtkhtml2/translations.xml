@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gtkhtml2</Name>
+        <Summary xml:lang="tr">Hafif bir HTML Görüntüleme/Yazdırma/Düzenleme motoru</Summary>
+        <Summary xml:lang="de">Leichtgewichtige HTML Engine</Summary>
+        <Description xml:lang="tr">gtkhtml2 hafif bir HTML Görüntüleme/Yazdırma/Düzenleme motorudur.</Description>
+        <Description xml:lang="de">gtkhtml2 ist eine leichtgewichtige HTML Engine und zuständig für das Rendern/Darstellen und das Bearbeiten.</Description>
+    </Source>
+</PISI>

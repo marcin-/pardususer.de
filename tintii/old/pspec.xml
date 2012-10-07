@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tintii</Name>
+        <Homepage>http://www.indii.org/software/tintii</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>tintii</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>Manipulate selective colors in a picture</Summary>
+        <Description>Tintii is a remarkably easy solution for a color-popping effect that normally would take you lots of time (as well as skill and effort) using your imaging program’s selection and color tools.</Description>
+        <Archive type="targz" sha1sum="9bf9b88ea57de0e186a5ebb7e471b94d1c0e60ae">http://pakete.pardususer.de/source-files/tintii-2.2.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>libgomp</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>wxGTK-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tintii</Name>
+        <RuntimeDependencies>
+            <Dependency>boost</Dependency>
+            <Dependency>wxGTK</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/</Path>          
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/tintii.desktop">tintii.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/tintii.png">tintii.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-10-07</Date>
+            <Version>2.2.3</Version>
+            <Comment>First release.</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

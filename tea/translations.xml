@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tea-editor</Name>
+        <Summary xml:lang="de">Kleiner leichtgewichtiger Qt Texteditor</Summary>
+        <Summary xml:lang="pl">Przejrzysty, szybki i niezwykle funkcjonalny edytor tekstu</Summary>
+        <Description xml:lang="de">TEA ist ein toller Texteditor mit hunderten von Funktionen.</Description>
+        <Description xml:lang="pl">TEA to przejrzysty, szybki i niezwykle funkcjonalny edytor tekstu, który z racji oferowanych opcji doskonale nadaje się jako narzędzie pracy dla programistów i webmasterów.</Description>
+    </Source>
+</PISI>

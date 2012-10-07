@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>SpiderOak</Name>
+        <Summary xml:lang="de">2GB großer kostenloser und sicherer Onlinespeicher für persönliche Daten.</Summary>
+        <Description xml:lang="de">SpiderOak erlaubt dem Nutzer jeden beliebigen Ordner des Computers online zu sichern. SpiderOak nutzt einen verschlüsselten Cloud-Server, so daß nicht einmal die Angestellten von SpiderOak auf die Daten zugreifen können.</Description>
+    </Source>
+</PISI>

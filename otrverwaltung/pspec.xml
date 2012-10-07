@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>otrverwaltung</Name>
+        <Homepage>http://elbersb.de/otrverwaltung/</Homepage>
+        <Packager>
+            <Name>Gregor Tätzner</Name>
+            <Email>yellowcake-@gmx.net</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>applications.multimedia</PartOf>
+        <Icon>otrverwaltung</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Mit OTR-Verwaltung lassen sich otrkey- und avi-Dateien von onlinetvrecorder.com unter Linux verwalten.</Summary>
+        <Description>Mit OTR-Verwaltung lassen sich otrkey- und avi-Dateien von onlinetvrecorder.com unter Linux verwalten. Man kann otrkey-Dateien dekodieren, avi-Dateien mit cutlists schneiden, mehrere Dateien gleichzeitig verarbeiten, Cutlists bewerten selbst erstellen und hochladen und die Schnitte mit mplayer in der Vorschau kontrollieren.</Description>
+        <Archive sha1sum="f5a634613c725705068c13f098774b7669d84c36" type="targz">http://github.com/elbersb/otr-verwaltung/tarball/0.9.1/elbersb-otr-verwaltung-0.9.1-0-g39b2a0c.tar.gz</Archive>
+       <BuildDependencies>
+           <Dependency>python</Dependency>
+           <Dependency>python-setuptools</Dependency>
+           <Dependency>python-distutils-extra</Dependency>
+       </BuildDependencies>
+     </Source>
+
+    <Package>
+        <Name>otrverwaltung</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-pyxdg</Dependency>
+            <Dependency>python-pygobject</Dependency>
+            <Dependency>otrdecoder</Dependency>
+            <Dependency>avidemux-cli</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/otrverwaltung/</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="localedata">/usr/share/</Path>
+        </Files>
+    </Package>
+
+   <History>
+       <Update release="2">
+           <Date>2011-02-20</Date>
+           <Version>0.9.1</Version>
+           <Comment>Release for Pardus 2011</Comment>
+           <Name>Gregor Tätzner</Name>
+           <Email>yellowcake-@gmx.net</Email>
+       </Update>
+       <Update release="1">
+            <Date>2010-07-06</Date>
+            <Version>0.9.0</Version>
+            <Comment>Update from 0.8 to 0.9.</Comment>
+            <Name>Klaus WINKLBAUER</Name>
+            <Email>alaska@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

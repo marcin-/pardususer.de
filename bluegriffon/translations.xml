@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>BlueGriffon</Name>
+        <Summary xml:lang="de">einfacher Webeditor nach dem WYSIWYG-Prinzip</Summary>
+        <Summary xml:lang="pl">wieloplatformowy WYSIWYG HTML edytor</Summary>
+        <Description xml:lang="de">BlueGriffon ist ein intuitiv zu benutzendes Programm mit einer einfach gehaltenen Benutzeroberfläche. Es ermöglicht dem Anwender normkonforme Webseiten zu erstellen, ohne viel Hintergrundwissen über Webstandarts zu benötigen. BlueGriffon nutzt mit Gecko die gleiche Rendering Engine wie Firefox.</Description>
+        <Description xml:lang="pl">BlueGriffon pozwala tworzyć strony WWW w trybie WYSIWYG lub edycji kodu źródłowego. Do poglądu wykorzystywany jest silnik renderujący Firefoksa - Gecko, podobnie jak przeglądarka czy klient poczty od Mozilli, program pozwala na rozbudowę funkcjonalności i zmianę wyglądu za pomocą dodatków.</Description>
+    </Source>
+</PISI>

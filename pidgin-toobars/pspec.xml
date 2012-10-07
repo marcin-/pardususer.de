@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pidgin-toobars</Name>
+        <Homepage>http://vayurik.ru/wordpress/en/toobars</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Plugin adds toolbar and status bar to Pidgin buddy list.</Summary>
+        <Description>Plugin adds toolbar and status bar to Pidgin buddy list.</Description>
+        <Archive sha1sum="8486fe6c29fe3066742caa95776c03437448f7cb" type="targz">http://vayurik.ru/wordpress/wp-content/uploads/toobars/1.14/pidgin-toobars-1.14.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pidgin-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pidgin-toobars</Name>
+        <RuntimeDependencies>
+            <Dependency>pidgin</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pidgin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-08-17</Date>
+            <Version>1.14</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

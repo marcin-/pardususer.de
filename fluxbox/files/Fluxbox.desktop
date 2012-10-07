@@ -1,0 +1,8 @@
+ 
+[Desktop Entry] 
+Encoding=UTF-8 
+Name=Fluxbox
+Comment=Start Fluxbox
+Exec=/usr/bin/fluxbox
+Icon= 
+Type=Application

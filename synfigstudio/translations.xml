@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>synfigstudio</Name>
+        <Summary xml:lang="de">2D Vektorgrafik- und Animations-Programm</Summary>
+        <Description xml:lang="de">Mit Synfig können spielfilmreife Animationsfilme erzeugt werden. Durch Tweening muss nicht jedes einzelne Bild gezeichnet werden - die Zwischenschritte zu Keyframes rechnet Synfig automatisch aus. Anmitationen können in viele Formate (auch Flash) exportiert werden!</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>libvlc-qt</Name>
+        <Homepage>http://projects.tano.si/en/vlc-qt</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+	<Icon>vlc-qt</Icon>
+        <IsA>library</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>VLC-Qt is a free library used to connect Qt and libvlc libraries.</Summary>
+        <Description>VLC-Qt is free (libre) software. This means that the library
+source code is available to public, anyone is welcome to research
+how the library works, participate in its development, freely distribute
+the library and spread the word!</Description>
+        <Archive sha1sum="6d94594f39e3ae5d47e0f6cb90efc3b3ba71ead0" type="targz">http://pakete.pardususer.de/source-files/vlc-qt-0.5.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>vlc-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libvlc-qt</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>vlc-libs</Dependency>
+            <Dependency>vlc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libvlc-qt-devel</Name>
+	<Summary>Development files for libvlc-qt</Summary>
+        <RuntimeDependencies>
+	    <Dependency release="current">libvlc-qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2010-06-27</Date>
+            <Version>0.5.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

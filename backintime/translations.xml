@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Summary xml:lang="de">Einfache Backup-Software</Summary>
+        <Summary xml:lang="tr">Basit yedekleme sistemi</Summary>
+    </Source>
+    <Package>
+        <Name>backintime-kde4</Name>
+        <Summary xml:lang="de">Einfache Backup-Software für KDE</Summary>
+        <Description xml:lang="de">Back In Time ist ein von Dan Oprea entwickeltes Backup-Programm, das Time Machine von Apple ähnelt. Es basiert auf den Programmen rsync, cp und diff und bietet graphische Oberfläche für KDE an. Back In Time verzichtet auf große Konfigurationsmöglichkeiten. Ursprünglich war es für automatisiertes Sichern des eigenen Benutzerverzeichnisses vorgesehen. Unter Verwendung von Administratorrechten ist aber auch die Sicherung anderer (System-)Verzeichnisse möglich.</Description>
+        <Summary xml:lang="pl">Proste narzędzie kopii zapasowej dla KDE</Summary>
+        <Summary xml:lang="tr">KDE4 Masaüstü için basit yedekleme sistemi</Summary>
+        <Description xml:lang="tr">Backintime-kde4, backintime-common için kde4 arayüzüdür.</Description>
+    </Package>
+    <Package>
+        <Name>backintime-common</Name>
+        <Summary xml:lang="de">Einfache Backup-Software</Summary>
+        <Description xml:lang="de">Back In Time ist ein von Dan Oprea entwickeltes Backup-Programm, das Time Machine von Apple ähnelt. Es basiert auf den Programmen rsync, cp und diff und bietet graphische Oberflächen an. Back In Time verzichtet auf große Konfigurationsmöglichkeiten. Ursprünglich war es für automatisiertes Sichern des eigenen Benutzerverzeichnisses vorgesehen. Unter Verwendung von Administratorrechten ist aber auch die Sicherung anderer (System-)Verzeichnisse möglich. Dieses Paket enthält Back In Time ohne desse Grafische Oberfläche.</Description>
+        <Summary xml:lang="pl">Proste narzędzie kopii zapasowej</Summary>
+        <Summary xml:lang="tr">Basit yedekleme sistemi (ortak)</Summary>
+        <Description xml:lang="tr">Backintime-common, arayüzler tarafından kullanılan ortak dosyaları içerir. Backintime, flyback projesi ve TimeVault tan esinlenilmiştir.</Description>
+    </Package>
+</PISI>

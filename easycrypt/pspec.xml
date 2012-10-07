@@ -1,0 +1,41 @@
+<PISI>
+    <Source>
+        <Name>easycrypt</Name>
+        <Homepage>http://www.squeezedonkey.com/wiki/linux/index.php?title=EasyCrypt</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>util.crypt</PartOf>
+        <License>GPLv2</License>
+        <Summary>Simply a Graphical GUI of the simplest nature for the Security Command Line product TrueCrypt.</Summary>
+        <Description>Easy Crypt provides an easy-to-use GUI that allows the user to create and mount multiple crypts, using TrueCrypt.
+Crypts created with Easy Crypt can be used on any other operating system supporting TrueCrypt, and vice-versa.</Description>
+        <Archive sha1sum="9e2a9bd07fe12e10f814222f970632fc1b29b80d" type="targz">http://www.squeezedonkey.com/svn/linux/trunk/releases/easycrypt/src/easycrypt_0.2.3.2.orig.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>easycrypt</Name>
+        <RuntimeDependencies>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>truecrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/easycrypt</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/easycrypt.desktop</Path>
+            <Path fileType="data" permanent="0">/usr/share/doc/easycrypt/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/easycrypt/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/easycrypt.*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-09-02</Date>
+            <Version>2.3.2</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

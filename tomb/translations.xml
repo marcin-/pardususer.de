@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tomb</Name>
+        <Summary xml:lang="de">Ein einfaches Werkzeug um Daten zu verschlüsseln</Summary>
+        <Description xml:lang="de">Tomb will ein freies System zur die Verschlüsselung von persönlichen Daten sein. Tomb generiert Schlüssel und schützt diese mit einem vom Benutzer gewählten Passwort.</Description>
+    </Source>
+</PISI>

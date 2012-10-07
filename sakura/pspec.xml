@@ -1,0 +1,47 @@
+<PISI>
+    <Source>
+        <Name>sakura</Name>
+        <Homepage>http://www.pleyades.net/david/projects/sakura</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>x11.terminal</PartOf>
+        <IsA>app</IsA>
+        <Summary>A terminal emulator based on GTK and VTE</Summary>
+        <Description>Sakura is a terminal emulator based on GTK and libvte.</Description>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>vte-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="24b98c42c057da39f57c281a4726901952774641" type="tarbz2">http://launchpad.net/sakura/trunk/2.4.2/+download/sakura-2.4.2.tar.bz2</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>sakura</Name>
+        <RuntimeDependencies>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>vte</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/sakura</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/sakura.desktop</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/sakura/*</Path>
+            <Path fileType="localedata" permanent="0">/usr/share/locale/*</Path>
+            <Path fileType="man" permanent="0">/usr/share/man/man1/sakura.1</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/terminal-tango.svg</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-09-24</Date>
+            <Version>2.4.2</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

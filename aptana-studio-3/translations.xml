@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aptana-studio-3</Name>
+        <Summary xml:lang="de">Professionelle Open-Source Webentwicklungsumgebung</Summary>
+        <Description xml:lang="de">Aptana Studio ist eine integrierte Entwicklungsumgebung (IDE) für Web-Anwendungen. Es unterstützt die neuesten Webtechnologien wie HTML 5, CSS 3, JavaScript und Server seitiges Ruby, Rails, PHP und Python. Durch optionale Plugins lässt sich dessen Funktionsumfang zusätzlich erweitern - wie etwa Perl, Adobe AIR, Apple iPhone und Nokia WRT (Web Runtime) Programmierung.</Description>
+    </Source>
+</PISI>

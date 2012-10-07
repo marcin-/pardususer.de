@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pardus/!svn/ver/121860/tags/2011.1/multimedia/video/x264/files
+END
+asneeded.patch
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/pardus/!svn/ver/121860/tags/2011.1/multimedia/video/x264/files/asneeded.patch
+END
+no_api_version.patch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/121860/tags/2011.1/multimedia/video/x264/files/no_api_version.patch
+END
+nostrip.patch
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/pardus/!svn/ver/121860/tags/2011.1/multimedia/video/x264/files/nostrip.patch
+END
+shared-gpac.patch
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/pardus/!svn/ver/121860/tags/2011.1/multimedia/video/x264/files/shared-gpac.patch
+END

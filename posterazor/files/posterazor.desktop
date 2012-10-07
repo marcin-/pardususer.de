@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Posterazor
+GenericName=Print posters
+GenericName[de]=Poster drucken
+Comment=Print posters on multiple sheets 
+Comment[de]=Poster auf mehrere Seiten aufteilen
+Icon=/usr/share/pixmaps/posterazor.png
+Exec=PosteRazor
+Categories=Application;Graphics;
+Type=Application
+Terminal=false
+MultipleArgs=false

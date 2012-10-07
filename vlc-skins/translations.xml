@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>vlc-skins</Name>
+        <Summary xml:lang="de">Skin-Sammlung für VLC</Summary>
+        <Description xml:lang="de">Diese Sammlung beinhaltet Skins für den VLC Media Player.</Description>
+        <Summary xml:lang="tr">VLC için tema koleksiyonu</Summary>
+        <Description xml:lang="tr">Bu koleksiyon'da VLC için çeşit temalar bulunmaktadir.</Description>
+    </Source>
+</PISI>

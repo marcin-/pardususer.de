@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>yed</Name>
+        <Summary xml:lang="de">Ein leistungsstarker Diagramm/Graph Editor</Summary>
+        <Description xml:lang="de">Mit yEd kann man schnell und effektiv hochwertige Diagramme erstellen. Sogar automatisches Erstellen von Diagrammen aus externen Daten zur Analyse wird unterstützt. Das Programm visualisiert auch große Datenmengen nur durch einen Knopfdruck.</Description>
+    </Source>
+</PISI>

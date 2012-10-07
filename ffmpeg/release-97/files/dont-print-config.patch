@@ -1,0 +1,11 @@
+--- ffmpeg-0.10-orig/cmdutils.c	2012-01-26 23:15:59.000000000 +0100
++++ ffmpeg-0.10/cmdutils.c	2012-02-12 15:09:44.538000070 +0100
+@@ -649,7 +649,7 @@
+ int opt_license(const char *opt, const char *arg)
+ {
+     printf(
+-#if CONFIG_NONFREE
++#if 0
+     "This version of %s has nonfree parts compiled in.\n"
+     "Therefore it is not legally redistributable.\n",
+     program_name

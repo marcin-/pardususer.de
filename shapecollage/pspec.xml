@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+
+
+- 	<Source>
+		<Name>shapecollage</Name> 
+		<Homepage>http://www.shapecollage.com</Homepage> 
+- 			<Packager>
+				<Name>Stefan Wilhelm</Name> 
+				<Email>sw@pardususer.de</Email> 
+			</Packager>
+		<License>as-is</License>
+		<License>copyright</License> 
+		<Icon>shapecollage</Icon>
+		<PartOf>applications.graphics</PartOf>
+		<IsA>app:gui</IsA> 
+		<Summary>Make picture collages in less than a minute</Summary> 
+		<Description>With Shape Collage You can easily create collages in a special shape. The free version is free for personal usage and inserts a Logo into the collage. The pro version for commercial use is fee required and is without logo in the collage.</Description> 
+		<Archive sha1sum="2c1f9f0bdc56d588e4bc873e72b9a9fc390f1a44" type="targz">http://www.shapecollage.com/2.5.3/ShapeCollage-2.5.3.tar.gz</Archive>
+	</Source>
+
+
+- <Package>
+		<Name>shapecollage</Name> 
+- 		<RuntimeDependencies>
+			<Dependency>sun-jre</Dependency>
+		</RuntimeDependencies>
+- 	<Files>
+		<Path fileType="executable">/usr/bin/</Path> 
+		<Path fileType="data">/usr/share/applications</Path>
+		<Path fileType="data">/usr/share/pixmaps</Path> 
+		<Path fileType="data">/usr/share/shapecollage/</Path>
+	</Files>
+	<AdditionalFiles>		
+		<AdditionalFile owner="root" permission="0755" target="/usr/bin/shapecollage">shapecollage</AdditionalFile>
+		<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/shapecollage.desktop">shapecollage.desktop</AdditionalFile>
+		<AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/shapecollage.png">shapecollage.png</AdditionalFile>
+	</AdditionalFiles>
+  </Package>
+
+  
+- 		<History>
+- 			<Update release="1">
+			<Date>2011-04-24</Date> 
+			<Version>2.5.3</Version> 
+			<Comment>First release</Comment> 
+			<Name>Stefan Wilhelm</Name> 
+			<Email>sw@pardususer.de</Email> 
+			</Update>
+		</History>
+  </PISI>

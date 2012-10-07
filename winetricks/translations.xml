@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>Winetricks</Name>
+        <Summary xml:lang="de">Kompatibilität von Wine zu Windows verbessern</Summary>
+        <Description xml:lang="de">Winetricks ist ein kleines Hilfsskript für Wine zur Installation von zusätzlichen Bibliotheken und Dateien. Dadurch sind sehr viel mehr Windowsprogramme unter Linux lauffähig. Es können sogar einige Programme direkt mit Hilfe des Scripts installiert werden (z.B. Google Sketchup, Firefox, Benchmark, VLC, usw.)</Description>
+    </Source>
+</PISI>

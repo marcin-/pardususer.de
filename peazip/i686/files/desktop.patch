@@ -1,0 +1,17 @@
+diff -Naur source-orig/usr/local/share/applications/PeaZip.desktop source/usr/local/share/applications/PeaZip.desktop
+--- usr/local/share/applications/PeaZip.desktop	2011-10-15 11:37:21.000000000 +0200
++++ usr/local/share/applications/PeaZip.desktop	2012-01-19 21:48:41.287000001 +0100
+@@ -5,10 +5,10 @@
+ Name=PeaZip
+ MimeType=application/x-gzip;application/x-lha;application/x-tar;application/x-tgz;application/x-tbz;application/x-tbz2;application/x-zip;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-archive;application/x-bzip2;application/x-jar;application/x-deb;application/x-ace;application/x-7z;application/x-arc;application/x-arj;application/x-compress;application/x-cpio;
+ GenericName=Archiving Tool
+-Exec=peazip %F
+-Icon=peazip.png
++Exec=/usr/bin/peazip %U
++Icon=/usr/share/icons/peazip.png
+ Type=Application
+ Terminal=false
+ X-KDE-HasTempFileOption=true
+-Categories=GTK;KDE;Utility;System;Archiving;
++Categories=GTK;KDE;Utility;Archiving;
+ Name[en_US]=PeaZip

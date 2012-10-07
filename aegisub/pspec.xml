@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>aegisub</Name>
+        <Homepage>http://www.aegisub.org</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>aegisub</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>Subtitle editor</Summary>
+        <Description>Aegisub is an advanced subtitle editor. It allows many advanced effects in the subtitles, apart from just basic timed text.</Description>
+        <Archive sha1sum="5b4204e55bc4f47c436cb1628abd8c19b01ec548" type="targz">http://pakete.pardususer.de/source-files/aegisub.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>hunspell-devel</Dependency>
+            <Dependency>libidn-devel</Dependency>
+            <Dependency>lua-devel</Dependency>
+            <Dependency>openal-devel</Dependency>
+            <Dependency>wxGTK-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>imagemagick-devel</Dependency>
+            <Dependency>subversion</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>aegisub</Name>
+        <RuntimeDependencies>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>hunspell</Dependency>
+            <Dependency>libidn</Dependency>
+            <Dependency>lua</Dependency>
+            <Dependency>openal</Dependency>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>imagemagick</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/aegisub</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="icons">/usr/share/icons/hicolor</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-03-29</Date>
+            <Version>2.1.9</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-04-18</Date>
+            <Version>0.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ertan Argüden</Name>
+            <Email>ert976@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

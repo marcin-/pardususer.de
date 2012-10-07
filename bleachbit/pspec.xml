@@ -1,0 +1,86 @@
+<PISI>
+    <Source>
+        <Name>bleachbit</Name>
+        <Homepage>http://bleachbit.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>util.misc</PartOf>
+        <License>GPLv3</License>
+        <Summary>Deletes unneeded files to free disk space and maintain privacy.</Summary>
+        <Description>BleachBit quickly frees disk space and tirelessly guards your privacy. Free cache, delete cookies, clear Internet history, shred temporary files, delete logs, and discard junk you didn't know was there.</Description>
+        <Archive sha1sum="1946a26c87c3e14e021486ea7a3efb2cf5dca353" type="tarbz2">mirrors://sourceforge/bleachbit/bleachbit-0.9.3.tar.bz2</Archive>
+        <Patches>
+            <Patch level="1">no_update.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>bleachbit</Name>
+        <RuntimeDependencies>
+            <Dependency>gnome-python</Dependency>
+            <Dependency>python-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/bleachbit/cleaners</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="7">
+            <Date>2012-07-07</Date>
+            <Version>0.9.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2012-03-18</Date>
+            <Version>0.9.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-11-13</Date>
+            <Version>0.9.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-09-04</Date>
+            <Version>0.9.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-06-26</Date>
+            <Version>0.8.8</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-06-02</Date>
+            <Version>0.8.7</Version>
+            <Comment>added cleaners</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-06-01</Date>
+            <Version>0.8.7</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

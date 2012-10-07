@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#############################################################################
+#
+# Startscript for Mediathek
+# Mediathek is a Java Application which downloads and streams videofiles of
+# various german tv-stations  (e.g. ARD, ZDF, 3sat, .....)
+#
+# Created  for Pardus
+#
+#############################################################################
+
+
+cd /opt/mediathek/
+java -jar Mediathek.jar -M

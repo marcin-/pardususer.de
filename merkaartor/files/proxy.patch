@@ -1,0 +1,11 @@
+--- a/src/Preferences/MerkaartorPreferences.h	2011-02-10 15:00:35.000000000 +0300
++++ b/src/Preferences/MerkaartorPreferences.h	2011-06-09 21:22:25.499000049 +0400
+@@ -21,7 +21,7 @@
+ #include <QNetworkProxy>
+ 
+ #ifdef USE_LIBPROXY
+-#include <libproxy/proxy.h>
++#include <proxy.h>
+ #endif
+ 
+ #include "Maps/Coord.h"

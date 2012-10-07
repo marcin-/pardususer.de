@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>furiusisomount</Name>
+        <Homepage>http://www.marcus-furius.com/?page_id=170</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>multimedia.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>An interface for managing ISO/IMG/BIN/MDF/NRG image files</Summary>
+        <Description>Simple Gtk+ Interface to Mount ISO, IMG, BIN, MDF and NRG Image files without burning to disk.</Description>
+        <Archive sha1sum="2f6a30c779d07f991725bce7482dc7a396b787b2" type="targz">http://launchpad.net/furiusisomount/python/0.11.3.1/+download/furiusisomount_0.11.3.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>furiusisomount</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/furiusisomount</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/furiusisomount/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/furiusisomount.desktop" permission="0644" group="root" owner="root">furiusisomount.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>fuseiso</Dependency>
+            <Dependency>python-gtk</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-10-18</Date>
+            <Version>0.11.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

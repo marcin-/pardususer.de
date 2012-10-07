@@ -1,0 +1,32 @@
+
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=2ManDVD
+Name[fr]=DVD authoring and slideshow tool
+GenericName=Video DVD Creator
+GenericName[en_US]=Video DVD Creator
+GenericName[tr]=Video DVD Oluşturucu
+GenericName[de]=Video DVD erstellen
+GenericName[es]=Crear un DVD
+GenericName[fr]=Créateur de DVD vidéo et de diaporama
+GenericNAme[el]=Δημιουργία DVD
+GenericName[it]=Creazione di DVD
+GenericName[pl]=Tworzy video DVD
+GenericName[pt]=Criação de DVD
+Comment=DVD authoring and slideshow tool
+Comment[de]=Tool für die Erstellung von DVD-Video
+Comment[en]=Tool for creating DVD Video
+Comment[es]=Utilidad para crear DVDs de video
+Comment[fr]=Outil de création de DVD vidéo
+Comment[el]=Εργαλείο δημιουργίας DVD βίντεο
+Comment[it]=Strumento per la creazione di DVD video
+Comment[pl]=Narzędzie do tworzenia DVD Video
+Comment[pt]=Ferramenta para criar DVD-Vídeo
+Icon=/usr/share/2ManDVD/mandvdico.png
+Terminal=false
+Type=Application
+Exec=/usr/bin/2ManDVD -graphicssystem raster %F
+MimeType=application/2ManDVD;
+Categories=GNOME;AudioVideo;Qt;KDE;AudioVideo;
+Name[fr_FR]=2ManDVD

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Tano
+GenericName=Tano IP TV Player/Recorder
+Icon=/usr/share/tano/logo.png
+Exec=tano
+Terminal=false
+Categories=GTK;Application;AudioVideo;Audio;Video;Player;TV;

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+	<Source>
+		<Name>imagination</Name>
+		<Summary xml:lang="de">DVD Diashows erstellen</Summary>
+		<Description xml:lang="de">Imagination ist ein sehr einfach zu bedienendes Programm zum erstellen von Diashows.</Description>
+	</Source>
+</PISI>

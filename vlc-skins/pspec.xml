@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vlc-skins</Name>
+        <Homepage>http://www.videolan.org/vlc/skins.php</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>amsn</Icon>
+        <IsA>data</IsA>
+        <PartOf>applications.multimedia</PartOf>
+        <Summary>Skin collection for VLC media player.</Summary>
+        <Description>This collection contains lots of various skins for the VLC media player.</Description>
+        <Archive type="zip" sha1sum="577370f29117c8dc2c3e63441add071e4d8fa781">http://www1.videolan.org/vlc/skins2/vlc-skins.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>vlc-skins</Name>
+        <RuntimeDependencies>
+            <Dependency>vlc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/vlc/skins2/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-10-04</Date>
+            <Version>2011.05.01</Version>
+            <Comment>Release for Pardus 2011; Added some new skins (120 skins); Changed version number to date of source file;</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-10-04</Date>
+            <Version>1.0</Version>
+            <Comment>First release - contains 118 skins.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

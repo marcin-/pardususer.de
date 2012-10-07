@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Exec=synkron
+GenericName=Folder Synchroniser
+GenericName[tr]=Klasör Eşleyici
+GenericName[de]=Ordner Syncronisierung
+Icon=synkron
+Name=Synkron
+Type=Application
+StartupNotify=True
+Categories=Application;Qt;Utility;

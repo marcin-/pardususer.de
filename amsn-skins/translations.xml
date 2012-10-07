@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>amsn-skins</Name>
+        <Summary xml:lang="de">Skin-Sammlung für aMSN</Summary>
+        <Summary xml:lang="tr">aMSN için tema koleksiyonu</Summary>
+        <Description xml:lang="de">Diese Sammlung beinhaltet insgesamt 46 verschiedene Skins für aMSN.</Description>
+        <Description xml:lang="tr">Bu koleksiyon'da aMSN için 46 çeşit temalar bulunmaktadir.</Description>
+    </Source>
+</PISI>

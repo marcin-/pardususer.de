@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>glpeces</Name>
+        <Summary xml:lang="de">Ein Tangram-Puzzlespiel</Summary>
+        <Description xml:lang="de">GLPeces lehnt sich an einem alten chinesischen Puzzlespiel an, wo man eine Vorlage mit 7 Bausteinen nachbilden muss. Das Programm bietet 33 verschiedene Variationen von Tangram und beinhaltet mehr als 4600 Figuren. GLPeces ist auch für den Unterricht geeignet.</Description>
+    </Source>
+</PISI>

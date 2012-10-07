@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/pardus/!svn/ver/88567/2009/stable/system/base/libpng/files
+END
+constantize.patch
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/pardus/!svn/ver/88557/2009/stable/system/base/libpng/files/constantize.patch
+END
+apng.patch
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/pardus/!svn/ver/88557/2009/stable/system/base/libpng/files/apng.patch
+END
+pngconf-setjmp.patch
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/pardus/!svn/ver/69977/2009/stable/system/base/libpng/files/pngconf-setjmp.patch
+END

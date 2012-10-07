@@ -1,0 +1,11 @@
+--- a/gdiskdump.desktop.in	2011-11-25 18:17:53.000000000 +0300
++++ b/gdiskdump.desktop.in	2011-12-02 07:14:20.417648265 +0300
+@@ -2,7 +2,7 @@
+ Name=Gdiskdump
+ Comment=Gdiskdump application
+ Categories=Utility;
+-Exec=gksu gdiskdump
++Exec=xdg-su -c "gdiskdump"
+ Icon=/usr/share/gdiskdump/data/media/gdiskdump.svg
+ Terminal=false
+ Type=Application

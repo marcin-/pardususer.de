@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kamerka</Name>
+        <Homepage>http://www.vacuum-im.org/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>kamerka</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>Take photos using your webcam and shiny animated QML interface</Summary>
+        <Description>Kamerka is an Qt4 app using KDE4 libraries. It uses Video4Linux to get image from
+webcam and is able to save photos. Interface is based on QML and uses it's possibilities
+to show easy to use animated UI.</Description>
+        <Archive sha1sum="e76a2e72e0e969f720ea47d75c109d07776758ff" type="targz">http://dosowisko.net/kamerka/downloads/kamerka-0.8.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>kdelibs-devel</Dependency>
+	    <Dependency>libv4l-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>kamerka</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>v4l-utils</Dependency>
+	    <Dependency>libv4l</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	    <!-- <Path fileType="header">/usr/include</Path> -->
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+	    <Date>2011-07-28</Date>
+	    <Version>-0.8.1</Version>
+	    <Comment>
+		  * fixed installation of kcfgc file instead of kcfg
+		  * fixed instructions in INSTALL file
+		  * german translation from Frank Schäfer
+	    </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+	</Update>
+        <Update release="2">
+	    <Date>2011-07-19</Date>
+            <Version>0.8</Version>
+            <Comment>
+		  * graphical configuration
+		  * XDG Pictures folder is now used by default to store photos
+		  * photo folder is now configurable
+		  * options to turn on/off sounds and notifications
+		  * better error handling
+		  * reworked video thread - it's now much less ugly :)
+		  * creating photo directory when trying to open it, instead of showing big ugly error
+		  * xdg-open utility used instead of kde-open
+		  * moar pretty, but still not disturbing animations!
+
+		  * Kamerka depends now on Phonon from KDE, not Qt (fixes build errors on systems without qt-phonon)
+		  * libv4lconvert is now correctly found on 64 bit systems
+		  * fix for Qt 4.7.0 ("import QtQuick 1.0" appeared first in 4.7.1)
+		  * some license issues fixed
+
+		  * czech translation from Pavel Fric
+		  * serbian translation from Mladen Pejaković
+		  * spanish translation from Daniel Halens
+	     </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-06-07</Date>
+            <Version>0.6</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

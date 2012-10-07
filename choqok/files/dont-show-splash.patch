@@ -1,0 +1,13 @@
+Index: choqok-1.2/libchoqok/choqokbehaviorsettings.kcfg
+===================================================================
+--- choqok-1.2.orig/libchoqok/choqokbehaviorsettings.kcfg
++++ choqok-1.2/libchoqok/choqokbehaviorsettings.kcfg
+@@ -32,7 +32,7 @@
+             <default>true</default>
+         </entry>
+         <entry name="showSplashScreen" type="Bool">
+-            <default>true</default>
++            <default>false</default>
+         </entry>
+         <entry name="position" type="Point">
+             <default>QPoint(-1,-1)</default>

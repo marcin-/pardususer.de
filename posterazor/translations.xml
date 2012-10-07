@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>posterazor</Name>
+        <Summary xml:lang="de">Poster zu Hause ausdrucken</Summary>
+        <Description xml:lang="de">PosteRazor schneidet ein Bild  in Stücke, die anschließend ausgedruckt und zu einem Poster zusammengefügt werden können.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=yEd
+GenericName=diagram editor
+GenericName[de]=Diagramm Editor
+Comment=A powerful graph editor
+Comment[de]=Leistungsstarker Graph Editor
+Icon=yed
+Exec=yed
+Categories=Graphics;
+Type=Application
+StartupNotify=true
+Terminal=false
+MultipleArgs=false

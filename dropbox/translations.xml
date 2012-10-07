@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>dropbox</Name>
+        <Summary xml:lang="tr">Bir Dropbox istemcisi</Summary>
+        <Description xml:lang="tr">Dropbox, kullanıcıların dosyalarını güvenli bir şekilde yedeklemesine ve diğerleriyle paylaşmasına izin veren bulut hesaplama tabanlı bir dosya barındırma servisidir.</Description>
+	<Summary xml:lang="de">Ein Programm für den Dropbox Service</Summary>
+        <Description xml:lang="de">Dropbox ist ein web-basierender Dienst der es ermöglicht Dateien über das Internet auf verschiedenen Rechnern synchron zu halten. Dropbox stellt kostenlos 2GB Speicherplatz zur Verfügung.</Description>
+    </Source>
+</PISI>

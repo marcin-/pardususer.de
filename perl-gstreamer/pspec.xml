@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-GStreamer</Name>
+        <Homepage>http://searchcpan.activestate.com/dist/GStreamer-Interfaces</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>Perl interface to the GStreamer media processing framework</Summary>
+        <Description>libgstreamer-perl allows a Perl developer to use the GStreamer libraries in a perlish way, freeing the programmer from any memory management and object casting. </Description>
+        <Archive sha1sum="767835d27eeeed637ad199db76324e86d75b6b5a" type="targz">mirrors://cpan/authors/id/T/TS/TSCH/GStreamer-0.15.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            <Dependency>perl-Glib</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-GStreamer</Name>
+        <RuntimeDependencies>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            <Dependency>perl-Glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-07</Date>
+            <Version>0.15</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

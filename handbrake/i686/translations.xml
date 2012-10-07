@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>handbrake</Name>
+        <Summary xml:lang="de">HandBrake ist ein Videokonvertierer</Summary>
+        <Description xml:lang="de">Das Programm kann auch DVDs rippen und die Filme in Formate umwandeln, mit denen die meisten portablen Medienplayer umgehen können.</Description>
+    </Source>
+</PISI>

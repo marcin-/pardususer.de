@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+
+- 	<Source>
+		<Name>imagination</Name> 
+		<Homepage>http://imagination.sourceforge.net</Homepage> 
+- 			<Packager>
+				<Name>Stefan Wilhelm</Name> 
+				<Email>sw@pardususer.de</Email> 
+			</Packager>
+		<License>GPLv3</License> 
+		<Icon>imagination</Icon> 
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.video</PartOf>
+		<Summary>Simple DVD slideshow creator</Summary> 
+		<Description>Imagination is a lightweight and easy to use DVD slideshow maker</Description> 
+        <Archive type="targz" sha1sum="b2a0c4305405dcb8ad8a0f408c7c58bbfc7ebf4e">http://leaseweb.dl.sourceforge.net/project/imagination/imagination/3.0/imagination-3.0.tar.gz</Archive>
+- 		<BuildDependencies>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>ffmpeg</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>docbook-xsl</Dependency>
+			<Dependency>sox-devel</Dependency>
+		</BuildDependencies>
+        <Patches>
+            <Patch level="1">plugins.patch</Patch>
+        </Patches>
+	</Source>
+
+- <Package>
+	<Name>imagination</Name> 
+- 		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+			<Dependency>ffmpeg</Dependency>
+			<Dependency>sox</Dependency>
+		</RuntimeDependencies>
+- 	<Files>
+		<Path fileType="executable">/usr/bin/</Path> 
+		<Path fileType="data">/usr/share/applications/</Path>
+		<Path fileType="data">/usr/share/pixmaps/</Path>
+		<Path fileType="data">/usr/share/imagination/</Path> 
+		<Path fileType="library">/usr/lib/</Path>	
+		<Path fileType="localedata">/usr/share/locale/</Path>
+		<Path fileType="data">/usr/share/icons/hicolor/</Path>
+		<Path fileType="doc">/usr/share/doc/</Path>
+		
+	</Files>
+	    <AdditionalFiles>	  
+	    </AdditionalFiles>
+  </Package>
+    
+- 		<History>
+- 			<Update release="1">
+			<Date>2011-04-29</Date> 
+			<Version>3.0</Version> 
+			<Comment>First release</Comment> 
+			<Name>Stefan Wilhelm</Name> 
+			<Email>sw@pardususer.de</Email> 
+			</Update>
+		</History>
+  </PISI>

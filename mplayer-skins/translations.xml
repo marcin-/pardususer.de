@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>mplayer-skins</Name>
+        <Summary xml:lang="de">Skin-Sammlung für MPlayer</Summary>
+        <Description xml:lang="de">Diese Sammlung beinhaltet insgesamt 71 Skins für MPlayer.</Description>
+        <Summary xml:lang="tr">MPlayer için tema koleksiyonu</Summary>
+        <Description xml:lang="tr">Bu koleksiyon'da MPlayer için 71 tane çeşit temalar bulunmaktadir.</Description>
+    </Source>
+</PISI>

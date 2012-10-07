@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>synkron</Name>
+        <Homepage>http://synkron.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Packager>
+        <PartOf>util.archive</PartOf>		
+        <License>GPLv2+</License>
+        <Icon>synkron</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A Qt based folder synchroniser</Summary>
+        <Description>Synkron is an application for folder synchronisation that allows you to configure your synchronisations in detail. Despite having many features, the user interface of Synkron is very user-friendly and easy to use.</Description>
+        <Archive sha1sum="0909caf101ed3d5b25235f22a83c6ca537f2b564"  type="targz">mirrors://sourceforge/synkron/Synkron-1.6.2-src.tar.gz</Archive>
+        <BuildDependencies>
+             <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>synkron</Name>
+        <RuntimeDependencies>
+             <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/synkron.desktop">synkron.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-10-19</Date>
+            <Version>1.6.2</Version>
+            <Comment>fixed building errors and v_up</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-11-21</Date>
+            <Version>1.6.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=FreeFileSync
+Exec=FreeFileSync
+GenericName=Folder Comparison and Synchronization
+GenericName[de]=Ordner synchronisieren
+Icon=ffsicon
+Type=Application
+StartupNotify=true
+Terminal=false
+Categories=Qt;Application;Utility;
+
+
+

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>yed</Name>
+        <Homepage>http://www.yworks.com/en/products_yed_about.html</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>as-is</License>
+        <Icon>yed</Icon>
+        <PartOf>office.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>A very powerful graph/diagram editor written in java</Summary>
+        <Description>yEd can be used to quickly and effectively generate high-quality drawings of diagrams. Create your diagrams manually or import your external data for analysis and auto-magically arrange even large data sets by just pressing a button.</Description>
+        <Archive type="zip" sha1sum="c1758f0e9a90f79e13ec95502feb45486a2b5d34">http://www.yworks.com/products/yed/demo/yEd-3.8.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>yed</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/yed/</Path>   
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="data">/usr/share/applications/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>			
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/yed">yed</AdditionalFile>
+	        <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/yed.png">yed.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/yed.desktop">yed.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+            <Update release="1">
+            <Date>2011-11-15</Date>
+            <Version>3.8</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

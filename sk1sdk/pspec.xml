@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-sk1sdk</Name>
+        <Homepage>http://sk1project.org/index.php</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Icon>sk1</Icon>
+        <IsA>library</IsA>
+	<PartOf>programming.language.python</PartOf>
+        <Summary>Multiplatform widgetset for sK1</Summary>
+        <Description>sk1sdk is a multiplatform widgetset for sK1 vector graphics editor.</Description>
+        <Archive sha1sum="b7a13ddf5fa6eb8321dd804e88f84b1a704a3171" type="targz">http://sk1.googlecode.com/files/sk1sdk-0.9.1pre2_rev1383.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>tcltk-devel</Dependency>
+	    <Dependency>tcl-devel</Dependency>
+            <Dependency>python-tk</Dependency>
+            <Dependency>python-sk1libs</Dependency>
+	    <Dependency>zlib-devel</Dependency>
+	    <Dependency>libXcursor-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-sk1sdk</Name>
+        <RuntimeDependencies>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>tcl</Dependency>
+	    <Dependency>tcltk</Dependency>
+            <Dependency>python-tk</Dependency>
+            <Dependency>python-sk1libs</Dependency>
+	    <Dependency>zlib</Dependency>
+	    <Dependency>libXcursor</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="1">
+            <Date>2011-03-2</Date>
+            <Version>0.9.1_1383</Version>
+            <Comment>Update</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

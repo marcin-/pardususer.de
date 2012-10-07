@@ -1,0 +1,67 @@
+<PISI>
+    <Source>
+        <Name>LaCie-LightScribe-Labeler</Name>
+        <Homepage>http://www.lacie.com/products/product.htm?id=10204</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>hardware.optical</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>LaCie LightScribe Picture Labeler for Linux</Summary>
+        <Description>4L lets you use LightScribe direct-disc labeling technology with your Linux system. Now you can burn professional, silkscreen-quality labels directly onto CDs and DVDs using the same laser that burns data on discs. It’s easy; just burn data as usual, flip the LightScribe disc over, reinsert it into the drive and burn a precise, iridescent label of your own design.</Description>
+        <BuildDependencies>
+            <Dependency>rpm2targz</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="929d62f53c208422a972f01c193720ce798f72c0" type="binary">http://www.lacie.com/download/drivers/LaCie%20LightScribe%20Labeler%201.0%20Linux.rpm</Archive>
+    </Source>
+    <Package>
+        <Name>LaCie-LightScribe-Labeler</Name>
+        <RuntimeDependencies>
+            <Dependency>LaCie-LightScribe-Host</Dependency>
+            <Dependency>libstdc++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/4L/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="data">/usr/share/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/lacie-lightscribe-labeler.desktop" permission="0644" owner="root">lacie-lightscribe-labeler.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/lacie-lightscribe.png" permission="0644" owner="root">lacie-lightscribe.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2012-01-11</Date>
+            <Version>1.18.24.1</Version>
+            <Comment>modified conflict</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2012-01-09</Date>
+            <Version>1.18.24.1</Version>
+            <Comment>added dektop file and modified conflict</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2012-01-08</Date>
+            <Version>1.18.24.1</Version>
+            <Comment>added runtimedeb libstdc++ </Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-01-08</Date>
+            <Version>1.18.24.1</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>systeminfo</Name>
+        <Homepage>http://www.pardususer.de/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>systeminfo</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>hardware.info</PartOf>
+        <Summary>Tool to show various information about operating system and computer - german only</Summary>
+        <Description>A shell-script which collects several information about operating system and hardware. Usefull if you have troubles with your Linux - than you're able to publish details about your hardware in support forums ...</Description>
+        <Archive type="targz" sha1sum="2d9bdbe3c0c36bb7f26066106e8fe83dfe7320a2">http://pakete.pardususer.de/source-files/systeminfo-0.6.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>systeminfo</Name>
+        <RuntimeDependencies>
+            <Dependency>bash</Dependency>
+            <Dependency>coreutils</Dependency>
+            <Dependency>grep</Dependency>
+            <Dependency>kdebase</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2010-06-07</Date>
+            <Version>0.6</Version>
+            <Comment>Completely refactored and fully optimzed for Pardus GNU/Linux</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-02-02</Date>
+            <Version>0.5.3</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,56 @@
+<PISI>
+    <Source>
+        <Name>gprename</Name>
+        <Homepage>http://gprename.sourceforge.net/index.php</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>util.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>A GTK2 batch renamer for files and directories</Summary>
+        <Description>GPRename is a complete batch renamer for files and directories.</Description>
+        <Archive sha1sum="933a0bd2278b0ad759eaf7bcf3e81c12e41f5d5f" type="tarbz2">mirrors://sourceforge/gprename/gprename-2.7.tar.bz2</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>gprename</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-Gtk2</Dependency>
+            <Dependency>perl-Locale-gettext</Dependency>
+            <Dependency>perl-libintl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/gprename</Path>
+            <Path fileType="data">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/gprename/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="man">/usr/share/man/man1/gprename.1</Path>
+            <Path fileType="data">/usr/share/pixmaps/gprename/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2012-06-09</Date>
+            <Version>2.7</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-12-04</Date>
+            <Version>2.6.6</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-09-29</Date>
+            <Version>2.6.5</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+<Source>
+<Name>mediathek</Name>
+<Summary xml:lang="de">Zugriff auf das Videoarchiv deutscher Fernsehsender</Summary>
+<Description xml:lang="de">Mit Mediathek kann man ältere Sendungen von ARD, ZDF, 3sat, ... ansehen und herunterladen. Vor der ersten Nutzung ist das Zielverzeichnis der Downloads und von flvstreamer (/bin/share/flvstreamer/) anzupassen.</Description>
+</Source>
+</PISI>

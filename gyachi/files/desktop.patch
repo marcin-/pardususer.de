@@ -1,0 +1,11 @@
+diff -Naur gyachi-1.1.0.orig/gyachi.desktop gyachi-1.1.0/gyachi.desktop
+--- gyachi-1.1.0.orig/gyachi.desktop	2006-03-20 12:02:18.000000000 +0200
++++ gyachi-1.1.0/gyachi.desktop	2008-11-24 00:56:56.000000000 +0200
+@@ -2,6 +2,7 @@
+ Encoding=UTF-8
+ Name=GYachE Improved
+ Name[sr]=Усавршени GYachE
++Comment[tr]=Yahoo! İstemcisi
+ Comment[de]=Yahoo! Klient
+ Comment[sr]=Програм за Yahoo!
+ Comment=Yahoo! Client

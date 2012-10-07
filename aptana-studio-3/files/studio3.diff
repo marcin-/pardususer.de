@@ -1,0 +1,34 @@
+Index: Aptana_Studio_3/studio3
+===================================================================
+--- /dev/null
++++ studio3
+@@ -0,0 +1,29 @@
++#!/usr/bin/env bash
++# Find our location
++
++cd /opt/AptanaStudio3/
++
++SELF_LOCATION=/opt/AptanaStudio3
++
++# Was this invoked as a link ?
++if [ -L "$0" ]
++then
++	LINKTO=$($(which readlink) "$0")
++
++	# Is the link a relative path
++	if [[ "${LINKTO}" = /* ]]
++	then
++	    # absolute path so just invoke it
++		exec "${LINKTO}" "$@"
++	else
++	    # invoke by prepending our folder
++		exec "${SELF_LOCATION}/${LINKTO}" "$@"
++	fi
++fi
++
++# Run IDE
++"${SELF_LOCATION}/AptanaStudio3" -application com.aptana.commandline.launcher.LauncherApplication "$@" > /dev/null 2>&1 &
++
++# Detach it
++disown -h %-
++disown %-

@@ -1,0 +1,50 @@
+<PISI>
+    <Source>
+        <Name>bumblebee</Name>
+        <Homepage>http://www.Bumblebee-Project.org</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>x11</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Bumblebee brings Optimus Support for Linux Through VirtualGL.</Summary>
+        <Description>Bumblebee brings Optimus Support for Linux Through VirtualGL. You need to install proper drivers separately. Can be used with Nouveau or Nvidia</Description>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>help2man</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libbsd</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="b5afc562e33fa23abd2cb9b83dee6d549d133f23" type="targz">https://github.com/downloads/Bumblebee-Project/Bumblebee/bumblebee-3.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>bumblebee</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libbsd</Dependency>
+            <Dependency>virtualgl</Dependency>
+            <Dependency>bbswitch</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc/bash_completion.d/*</Path>
+            <Path fileType="data">/etc/bumblebee/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="executable">/usr/sbin/*</Path>
+            <Path fileType="doc">/usr/share/doc/bumblebee/*</Path>
+            <Path fileType="man">/usr/share/man/man1/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-02-01</Date>
+            <Version>3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

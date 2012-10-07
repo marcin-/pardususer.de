@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<PISI>
+    <Source>
+        <Name>kaption</Name>
+        <Summary xml:lang="de">Ein praktisches kleines Screenshot-Werkzeug</Summary>
+        <Description xml:lang="de">Kaption liegt im Systemtray und wird mit einem Linksklick aktiviert. Es ermöglicht das Aufnehmen von Bildschirmbereichen und erlaubt das Zeichnen von Textfeldern und Pfeilen.</Description>
+        <Summary xml:lang="ru">Kaption - это утилита для создания скриншотов похожая на Skitch или Jing</Summary>
+        <Description xml:lang="ru">Создания скриншота рабочего стола, выбранной области или окна. Редактирование, добавление надпсей, стрелок, элипсов. Возможна загрузка по FTP.</Description>
+    </Source>
+</PISI>

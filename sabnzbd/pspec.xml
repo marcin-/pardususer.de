@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>SABnzbd</Name>
+        <Homepage>http://sabnzbd.org/</Homepage>
+        <Packager>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>service</IsA>
+        <PartOf>server</PartOf>
+        <Summary>SABnzbd is an Open Source Binary Newsreader written in Python.</Summary>
+        <Description>SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.</Description>
+        <Archive sha1sum="e6d64ec35e837fe634d6e45234ec64c49cbb7e3b" type="targz">http://switch.dl.sourceforge.net/project/sabnzbdplus/sabnzbdplus/sabnzbd-0.6.15/SABnzbd-0.6.15-src.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>SABnzbd</Name>
+        <RuntimeDependencies>
+            <Dependency versionFrom="0.9.8">openssl</Dependency>
+            <Dependency versionFrom="0.7">pyopenssl</Dependency>
+            <Dependency versionFrom="5.52">unzip</Dependency>
+            <Dependency versionFrom="3.8.5">unrar</Dependency>
+            <Dependency versionFrom="0.4">par2cmdline</Dependency>
+            <Dependency versionFrom="2.0.1">python-Cheetah</Dependency>
+            <Dependency versionFrom="2.6">python</Dependency>
+            <Dependency versionFrom="3.4">unrar</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc/</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/sabnzbd">sabnzbd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0600" target="/etc/sabnzbd.config">sabnzbd.config</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+             <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="13">
+            <Date>2012-02-11</Date>
+            <Version>0.6.15</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="12">
+            <Date>2011-12-30</Date>
+            <Version>0.6.14</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="11">
+            <Date>2011-10-29</Date>
+            <Version>0.6.10</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="10">
+            <Date>2011-08-13</Date>
+            <Version>0.6.8</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="9">
+            <Date>2011-08-06</Date>
+            <Version>0.6.7</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="8">
+            <Date>2011-06-20</Date>
+            <Version>0.6.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="7">
+            <Date>2010-11-16</Date>
+            <Version>0.5.6</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="6">
+            <Date>2010-11-08</Date>
+            <Version>0.5.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="5">
+            <Date>2010-08-25</Date>
+            <Version>0.5.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2010-07-22</Date>
+            <Version>0.5.3</Version>
+            <Comment>Just to force the buildfarm to compile this new version.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-07-04</Date>
+            <Version>0.5.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2010-05-09</Date>
+            <Version>0.5.2</Version>
+            <Comment>SABnzbd is now a service.</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-05-08</Date>
+            <Version>0.5.2</Version>
+            <Comment>First release</Comment>
+            <Name>gyan000</Name>
+            <Email>gyan000@free.fr</Email>
+        </Update>
+    </History>
+</PISI>

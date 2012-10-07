@@ -1,0 +1,16 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=tintii
+GenericName=colour photo effects
+GenericName[de]=Farbeffekte für Fotos
+Comment=cool selective colour photo effects (Colour Popping)
+Comment[de]=Fotos selektiv ent- bzw. einfärben (Colour Popping)
+Icon=/usr/share/pixmaps/tintii.png
+Exec=tintii
+Categories=Graphics;Photography
+Type=Application
+Terminal=false
+X-KDE-StartupNotify=true
+MultipleArgs=false

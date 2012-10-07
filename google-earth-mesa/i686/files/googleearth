@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /usr/lib/googleearth
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+exec "./googleearth-bin" "$@"

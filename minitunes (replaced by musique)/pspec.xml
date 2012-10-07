@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>minitunes</Name>
+        <Homepage>http://flavio.tordini.org/minitunes</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>LGPLv2.1</License>
+        <Icon>minitunes</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.sound</PartOf>
+        <Summary>Minimalistic and innovative music player.</Summary>
+        <Description>Browse your collection by artists pictures and album covers. Also during playing the music Minitunes shows covers and additional informations about the artists.</Description>
+        <Archive sha1sum="902182724add08bade9bab75a8088a4eaa84d303"  type="targz">http://flavio.tordini.org/files/minitunes/minitunes-1.0.tar.gz</Archive>
+        <BuildDependencies>
+             <Dependency>qt</Dependency>
+             <Dependency>qt-devel</Dependency>
+             <Dependency>phonon-devel</Dependency>
+             <Dependency>qt-sql-sqlite</Dependency>
+             <Dependency>sqlite-devel</Dependency>
+             <Dependency>taglib-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>minitunes</Name>
+        <RuntimeDependencies>
+             <Dependency>qt</Dependency>
+             <Dependency>phonon</Dependency>
+             <Dependency>qt-sql-sqlite</Dependency>
+             <Dependency>sqlite</Dependency>
+             <Dependency>taglib</Dependency>
+             <Dependency>gst-plugins-bad</Dependency>
+             <Dependency>gst-ffmpeg</Dependency>
+             <Dependency>gstreamer</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/minitunes/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-10-03</Date>
+            <Version>1.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-04-29</Date>
+            <Version>0.1.1</Version>
+            <Comment>some modifications</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-07-26</Date>
+            <Version>0.1.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

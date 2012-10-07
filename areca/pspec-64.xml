@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>areca</Name> 
+        <Homepage>http://www.areca-backup.org/</Homepage> 
+        <Packager>
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Packager>
+        <License>GPLv2</License> 
+        <Icon>areca</Icon>
+        <PartOf>util.archive</PartOf>
+        <IsA>app:gui</IsA> 
+        <Summary>Easy to use and reliable backup solution for Linux.</Summary> 
+        <Description>Areca Backup is very versatile and as simple as possible.</Description> 
+        <Archive sha1sum="53e5d7ccb9e2243e25e06181386fcebbf3cc3d9c" type="targz">http://sourceforge.net/projects/areca/files/areca-stable/areca-7.2.10/areca-7.2.10-linux-gtk-64.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>areca</Name> 
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path> 
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path> 
+            <Path fileType="data">/opt/areca/</Path>
+            <Path fileType="data">/usr</Path>
+        </Files>
+        <AdditionalFiles>		
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/areca">areca</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/areca.desktop">areca.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/areca.png">areca.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="13">
+            <Date>2012-06-17</Date> 
+            <Version>7.2.10</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="12">
+            <Date>2012-05-31</Date> 
+            <Version>7.2.9</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="11">
+            <Date>2012-05-13</Date> 
+            <Version>7.2.8</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="10">
+            <Date>2012-02-17</Date> 
+            <Version>7.2.5</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="9">
+            <Date>2012-01-24</Date> 
+            <Version>7.2.4</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="8">
+            <Date>2011-09-23</Date> 
+            <Version>7.2.3</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="7">
+            <Date>2011-09-13</Date> 
+            <Version>7.2.2</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="6">
+            <Date>2011-04-10</Date> 
+            <Version>7.2.1</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="5">
+            <Date>2011-02-17</Date> 
+            <Version>7.2</Version> 
+            <Comment>Added symlink removed and JAVADIR in areca_run.sh modified</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="4">
+            <Date>2011-02-09</Date> 
+            <Version>7.2</Version> 
+            <Comment>Udpate to release 7.2</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="3">
+            <Date>2010-11-03</Date> 
+            <Version>7.1.10</Version> 
+            <Comment>Udpate NL string + symlink added</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="2">
+            <Date>2010-11-02</Date> 
+            <Version>7.1.10</Version> 
+            <Comment>Udpate release</Comment> 
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Update>
+        <Update release="1">
+            <Date>2010-08-16</Date> 
+            <Version>7.1.7</Version> 
+            <Comment>First release</Comment> 
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Update>
+    </History>
+</PISI>

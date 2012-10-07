@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>me-tv</Name>
+        <Homepage>https://launchpad.net/me-tv</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>A digital television (DVB) viewer</Summary>
+        <Description>Me-TV works with DVB-T, DVB-S, DVB-C and ATSC devices that are supported by Linux kernel drivers. With Me-TV You can watch television, record it and use EPG.</Description>
+        <Archive sha1sum="9c505299f25621f9ec227ebb94fd9bc6238f273a" type="targz">http://launchpadlibrarian.net/68048848/me-tv-2.0.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gconfmm-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>libunique-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libxmlpp-devel</Dependency>
+            <Dependency>dvb-apps</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>vlc-libs</Dependency>
+            <Dependency>vlc-devel</Dependency>
+            <Dependency>xine-lib-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libunique-devel</Dependency>
+            <Dependency>gtkmm-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>perl-Gtk2</Dependency>
+            <Dependency>perl-GStreamer-Interfaces</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>me-tv</Name>
+        <RuntimeDependencies>
+            <Dependency>gconfmm</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libxmlpp</Dependency>
+            <Dependency>dvb-apps</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>vlc</Dependency>
+            <Dependency>vlc-libs</Dependency>
+            <Dependency>xine-lib</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>perl-Gtk2</Dependency>
+            <Dependency>perl-GStreamer-Interfaces</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/</Path>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="icon">/usr/share/icons/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="locale">/usr/share/locale/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-06</Date>
+            <Version>2.0.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

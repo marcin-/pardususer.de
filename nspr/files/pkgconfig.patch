@@ -1,0 +1,121 @@
+diff -Naur nspr-4.9-orig/mozilla/nsprpub/config/Makefile.in nspr-4.9/mozilla/nsprpub/config/Makefile.in
+--- nspr-4.9-orig/mozilla/nsprpub/config/Makefile.in	2009-03-03 23:04:23.000000000 +0100
++++ nspr-4.9/mozilla/nsprpub/config/Makefile.in	2012-03-14 20:53:01.661000003 +0100
+@@ -36,15 +36,15 @@
+ #
+ # ***** END LICENSE BLOCK *****
+ 
+-MOD_DEPTH	= ..
+-topsrcdir	= @top_srcdir@
+-srcdir		= @srcdir@
+-VPATH		= @srcdir@
++MOD_DEPTH      = ..
++topsrcdir      = @top_srcdir@
++srcdir         = @srcdir@
++VPATH          = @srcdir@
+ 
+ include $(MOD_DEPTH)/config/autoconf.mk
+ 
+ # Indicate that this directory builds build tools.
+-INTERNAL_TOOLS	= 1
++INTERNAL_TOOLS = 1
+ 
+ # For sanity's sake, we compile nsinstall without the wrapped system
+ # headers, so that we can use it to set up the wrapped system headers.
+@@ -52,19 +52,19 @@
+ 
+ # autoconf.mk must be deleted last (from the top-level directory)
+ # because it is included by every makefile.
+-DIST_GARBAGE	= nsprincl.mk nsprincl.sh nspr-config
++DIST_GARBAGE   = nsprincl.mk nsprincl.sh nspr-config nspr.pc
+ 
+-RELEASE_BINS	= nspr-config
++RELEASE_BINS   = nspr-config nspr.pc
+ 
+ include $(topsrcdir)/config/config.mk
+ 
+-CSRCS	= now.c
++CSRCS  = now.c
+ 
+ # This version hasn't been ported for us; the one in mozilla/config has
+ ifneq ($(OS_ARCH),OS2)
+ CSRCS  += nsinstall.c
+  
+-PLSRCS	= nfspwd.pl
++PLSRCS = nfspwd.pl
+ endif
+ 
+ ifeq (,$(CROSS_COMPILE)$(filter-out WINNT OS2,$(OS_ARCH)))
+@@ -108,7 +108,7 @@
+ 
+ include $(topsrcdir)/config/rules.mk
+ 
+-PROGS	= $(OBJDIR)/now$(PROG_SUFFIX)
++PROGS  = $(OBJDIR)/now$(PROG_SUFFIX)
+ 
+ ifeq (,$(CROSS_COMPILE)$(filter-out OS2 WINNT,$(OS_ARCH)))
+ TARGETS = $(PROGS)
+@@ -116,7 +116,7 @@
+ ifeq (,$(filter-out SYMBIAN WINCE,$(OS_ARCH)))
+ TARGETS = $(PROGS)
+ else
+-PROGS	+= $(OBJDIR)/nsinstall$(PROG_SUFFIX)
++PROGS  += $(OBJDIR)/nsinstall$(PROG_SUFFIX)
+ TARGETS = $(PROGS) $(PLSRCS:.pl=)
+ endif
+ endif
+@@ -135,12 +135,13 @@
+ 
+ export:: $(TARGETS)
+ 	rm -f $(dist_bindir)/nspr-config
++	rm -f $(dist_bindir)/nspr.pc
+ 
+ ifdef WRAP_SYSTEM_INCLUDES
+ export::
+-	if test ! -d system_wrappers; then mkdir system_wrappers; fi
+-	$(PERL) $(srcdir)/make-system-wrappers.pl system_wrappers < $(srcdir)/system-headers
+-	$(INSTALL) system_wrappers $(dist_includedir)
++       if test ! -d system_wrappers; then mkdir system_wrappers; fi
++       $(PERL) $(srcdir)/make-system-wrappers.pl system_wrappers < $(srcdir)/system-headers
++       $(INSTALL) system_wrappers $(dist_includedir)
+ endif
+ 
+ $(OBJDIR)/%$(PROG_SUFFIX): $(OBJDIR)/%.$(OBJ_SUFFIX)
+diff -Naur nspr-4.9-orig/mozilla/nsprpub/config/nspr.pc.in nspr-4.9/mozilla/nsprpub/config/nspr.pc.in
+--- nspr-4.9-orig/mozilla/nsprpub/config/nspr.pc.in	1970-01-01 01:00:00.000000000 +0100
++++ nspr-4.9/mozilla/nsprpub/config/nspr.pc.in	2012-03-14 19:47:18.397000010 +0100
+@@ -0,0 +1,12 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++libdir=@libdir@
++includedir=@includedir@
++
++Name: NSPR
++Description: The Netscape Portable Runtime
++Version: @MOD_MAJOR_VERSION@.@MOD_MINOR_VERSION@.@MOD_PATCH_VERSION@
++Libs: -L${libdir} -lplds@MOD_MAJOR_VERSION@ -lplc@MOD_MAJOR_VERSION@ -lnspr@MOD_MAJOR_VERSION@ -lpthread -ldl
++Cflags: -I${includedir}
++
++
+diff -Naur nspr-4.9-orig/mozilla/nsprpub/configure nspr-4.9/mozilla/nsprpub/configure
+--- nspr-4.9-orig/mozilla/nsprpub/configure	2012-02-14 20:06:00.000000000 +0100
++++ nspr-4.9/mozilla/nsprpub/configure	2012-03-14 19:50:49.764000009 +0100
+@@ -6694,6 +6694,7 @@
+     config/nsprincl.mk
+     config/nsprincl.sh
+     config/nspr-config
++    config/nspr.pc
+     lib/Makefile
+     lib/ds/Makefile
+     lib/libc/Makefile
+diff -Naur nspr-4.9-orig/mozilla/nsprpub/configure.in nspr-4.9/mozilla/nsprpub/configure.in
+--- nspr-4.9-orig/mozilla/nsprpub/configure.in	2012-02-14 20:06:00.000000000 +0100
++++ nspr-4.9/mozilla/nsprpub/configure.in	2012-03-14 19:49:27.962000015 +0100
+@@ -3357,6 +3357,7 @@
+     config/nsprincl.mk
+     config/nsprincl.sh
+     config/nspr-config
++    config/nspr.pc
+     lib/Makefile
+     lib/ds/Makefile
+     lib/libc/Makefile

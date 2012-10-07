@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>id3v2</Name>
+        <Summary xml:lang="de">Kommandozeileneditor für id3v2 tags</Summary>
+        <Description xml:lang="de">Mit id3v2 können Sie id3v2 tags editieren/modifizieren/löschen und id3v1 zu id3v2 konvertieren.</Description>
+    </Source>
+</PISI>

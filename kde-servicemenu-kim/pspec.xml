@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kde-servicemenu-kim</Name>
+        <Homepage>http://www.pardususer.de/</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.addon</PartOf>
+        <Summary>Service-menus for image processing</Summary>
+        <Description>"KDE Image Menu", shortly Kim, is an image service menu for the file manager Dolphin and Konqueror with many usefull features like compressing, resizing, converting, rotating, resizing and send by mail, rename and more other actions.</Description>
+        <Archive type="targz" sha1sum="1bbc85543c46c04420adb0491683c79d2ff1d142">http://bouveyron.free.fr/kim/release/kim4-0.9.5.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>kde-servicemenu-kim</Name>
+        <RuntimeDependencies>
+            <Dependency>bash</Dependency>
+            <Dependency>coreutils</Dependency>
+            <Dependency>firefox</Dependency>
+            <Dependency>grep</Dependency>
+            <Dependency>imagemagick</Dependency>
+            <Dependency>kdebase</Dependency>
+            <Dependency>mjpegtools</Dependency>
+            <Dependency>sed</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="info">/usr/share/info/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-11-10</Date>
+            <Version>0.9.5</Version>
+            <Comment>One more package: First release! :D</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,114 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>soundKonverter</Name>
+        <Homepage>http://gitorious.org/soundkonverter/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>soundkonverter</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.converter</PartOf>
+        <Summary>SoundKonverter is a frontend to various audio converters.</Summary>
+        <Description>Support: audio conversion, replay Gain calculation, CD ripping. It is extendable by plugins and supports many backends: soundKonverter supports reading and writing tags for many formats, so the tags are preserved when converting files.</Description>
+        <Archive sha1sum="150f1c16229e7f684eed9631c2c2e6d58470b534" type="targz">https://gitorious.org/soundkonverter/soundkonverter/blobs/raw/180e777aa3d91456ac386868a1e324ca28649e2e/release/soundkonverter-1.2.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>taglib-devel</Dependency>
+            <Dependency>kdemultimedia-devel</Dependency>
+            <Dependency>cdparanoia-devel</Dependency>
+            <Dependency>kdelibs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>soundKonverter</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+	    <Dependency>kdemultimedia</Dependency>
+            <Dependency>cdparanoia</Dependency>
+            <Dependency>flac</Dependency>
+            <Dependency>speex</Dependency>
+            <Dependency>timidity</Dependency>
+            <Dependency>vorbis-tools</Dependency>
+            <Dependency>wavpack</Dependency>
+            <Dependency>mplayer</Dependency>
+            <Dependency>faac</Dependency>
+            <Dependency>faad2</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>lame</Dependency>
+            <Dependency>mac</Dependency>
+            <Dependency>shorten</Dependency>
+            <Dependency>twolame</Dependency>
+            <Dependency>kdelibs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2011-10-23</Date>
+            <Version>1.2.0</Version>
+            <Comment>
+                -Add: Update translations
+                -Remove: French, Serbian, Russian and Brazilian Portuguese translations since they are less than 80% complete
+                -Add: Aften plugin
+                -Add: Speex plugin
+                -Add: Plugin info dialog
+                -Add: Make it possible to use experimental codecs with ffmpeg
+                -Add: Make it possible to use user defined arguments with ffmpeg
+                -Add: Re-add aac/m4a encoding to the ffmpeg plugin
+                -Change: Query ffmpeg for supported codecs
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>    
+        <Update release="3">
+            <Date>2011-09-15</Date>
+            <Version>1.1.0</Version>
+            <Comment>
+		          -Add: Estonian translation (by Mihkel Tõnnov)
+		          -Add: Serbian translation (by Slobodan Terzić)
+		          -Add: Spanish (Argentinian) translation (by akana_sfe)
+		          -Change: Only use wav as temp codec
+		          -Add: Portuguese translation (by Sérgio Marques)
+		          -Add: Brazilian Portuguese translation (by Tex Weissffudder)
+		          -Add: Russian translation (by Alexey Ivanov)
+		          -Add: Inform the user if there is a better backend available for a given format (e.g. prefer lame over ffmpeg)
+		          -Add: Make it possible to choose the preferred extension for ogg vorbis files
+		          -Add: Playing CD tracks before ripping them
+		          -Add: Fluidsynth plugin
+		          -Add: Possibility to write temporary files to /dev/shm
+		          -Change: Prevent options dialogs from getting too wide
+		          -Change: Automatically remove FAT incompatible characters if output directory is on a FAT volume
+		          -Change: MusePack: Find mpenc, mpcdec and mpcgain backends, too
+		          -Fix: CDDB requests
+		          -Fix: Handle files with dollar signs and backticks (`) correctly
+		          -Fix: Filnames wouldn't be FAT compatible if output mode was copy directory structure
+		          -Fix: Display correct progress when applying Replay Gain to multiple ogg vorbis files
+		          -Fix: Replay Gain Scanner wouldn't work properly with files of different format
+	    </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>      
+        <Update release="2">
+            <Date>2011-06-04</Date>
+            <Version>1.0.0</Version>
+            <Comment>version update</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>                                                                                
+        <Update release="1">
+            <Date>2011-04-19</Date>
+            <Version>0.9.95_rc3</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

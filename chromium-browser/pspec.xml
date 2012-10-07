@@ -1,0 +1,763 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>chromium-browser</Name>
+        <Homepage>http://code.google.com/chromium</Homepage>
+        <Packager>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>network.web</PartOf>
+        <Icon>chromium-browser</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A WebKit powered web browser</Summary>
+        <Description>Chromium-browser is an open-source web browser, powered by WebKit.</Description>
+        <Archive sha1sum="48e1a3b9808888d224b0c3dd83a82ead97a41127" type="tarbz2">http://gsdview.appspot.com/chromium-browser-official/chromium-18.0.1027.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency versionFrom="2.0.12">libevent-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libvpx-devel</Dependency>
+	    <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency versionFrom="3.13.1">nss-devel</Dependency>
+            <Dependency>nss-mdns</Dependency>
+            <Dependency>nspr-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>minizip-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+	    <Dependency>speex-devel</Dependency>
+            <Dependency>flac-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Add warnings for pisi and zsh files-->
+            <Patch level="1">additional_download_extensions.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>chromium-browser</Name>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+	    <Dependency versionFrom="2.0.12">libevent</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>flac</Dependency>
+	    <Dependency>speex</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency versionFrom="3.13.1">nss</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libXrender</Dependency>
+	    <Dependency>libXcomposite</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/chromium-browser/master_preferences" >master_preferences</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/chromium-browser.desktop" >chromium-browser.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/chromium-browser">chromium-browser.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+      <Update release="58">
+            <Date>2012-01-16</Date>
+            <Version>18.0.1027.0</Version>
+            <Comment>New upstream to develop release 18.0.1027.0</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@gmail.com</Email>
+        </Update>
+      <Update release="57">
+            <Date>2012-01-16</Date>
+            <Version>18.0.1009.0</Version>
+            <Comment>New upstream release 18.0.1009.0</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@gmail.com</Email>
+        </Update>
+      <Update release="56">
+            <Date>2012-01-05</Date>
+            <Version>18.0.997.0</Version>
+            <Comment>New upstream release 18.0.997.0</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@gmail.com</Email>
+        </Update>
+        <Update release="55">
+            <Date>2011-12-08</Date>
+            <Version>16.0.912.63</Version>
+            <Comment>New upstream release 16.0.912.63</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="54">
+            <Date>2011-11-04</Date>
+            <Version>16.0.912.21</Version>
+            <Comment>Upstream release 16.0.912.21 . Merging devel channel to beta channel.</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="53">
+            <Date>2011-10-27</Date>
+            <Version>15.0.874.106</Version>
+            <Comment>New upstream release 15.0.874.106</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="52">
+            <Date>2011-10-20</Date>
+            <Version>15.0.874.100</Version>
+            <Comment>
+                * New release 15.0.874.100
+                * Updated V8 - 3.5.10.22
+                * Numerous buffering fixes and optimizations for HTML5 media elements. (99775, 99749, 100439)
+                * Tuned the omnibox to recognize more types of inputs as intranet navigations (99131, 94806)
+                * Fixed several crashes and hangs (98975, 98948, 98955, 96861)
+                * Fixed Omnibox enters keyword search mode incorrectly (95454)
+                * Fixed partially visible toolbar in fullscreen mode (97177)
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="51">
+            <Date>2011-10-13</Date>
+            <Version>15.0.874.92</Version>
+            <Comment>
+                * New release 15.0.874.92
+                * Updated V8 -  3.5.10.17
+                * Fixed crash during Print Preview (96063)
+                * Fixed excessive margins in printing (92000)
+                * Fixed large downloads don't show progress (94468)
+                * Fixed Netflix/Silverlight error (97319)
+                * Disabled acceleration for background pages (96006)
+                * Restored the old bookmark menus (93674)
+                * Added support for an optional "requirements" section in extension/app manifests (99241)
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="50">
+            <Date>2011-10-07</Date>
+            <Version>15.0.874.83</Version>
+            <Comment>New release 15.0.874.83</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="49">
+            <Date>2011-09-28</Date>
+            <Version>15.0.874.54</Version>
+            <Comment>
+                * Beta release 15.0.874.54
+                * Updated V8 - 3.5.10.14
+                * Notification promos work with New Tab Page  (Issue: 93201)
+                * Several crash fixes (including 96727, 93314, 97165, 96282)
+                * Intranet URLs don't inline autocomplete (Issue 94805)
+                * The New Tab Page bookmark pane has been reverted to the detached bar pending future improvements to the pane version. Thanks for all the feedback! (Issue: 92609)
+                * Only show NTP4 info bubble for upgrading users (Issue 97103)
+                * Sync not enforcing server legal bookmark names when migrating to new specifics (Issue 96623)
+                * Native Client startup fixed for 32-bit Linux (Issue 92964)
+                * Fixed fetching proxy settings on Gnome 3 systems when glib2-dev package is not installed (Issue 91744)
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="48">
+            <Date>2011-09-23</Date>
+            <Version>15.0.874.21</Version>
+            <Comment>
+                * Beta release 15.0.874.21
+                * Enable pulseaudio suppport
+                * Fix sandbox path to enable sandbox
+                * A revamped new Tab page
+                * Fixed many known stability issues
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="47">
+            <Date>2011-09-19</Date>
+            <Version>14.0.835.163</Version>
+            <Comment>Include internal ffmpeg libraries</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="46">
+            <Date>2011-09-15</Date>
+            <Version>14.0.835.163</Version>
+            <Comment>
+                * New beta release
+                * Enable chrome:flags again
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="45">
+            <Date>2011-09-08</Date>
+            <Version>14.0.835.126</Version>
+            <Comment>
+                * New beta release
+                * Rearrange dependencies
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="44">
+            <Date>2011-08-12</Date>
+            <Version>14.0.835.95</Version>
+            <Comment>
+                * New Beta channel 14.0.835.95
+                * Initial release of Native Client
+                * Web Audio API
+                * Additional Mac OS X Lion feature support
+                * Sync Encryption for all data
+                * Print Preview on Mac
+                * Experimental Web Request extension API
+                * Experimental Content Settings extension API
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="43" type="security">
+            <Date>2011-08-04</Date>
+            <Version>13.0.782.107</Version>
+            <Comment>
+                * Beta channel has been merged to stable channel 13.0.782.107
+                * New features like Instant pages
+                * Improved OmniBox
+                * Security fixes:
+                    * [75821] Medium CVE-2011-2358: Always confirm an extension install via a browser dialog.
+                    * [78841] High CVE-2011-2359: Stale pointer due to bad line box tracking in rendering.
+                    * [79266] Low CVE-2011-2360: Potential bypass of dangerous file prompt.
+                    * [79426] Low CVE-2011-2361: Improve designation of strings in the basic auth dialog.
+                    * [81307] Medium CVE-2011-2782: File permissions error with drag and drop.
+                    * [83273] Medium CVE-2011-2783: Always confirm a developer mode NPAPI extension install via a browser dialog.
+                    * [83841] Low CVE-2011-2784: Local file path disclosure via GL program log.
+                    * [84402] Low CVE-2011-2785: Sanitize the homepage URL in extensions.
+                    * [84600] Low CVE-2011-2786: Make sure the speech input bubble is always on-screen.
+                    * [84805] Medium CVE-2011-2787: Browser crash due to GPU lock re-entrancy issue.
+                    * [85559] Low CVE-2011-2788: Buffer overflow in inspector serialization.
+                    * [85808] Medium CVE-2011-2789: Use after free in Pepper plug-in instantiation.
+                    * [86502] High CVE-2011-2790: Use-after-free with floating styles.
+                    * [86900] High CVE-2011-2791: Out-of-bounds write in ICU.
+                    * [87148] High CVE-2011-2792: Use-after-free with float removal.
+                    * [87227] High CVE-2011-2793: Use-after-free in media selectors.
+                    * [87298] Medium CVE-2011-2794: Out-of-bounds read in text iteration.
+                    * [87339] Medium CVE-2011-2795: Cross-frame function leak.
+                    * [87548] High CVE-2011-2796: Use-after-free in Skia.
+                    * [87729] High CVE-2011-2797: Use-after-free in resource caching.
+                    * [87815] Low CVE-2011-2798: Prevent a couple of internal schemes from being web accessible.
+                    * [87925] High CVE-2011-2799: Use-after-free in HTML range handling.
+                    * [88337] Medium CVE-2011-2800: Leak of client-side redirect target.
+                    * [88591] High CVE-2011-2802: v8 crash with const lookups.
+                    * [88827] Medium CVE-2011-2803: Out-of-bounds read in Skia paths.
+                    * [88846] High CVE-2011-2801: Use-after-free in frame loader.
+                    * [88889] High CVE-2011-2818: Use-after-free in display box rendering.
+                    * [89142] High CVE-2011-2804: PDF crash with nested functions.
+                    * [89520] High CVE-2011-2805: Cross-origin script injection.
+                    * [90222] High CVE-2011-2819: Cross-origin violation in base URI handling.
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="42">
+            <Date>2011-07-25</Date>
+            <Version>13.0.782.99</Version>
+            <Comment>New beta release</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="41">
+            <Date>2011-06-30</Date>
+            <Version>13.0.782.56</Version>
+            <Comment>New beta release</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="40">
+            <Date>2011-06-30</Date>
+            <Version>13.0.782.41</Version>
+            <Comment>New beta release. Contain bug fixes and small improvements</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="39">
+            <Date>2011-06-28</Date>
+            <Version>13.0.782.24</Version>
+            <Comment>Write strict dependency to new version of libevent</Comment>
+            <Name>Meltem Parmaksız</Name>
+            <Email>meltem@pardus.org.tr</Email>
+        </Update>
+        <Update release="38">
+            <Date>2011-06-22</Date>
+            <Version>13.0.782.24</Version>
+            <Comment>Upgrade to the new Beta channel</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="37">
+            <Date>2011-06-07</Date>
+            <Version>12.0.742.91</Version>
+            <Comment>New beta release. It contains additional stability fixes</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="36">
+            <Date>2011-05-26</Date>
+            <Version>12.0.742.68</Version>
+            <Comment>New beta release which contains a small number of UI updates and performance fixes</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="35">
+            <Date>2011-05-16</Date>
+            <Version>12.0.742.53</Version>
+            <Comment>
+                * Beta channel has catched the dev channel
+                * Hardware accelerated 3D CSS
+                * New Safe Browsing protection against downloading malicious files
+                * Ability to delete Flash cookies from inside Chrome
+                * Launch Apps by name from the Omnibox
+                * Integrated Sync into new settings pages
+                * Improved screen reader support
+                * New warning when hitting Command-Q on Mac
+                * Removal of Google Gears
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="34" type="security">
+            <Date>2011-04-27</Date>
+            <Version>11.0.696.57</Version>
+            <Comment>
+                * Beta channel has upgraded to stable channel
+                * Update to 11.0.696.57 with the following security fixes:
+                    * High CVE-2011-1303: Stale pointer in floating object handling.
+                    * Low CVE-2011-1304: Pop-up block bypass via plug-ins.
+                    * [70589] Medium CVE-2011-1305: Linked-list race in database handling.
+                    * [71586] Medium CVE-2011-1434: Lack of thread safety in MIME handling.
+                    * [72523] Medium CVE-2011-1435: Bad extension with ‘tabs’ permission can capture local files.
+                    * [72910] Low CVE-2011-1436: Possible browser crash due to bad interaction with X.
+                    * [73526] High CVE-2011-1437: Integer overflows in float rendering.
+                    * [74653] High CVE-2011-1438: Same origin policy violation with blobs.
+                    * [74763] High CVE-2011-1439: Prevent interference between renderer processes.
+                    * [75186] High CVE-2011-1440: Use-after-free with ruby tag and CSS.
+                    * [75347] High CVE-2011-1441: Bad cast with floating select lists.
+                    * [75801] High CVE-2011-1442: Corrupt node trees with mutation events.
+                    * [76001] High CVE-2011-1443: Stale pointers in layering code.
+                    * [76542] High CVE-2011-1444: Race condition in sandbox launcher.
+                    * [76646] Medium CVE-2011-1445: Out-of-bounds read in SVG.
+                    * [76666] [77507] [78031] High CVE-2011-1446: Possible URL bar spoofs with navigation errors and interrupted loads.
+                    * [76966] High CVE-2011-1447: Stale pointer in drop-down list handling.
+                    * [77130] High CVE-2011-1448: Stale pointer in height calculations.
+                    * [77346] High CVE-2011-1449: Use-after-free in WebSockets.
+                    * [77349] Low CVE-2011-1450: Dangling pointers in file dialogs.
+                    * [77463] High CVE-2011-1451: Dangling pointers in DOM id map.
+                    * [77786] Medium CVE-2011-1452: URL bar spoof with redirect and manual reload.
+                    * [79199] High CVE-2011-1454: Use-after-free in DOM id handling.
+                    * [79361] Medium CVE-2011-1455: Out-of-bounds read with multipart-encoded PDF.
+                    * [79364] High CVE-2011-1456: Stale pointers with PDF forms.
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="33">
+            <Date>2011-04-19</Date>
+            <Version>11.0.696.50</Version>
+            <Comment>
+                * New beta release with the following fixes:
+                    * Flash does not load until the tab gets activated. (Issue 71591).
+                    * Going to settings from notification popup crashes Chrome (Issue 78938).
+                    * Disable speech input for readonly and disabled input fields (Issue 58540 ).
+                    * Renamed Blob.slice to Blob.webkitSlice and changed it to take start and end parameters. Also renamed BlobBuilder to WebKitBlobBuilder (Click for more detail).
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="32">
+            <Date>2011-04-13</Date>
+            <Version>11.0.696.43</Version>
+            <Comment>
+                * New beta release 11.0.696.43 with following fixes:
+                * Passwords sync: passwords sync commits after EVERY browser restart (Issue 78548).
+                * Autofill fails to fill forms (Issue 78509).
+                * A few known crashes (Issue 78688, Issue 68350, Issue 77665, Issue 74585, Issue 76092, Issue 77219 and Issue 77447).
+                * Redirect to my site without CFInstall.js (Issue 60018).
+                * Update Silverlight v3 version metadata (Issue 78005).
+                * Blocked plug-in dialog: make sure "Run this time" button is the first one (Issue 78120).
+                * Policy: Proxy configuration over policy does not work. (Issue 78016).
+                * Editing style adds the word "initial" for any property value that uses a paren (Issue 75302).
+                * Google Chrome Helper doesn't quit, killing it relaunches a new helper process (Issue 74983).
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="31">
+            <Date>2011-04-05</Date>
+            <Version>11.0.696.34</Version>
+            <Comment>
+                * New beta release 11.0.696.34 with following fixes:
+                    * Duplicate desktop icon is created using First Run UI even if it's present (Issue 5073).
+                    * FLACEncoder::Encode has mismatched free (Issue 77653).
+                    * Switch from using Speex to FLAC for speech input requests (Issue 61677).
+                    * Chrome hangs on form submit with lots of stored Autofill profiles (Issue 75862).
+                    * Browser crash if tab is closed while page is being downloaded (Issue 76963).
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="30">
+            <Date>2011-03-29</Date>
+            <Version>11.0.696.25</Version>
+            <Comment>
+                * New beta release 11.0.696.25
+                * The following bugs were fixed:
+                    * cloud print: Error running service on the headless machine (Issue 76991).
+                    * sync: Not registering for NIGORI data types (Issue 76268).
+                    * A known crash (Issue 76998 ).
+                    * REGRESSION: img of extensions not displayed in chrome://extensions within an incognito window (Issue 74905).
+                    * Cloud policy fetch loop upon POLICY_NOT_FOUND answer from the server (Issue 77232).
+                    * Token fetcher doesn't correctly enter unmanaged state (Issue 77185).
+                    * Memory Leak in ChromeFrame in the AutomationResourceMessageFilter::SetCookiesForUrl function (Issue 77421).
+                    * REGRESSION: Arrows not showing up on tabstrip while dropping links (Issue 74764).
+                    * Java: Direct users to the right download page (Issue 76634).
+                    * add es-419, fr-Foo and en-Foo and zh_HK/zh_Hant_HK to Accept-Language list(Issue 62715).
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="29">
+            <Date>2011-03-23</Date>
+            <Version>11.0.696.16</Version>
+            <Comment>
+                * Version bump to Beta Channel 11.0.696.16
+                * Remove some old patches
+                * Disable one experimental extension as it causes to prevent compiling
+                * Remove comar script. It is handled via pakhandler
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="28">
+            <Date>2011-03-19</Date>
+            <Version>10.0.648.151</Version>
+            <Comment>Version bump to 10.0.648.151</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="27" type="security">
+            <Date>2011-03-14</Date>
+            <Version>10.0.648.133</Version>
+            <Comment>New Stable release. Fixes CVE-2011-1290 [75712] High Memory corruption in style handling</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="26">
+            <Date>2011-03-04</Date>
+            <Version>10.0.648.127</Version>
+            <Comment>
+                * New Beta release
+                * This release contains stability improvements and UI tweaks. There is one known issue:
+                    * [Bug 74709] Clicking "Disable individual plug-ins" in Options causes crash
+                * Enable gecko-mediaplayer support
+                * Enable verbose output during compile
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="25">
+            <Date>2011-02-24</Date>
+            <Version>10.0.648.114</Version>
+            <Comment>Version bump. UI and stability fixes.</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="24">
+            <Date>2011-02-18</Date>
+            <Version>10.0.648.82</Version>
+            <Comment>
+                * Update to Beta Channel
+                * Add several patches for support building without the third party libraries
+                * Remove hunspell from system as it has gyp build problems
+                * Use xdg-utils that ships with the system
+                * Enable the to use system library of flac
+                * Several new features:
+                    * New version of V8 - Crankshaft - which greatly improves javascript performance
+                    * New settings pages that open in a tab, rather than a dialog box
+                    * Improved security with malware reporting and disabling outdated plugins by default
+                    * Password sync as part of Chrome Sync now enabled by default
+                    * GPU Accelerated Video
+                    * Background WebApps
+                    * webNavigation extension API
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="23">
+            <Date>2011-02-09</Date>
+            <Version>9.0.597.94</Version>
+            <Comment>
+                * New Stable release
+                * Several security fixes:
+                    * [67234] High Stale pointer in animation event handling.
+                    * [68120] High Use-after-free in SVG font faces.
+                    * [69556] High Stale pointer with anonymous block handling.
+                    * [69970] Medium Out-of-bounds read in plug-in handling.
+                    * [70456] Medium Possible failure to terminate process on out-of-memory condition.
+            </Comment>
+            <Type package="chromium-browser">security</Type>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="22">
+            <Date>2011-02-03</Date>
+            <Version>9.0.597.84</Version>
+            <Comment>
+                * Beta channel has been upgraded to stable channel
+                * Several security fixes:
+                    * [55831] High Use-after-free in image loading.
+                    * [59081] Low Apply some restrictions to cross-origin drag + drop.
+                    * [62791] Low Browser crash with extension with missing key.
+                    * [64051] High Crashing when printing in PDF event handler.
+                    * [65669] Low Handle merging of autofill profiles more gracefully.
+                    * [68244] Low Browser crash with bad volume setting.
+                    * [69195] Critical Race condition in audio handling.
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="21">
+            <Date>2011-01-31</Date>
+            <Version>9.0.597.83</Version>
+            <Comment>Adding new missed build dependencies</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="20">
+            <Date>2011-01-27</Date>
+            <Version>9.0.597.83</Version>
+            <Comment>New beta release</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="19">
+            <Date>2011-01-19</Date>
+            <Version>9.0.597.67</Version>
+            <Comment>New beta release</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="18">
+            <Date>2011-01-10</Date>
+            <Version>9.0.597.45</Version>
+            <Comment>
+                * New beta release
+                * Create symlinks for ffmpeg libraries
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="17">
+            <Date>2011-01-05</Date>
+            <Version>9.0.597.42</Version>
+            <Comment>
+                * New beta channel release
+                * Give warning when downloading pisi file
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="16">
+            <Date>2010-12-29</Date>
+            <Version>9.0.597.19</Version>
+            <Comment>All options are enabled by default, don't need this option strings anymore.</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="15">
+            <Date>2010-12-16</Date>
+            <Version>9.0.597.19</Version>
+            <Comment>
+                * Bump to newest Beta channel (major update again)
+                * Use patch for using libvpx systemwide instead of the bundle one
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="14">
+            <Date>2010-12-14</Date>
+            <Version>8.0.552.224</Version>
+            <Comment>
+                * Bump to newest stable
+                * [56449] High Bad validation for message deserialization on 64-bit Linux builds.
+                * [60761] Medium Bad extension can cause browser crash in tab handling.
+                * [63529] Low Browser crash with NULL pointer in web worker handling.
+                * [63866] Medium Out-of-bounds read in CSS parsing.
+                * [64959] High Stale pointers in cursor handling.
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="13">
+            <Date>2010-12-03</Date>
+            <Version>8.0.552.215</Version>
+            <Comment>
+                * Bump to 8.0.552.215
+                * Stable channel has been merged to the Beta Channel
+                * The built-in PDF viewer is now enabled by default.
+                * Over 800 bug fixes, the importants one listed below:
+                    * [17655] Possible pop-up blocker bypass.
+                    * [55745] Cross-origin video theft with canvas.
+                    * [56237] Browser crash with HTML5 databases.
+                    * [58319] Prevent excessive file dialogs, possibly leading to browser crash.
+                    * [59554] Use after free in history handling.
+                    * [59817] Make sure the “dangerous file types” list is uptodate with the Windows platforms.
+                    * [61701] Browser crash with HTTP proxy authentication.
+                    * [61653] Out-of-bounds read regression in WebM video support.
+                    * [62127] Crash due to bad indexing with malformed video.
+                    * [62168] Possible browser memory corruption via malicious privileged extension.
+                    * [62401] Use after free with SVG animations.
+                    * [63051] Use after free in mouse dragging event handling.
+                    * [63444] Double free in XPath handling.
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="12">
+            <Date>2010-11-23</Date>
+            <Version>8.0.552.210</Version>
+            <Comment>Version bump</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="11">
+            <Date>2010-11-21</Date>
+            <Version>8.0.552.208</Version>
+            <Comment>
+                * Version bump to beta
+                * Stability and UI improvements
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="10">
+            <Date>2010-11-04</Date>
+            <Version>7.0.517.44</Version>
+            <Comment>
+                -Version bump
+                -Fixes memory corruption errors and several other bugs: http://googlechromereleases.blogspot.com/2010/11/stable-channel-update.html
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="9">
+            <Date>2010-10-20</Date>
+            <Version>7.0.517.41</Version>
+            <Comment>
+                -Bump to latest stable channel
+                -An updated HTML5 parser
+                -File API
+                -Several bug fixes (http://bit.ly/chrome7fixes)
+                -Ffmpeg video support for HTML5 works now
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="8">
+            <Date>2010-10-13</Date>
+            <Version>6.0.472.63</Version>
+            <Comment>Mass rebuild for Pardus 2011 Beta</Comment>
+            <Name>Gökcen Eraslan</Name>
+            <Email>gokcen@pardus.org.tr</Email>
+        </Update>
+        <Update release="7">
+            <Date>2010-09-28</Date>
+            <Version>6.0.472.63</Version>
+            <Comment>Fix desktop icon, rename desktop name to "Chromium Browser"</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="6">
+            <Date>2010-09-23</Date>
+            <Version>6.0.472.63</Version>
+            <Comment>
+                Version bump
+                Fix direct loading of global function prototypes in v8 engine
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="5">
+            <Date>2010-09-18</Date>
+            <Version>6.0.472.62</Version>
+            <Comment>
+                Version bump
+                Security fixes(issued: 55114, 55119, 55350)
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2010-09-16</Date>
+            <Version>6.0.472.56</Version>
+            <Comment>Change package name, add sandbox path, modified master_preferences</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-09-15</Date>
+            <Version>6.0.472.59</Version>
+            <Comment>
+                *Version bump
+                *Fixes various bugs: http://googlechromereleases.blogspot.com/2010/09/stable-beta-channel-updates_14.html
+            </Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2010-09-12</Date>
+            <Version>6.0.472.56</Version>
+            <Comment>Version bump, take over of package</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-06-01</Date>
+            <Version>6.0.417.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Mete Alpaslan</Name>
+            <Email>mete@pardus.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

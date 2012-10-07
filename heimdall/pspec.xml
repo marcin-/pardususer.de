@@ -1,0 +1,73 @@
+<PISI>
+    <Source>
+        <Name>heimdall</Name>
+        <Homepage>http://www.glassechidna.com.au/products/heimdall/</Homepage>
+        <Packager>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Packager>
+        <IsA>app:console</IsA>
+        <PartOf>hardware.mobile</PartOf>
+        <License>MIT</License>
+        <Icon>heimdall</Icon>
+        <Summary>Open-Source tool suite used to flash firmware (aka ROMs) onto Samsung Galaxy S devices.</Summary>
+        <Description>
+            Heimdall is a cross-platform open-source tool suite used to flash firmware (aka ROMs) onto 
+            Samsung Galaxy S devices. It uses the same protocol as Odin to interact with a device in download mode. 
+            USB communication in Heimdall is handled by the popular open-source USB library, libusb-1.0. 
+            This package provides the graphical user interface (GUI) and command line programmer for Heimdall.</Description>
+        <Archive sha1sum="fa459b13963053c587430822ba48e70c0de4794e" type="targz">
+            http://pakete.pardususer.de/source-files/Benjamin-Dobell-Heimdall-v1.3.1-0-gfbbed42.tar.gz
+        </Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>heimdall</Name>
+        <Files>
+            <Path fileType="library">/lib/udev/rules.d/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/applications/</Path>
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+        <Replaces>
+            <Package>heimdall-frontend</Package>
+        </Replaces>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/heimdall.desktop" permission="0755" owner="root">heimdall.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/heimdall.png" permission="0644" owner="root">heimdall.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2011-10-09</Date>
+            <Version>1.3.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-08-07</Date>
+            <Version>1.3.0</Version>
+            <Comment>
+                Version bump.
+                Add frontend.
+                Edit summary and descriptions.
+            </Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-04</Date>
+            <Version>1.1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Hüseyin  Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

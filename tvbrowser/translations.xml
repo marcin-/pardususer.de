@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tvbrowser</Name>
+        <Summary xml:lang="de">Digitale TV-Programmzeitschrift</Summary>
+        <Description xml:lang="de">tvbrowser ist ein Java-basierender TV Guide dessen Funktionsumfang mit Plugins erweitert werden kann.</Description>
+    </Source>
+</PISI>

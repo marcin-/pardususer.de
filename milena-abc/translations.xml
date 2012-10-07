@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>milena-abc</Name>
+        <Summary xml:lang="pl">Kreator audioksiążek.</Summary>
+        <Description xml:lang="pl">Kreator audioksiążek to aplikacja w GTK, służąca do szybkiego tworzenia książek audio bez konieczności użycia oddzielnych programów.</Description>
+    </Source>
+</PISI>

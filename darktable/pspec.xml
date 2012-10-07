@@ -1,0 +1,105 @@
+<PISI>
+    <Source>
+        <Name>darktable</Name>
+        <Homepage>http://darktable.sourceforge.net/index.shtml</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>GPLv3</License>
+        <Summary>Utility to organize and develop raw images.</Summary>
+        <Description>darktable is a virtual light table and darkroom for photographers. It manages your digital negatives in a database and lets you view them through a zoomable light table. It also enables you to develop raw images and enhance them.</Description>
+        <Archive sha1sum="ca523b5d944abe9e724737bcbfaf6f29c49aa2c3" type="targz">mirrors://sourceforge/darktable/darktable-1.0.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>exiv2-devel</Dependency>
+            <Dependency>flickcurl-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>lensfun-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>libgphoto2-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>openexr-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+        </BuildDependencies>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>darktable</Name>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>exiv2-libs</Dependency>
+            <Dependency>flickcurl</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>ilmbase</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>lensfun</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>libgomp</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>openexr-libs</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>tiff</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/darktable</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/darktable</Path>
+            <Path fileType="doc">/usr/share/doc/darktable</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="5">
+            <Date>2012-06-02</Date>
+            <Version>1.0.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2012-04-22</Date>
+            <Version>1.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-11-07</Date>
+            <Version>0.9.3</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-08-28</Date>
+            <Version>0.9.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-08-18</Date>
+            <Version>0.9.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>mediainfo</Name>
+        <Summary xml:lang="de">Mediainfo analysiert Multimediadateien.</Summary>
+        <Summary xml:lang="pl">Dostarcza informacji technicznych o plikach multimedialnych.</Summary>
+        <Description xml:lang="de">Mit Mediainfo werden Multimediadateien (Fotos, Musik, Videos) analysiert und detailierte Informationen dazu ausgegeben.</Description>
+        <Description xml:lang="pl">MediaInfo dostarcza informacji technicznych i pochodzących ze znaczników o plikach audio i wideo.</Description>
+    </Source>
+</PISI>

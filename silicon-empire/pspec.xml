@@ -1,0 +1,66 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>silicon-empire</Name>
+        <Homepage>http://getsilicon.org/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>silicon-empire</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>hardware.optical</PartOf>
+        <Summary>Silicon is set of OpenSource tools to manage and organize your optical discs like CDs, DVDs and Blu-rays. </Summary>
+        <Description>Silicon target is made optical discs managing easy.</Description>
+        <Archive sha1sum="ab0208b4947ec3f120f6d3998bf489c3a3f41188" type="targz">http://getsilicon.org/download/silicon_1.7.3_src.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>taglib-devel</Dependency>
+            <Dependency>phonon-devel</Dependency>
+            <Dependency>fuse-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">make.patch</Patch>
+	  </Patches>
+    </Source>
+    <Package>
+        <Name>silicon-empire</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>phonon</Dependency>
+            <Dependency>fuse</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2011-06-18</Date>
+            <Version>1.7.3</Version>
+            <Comment>Version update.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-05-31</Date>
+            <Version>1.7.2</Version>
+            <Comment>Not working</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-03-22</Date>
+            <Version>1.7.0</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

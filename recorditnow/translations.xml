@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>recorditnow</Name>
+        <Summary xml:lang="tr">Masaüstü kaydedici</Summary>
+        <Summary xml:lang="de">Desktop für Screencasts aufnehmen</Summary>
+        <Description xml:lang="tr">RecordItNow KDE için eklenti destekli bir masaüstü kaydedicidir.</Description>
+        <Description xml:lang="de">RecordItNow ist ein Desktop Rekorder für KDE SC 4. Man kann sehr einfach den Desktop aufnehmen, Screenshots erstellen, zoomen, Mausklicks visualisieren und optional die Videos bei YouTube oder blib.tv hochladen.</Description>
+    </Source>
+</PISI>

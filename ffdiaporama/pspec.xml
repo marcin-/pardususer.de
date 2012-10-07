@@ -1,0 +1,59 @@
+<PISI>
+    <Source>
+        <Name>ffdiaporama</Name>
+        <Homepage>http://ffdiaporama.tuxfamily.org/?lang=en</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>multimedia.video</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Creation of videos sequences from images, titles, music...</Summary>
+        <Description>ffDiaporama is an application for assembling photos and videos especially for preserving holiday memories. It is inspired by presentation software such as Impress or Powerpoint.</Description>
+        <BuildDependencies>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>qconf</Dependency>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>qt-webkit-devel</Dependency>
+            <Dependency>sdl-mixer-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="bcc5a745562f671bf057865570943343f913403f" type="targz">http://download.tuxfamily.org/ffdiaporama/Stable/1.1_20111218/ffdiaporama_1.1.2011.1218.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>ffdiaporama</Name>
+        <RuntimeDependencies>
+            <Dependency>exiv2</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>qt-webkit</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons/gnome/32x32/mimetypes</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2011-12-18</Date>
+            <Version>1.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-01-27</Date>
+            <Version>1.0</Version>
+            <Comment>fist version</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

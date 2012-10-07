@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>guayadeque</Name>
+        <Homepage>http://guayadeque.org/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>guayadeque</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.sound</PartOf>
+        <Summary>A intuitive and fast music player</Summary>
+        <Description>Guayadeque is a music management program designed for all music enthusiasts. It is easy to use and fast even for huge music collections.</Description>
+        <Archive sha1sum="3bff762f0f7f9cbdbacde7dec78c3c6830129b84" type="tarbz2">mirrors://sourceforge/guayadeque/guayadeque-0.3.5.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>flac-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>taglib-devel</Dependency>
+            <Dependency>wxGTK-devel</Dependency>
+            <Dependency>libgpod-devel</Dependency>
+            <Dependency>libindicate-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>guayadeque</Name>
+        <RuntimeDependencies>
+            <Dependency>flac</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>wxBase</Dependency>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>libgpod</Dependency>
+            <Dependency>libindicate</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2012-05-12</Date>
+            <Version>0.3.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-11-25</Date>
+            <Version>0.3.1</Version>
+            <Comment>Added iPod and sound menu support.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-11-24</Date>
+            <Version>0.3.1</Version>
+            <Comment>Version bump. Updating build-files: actions.py, pspec.xml, translations.xml</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-03-01</Date>
+            <Version>0.2.9</Version>
+            <Comment>version bump</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-02-11</Date>
+            <Version>0.2.7</Version>
+            <Comment>Updating build-files: actions.py, pspec.xml, translations.xml</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-02-11</Date>
+            <Version>0.2.7</Version>
+            <Comment>first release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

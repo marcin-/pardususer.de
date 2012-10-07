@@ -1,0 +1,39 @@
+<PISI>
+    <Source>
+        <Name>vnstat</Name>
+        <Homepage>http://humdi.net/vnstat/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:console</IsA>
+        <PartOf>network.monitor</PartOf>
+        <License>GPLv2</License>
+        <Summary>A console-based network traffic monitor</Summary>
+        <Description>vnStat is a console-based network traffic monitor for Linux and BSD that keeps a log of network traffic for the selected interface(s). It uses the network interface statistics provided by the kernel as information source. This means that vnStat won't actually be sniffing any traffic and also ensures light use of system resources.</Description>
+        <Archive sha1sum="92494f38a752dcf60053af2a6d8977737da7e616" type="targz">http://humdi.net/vnstat/vnstat-1.11.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>vnstat</Name>
+        <Files>
+            <Path fileType="config" permanent="0">/etc/vnstat.conf</Path>
+            <Path fileType="executable" permanent="0">/usr/bin/vnstat</Path>
+            <Path fileType="executable" permanent="0">/usr/sbin/vnstatd</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/vnstat/*</Path>
+            <Path fileType="man" permanent="0">/usr/share/man/*</Path>
+            <Path fileType="ldata" permanent="0">/var/lib/vnstat</Path>
+        </Files>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR> 
+        </Provides>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-08-26</Date>
+            <Version>1.11</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

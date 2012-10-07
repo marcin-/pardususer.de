@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=RealtimeSync
+Exec=RealtimeSync
+GenericName=Automatic Synchronization
+GenericName[de]=Automatische Synchronisierung
+Icon=rtsicon
+Type=Application
+StartupNotify=true
+Terminal=false
+Categories=Qt;Application;Utility;
+
+
+

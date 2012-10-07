@@ -1,0 +1,18 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TeamSpeak3
+Type=Application
+Categories=Network;Application;
+Icon=/usr/share/pixmaps/teamspeak3.png
+Exec=teamspeak3
+Terminal=false
+StartupNotify=true
+MultipleArgs=false
+DocPath=file:///usr/share/doc/teamspeak3/teamspeak3-help-index.html
+GenericName=VoIP based communication
+Comment=A completely new experience in voice communication
+GenericName[de]=VoIP-Sprachkonferenzsoftware
+Comment[de]=Eine neuartige VoIP-Sprachkonferenzsoftware
+GenericName[nl]VoIP spraakcommunicatie
+Comment[nl]=Een comleet nieuwe ervaring in spraakcommunicatie
+GenericName[tr]=VoIP tabanlı haberleşme

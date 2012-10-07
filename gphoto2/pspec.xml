@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>gphoto2</Name>
+        <Homepage>http://www.gphoto.org/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>multimedia.misc</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>A digital camera download and access program.</Summary>
+        <Description>gPhoto2 is a free, redistributable, ready to use set of digital camera software applications for Unix-like systems, written by a whole team of dedicated volunteers around the world.</Description>
+        <BuildDependencies>
+            <Dependency>aalib-devel</Dependency>
+            <Dependency>cdk-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency versionFrom="2.4.11">libgphoto2-devel </Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="008918c1871128cbc2f3a796132d7093529a5566" type="tarbz2">mirrors://sourceforge/gphoto/gphoto2-2.4.11.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>gphoto2</Name>
+        <RuntimeDependencies>
+            <Dependency>aalib</Dependency>
+            <Dependency>cdk</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency versionFrom="2.4.11">libgphoto2 </Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/gphoto2</Path>
+            <Path fileType="doc">/usr/share/doc/gphoto2/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="man">/usr/share/man/man1/gphoto2.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-01-21</Date>
+            <Version>2.4.11</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

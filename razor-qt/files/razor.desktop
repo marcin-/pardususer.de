@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Razor Configuration Center
+Name[ru]=Центр настроек Razor
+Name[pl]=Panel sterowania Razor
+GenericName=Razor Configuration
+GenericName[ru]=Центр настроек Razor
+GenericName[pl]=Panel sterowania Razor
+Comment=Configure Razor-Qt modules
+Comment[ru]=Центр настроек для модулей Razor-Qt
+GenericName[pl]=Panel sterowania Razor
+Icon=/usr/share/razor/graphics/razor_logo.png
+Exec=razor-config
+Categories=Application;X-Razor;
+Encoding=UTF-8
+Terminal=false
+MultipleArgs=false

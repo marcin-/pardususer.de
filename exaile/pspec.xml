@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>exaile</Name>
+        <Homepage>http://www.exaile.org</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.sound</PartOf>
+        <Summary>Music Player for GTK and written in Python</Summary>
+        <Description>Exaile is a media player aiming to be similar to AmaroK, but for GTK+.</Description>
+        <Archive sha1sum="8828615d92c75714f78a790c51cf214454c2f927" type="targz">http://launchpad.net/exaile/0.3.2/0.3.2.2/+download/exaile-0.3.2.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-gtk-devel</Dependency>
+            <Dependency>python-pygobject-devel</Dependency>
+            <Dependency>gst-python-devel</Dependency>
+            <Dependency>libcddb-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>exaile-makefile.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>exaile</Name>
+        <RuntimeDependencies>
+            <Dependency>python-mutagen</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>notify-python</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-pygobject</Dependency>
+            <Dependency>gst-python</Dependency>
+            <Dependency>libcddb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-08-07</Date>
+            <Version>0.3.2.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+        <Name>fbpanel</Name>
+        <Homepage>http://fbpanel.sourceforge.net</Homepage>
+        <Packager>
+            <Name>mpie</Name>
+            <Email>michael.kyne-phillips@sky.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>GPLv3</License>
+	<PartOf>util.misc</PartOf>
+	<IsA>app:gui</IsA>
+        <Summary>Lightweight Panel</Summary>
+	<Description>fbpanel is a lightweight,NETWM compliant desktop panel.It works with any NETWM compliant window manager</Description>
+	<Archive sha1sum="4ebb2e0e23cd68aef0238f10781bbf42274d32f8" type="tarbz2">http://sourceforge.net/projects/fbpanel/files/fbpanel/6.1/fbpanel-6.1.tbz2</Archive>
+	<BuildDependencies>
+	    <Dependency>gtk2-devel</Dependency>
+	</BuildDependencies>
+  </Source>
+  
+  <Package>
+      <Name>fbpanel</Name>
+      <RuntimeDependencies>
+	  <Dependency>gtk2</Dependency>
+      </RuntimeDependencies>
+      <Files>
+	    <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="header">/usr/include</Path>
+	    <Path fileType="library">/usr/lib/fbpanel</Path>
+	    <Path fileType="data">/usr/share/</Path>
+	    <Path fileType="doc">/usr/share/doc/fbpanel</Path>
+	    <Path fileType="data">/usr/libexec/fbpanel</Path>
+      </Files>
+  </Package>
+  
+    <History>
+      <Update release="1">
+            <Date>2011-01-28</Date>
+            <Version>6.1</Version>
+            <Comment>Initial package</Comment>
+            <Name>mpie</Name>
+            <Email>michael.kyne-phillips@sky.com.com</Email>
+      </Update>
+    </History>
+</PISI>

@@ -1,0 +1,50 @@
+<PISI>
+    <Source>
+        <Name>gtkhotkey</Name>
+        <Homepage>https://launchpad.net/gtkhotkey</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>x11.library</PartOf>
+        <IsA>library</IsA>
+        <Summary>Platform independent hotkey handling for Gtk+ applications</Summary>
+        <Description>Platform independent hotkey handling for Gtk+ applications</Description>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="4dfc99163945c16e47f5296d3a3b7fb3f96bc91c" type="targz">http://launchpad.net/gtkhotkey/0.2/0.2.1/+download/gtkhotkey-0.2.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>gtkhotkey</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc" permanent="0">/usr/doc/gtkhotkey/*</Path>
+            <Path fileType="library" permanent="0">/usr/lib</Path>
+            <Path fileType="data" permanent="0">/usr/share/gtk-doc/html/gtkhotkey/*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gtkhotkey-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkhotkey</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header" permanent="0">/usr/include/gtkhotkey-1.0</Path>
+            <Path fileType="library" permanent="0">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-09-24</Date>
+            <Version>0.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

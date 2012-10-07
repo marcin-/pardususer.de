@@ -1,0 +1,14 @@
+--- WordNet-3.0.orig/configure.ac	2007-01-20 20:59:24.000000000 +0100
++++ WordNet-3.0/configure.ac	2011-04-04 20:43:57.474000106 +0200
+@@ -40,9 +40,9 @@
+ fi
+ AC_SUBST(ac_prefix)
+ AH_TEMPLATE([DEFAULTPATH],[The default search path for WordNet data files])
+-AC_DEFINE_UNQUOTED(DEFAULTPATH, ["$ac_prefix/dict"], [Default installation prefix.])
++AC_DEFINE_UNQUOTED(DEFAULTPATH, ["$ac_prefix/share/wordnet/dict"], [Default installation prefix.])
+ 
+-#AC_DEFINE_UNQUOTED(DEFAULTPATH,"${prefix}/dict")
++#AC_DEFINE_UNQUOTED(DEFAULTPATH,"${prefix}/share/wordnet/dict")
+ 
+ # This doesn't do anything
+ AC_CONFIG_COMMANDS([default])

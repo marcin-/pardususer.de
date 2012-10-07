@@ -1,0 +1,15 @@
+--- src/configme.sh	2011-07-22 08:39:59.000000000 +0200
++++ src.new/configme.sh	2011-08-28 18:43:01.160000052 +0200
+@@ -29,10 +29,8 @@
+ 	echo A gdzie sox?
+ 	exit 1
+ fi
+-contrast=""
+-if play -n -q synth 0.01 sine 440 vol 0 contrast >/dev/null 2>/dev/null; then
+-        contrast=contrast
+-fi
++
++contrast=contrast
+ 
+ if ! mbrola=`which mbrola` ; then
+ 	echo A mbrola gdzie?

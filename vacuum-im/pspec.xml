@@ -1,0 +1,312 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>vacuum-im</Name>
+        <Homepage>http://www.vacuum-im.org/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>vacuum</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Cross-platform Qt-based jabber client</Summary>
+        <Description>Vacuum IM is cross-platform Qt-based application, fast and lightweight jabber instant messaging client that utilises the best in open source technologies.</Description>
+        <Archive sha1sum="a7dd1a471c9037e9d6085c0461b55c89750037dc" type="tarxz">http://vacuum-im.googlecode.com/files/vacuum-1.1.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>qt-webkit-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>minizip-devel</Dependency>
+	    <Dependency>libidn-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>vacuum-im</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>qt-webkit</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>minizip</Dependency>
+	    <Dependency>libidn</Dependency>
+        </RuntimeDependencies>
+	<Replaces>
+	    <Package>vacuum</Package>
+	</Replaces>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/vacuum.desktop" permission="0644" owner="root">vacuum.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>vacuum-im-devel</Name>
+	    <Summary>Development files for vacuum-im</Summary>
+        <RuntimeDependencies>
+	    <Dependency release="current">vacuum-im</Dependency>
+        </RuntimeDependencies>
+	<Conflicts>
+	    <Package>vacuum-im-unstable-devel</Package>
+	</Conflicts>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="34">
+            <Date>2011-12-28</Date>
+            <Version>1.1.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+      	<Update release="33">
+            <Date>2011-08-24</Date>
+            <Version>1.1.1</Version>
+            <Comment>Fixed bug with handling stanzas from Google XMPP servers
+                     XML parser did not correctly handle the elements with not declared prefixes, which caused to the breaking the connection
+                     Fixed bug in Digest-MD5 authorization for which was not possible to log on some servers
+                     NOTICE: Look for a latest (svn) vacuum-im in package vacuum-im-unstabe</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+      	<Update release="32">
+            <Date>2011-06-12</Date>
+            <Version>1.1.0.1547</Version>
+            <Comment>* Fixed build ChatMessageHandler</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+      	<Update release="31">
+            <Date>2011-06-11</Date>
+            <Version>1.1.0.1546</Version>
+            <Comment>* Now used system minizip and libidn</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+      	<Update release="30">
+            <Date>2011-05-10</Date>
+            <Version>1.1.0.1540</Version>
+            <Comment>svn up</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+      	<Update release="29">
+            <Date>2011-03-10</Date>
+            <Version>1.1.0</Version>
+            <Comment>Release 1.1.0</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+	<Update release="28">
+            <Date>2011-03-10</Date>
+            <Version>1.1.0.1518_rc1</Version>
+            <Comment>Bump to svn rev.1518 ver. 1.1.0 RC1</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+	<Update release="27">
+            <Date>2011-03-05</Date>
+            <Version>1.1.0.1514_rc1</Version>
+            <Comment>Bump to svn rev.1514 ver. 1.1.0 RC1</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="26">
+            <Date>2011-03-02</Date>
+            <Version>1.1.0.1512_rc1</Version>
+            <Comment>Bump to svn rev.1512 ver. 1.1.0 RC1</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="25">
+            <Date>2011-02-28</Date>
+            <Version>1.1.0.1509_rc1</Version>
+            <Comment>Bump to svn rev.1509 ver. 1.1.0 RC1</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="24">
+            <Date>2011-02-24</Date>
+            <Version>1.0.2.1503</Version>
+            <Comment>Bump to svn rev.1504</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="23">
+            <Date>2011-02-22</Date>
+            <Version>1.0.2.1501</Version>
+            <Comment>Bump to svn rev.1501</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="22">
+            <Date>2011-02-08</Date>
+            <Version>1.0.2.1486</Version>
+            <Comment>Bump to svn rev.1486</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="22">
+            <Date>2011-01-27</Date>
+            <Version>1.0.2.1471</Version>
+            <Comment>Bump to svn rev.1471</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="21">
+            <Date>2011-01-25</Date>
+            <Version>1.0.2.1469</Version>
+            <Comment>Bump to svn rev.1469</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="20">
+            <Date>2011-01-24</Date>
+            <Version>1.0.2.1467</Version>
+            <Comment>Bump to svn rev.1467</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="19">
+            <Date>2011-01-22</Date>
+            <Version>1.0.2.1465</Version>
+            <Comment>Bump to svn rev.1465</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="18">
+            <Date>2011-01-16</Date>
+            <Version>1.0.2.1460</Version>
+            <Comment>Bump to svn rev.1460</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="17">
+            <Date>2011-01-13</Date>
+            <Version>1.0.2.1451</Version>
+            <Comment>Bump to svn rev.1451</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="16">
+            <Date>2011-01-12</Date>
+            <Version>1.0.2.1450</Version>
+            <Comment>Bump to svn rev.1450</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="15">
+            <Date>2011-01-08</Date>
+            <Version>1.0.2.1430</Version>
+            <Comment>Bump to svn rev.1430</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="14">
+            <Date>2011-01-04</Date>
+            <Version>1.0.2.1425</Version>
+            <Comment>Bump to svn rev.1425</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="13">
+            <Date>2011-01-04</Date>
+            <Version>1.0.2.1423</Version>
+            <Comment>Bump to svn rev.1423</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="12">
+            <Date>2011-01-04</Date>
+            <Version>1.0.2.1421</Version>
+            <Comment>Bump to svn rev.1421</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="11">
+            <Date>2011-01-04</Date>
+            <Version>1.0.2.1415</Version>
+            <Comment>Bump to svn rev.1415</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="10">
+            <Date>2010-01-04</Date>
+            <Version>1.0.2.1414</Version>
+            <Comment>Bump to svn rev.1414</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="9">
+            <Date>2011-01-03</Date>
+            <Version>1.0.2.1411</Version>
+            <Comment>Bump to svn rev.1411</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="8">
+            <Date>2010-12-29</Date>
+            <Version>1.0.2.1405</Version>
+            <Comment>Bump to svn rev.1405</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2010-12-29</Date>
+            <Version>1.0.2.1396</Version>
+            <Comment>Bump to svn rev.1396</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2010-12-29</Date>
+            <Version>1.0.2.1392</Version>
+            <Comment>Bump to svn rev.1392</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2010-12-27</Date>
+            <Version>1.0.2.1388</Version>
+            <Comment>Bump to svn rev.1388</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2010-12-26</Date>
+            <Version>1.0.2.1386</Version>
+            <Comment>Bump to svn rev.1386</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-12-25</Date>
+            <Version>1.0.2.1382</Version>
+            <Comment>Bump to svn rev.1382</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2010-12-23</Date>
+            <Version>1.0.2.1381</Version>
+            <Comment>Bump to svn rev.1381</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-12-22</Date>
+            <Version>1.0.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

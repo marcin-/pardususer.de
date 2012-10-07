@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>motion</Name>
+        <Summary xml:lang="de">Bewegungserkennung-Software für Webcams</Summary>
+        <Description xml:lang="de">Motion überwacht das Videosignal von mehreren Kameras (video4linux-Interface) und beinhaltet eine Bewegungsmeldung sobald sich ein Teil des Bildschirminhaltes ändert. Funktionen: zyklischer Screenshot, Live-Bildstrom einer Webcam, Erstellung einer mpeg-Datei, Datenbank-Interface, OSD etc.</Description>
+    </Source>
+</PISI>

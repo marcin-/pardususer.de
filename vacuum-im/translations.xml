@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>vacuum-im</Name>
+        <Summary xml:lang="ru">Jabber клиент, написанный на QT</Summary>
+        <Description xml:lang="ru">Лёгкий и быстрый клиент для обмена мгновенными сообщениями в сети Jabber</Description>
+	<Summary xml:lang="en">Cross-platform Qt-based jabber client</Summary>
+        <Description xml:lang="en">Vacuum IM is cross-platform Qt-based application, fast and lightweight jabber instant messaging client that utilises the best in open source technologies.</Description>
+    </Source>
+</PISI>

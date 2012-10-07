@@ -1,0 +1,80 @@
+<PISI>
+    <Source>
+        <Name>easystroke</Name>
+        <Homepage>http://sourceforge.net/projects/easystroke/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <License>MIT</License>
+         <PartOf>util.accessibility</PartOf>
+       <IsA>app:gui</IsA>
+        <Summary>A gesture-recognition application for X11</Summary>
+        <Description>Easystroke is a gesture-recognition application for X11. Gestures or strokes are movements that you make with you mouse (or your pen, finger etc.) while holding down a specific mouse button. Easystroke will execute certain actions if it recognizes the stroke; currently easystroke can emulate key presses, execute shell commands, hold down modifiers and emulate a scroll wheel. The program was designed with Tablet PCs in mind and can be used effectively even without access to a keyboard. Easystroke tries to provide an intuitive and efficient user interface, while at the same time being highly configurable and offering many advanced features.</Description>
+        <BuildDependencies>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtkmm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="04a15d6d50f883b6d492a70adf53943e61dc6ca9" type="targz">mirrors://sourceforge/easystroke/easystroke-0.5.5.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>easystroke</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>cairomm</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtkmm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pangomm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/easystroke</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/easystroke.desktop</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/easystroke/LICENSE</Path>
+            <Path fileType="data" permanent="0">/usr/share/icons/hicolor/scalable/apps/easystroke.svg</Path>
+            <Path fileType="localedata" permanent="0">/usr/share/locale/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2011-09-24</Date>
+            <Version>0.5.5.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-03-04</Date>
+            <Version>0.5.4</Version>
+            <Comment>PREFIX in makefile chanced</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-03-02</Date>
+            <Version>0.5.4</Version>
+            <Comment>First release</Comment>
+            <Name>Bekir ŞENALP</Name>
+            <Email>bsenalp@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

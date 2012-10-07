@@ -1,0 +1,34 @@
+<PISI>
+    <Source>
+        <Name>flasm</Name>
+        <Homepage>http://www.nowrap.de/flasm.html</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:console</IsA>
+        <PartOf>programming.misc</PartOf>
+        <License>custom</License>
+        <License>as-is</License>
+        <Summary>Disassembler tool for SWF bytecode.</Summary>
+        <Description>Flasm is a free command line assembler/disassembler of Flash ActionScript bytecode. It lets you make changes to any SWF. Flasm fully supports SWFs produced by Macromedia Flash 8 and earlier Flash versions.</Description>
+        <Archive sha1sum="3b383fa042eae414c5e5608bfa91a42f44bd1a86" type="zip">http://www.nowrap.de/download/flasm16src.zip</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>flasm</Name>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/flasm</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/flasm/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-08-31</Date>
+            <Version>1.62</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

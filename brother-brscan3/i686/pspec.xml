@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>brscan3</Name>
+        <Homepage>http://solutions.brother.com/linux/sol/printer/linux/sane_drivers.html</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <PartOf>applications.printing</PartOf>
+        <Summary>Sane scanner drivers for Brother DCP and MFC multifunction printers.</Summary>
+        <Description>brscan3 scanner driver is a sane backend which supports numerous Brother multifunction printers.</Description>
+        <Archive sha1sum="2b3217dc6482d511683c417fb17fea34157eaf90" type="tarbz2">http://pakete.pardususer.de/source-files/brscan3-0.2.11-4-32.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>brscan3</Name>
+        <RuntimeDependencies>
+            <Dependency>sane-backends</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/local/Brother/sane</Path>
+            <Path fileType="data">/usr/local/Brother/sane/models3</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/sane</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-02-22</Date>
+            <Version>0.2.11</Version>
+            <Comment>First release.</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

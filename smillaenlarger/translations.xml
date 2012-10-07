@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>smillaenlarger</Name>
+        <Summary xml:lang="de">Bilder/Fotos ohne Artefakte vergrößern</Summary>
+        <Description xml:lang="de">Smillaenlarger ist ein kleines nützliches Werkzeug, um Bilder und Fotos zu vergrößern ohne Artefakte zu generieren und ohne viel Qualität einzubüßen.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=TEA text editor
+Name[ru]=Текстовый редактор TEA
+Name[de]=Texteditor TEA
+Name[pl]=Edytor tekstu TEA
+Comment=Advanced text editor
+Comment[ru]=Продвинутый текстовый редактор
+Comment[de]=Ein erweiterter Texteditor
+Comment[pl]=Zaawansowany edytor tekstu
+Exec=tea
+Terminal=false
+Type=Application
+StartupNotify=false
+MimeType=text/plain;
+Icon=tea_icon_v2.png
+Categories=Qt;Utility;TextEditor;
+GenericName=Advanced text editor
+GenericName[ru]=Продвинутый текстовый редактор
+GenericName[de]=Ein erweiterter Texteditor
+GenericName[pl]=Zaawansowany edytor tekstu
+X-SuSE-translate=true

@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>truecrypt</Name>
+        <Homepage>http://www.truecrypt.org/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>util.crypt</PartOf>
+        <License>as-is</License>
+        <License>custom</License>
+        <Summary>Free open-source cross-platform disk encryption software.</Summary>
+        <Description>TrueCrypt is a software system for establishing and maintaining an on-the-fly-encrypted volume (data storage device).</Description>
+        <Archive sha1sum="6981969fee76a60bd9303bd43193f9da3b5b25ae" type="targz">http://pakete.pardususer.de/source-files/truecrypt-7.1-setup.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>truecrypt</Name>
+        <RuntimeDependencies>                                                                
+            <Dependency>fuse</Dependency>                                                        
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/truecrypt.desktop</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/truecrypt.xpm</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/truecrypt.desktop" permission="0644" owner="root">truecrypt.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/truecrypt.xpm" permission="0644" owner="root">truecrypt.xpm</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-09-02</Date>
+            <Version>7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>cnijfilter-mp610series</Name>
+        <Homepage>http://software.canon-europe.com</Homepage>
+        <Packager>
+            <Name>Ozan Çağlayan</Name>
+            <Email>ozan@pardus.org.tr</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>driver</IsA>
+        <PartOf>applications.printing</PartOf>
+        <Summary>Driver suite for Canon MP610 printer</Summary>
+        <Description>Canon common printing drivers which supports MP610 multifunction printer.</Description>
+        <Archive sha1sum="81a7979cf12c0067bd63dc59905aacb0a44b09e5" type="tarbz2">http://pakete.pardususer.de/source-files/cnijfilter-mp610series-2.80-1.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>cnijfilter-mp610series</Name>
+        <RuntimeDependencies>
+            <Dependency>cnijfilter-common</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/local/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/local/share</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-11-12</Date>
+            <Version>2.80</Version>
+            <Comment>Made from cnijfilter-mp610series-2.80-1.i386.rpm with language fles /usr/local/share/locale/.../.mo removed</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-11-07</Date>
+            <Version>2.80</Version>
+            <Comment>Archive (rebuild) from pardususer.de</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-03-10</Date>
+            <Version>2.80</Version>
+            <Comment>Stable release.</Comment>
+            <Name>Ozan Çağlayan</Name>
+            <Email>ozan@pardus.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

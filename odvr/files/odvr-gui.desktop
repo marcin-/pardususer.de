@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=odvr GUI
+GenericName=Olympus DVR Reader
+Comment=Tool for reading files from Olympus digital voice recorders
+Icon=media-tape
+Exec=odvr-gui
+Categories=Application;Utility;Audio;AudioVideo
+MimeType=
+StartupNotify=true
+Terminal=false
+Type=Application

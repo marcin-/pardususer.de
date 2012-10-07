@@ -1,0 +1,42 @@
+<PISI>
+    <Source>
+        <Name>sinthgunt</Name>
+        <Homepage>http://code.google.com/p/sinthgunt/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>multimedia.converter</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>An open source graphical user interface for ffmpeg</Summary>
+        <Description>Sinthgunt is an open source graphical user interface for ffmpeg, a computer program that can convert digital audio and video into numerous formats. Using pre-configured conversion settings, it makes the task of converting between different media formates very easy.</Description>
+        <Archive sha1sum="f45ee2ebe9dcdbae88a9afd7d2e516ec18384fb8" type="targz">http://sinthgunt.googlecode.com/files/sinthgunt-2.0.3.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>sinthgunt</Name>
+        <RuntimeDependencies>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>youtube-dl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/site-packages/Sinthgunt/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/sinthgunt.desktop</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/sinthgunt/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/sinthgunt.png</Path>
+            <Path fileType="data" permanent="0">/usr/share/sinthgunt/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-10-01</Date>
+            <Version>2.0.3</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

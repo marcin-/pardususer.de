@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	
+	<Source>
+		<Name>smillaenlarger</Name>
+		<Homepage>http://sourceforge.net/projects/imageenlarger/</Homepage>
+		<Packager>
+			<Name>Erdem Artan</Name>
+			<Email>baDibere@gmail.com</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
+		<Summary>Enlarge pictures/photos without loosing so much quality.</Summary>
+		<Description>Smillaenlarger is a small graphical tool to resize, especially magnify bitmaps in high quality.</Description>
+		<Archive sha1sum="6d2d1aa735099b97d73548c603b9ee6906a81c46" type="zip">http://garr.dl.sourceforge.net/project/imageenlarger/imageenlarger/SmillaEnlarger%20Release%200.9.0/SmillaEnlarger_0.9.0_source.zip</Archive>
+		<BuildDependencies>
+			<Dependency>qt</Dependency>
+			<Dependency>qt-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+	
+	<Package>
+		<Name>smillaenlarger</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share/icons</Path>
+			<Path fileType="data">/usr/share/applications</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+		<AdditionalFiles>
+			<AdditionalFile target="/usr/share/applications/SmillaEnlarger.desktop" permission="0644" owner="root">SmillaEnlarger.desktop</AdditionalFile>
+		</AdditionalFiles>
+		<RuntimeDependencies>
+			<Dependency>qt</Dependency>
+		</RuntimeDependencies>
+	</Package>
+	<History>
+	    <Update release="3">
+			<Date>2011-02-16</Date>
+			<Version>0.9.0</Version>
+			<Comment>Version for P2011</Comment>
+			<Name>Stefan Wilhelm</Name>
+			<Email>sw@pardususer.de</Email>
+		</Update>
+	    <Update release="2">
+			<Date>2010-06-02</Date>
+			<Version>0.9.0</Version>
+			<Comment>Version Bump</Comment>
+			<Name>Erdem Artan</Name>
+			<Email>baDibere@gmail.com</Email>
+		</Update>
+		<Update release="1">
+			<Date>2010-01-23</Date>
+			<Version>0.8.9</Version>
+			<Comment>First Release</Comment>
+			<Name>Erdem Artan</Name>
+			<Email>baDibere@gmail.com</Email>
+		</Update>
+	</History>
+</PISI>
+
+ 

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>amsn-skins</Name>
+        <Homepage>http://sourceforge.net/projects/amsn/files/amsn-skins/</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>amsn</Icon>
+        <IsA>data</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Skin collection for aMSN.</Summary>
+        <Description>This collection contains lots of various skins for aMSN (actually 44 skins).</Description>
+        <Archive type="binary" sha1sum="f34021d8aa16d979026289f4e9fb5689dadaabdb">http://pakete.pardususer.de/source-files/amsn-skins-2011.04.11.7z</Archive>
+        <BuildDependencies>
+            <Dependency>p7zip</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>amsn-skins</Name>
+        <RuntimeDependencies>
+            <Dependency>amsn</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/amsn/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-04-11</Date>
+            <Version>2011.04.11</Version>
+            <Comment>Release for Pardus 2011; Added some new skins; Changed version number to date of source file; Source file is compressed with 7zip now (for smaller file size) ;-)</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="3">
+            <Date>2009-01-26</Date>
+            <Version>1.0</Version>
+            <Comment>Updating translations.xml</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-01-25</Date>
+            <Version>1.0</Version>
+            <Comment>Correcting pspec.xml information</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-01-06</Date>
+            <Version>1.0</Version>
+            <Comment>This release (first release) contains 44 skins.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

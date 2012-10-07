@@ -1,0 +1,15 @@
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Menu>
+		<Name>Settingsmenu</Name>
+		<Menu>
+			<Name>razor-razor</Name>
+			<Directory>Razor.directory</Directory>
+			<Include>
+				<Category>X-Razor</Category>
+			</Include>
+		</Menu>
+	</Menu>
+</Menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE PISI SYSTEM "http://www.uludag.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vdr</Name>
+        <Homepage>http://www.tvdr.de/</Homepage>
+        <Packager>
+            <Name>Fahri Tuğrul Gürkaynak</Name>
+            <Email>tugrul@pardus.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>multimedia.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Video Disk Recorder</Summary>
+        <Description>Turns a pc into a powerful set top box for DVB</Description>
+        <Archive type="tarbz2" sha1sum="203a03ce4a39e8c70e0a64d7d94b7f5f17f03e7d">ftp://ftp.tvdr.de/vdr/vdr-1.6.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>vdr-1.6.0-makefile.diff</Patch>
+            <Patch>vdr-1.6.0-remove-dvb-abi-check.patch</Patch>
+            <Patch level="1">vdr-1.6.0-const.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>vdr</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/video</Path>
+        </Files>
+   </Package>
+
+   <History>
+        <Update release="2">
+            <Date>2012-01-25</Date>
+            <Version>1.6.0</Version>
+	    <Comment>Version for P2011</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2008-07-01</Date>
+            <Version>1.6.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Fahri Tuğrul Gürkaynak</Name>
+            <Email>tugrul@pardus.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

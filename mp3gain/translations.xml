@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+	<Source>
+		<Name>mp3gain</Name>
+		<Summary xml:lang="de">Verlustfreies normalisieren der Lautstärke von MP3 Dateien</Summary>
+		<Description xml:lang="de">Mp3gain analysiert mp3 Dateien und stellt die Lautstärke auf eine definierte Lautstärke ein. Das Programm führt nicht nur eine Peak Normalisierung durch, sondern es analysiert wie laut das Lied für das menschliche Ohr ist. Nach der Bearbeitung ist kei Qualitätsverlust feststellbar, da die Lautstärke direkt beeinflusst wird ohne die Datei neu zu enkodieren.</Description>
+	</Source>
+</PISI>

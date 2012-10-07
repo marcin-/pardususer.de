@@ -1,0 +1,12 @@
+diff -Naur deadbeef-0.5.4.orig/plugins/m3u/Makefile.am deadbeef-0.5.4/plugins/m3u/Makefile.am
+--- deadbeef-0.5.4.orig/plugins/m3u/Makefile.am	2012-04-09 16:21:52.000000000 +0200
++++ deadbeef-0.5.4/plugins/m3u/Makefile.am	2012-06-03 20:40:08.418999947 +0200
+@@ -5,7 +5,7 @@
+ 
+ m3u_la_LDFLAGS = -module -lm
+ 
+-m3u_la_LIBADD = $(LIBADD)
++m3u_la_LIBADD = $(LIBADD) -lm
+ 
+ m3u_la_CFLAGS = $(CFLAGS) -std=c99
+ endif

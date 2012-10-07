@@ -1,0 +1,63 @@
+<PISI>
+    <Source>
+        <Name>turbojpeg</Name>
+        <Homepage>http://www.libjpeg-turbo.org/About/TurboJPEG</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <PartOf>multimedia.converter</PartOf>
+        <IsA>library</IsA>
+        <Summary>libjpeg derivative with accelerated baseline JPEG compression and decompression</Summary>
+        <Description>libjpeg-turbo is a derivative of libjpeg that uses MMX, SSE, SSE2, and NEON SIMD instructions to accelerate baseline JPEG compression/decompression by about 2-4x on x86, x86-64, and ARM platforms. It is based on libjpeg/SIMD but has numerous enhancements.</Description>
+        <BuildDependencies>
+            <Dependency>autoconf</Dependency>
+            <Dependency>automake</Dependency>
+            <Dependency>libtool</Dependency>
+            <Dependency>nasm</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="131cef514c34e0b3f6952000968796d5a87a59e9" type="targz">http://sourceforge.net/projects/libjpeg-turbo/files/1.1.1/libjpeg-turbo-1.1.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>turbojpeg</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/turbojpeg/*</Path>
+        </Files>
+    </Package>
+    
+    <!-- <Package>
+        <Name>turbojpeg-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for turbojpeg</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency></Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">tubojpeg</Dependency>
+            <Dependency></Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/turbojpeg*</Path>
+        </Files>
+      </Package> -->
+
+    
+    <History>
+        <Update release="1">
+            <Date>2012-01-25</Date>
+            <Version>1.1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

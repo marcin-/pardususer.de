@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libzen</Name>
+        <Homepage>http://sourceforge.net/projects/zenlib/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <License>ZLIB</License>
+        <IsA>library</IsA>
+        <PartOf>library</PartOf>
+        <Summary>Small C++ derivate class to have a simpler life.</Summary>
+        <Description>shared library for libmediainfo and mediainfo</Description>
+        <Archive sha1sum="56567436ee5dbc3986daf9f4dd34ba15d579db93" type="tarbz2">mirrors://sourceforge/zenlib/libzen_0.4.27.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>libzen</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libzen-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libzen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/libzen-config</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/libzen.so</Path>
+            <Path fileType="header">/usr/include/ZenLib</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2012-06-10</Date>
+            <Version>0.4.27</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2012-05-03</Date>
+            <Version>0.4.26</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2012-01-26</Date>
+            <Version>0.4.24</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-11-14</Date>
+            <Version>0.4.23</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-09-24</Date>
+            <Version>0.4.22</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-08-15</Date>
+            <Version>0.4.20</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

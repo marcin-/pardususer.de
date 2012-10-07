@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Icon=application-x-love-game
+Exec=nottetris2
+Terminal=false
+StartupNotify=false
+
+Name=Not Tetris 2
+GenericName=Arcade Game
+Comment=Basically it's a little like tetris except with a twist.
+
+Categories=Game;ArcadeGame;

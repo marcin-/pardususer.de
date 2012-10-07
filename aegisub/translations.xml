@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aegisub</Name>
+        <Summary xml:lang="de">Untertitel Editor</Summary>        
+        <Description xml:lang="de">Aegisub ist ein umfassender Untertiteleditor. Er erlaubt nicht nur das erstellen von einfachen Kommentaren, sondern auch fortgeschrittene Effekte.</Description>
+    </Source>
+</PISI>

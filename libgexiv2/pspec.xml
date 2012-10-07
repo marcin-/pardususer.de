@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libgexiv2</Name>
+        <Homepage>http://redmine.yorba.org/projects/gexiv2</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.library</PartOf>
+	<Summary>Gexiv2 is a GObject-based wrapper around the Exiv2 library</Summary>
+	<Description>libgexiv2 is a GObject-based wrapper around the Exiv2 library. It makes the basic features of Exiv2 available to GNOME applications.</Description>
+	<Archive type="tarbz2" sha1sum="f7c19da4b678c050966f9677c95a8fdfdcc9892c">http://yorba.org/download/gexiv2/0.2/libgexiv2-0.2.2.tar.bz2</Archive>
+        <BuildDependencies>
+        	<Dependency versionTo="0.21">exiv2-devel</Dependency>
+	    	<Dependency>gobject-introspection</Dependency>
+	    	<Dependency>libtool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgexiv2</Name>
+        <RuntimeDependencies>
+            <Dependency versionTo="0.21">exiv2</Dependency>
+	    	<Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+	<Package>
+        <Name>libgexiv2-devel</Name>
+		<Summary>Development files for libgexiv2</Summary>
+        <RuntimeDependencies>
+	    <Dependency release="current">libgexiv2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>2011-09-28</Date>
+	    	<Version>0.2.2</Version>
+            <Comment>Update</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-07-06</Date>
+	    	<Version>0.1.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Bahadir Ozdemir</Name>
+            <Email>baho888@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

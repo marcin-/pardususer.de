@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pdfsam-enhanced</Name>
+        <Homepage>http://www.pdfsam.org/</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>pdfsam-enhanced</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>office.misc</PartOf>
+        <Summary>Tool to editing and manipulating PDF files</Summary>
+        <Description>PDFSam has a simple graphical interface to let the user choose pdf files, split or merge them. This is the enhanced version of PDFSam with more functionalities.</Description>
+        <Archive type="zip" sha1sum="b3dec79d4a50fa0b0b2aa2250f7d1b0c435e4dcf">http://ignum.dl.sourceforge.net/project/pdfsam/pdfsam-enhanced/2.2.1e/pdfsam-2.2.1e-out-src.zip</Archive>
+        <BuildDependencies>
+            <Dependency>ant</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pdfsam-enhanced</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+            <Package>pdfsam-basic</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="data">/opt/pdfsam-enhanced/</Path>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pdfsam-enhanced.desktop">pdfsam-enhanced.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/pdfsam-enhanced.png">pdfsam-enhanced.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/pdfsam-enhanced/pdfsam-enhanced-help-index.html">pdfsam-enhanced-help-index.html</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/pdfsam-enhanced/tutorial-de.pdf">tutorial-de.pdf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/pdfsam-enhanced/tutorial-en.pdf">tutorial-en.pdf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/pdfsam-enhanced/tutorial-fr.pdf">tutorial-fr.pdf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/pdfsam">pdfsam-enhanced.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/pdfsam-console">pdfsam-enhanced-console.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-05-02</Date>
+            <Version>2.2.1e</Version>
+            <Comment>Adding pdfsam-enhanced-help-index.html as DocPath into pdfsam-enhanced.desktop</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2010-03-30</Date>
+            <Version>2.2.0e</Version>
+            <Comment>Adding pdfsam-enhanced-help-index.html as DocPath into pdfsam-enhanced.desktop</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-03-29</Date>
+            <Version>2.2.0e</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

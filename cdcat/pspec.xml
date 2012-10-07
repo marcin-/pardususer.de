@@ -1,0 +1,81 @@
+<PISI>
+    <Source>
+        <Name>cdcat</Name>
+        <Homepage>http://cdcat.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>multimedia.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Qt based CD/DVD/Media catalog software</Summary>
+        <Description>The cdcat is graphical (QT based) multiplatform (Linux/Windows/MacOS) catalog program which scans the directories/drives you want and memoryze the filesystem (including the tags of mp3's) and store it in a small file.</Description>
+        <BuildDependencies>
+            <Dependency>lib7zip</Dependency>
+            <Dependency>p7zip</Dependency>
+            <Dependency>libmediainfo-devel</Dependency>
+            <Dependency>libzen-devel</Dependency>
+            <Dependency>libtar-devel</Dependency>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="af2d544c645b300c75c1140ba77caeb0b788f237" type="tarbz2">mirrors://sourceforge/cdcat/cdcat-1.9.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>cdcat</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/cdcat</Path>
+            <Path fileType="data">/usr/share/applications/cdcat.desktop</Path>
+            <Path fileType="data">/usr/share/cdcat/*</Path>
+            <Path fileType="doc">/usr/share/doc/cdcat/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="data">/usr/share/pixmaps/cdcat.png</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>        
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/cdcat.desktop" permission="0644" group="root" owner="root">cdcat.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>libtar</Dependency>
+            <Dependency>p7zip</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>libmediainfo</Dependency>
+            <Dependency>libexif</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2012-04-06</Date>
+            <Version>1.9</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2012-02-24</Date>
+            <Version>1.8</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2012-01-29</Date>
+            <Version>1.6</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-12-22</Date>
+            <Version>1.5</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

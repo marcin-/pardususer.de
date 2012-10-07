@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>2mandvd</Name>
+        <Summary xml:lang="de">Video DVDs erstellen</Summary>       
+        <Summary xml:lang="pl">Narzędzie do tworzenia Video DVD</Summary>      
+        <Summary xml:lang="tr">Video DVD oluşturma yazılımı</Summary>
+        <Description xml:lang="de">2ManDVD erlaubt das einfache erstellen von Video-DVDs und Diashows.</Description>
+        <Description xml:lang="pl">Narzędzie do tworzenia Video DVD</Description>
+        <Description xml:lang="tr">2ManDVD video DVD'ler oluşturmak için bir araçtır. ManDVD projesine esas almıştır.</Description>
+    </Source>
+</PISI>

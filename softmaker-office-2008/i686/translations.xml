@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>softmaker-office-2008</Name>
+        <Summary xml:lang="de">Vollständige Office-Software</Summary>
+        <Description xml:lang="de">SoftMaker Office ist eine propritäre Office-Software bestehend aus einer Textverarbeitung (TextMaker), Tabellenkalkulation (PlanMaker) und einem PowerPoint ähnlichen Präsentationsprogramm (Presentations). Neben dem OpenDocument-Format aus LibreOffice und OpenOffice werdem auch Dokumenformate aus Microsoft Office wie Word, Excel und PowerPoint unterstützt. Um SoftMaker Office benutzen zu können ist eine kostenpflichtige Seriennummer erforderlich: http://www.softmaker.com/shop/shop.php</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Qnext
+GenericName=Communication and Sharing solution
+Comment=Communication and Sharing solution for Linux operating systems.
+Icon=/usr/share/pixmaps/qnext.png
+Exec=kdesu qnext
+Categories=Application;Network;
+Type=Application
+Terminal=false
+X-KDE-StartupNotify=true
+MultipleArgs=false

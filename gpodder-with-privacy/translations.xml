@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gpodder-with-privacy</Name>
+        <Summary xml:lang="de">Podcasts einfach und systematisch konsumieren</Summary>
+        <Description xml:lang="de">gpodder lädt freie und kostenlose Audio- oder Video-Podcasts herunter, die man dann am Computer oder unterwegs anhören kann. Diese Version ist für besseren Datenschutz ohne Zugriff auf den Web-Service von gpodder.net</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,68 @@
+<PISI>
+    <Source>
+        <Name>photivo</Name>
+        <Homepage>http://photivo.org/photivo/start</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>GPLv3</License>
+        <Summary>Free and open source photo processor.</Summary>
+        <Description>It is intended to be used in a workflow together with digiKam/F-Spot/Shotwell and Gimp.</Description>
+        <BuildDependencies>
+            <Dependency>GraphicsMagick-devel</Dependency>
+            <Dependency>exiv2-devel</Dependency>
+            <Dependency>fftw3-devel</Dependency>
+            <Dependency>gimp-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>lensfun-devel</Dependency>
+            <Dependency>liblqr-devel</Dependency>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="5e577f2b8e09ec7238610f830c2714c9bcc943b5" type="targz">https://launchpad.net/~dhor/+archive/myway/+files/photivo_20110901hg.orig.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>photivo</Name>
+        <RuntimeDependencies>
+            <Dependency>GraphicsMagick</Dependency>
+            <Dependency>exiv2-libs</Dependency>
+            <Dependency>fftw3</Dependency>
+            <Dependency>gimp</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>lensfun</Dependency>
+            <Dependency>libgomp</Dependency>
+            <Dependency>liblqr</Dependency>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin</Path>
+            <Path fileType="library" permanent="0">/usr/lib</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc</Path>
+            <Path fileType="data" permanent="0">/usr/share/photivo</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2011-09-04</Date>
+            <Version>20110901</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-07-08</Date>
+            <Version>20110627</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>gimp-dds-plugin</Name>
+        <Homepage>http://code.google.com/p/gimp-dds/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <PartOf>multimedia.graphics.gimp.addon</PartOf>
+        <IsA>library</IsA>
+        <Summary>DirectDraw Surface (DDS) format plugin for Gimp</Summary>
+        <Description>This is a plugin for GIMP version 2.6.x. It allows you to load and save images in the Direct Draw Surface (DDS) format.</Description>
+        <BuildDependencies>
+            <Dependency>gimp-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="1b1693a5d7d126acd4291a74120d80f3adc58a50" type="tarbz2">http://gimp-dds.googlecode.com/files/gimp-dds-2.1.0.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>gimp-dds-plugin</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gimp</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2012-07-07</Date>
+            <Version>2.1.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-03-14</Date>
+            <Version>2.0.9</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

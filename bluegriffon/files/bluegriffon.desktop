@@ -1,0 +1,18 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=BlueGriffon
+GenericName=Create websites
+GenericName[de]=Webseiten erstellen
+GenericName[pl]=Tworzenie stron internetowych
+Comment=Webeditor using WYSIWYG
+Comment[de]=Webeditor nach dem WYSIWYG-Prinzip
+Comment[pl]=Edytor stron WWW typu WYSIWYG
+Categories=Development;WebDevelopment;
+Exec=bluegriffon
+Icon=bluegriffon
+Terminal=false
+MimeType=text/html;text/xml;text/css;text/x-javascript;text/javascript;application/x-php;text/x-php;application/xhtml+xml;
+Type=Application
+MultipleArgs=false
+StartupNotify=true

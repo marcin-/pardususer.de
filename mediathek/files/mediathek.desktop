@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Mediathek
+GenericName=Repository of german TV-Stations
+GenericName[de]=Filmarchiv dt. Fernsehstationen
+Comment=Access to the videorepository of german TV-Stations - GERMAN ONLY!
+Comment[de]=Zugriff auf das Videoarchiv deutscher Fernsehsender.
+Icon=/usr/share/pixmaps/mediathek.png
+Exec=mediathek
+Categories=Application;AudioVideo;Video;TV
+Type=Application
+Terminal=false
+MultipleArgs=false

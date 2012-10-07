@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pidgin-mra</Name>
+        <Homepage>https://github.com/dreadatour/pidgin-mra</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon></Icon>
+        <IsA>library</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Mail.ru Agent plugin for Pidgin.</Summary>
+        <Description>Mail.ru Agent protocol plugin for Pidgin IM.</Description>
+        <Archive sha1sum="5eab3f7fa73fb1760cb287696edb7028e6101b15" type="targz">https://github.com/downloads/dreadatour/pidgin-mra/pidgin-mra-0.1.4.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pidgin-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pidgin-mra</Name>
+        <RuntimeDependencies>
+            <Dependency>pidgin</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/purple-2</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-08-17</Date>
+            <Version>0.1.4.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

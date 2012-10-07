@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>violetland</Name>
+        <Homepage>http://code.google.com/p/violetland</Homepage>
+        <Packager>
+            <Name>Alexey Ivanes</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>CCPL-Attribution-ShareAlike-3.0</License>
+        <PartOf>game</PartOf>
+        <Icon>violetland</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A game similar to Crimsonland</Summary>
+        <Description>violetland is a game where a girl, Violet, struggles with hordes of monsters.</Description>
+        <Archive sha1sum="1f84510a8eb376da50da6262fadfe0ad88664644" type="zip">http://violetland.googlecode.com/files/violetland-v0.4.2-src.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>sdl-image-devel</Dependency>
+            <Dependency>sdl-mixer-devel</Dependency>
+            <Dependency>sdl-ttf-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>violetland</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libSM</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/violetland</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/violetland.desktop">violetland.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-06-11</Date>
+            <Version>0.4.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanes</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

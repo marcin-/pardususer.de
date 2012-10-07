@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>FreeFileSync</Name>
+        <Summary xml:lang="de">Programm zum Vergleichen und Synchronisieren von Ordnern.</Summary>
+        <Description xml:lang="de">Eine Besonderheit ist noch das bei FreeFileSync mitgelieferte eigenständige Programm RealtimeSync, mit dem sich Dateien, Ordner oder Partitionen im Hintergrund ständig auf Veränderungen hin beobachten lassen. Man kann dann automatisch irgendwelche Aufgaben, z.B. eben Synchronisieren, ausführen lassen.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>Dustismo-fonts</Name>
+        <Homepage>http://forum.pardususer.de/index.php?topic=462</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>fonts-package</Icon>
+        <IsA>data:font</IsA>
+        <PartOf>desktop.font</PartOf>
+        <Summary>Various TrueType fonts from dustismo.com</Summary>
+        <Description>This package contains various fonts from dustismo.com licensed under the GPL. Dustismo and Dustismo Roman are general purpose Sans Serif and Roman TrueType fonts (with bold, italic and bold-italic variations), and contain all the European Latin characters. The other fonts are beautiful for special decorations and headlines, but they are limited to subsets of ASCII. This package provides following fonts: Balker, Domestic Manners, Dustismo, El Abogado Loco, Flatline, It wasn't me, Junkyard, Marked Fool, Penguin Attack, Progenesis, Swift, Wargames and Winks</Description>
+        <Archive type="targz" sha1sum="6ef8fdc5be89d591eabab6d70ee84ca2fabcfbc1">http://pakete.pardususer.de/source-files/dustismo-fonts-1.9.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>Dustismo-fonts</Name>
+        <Files>
+            <Path fileType="data">/usr/share/fonts/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-11-09</Date>
+            <Version>1.9</Version>
+            <Comment>Completelly reworked pacakge for Pardus 2011, with the full Dustismo font collection</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-01-26</Date>
+            <Version>20030517</Version>
+            <Comment>Updating pspec.xml and translations.xml</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-01-22</Date>
+            <Version>20030517</Version>
+            <Comment>First release. (I got it from http://packages.debian.org/sid/ttf-dustin)</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

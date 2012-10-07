@@ -1,0 +1,34 @@
+<PISI>
+    <Source>
+        <Name>virtualgl32-bin</Name>
+        <Homepage>http://virtualgl.org</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <PartOf>x11</PartOf>
+        <IsA>library</IsA>
+        <Summary>32-bit serverside components for 64-bit VirtualGL servers.</Summary>
+        <Description>virtualgl32-bin provides 32-bit serverside components for 64-bit VirtualGL servers.</Description>
+        <Archive sha1sum="789dc74be6956add2f8e98ef6a8571e476629805" type="binary">http://downloads.sourceforge.net/project/virtualgl/VirtualGL/2.3/VirtualGL32_2.3_amd64.deb</Archive>
+    </Source>
+    <Package>
+        <Name>virtualgl32-bin</Name>
+        <Files>
+            <Path fileType="data">/opt/VirtualGL/*</Path>
+            <Path fileType="library">/usr/lib32/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-02-04</Date>
+            <Version>2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

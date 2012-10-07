@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>radiotray</Name>
+        <Homepage>http://radiotray.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanov@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>radiotray</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.radio</PartOf>
+        <Summary>Online radio player for system tray</Summary>
+        <Description>Radio Tray is an online radio streaming player that runs on system tray. Its goal is to have the minimum interface possible, making it very straightforward to use.</Description>
+        <Archive sha1sum="ba43edc8cc2f9c3a29d036e5457488965e09ae51" type="targz">mirrors://sourceforge/radiotray/radiotray-0.7.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gst-python-devel</Dependency>
+            <Dependency>python-gtk-devel</Dependency>
+            <Dependency>python-inotify</Dependency>
+            <Dependency>python-lxml</Dependency>
+            <Dependency>python-pygobject-devel</Dependency>
+        <Dependency>python-pyxdg</Dependency>
+        <Dependency>notify-python</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>radiotray</Name>
+        <RuntimeDependencies>
+            <Dependency>gst-python</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-inotify</Dependency>
+            <Dependency>python-lxml</Dependency>
+            <Dependency>python-pygobject</Dependency>
+            <Dependency>python-pyxdg</Dependency>
+            <Dependency>notify-python</Dependency>
+            <Dependency>libmms</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-ffmpeg</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2012-02-11</Date>
+            <Version>0.7.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+      <Update release="3">
+            <Date>2012-01-06</Date>
+            <Version>0.7.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+      <Update release="2">
+            <Date>2011-07-22</Date>
+            <Version>0.6.4</Version>
+            <Comment>Several bug fixes
+                     Updated translations
+                     Added first run configuration dialog</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanov@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-03-23</Date>
+            <Version>0.6.3</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanov@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

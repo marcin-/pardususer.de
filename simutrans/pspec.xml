@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+    <Name>simutrans</Name>
+    <Homepage>http://www.simutrans.com/index.html</Homepage>
+    <Packager>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Packager>
+    <License>Artistic</License>
+    <Icon>simutrans</Icon>
+     <PartOf>game.strategy</PartOf>
+    <IsA>app:gui</IsA>
+    <Summary>Freeware and open-source transportation simulation game.</Summary>
+    <Description>In Simutrans you can build the transport networks you always dreamed of, with platforms, quays, level crossings, bridges, tunnels, signals and much more.</Description>
+    <Archive sha1sum="6b7f54cc07956beb09638dcb47b720bb6ff1fd58" type="zip">mirrors://sourceforge/simutrans/simutrans/111-0/simutrans-src-111-0.zip</Archive>
+    <Archive sha1sum="9748c652c9490dc7113d7acfe977c004d7ece568" type="zip">mirrors://sourceforge/simutrans/pak64/111-0/simupak64-111-0.zip</Archive>
+    <Archive sha1sum="acb1d7c0c49d01428204d41348e244dae6289f44" type="zip">mirrors://sourceforge/simutrans/pak64/111-0/simupak64-addon-food-111-0.zip</Archive>
+    <BuildDependencies>
+        <Dependency>imagemagick</Dependency>
+        <Dependency>libsdl-devel</Dependency>
+        <Dependency>sdl-mixer-devel</Dependency>
+    </BuildDependencies>
+    <Patches>
+        <Patch level="1">config.patch</Patch>
+        <Patch level="1">path-for-game-data.patch</Patch>
+        <Patch level="1">settings-folder.patch</Patch>
+    </Patches>
+</Source>
+
+<Package>
+    <Name>simutrans</Name>
+    <RuntimeDependencies>
+        <Dependency>sdl-mixer</Dependency>
+        <Dependency>libsdl</Dependency>
+    </RuntimeDependencies>
+    <Files>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+        <Path fileType="data">/usr/share/applications</Path>
+        <Path fileType="data">/usr/share/pixmaps</Path>
+        <Path fileType="data">/usr/share/simutrans</Path>
+    </Files>
+    <AdditionalFiles>
+        <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/simutrans.desktop">simutrans.desktop</AdditionalFile>
+    </AdditionalFiles>
+</Package>
+
+<History>
+    <Update release="4">
+        <Date>2012-01-20</Date>
+        <Version>111.0</Version>
+        <Comment>rebuilded actions.py</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+    <Update release="3">
+        <Date>2012-01-18</Date>
+        <Version>111.0</Version>
+        <Comment>Version update</Comment>
+        <Name>Antoon Tolboom</Name>
+        <Email>atolboo@gmail.com</Email>
+    </Update>
+    <Update release="2">
+        <Date>2011-05-20</Date>
+        <Version>110.0.1</Version>
+        <Comment>removed AnyDependency tag</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+    <Update release="1">
+        <Date>2011-05-14</Date>
+        <Version>110.0.1</Version>
+        <Comment>First release.</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+</History>
+</PISI>

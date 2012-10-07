@@ -1,0 +1,42 @@
+<PISI>
+    <Source>
+        <Name>pykaraoke</Name>
+        <Homepage>http://www.kibosh.org/pykaraoke/</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>LGPL</License>
+        <PartOf>multimedia.sound</PartOf>
+        <IsA>data</IsA>
+        <Summary>PyKaraoke is a karaoke player</Summary>
+        <Description>PyKaraoke is a karaoke player for Linux, FreeBSD, Windows and GP2X.</Description>
+        <BuildDependencies>
+            <Dependency>pygame</Dependency>
+            <Dependency>sdl-gfx-devel</Dependency>
+            <Dependency>wxPython</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="7f0193cb7140fe8304e2f2df060e8eea0d139da0" type="zip">http://garr.dl.sourceforge.net/project/pykaraoke/pykaraoke/0.7.5/pykaraoke-0.7.5.zip</Archive>
+    </Source>
+    <Package>
+        <Name>pykaraoke</Name>
+        <RuntimeDependencies>
+            <Dependency>pygame</Dependency>
+            <Dependency>wxPython</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-11-20</Date>
+            <Version>0.7.5</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

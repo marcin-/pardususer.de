@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>myThemeCreator</Name>
+        <Homepage>http://www.lasyk.net/mTC/</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>myThemeCreator</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>util.misc</PartOf>
+        <Summary>Theme creator specially for Sony Ericsson mobile phones</Summary>
+        <Description>myThemeCreator - shortly known as mTC - is the ultimate theme creating software with supporting over 80 Sony Ericsson mobile phones and some NOKIA devices.</Description>
+        <Archive type="zip" sha1sum="62bb63dd7103b0f207b0c1a26fd2f90ef41cf57b">http://myforum.lasyk.net/attachment.php?attachmentid=36641</Archive>
+    </Source>
+
+    <Package>
+        <Name>myThemeCreator</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/myThemeCreator/</Path>
+            <Path fileType="data">/usr/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/opt/myThemeCreator/myThemeCreator.sh">myThemeCreator.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/myThemeCreator.desktop">myThemeCreator.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/myThemeCreator.png">myThemeCreator.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/myThemeCreator/myThemeCreator-help.html">myThemeCreator-help.html</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/myThemeCreator/mTC_Comparison_Matrix.pdf">mTC_Comparison_Matrix.pdf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-05-06</Date>
+            <Version>2.28</Version>
+            <Comment>First for Pardus 2011</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-04-05</Date>
+            <Version>2.28</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

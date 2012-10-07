@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Dropbox
+Name[tr]=Dropbox
+GenericName=Dropbox Client
+GenericName[tr]=Dropbox İstemcisi
+GenericName[tr]=Dropbox Service
+Comment=Sync your files across computers and to the web
+Comment[tr]=Dosyalarınızı her yerden eşzamanlayın
+Comment[de]=Dateien über das Web synchronisieren
+Icon=dropbox
+Exec=/opt/dropbox/dropboxd
+Terminal=false
+StartupNotify=false
+Categories=Application;Network;

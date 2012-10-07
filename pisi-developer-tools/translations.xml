@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pisi-developer-tools</Name>
+        <Summary xml:lang="de">Nützliche Tools für die Entwicklung von PiSi-Paketen</Summary>
+        <Description xml:lang="de">PiSi-Developer-Tools ist eine Sammlung von praktischen Tools und Service-Menüs für den Dolphin-Dateimanager, welches die Entwicklung von PiSi-Paketen vereinfachen soll. Typische Anwendungsbeispielde sind: Paket-Konstruktion, Paket-Informationen anzeigen, Indexierung von Softwarequellen, Prüfsummen berechnen und speichern. Ursprünglich war PiSi-Developer-Tools ergänzender Bestandteil des deutschsprachigen PiSi-Handbuchs "PiSi --howto", geschrieben von Gürkan ZENGIN - PardusUser.de</Description>
+    </Source>
+</PISI>

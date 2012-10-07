@@ -1,0 +1,15 @@
+Index: security/nss/tests/ssl/ssl.sh
+===================================================================
+RCS file: /cvsroot/mozilla/security/nss/tests/ssl/ssl.sh,v
+retrieving revision 1.100
+diff -u -r1.100 ssl.sh
+--- security/nss/tests/ssl/ssl.sh	26 Mar 2009 23:14:34 -0000	1.100
++++ security/nss/tests/ssl/ssl.sh	6 Jun 2009 06:21:07 -0000
+@@ -974,6 +974,7 @@
+ 
+ ################################# main #################################
+ 
++unset MALLOC_CHECK_
+ ssl_init
+ ssl_run_tests
+ ssl_cleanup

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>UNetbootin</Name>
+        <Summary xml:lang="de">Hilfsprogramm, um Live-USB-Sticks von Linux Distributionen zu erstellen</Summary>
+        <Description xml:lang="de">Mit UNetbootin können Sie bootfähige Live-USB-Sticks von unterschiedlichsten Linux Distributionen erstellen, oder optional den gesamten Inhalt von ISO-Abbildern auf ihre lokalen Festplatte kopieren. UNetbootin lädt auf Wunsch das aktuellste ISO-Abbild von Linux Distributionen direkt aus dem Internet. Alternativ haben Sie auch die Möglichkeit lokal vorhandene ISO-Bilder zu benutzen.</Description>
+        <Summary xml:lang="pl">Nagrywa obraz Linuxa na nośnikach USB</Summary>
+        <Description xml:lang="pl">UNetbootin umożliwia przygotowanie podręcznej pamięci pendrive z której uruchomiona zostanie wybrana przez Ciebie dystrybucja systemu operacyjnego z rodziny Linux.</Description>
+        <Summary xml:lang="ru">UNetbootin (Universal Netboot Installer) — это свободная кроссплатформенная утилита для создания Live USB системы из ISO-образа CD/DVD диска c Linux / *BSD.</Summary>
+        <Description xml:lang="ru">Утилита копирует и преобразует содержимое диска с системой для запуска и работы с USB-носителя. Преобразование идёт по принципу:
+    Live CD/Live DVD → Live USB
+    Установочный CD/DVD → Установочный USB-носитель с ОС
+</Description>
+    </Source>
+</PISI>

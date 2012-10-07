@@ -1,0 +1,11 @@
+--- a/Makefile    2011-05-31 10:06:13.591062000 +0400
++++ b/Makefile   2011-05-31 10:06:13.565234000 +0400
+@@ -45,7 +45,7 @@
+ QMAKE               = qmake -r -spec linux-g++
+ MAKE                = make
+ 
+-if test /usr/bin/qmake-qt4; then QMAKE = qmake-qt4 -r -spec linux-g++; fi
++#if test /usr/bin/qmake-qt4; then QMAKE = qmake-qt4 -r -spec linux-g++; fi
+ 
+ src/silicon:
+        $(CD) src && $(QMAKE) && $(MAKE)

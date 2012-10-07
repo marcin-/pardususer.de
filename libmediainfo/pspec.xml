@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libmediainfo</Name>
+        <Homepage>http://mediainfo.sourceforge.net/en</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <PartOf>applications.multimedia</PartOf>
+        <Summary>shared library for mediainfo</Summary>
+        <Description>shared library for mediainfo</Description>
+        <Archive type="tarbz2" sha1sum="fe0bee778e04969fcb60be0ebaee3dd81dcd7f69">mirrors://sourceforge/mediainfo/libmediainfo_0.7.58.tar.bz2</Archive>
+       <BuildDependencies>
+            <Dependency releaseFrom="6">libzen-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>libmms-devel</Dependency>
+       </BuildDependencies>
+        <Patches>
+            <Patch level="1">libmediainfo-0.7.50-libmms.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>libmediainfo</Name>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="6">libzen</Dependency>
+            <Dependency>libmms</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libmediainfo-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libmediainfo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/libmediainfo.so</Path>
+            <Path fileType="header">/usr/include/MediaInfo</Path>
+            <Path fileType="header">/usr/include/MediaInfoDLL</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="7">
+            <Date>2012-06-10</Date>
+            <Version>0.7.58</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2012-05-03</Date>
+            <Version>0.7.57</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2012-01-26</Date>
+            <Version>0.7.53</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-12-22</Date>
+            <Version>0.7.52</Version>
+            <Comment>Version bump.</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update> 
+        <Update release="3">
+            <Date>2011-11-14</Date>
+            <Version>0.7.51</Version>
+            <Comment>Version bump.</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update> 
+        <Update release="2">
+            <Date>2011-10-06</Date>
+            <Version>0.7.50</Version>
+            <Comment>Version bump.</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update> 
+        <Update release="1">
+            <Date>2011-08-15</Date>
+            <Version>0.7.47</Version>
+            <Comment>First release.</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update> 
+    </History>
+</PISI>

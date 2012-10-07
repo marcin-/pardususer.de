@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mrim-prpl</Name>
+        <Homepage>http://code.google.com/p/mrim-prpl/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Mail.ru instant messenger plugin</Summary>
+        <Description>MRIM plugin for libpurple-based IM clients like Pidgin, Audium, etc.</Description>
+        <Archive sha1sum="ada72e1ee14e6dc2deaf23a3f1be403aac62b564" type="targz">http://mrim-prpl.googlecode.com/files/mrim-prpl-0.1.28.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="2.6.0">libpurple-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mrim-prpl</Name>
+        <RuntimeDependencies>
+            <Dependency>libpurple</Dependency>
+        </RuntimeDependencies>
+    <Files>
+        <Path fileType="library">/usr/lib</Path>
+        <Path fileType="localedata">/usr/share/locale</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+        <Path fileType="data">/usr/share/pixmaps</Path>
+    </Files>
+</Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-06-17</Date>
+            <Version>0.1.28</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

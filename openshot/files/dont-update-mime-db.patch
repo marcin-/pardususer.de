@@ -1,0 +1,45 @@
+diff -Naur openshot-1.4.2.orig/setup.py openshot-1.4.2/setup.py
+--- openshot-1.4.2.orig/setup.py	2011-09-15 05:29:21.000000000 +0200
++++ openshot-1.4.2/setup.py	2012-04-23 12:35:33.927000044 +0200
+@@ -48,7 +48,7 @@
+ 
+ # Add all the translations
+ locale_files = []
+-for filepath in glob.glob("openshot/locale/*/LC_MESSAGES/*"):
++for filepath in glob.glob("openshot/locale/*/LC_MESSAGES/*.mo"):
+ 	filepath = filepath.replace('openshot/', '')
+ 	locale_files.append(filepath)
+ 	
+@@ -67,32 +67,3 @@
+ 	 **info.SETUP
+ )
+ # -------------------------------------
+-
+-
+-FAILED = 'Failed to update.\n'
+-
+-if ROOT and dist != None:
+-	#update the XDG Shared MIME-Info database cache
+-	try: 
+-		sys.stdout.write('Updating the Shared MIME-Info database cache.\n')
+-		subprocess.call(["update-mime-database", os.path.join(sys.prefix, "share/mime/")])
+-	except:
+-		sys.stderr.write(FAILED)
+-
+-	#update the mime.types database
+-	try: 
+-		sys.stdout.write('Updating the mime.types database\n')
+-		subprocess.call("update-mime")
+-	except:
+-		sys.stderr.write(FAILED)
+-
+-	# update the XDG .desktop file database
+-	try:
+-		sys.stdout.write('Updating the .desktop file database.\n')
+-		subprocess.call(["update-desktop-database"])
+-	except:
+-		sys.stderr.write(FAILED)
+-	sys.stdout.write("\n-----------------------------------------------")
+-	sys.stdout.write("\nInstallation Finished!")
+-	sys.stdout.write("\nRun OpenShot by typing 'openshot' or through the Applications menu.")
+-	sys.stdout.write("\n-----------------------------------------------\n")

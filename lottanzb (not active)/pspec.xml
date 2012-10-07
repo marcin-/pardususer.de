@@ -1,0 +1,42 @@
+<PISI>
+    <Source>
+        <Name>lottanzb</Name>
+        <Homepage>http://www.lottanzb.org/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>network.download</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>SABnzbd-based Usenet downloader written in PyGTK</Summary>
+        <Description>LottaNZB aims to simplify and automate the download of binary news from the Usenet, a world-wide internet discussion system. You can tell LottaNZB what to download using NZB files, which are created by many Usenet search engines.</Description>
+        <Archive sha1sum="2594a0f8fcad957b626d3dad4780dfbd3a198c47" type="targz">http://launchpad.net/lottanzb/0.6/0.6/+download/lottanzb-0.6.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>lottanzb</Name>
+        <RuntimeDependencies>
+            <Dependency>SABnzbd</Dependency>
+            <Dependency>python-configobj</Dependency>
+            <Dependency>python-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/lottanzb</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="data">/usr/share/*</Path>
+            <Path fileType="doc">/usr/share/doc/lottanzb/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="man">/usr/share/man/man1/lottanzb.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-10-05</Date>
+            <Version>0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

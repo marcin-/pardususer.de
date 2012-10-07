@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>lib7zip</Name>
+        <Homepage>http://code.google.com/p/lib7zip/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>util.archive</PartOf>
+        <IsA>library</IsA>
+        <Summary>a library using 7z.dll/7z.so(from 7-Zip) to handle different archive types.</Summary>
+        <Description>a library using 7z.dll/7z.so(from 7-Zip) to handle different archive types.</Description>
+        <Archive sha1sum="52f13330718932c5bbe6659cfb910d57512165e2" type="targz">http://lib7zip.googlecode.com/files/lib7zip-1.4.1.tar.gz</Archive>
+        <Archive sha1sum="81da0729561ce123c0a82656ec96a04ad5bfa522" type="tarbz2">mirrors://sourceforge/p7zip/p7zip_9.13_src_all.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>lib7zip</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="header">/usr/include/lib7zip.h</Path>
+            <Path fileType="library">/usr/lib/lib7zip.a</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-12-22</Date>
+            <Version>1.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

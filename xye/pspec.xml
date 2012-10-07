@@ -1,0 +1,72 @@
+<PISI>
+    <Source>
+        <Name>xye</Name>
+        <Homepage>http://xye.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <License>ZLIB</License>
+        <PartOf>game.puzzle</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Xye is similar to other puzzle games like sokoban or boulderdash, yet it also includes some arcade elements.</Summary>
+        <Description>Xye is a puzzle game in which the objective is to help a character that looks like a green circle to get all the gems in the room. This is, of course, not as easy as it sounds, Xye must solve all sorts of puzzles while at the same time avoiding all sorts of traps and beasts.</Description>
+        <BuildDependencies>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>sdl-image-devel</Dependency>
+            <Dependency>sdl-ttf-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="82bea042934ade4ff43984ac210dab39b87f0939" type="targz">mirrors://sourceforge/xye/xye-0.12.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>xye</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/xye</Path>
+            <Path fileType="doc">/usr/share/doc/xye/*</Path>
+            <Path fileType="data">/usr/share/xye/*</Path>
+            <Path fileType="data">/usr/share/applications/xye.desktop</Path>
+            <Path fileType="data">/usr/share/pixmaps/xye.png</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/xye.desktop" permission="0644" group="root" owner="root">xye.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/xye.png" permission="0644" group="root" owner="root">xye.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2012-04-06</Date>
+            <Version>0.12.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-11-02</Date>
+            <Version>0.12.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-10-18</Date>
+            <Version>0.11.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-03</Date>
+            <Version>0.11.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>heimdall</Name>
+        <Summary xml:lang="de">Freie Firmware (ROMs) Flash-Software für Samsung Galaxy S Smartphones.</Summary>
+        <Description xml:lang="de">Heimdall ist eine freie (Open-Source) Softwaresammlung zum Flashen von Firmwares (ROMs) auf Samsung Galaxy S Smartphones. Es benutzt zum Flashen die selben Routinen wie Odin im Download-Modus des jeweiligen Geräts.</Description>
+        <Summary xml:lang="tr">Samsung Galaxy S telefonuna firmware programlayıcı.</Summary>
+        <Description xml:lang="tr">Samsung Galaxy S telefonuna firmware güncellemesi için kullanılabilir. Bu paket komut satırından çalışan ana uygulamayı ve grafik arabirim içerir.</Description>
+    </Source>
+</PISI>

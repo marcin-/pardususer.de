@@ -1,0 +1,59 @@
+<PISI>
+    <Source>
+        <Name>quadkonsole4</Name>
+        <Homepage>http://kde-apps.org/content/show.php?content=141069</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>x11.util</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>tries to provide a keyboard focused interface to multiple KParts in one window.</Summary>
+        <Description>QuadKonsole embeds Konsole kparts in a grid layout.</Description>
+        <BuildDependencies>
+            <Dependency>kdelibs-devel</Dependency>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="2638b080e15988b3a47ce8fbc85ef3297ac64881" type="tarbz2">http://kb.ccchl.de/quadkonsole4/quadkonsole4-0.4.4.tar.bz2</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>quadkonsole4</Name>
+        <RuntimeDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib/kde4/qkremotepart.so</Path>
+            <Path fileType="data">/usr/share/applications/kde4/*</Path>
+            <Path fileType="config">/usr/share/config.kcfg/quadkonsole4.kcfg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/*</Path>
+            <Path fileType="data">/usr/share/kde4/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2011-11-14</Date>
+            <Version>0.4.4</Version>
+            <Comment>Version bump
+                     * Added Konqueror's sidebar to show history and bookmarks
+                     * Added shortcut to "maximize" a single view within a main window
+                     * Show the progress when opening a URL
+                     * Open URLs from outside within an existing window
+                     * Session management includes open views and URLs</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-03</Date>
+            <Version>0.4.3</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

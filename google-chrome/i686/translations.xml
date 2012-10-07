@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>google-chrome</Name>
+        <Summary xml:lang="de">Google Chrome für Linux</Summary>
+        <Description xml:lang="de">Google Chrome ist ein Web-Browser der von Google Inc. entwickelt wird. Wichtige Bestandteile sind die Rendering-Engine Webkit, sowie die JavaScript Engine. Beliebt macht den Browser seine einfach zu bedienende Oberfläche und die hohe Geschwindigkeit.</Description>
+    </Source>
+</PISI>

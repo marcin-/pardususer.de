@@ -1,0 +1,64 @@
+<PISI>
+    <Source>
+        <Name>qutecom</Name>
+        <Homepage>http://trac.qutecom.org/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>network.chat</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Internet phone software</Summary>
+        <Description>QuteCom is a SIP softphone which allows you to make free PC to PC video and voice calls, and to integrate all your IM contacts in one place.</Description>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>libpurple-devel</Dependency>
+            <Dependency>libsamplerate-devel</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libv4l-devel</Dependency>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>qt-webkit-devel</Dependency>
+            <Dependency>speex-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="14ff024101d5630726bdb847231ce42ff7e96ad7" type="targz">http://trac.qutecom.org/downloads/qutecom-2.2.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>qutecom</Name>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libpurple</Dependency>
+            <Dependency>libsamplerate</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>qt-webkit</Dependency>
+            <Dependency>speex</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/qutecom</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="data">/usr/share/applications/qutecom.desktop</Path>
+            <Path fileType="doc">/usr/share/doc/qutecom/*</Path>
+            <Path fileType="data">/usr/share/icons/*</Path>
+            <Path fileType="data">/usr/share/qutecom/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-06-10</Date>
+            <Version>2.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

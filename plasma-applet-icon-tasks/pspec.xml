@@ -1,0 +1,117 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>plasma-applet-icon-tasks</Name>
+        <Homepage>http://kde-look.org/content/show.php/Icon+Tasks?content=144808</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>data</IsA>
+        <PartOf>desktop.kde.addon</PartOf>
+        <Summary>This is a modified version of the KDE taskbar, and taskmanager library.</Summary>
+        <Description>The main change is to preserve the position of tasks and launchers. e.g. when a launcher is activated, the resultant task item appears in the same place in the taskbar as the launcher did.</Description>
+        <Archive sha1sum="781763ebfab48e0ef4534ba8b3b74ddaff48d371" type="tarbz2">http://kde-apps.org/CONTENT/content-files/144808-plasma-icontasks-0.9.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>kdebase-workspace-devel</Dependency>
+            <Dependency>kdelibs-devel</Dependency>
+            <Dependency>libdbusmenu-qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>plasma-applet-icon-tasks</Name>
+        <RuntimeDependencies>
+            <Dependency>kdebase-workspace</Dependency>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>libdbusmenu-qt</Dependency>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="5">
+            <Date>2012-02-11</Date>
+            <Version>0.9.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-10-26</Date>
+            <Version>0.8.1</Version>
+            <Comment>
+                0.8.1
+                =====
+                1. Only show standard items in right click menu of tooltip.
+                2. Use italic text for system-wide dock-manager plugins.
+                3. Delete item delegate of dock plugins, to stop KWidgetItemDelegateEventListener logging so many warnings. This should not be required, but it keeps the library quiet...
+                4. Hungarian translation - thanks to Kristóf Kiszel
+                5. Turkish translation - thanks to Yavuz Ünver
+                
+                0.8.0
+                =====
+                1. Better, less hacky, way of placing newly created group where first task of group was. (And placing of task after group is closed).
+                2. Vary size of drop indicator (16 to 32pixels) depending upon task item sizes.
+                3. Italian translation - thanks to Giovanni Tedaldi
+                4. Brazilian Portuguese translation - thanks to Luis Fernando Planella Gonzalez
+                5. When drawing spinner for non-launcher task, draw task background and icon with 50% opacity.
+                6. Reduce space taken by tasks in non-composited tooltips.
+                7. Adjust size of popup menu (up to 512 pixels) based upon task's text.
+                8. Fix duplicate items created when plasma-desktop is restarted and taskbar contains a task group.
+                9. Restrict hue value of background colours to be between 196 and 224, likwise restrict saturation to be between 128 and 196. Improves contrast with icon.
+                10. Move progressbar to the bottom of the icon - to give more space for indicators.
+                11. Don't fade minimized tasks, fade the indicator instead.
+                12. Allow larger indicators for larger tasks.
+                13. If we have more the 1 recent document, place in a 'Recent Documents' menu.
+                14. Parse ~/.recently-used.xbel and ~/.local/share/recently-used.xbel to obtain Gtk recent documents.
+                15. Pase ~/.recently-used for LibreOffice recent documents.
+                16. Only monitor the dbus service for DockManager helpers started by IconTasks.
+                17. Better icon positioning.
+                18. Clear DockManager and Unity menus when helper/application terminates.
+                19. Alter DockManager plugin config page; remove filter, use item delegate to improve look of items, move details into information button.
+                20. Add a 'Refresh' menu entry to main popup menu, to attempt to work-around ghost taskbar issues.
+                21. To help with Firefox unity plugin, when unity API is enabled set the DESKTOP_SESSION env var to ubuntu.
+                22. Draw progress fill at least 4pixels wide, so as to stop odd look at low progress.
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-09-30</Date>
+            <Version>0.2.0</Version>
+            <Comment>
+            1. For tooltips of task/group items, show [window icon][text][close icon] above each preview - instead of large icon and text below. Allow windows to be closed via close icon.
+ 			2. Add option to set task spacing - 0(default) to 50 pixels.
+ 			3. Add option to control if task frames should be rotated in vertical panels.
+ 			4. Add option to specify icon scale - 50% to 100%
+ 			5. Add option to control when tooltips are displayed; never, instant, after delay.
+ 			6. Remove 'Force rows' option.
+ 			7. Fix issue where if launcher was activated on one activity, when a new activity was activated the launcher would not appear.
+ 			8. Detect whan a window changes its window class/name. This happens with LibreOffice.
+			9. Use screen size to determine how man windows can appear in tooltip - use multiple rows if necessary.
+			10. Each time a task is associated/disassociated with a launcher, recehck whether it should be shown. Helps when the same app is started/closed on multiple	desktops/activities.
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-08-30</Date>
+            <Version>0.1.1</Version>
+            <Comment>Fix KDE4.6 compile; rename lib directory to taskmanager, use quotes for taskmanager includes (so that local copy is found first), etc.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-08-29</Date>
+            <Version>0.1.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

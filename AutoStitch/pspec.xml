@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>AutoStitch</Name>
+        <Homepage>http://cvlab.epfl.ch/~brown/autostitch/autostitch.html</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>EULA</License>
+        <Icon>AutoStitch</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>A proprietary image stitching software tool for creating panoramas</Summary>
+        <Description>AutoStitch (TM) takes a step forward in panoramic image stitching by automatically recognising matching images. This allows entire panoramas to be constructed with no user input whatsoever. AutoStitch is incredibly simple to use! Just select a set of photos, and AutoStitch does the rest: digital photos in, panoramas out. This is a demo version to demonstrate the basic functionality of Autostitch.</Description>
+        <Archive type="zip" sha1sum="69196bcfc04f3b8bd31927423d4cf47ba7188bb6">http://cvlab.epfl.ch/~brown/autostitch/autostitch.zip</Archive>
+        <BuildDependencies>
+            <Dependency>wine</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>AutoStitch</Name>
+        <RuntimeDependencies>
+            <Dependency>wine</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/</Path>
+            <Path fileType="data">/usr/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/AutoStitch">AutoStitch.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/AutoStitch.desktop">AutoStitch.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/AutoStitch/AutoStitch.html">AutoStitch.html</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/AutoStitch.png">AutoStitch.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-09-18</Date>
+            <Version>2.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

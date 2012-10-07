@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>bombono-dvd</Name>
+        <Summary xml:lang="de">Einfaches Programm um eigene Video-DVDs zu erstellen</Summary>        
+        <Summary xml:lang="pl">Prosty program do tworzenia niestandardowych video DVD</Summary>        
+        <Summary xml:lang="tr">DVD hazırlama ve yazma uygulaması</Summary>
+        <Description xml:lang="de">Mit Bombono kann man ganz einfach Kapitel und Menüs erstellen und eine Video-DVD der Komposition brennen. Man kann sogar eine DVD ins Videoformat zurückkonvertieren.</Description>
+        <Description xml:lang="pl">Z bombono można łatwo tworzyć rozdziały i menu, i nagrać płytę video DVD z kompozycji. Można również konwertować DVD z powrotem do formatu wideo.</Description>
+        <Description xml:lang="tr">Bombono DVD ile DVD hazırlayıp, yazabilirsiniz.</Description>
+    </Source>
+</PISI>

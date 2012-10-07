@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gummi</Name>
+        <Summary xml:lang="pl">Prosty edytor LaTeX-owy.</Summary>
+        <Description xml:lang="pl">Edytor LaTeX-owy dla  Linuxa, napisany w C/GTK+. Zaprojektowany z myślą o prostocie.</Description>
+    </Source>
+</PISI>
+

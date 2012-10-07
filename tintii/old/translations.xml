@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tintii</Name>
+        <Summary xml:lang="de">Farben in Bilder partiell entfernen und/oder ändern</Summary>
+        <Description xml:lang="de">Tintii ist eine bemerkenswert einfache Lösung für den Color-Popping Effekt der normalerweise Zeit und Bildbearbeitungskenntnisse erfordert. Mit nur wenigen Einstellungen kann man aus einfachen und langweiligen Fotos aufregende Resultate erzielen.</Description>
+    </Source>
+</PISI>

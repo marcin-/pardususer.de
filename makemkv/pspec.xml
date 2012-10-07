@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>makemkv</Name>
+        <Homepage>http://www.makemkv.com</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <PartOf>multimedia.video</PartOf>
+        <License>LGPL</License>
+        <License>MPL</License>
+        <License>custom</License>
+        <Icon>makemkv</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>GUI for MakeMKV which lets You easily convert Blueray and DVD into MKV.</Summary>
+        <Description>MakeMKV is your one-click solution to convert DVD, Blu-ray and AVCHD discs that you own into MKV. There are many players that can play MKV files nearly on all platforms, and there are tools to convert MKV files to many formats, including DVD and Blu-ray discs. Functionality to open DVD discs is free and will always stay free. To encode Blue-ray You need a key! Until program is in beta state You can test it. If Program is finished You will have a 30 day limited test.</Description>
+        <Archive sha1sum="60120d0020a8c6b8715df5ee089328bb60436d95"  type="targz">http://www.makemkv.com/download/makemkv_v1.7.0_oss.tar.gz</Archive>
+        <BuildDependencies>
+             <Dependency>qt-devel</Dependency>
+             <Dependency>glibc-devel</Dependency>
+             <Dependency>openssl-devel</Dependency>
+             <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>makemkv</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">makemkv_bin</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>mesa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/share</Path>
+            <Path fileType="executable">/usr/lib</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/makemkv.desktop">makemkv.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/makemkv.png">makemkv.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-12-23</Date>
+            <Version>1.7.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-11-14</Date>
+            <Version>1.6.16</Version>
+            <Comment>Version bump
+                     added Polish package description</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-21</Date>
+            <Version>1.6.15</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

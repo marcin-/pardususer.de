@@ -1,0 +1,59 @@
+<PISI>
+    <Source>
+        <Name>qpdf</Name>
+        <Homepage>http://qpdf.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>Artistic-2</License>
+        <PartOf>office.misc</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>A Content-Preserving PDF Transformation System</Summary>
+        <Description>QPDF is a C++ library and set of programs that inspect and manipulate the structure of PDF files. It can encrypt and linearize files, expose the internals of a PDF file, and do many other operations useful to end users and PDF developers.</Description>
+        <Archive sha1sum="043cceeb74a702d4e6a6a83b0211d99f28383655" type="targz">mirrors://sourceforge/qpdf/qpdf-2.3.1.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>qpdf</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>qpdf-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">qpdf</Dependency>
+        </RuntimeDependencies>        
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2011-12-31</Date>
+            <Version>2.3.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-10-04</Date>
+            <Version>2.3.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-21</Date>
+            <Version>2.2.2</Version>
+            <Comment>test</Comment>
+            <Name>Gregor T채tzner</Name>
+            <Email>yellowcake-@gmx.net</Email>
+        </Update>
+    </History>
+</PISI>

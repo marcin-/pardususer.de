@@ -1,0 +1,47 @@
+<PISI>
+    <Source>
+        <Name>libspatialindex</Name>
+        <Homepage>http://libspatialindex.github.com/</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>science.gis</PartOf>
+        <IsA>library</IsA>
+        <Summary>C++ implementation of R*-tree, an MVR-tree and a TPR-tree with C API</Summary>
+        <Description>An extensible framework that will support robust spatial indexing methods.</Description>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="7ef94a28a9accfd42551b069ba240d2244f3d054" type="tarbz2">http://download.osgeo.org/libspatialindex/spatialindex-src-1.7.1.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>libspatialindex</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libspatialindex-devel</Name>
+        <Summary>Development files for libspatialindex</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libspatialindex</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-06-22</Date>
+            <Version>1.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

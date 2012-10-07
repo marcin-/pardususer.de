@@ -1,0 +1,37 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=kcmshell4 kcm_kchildlock
+Icon=/usr/share/icons/kchildlock.png
+Type=Service
+ServiceTypes=KCModule
+X-DocPath=kcontrol/kchildlock/index.html
+
+X-KDE-Library=kcm_kchildlock
+X-KDE-ParentApp=kcontrol
+X-KDE-RootOnly=true
+# the next line calls function init_kchildlockd in the library at system startup
+#X-KDE-Init=kchildlockd
+#NoDisplay=true
+Categories=QT;KDE;X;System;Settings;
+
+X-KDE-System-Settings-Parent-Category=system-administration
+
+Name=Children Lock
+Name[de]=Kindersicherung
+Name[en]=Children Lock
+Name[pt]=Bloquear Crianças
+Name[fr]=Serrure pour enfants
+Name[bg]=Children Lock
+Name[sk]=Detský zámok
+Name[tr]=Çocuk Kilidi
+
+Comment=Restrictions for Children
+Comment[de]=Einschränkungen für Kinder
+Comment[en]=Restrictions for Children
+Comment[pt]=Restrições das crianças
+Comment[fr]=Restrictions pour enfants
+Comment[bg]=Ограничение за деца
+Comment[sk]=Obmedzenia detí
+Comment[tr]=Çocuklar için Kısıtlamalar
+
+X-KDE-Keywords=system,children,lock,restriction

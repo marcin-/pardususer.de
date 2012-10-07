@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+<Source>
+<Name>shapecollage</Name>
+<Summary xml:lang="de">Collagen in weniger als einer Minute erstellen</Summary>
+<Description xml:lang="de">Mit Shape Collage kann man ganz einfach Bildercollagen in einer bestimmten Form generieren. Die Free-Version ist kostenlos für die private Nutzung und fügt ein Logo in die Collage ein. Die kostenpflichtige Pro-Version gestattet die kommerzielle Nutzung ohne Einschränkungen.</Description>
+</Source>
+</PISI>

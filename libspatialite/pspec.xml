@@ -1,0 +1,56 @@
+<PISI>
+    <Source>
+        <Name>libspatialite</Name>
+        <Homepage>https://www.gaia-gis.it/fossil/libspatialite/index</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>MPL-1.0</License>
+        <PartOf>science.gis</PartOf>
+        <IsA>library</IsA>
+        <Summary>SQLite extension to support spatial data types and operations</Summary>
+        <Description>SpatiaLite is an open source library intended to extend the SQLite core to support fully fledged Spatial SQL capabilities.</Description>
+        <BuildDependencies>
+            <Dependency>geos-devel</Dependency>
+            <Dependency>libfreexl-devel</Dependency>
+            <Dependency>proj-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="a88c763302aabc3b74d44a88f969c8475f0c0d10" type="targz">http://www.gaia-gis.it/gaia-sins/libspatialite-3.0.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>libspatialite</Name>
+        <RuntimeDependencies>
+            <Dependency>geos</Dependency>
+            <Dependency>libfreexl</Dependency>
+            <Dependency>proj</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libspatialite-devel</Name>
+        <Summary>Development files for libspatialite</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libspatialite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/*</Path>
+            <Path fileType="library">/usr/lib/libspatialite.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-06-22</Date>
+            <Version>3.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

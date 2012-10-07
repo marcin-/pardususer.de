@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" ?>pspec.xml
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cairo-dock-plugins</Name>
+        <Homepage>http://www.glx-dock.org/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.lookandfeel</PartOf>
+        <Summary>Plugins for glx-dock</Summary>
+        <Description>More options and plugins for glx-dock to enhance functionality.</Description>
+        <Archive sha1sum="7fdc2ad190f45df8e432416432147ab9205f09f8" type="targz">http://launchpad.net/cairo-dock-plug-ins/2.4/2.4.0/+download/cairo-dock-plugins-2.4.0~2.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="2.4.0">cairo-dock-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>gtkglext-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libical-devel</Dependency>
+            <Dependency>libdbusmenu-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>libzeitgeist-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>vte-devel</Dependency>
+            <Dependency>webkit-gtk-devel</Dependency>
+            <!--Dependency>Thunar-devel</Dependency>
+            <Dependency>thunar-vfs-devel</Dependency-->
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>libtasn1-devel</Dependency>
+            <Dependency>mono-devel</Dependency>
+            <Dependency>gtk-sharp-devel</Dependency>
+            <Dependency>ndesk-dbus</Dependency>
+            <Dependency>ndesk-dbus-glib</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>libetpan-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>fftw3-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cairo-dock-plugins</Name>
+        <RuntimeDependencies>
+            <Dependency versionFrom="2.4.0">cairo-dock</Dependency>
+            <Dependency>vte</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>webkit-gtk</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>lm_sensors</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>libzeitgeist</Dependency>
+            <Dependency>libdbusmenu-gtk</Dependency>
+            <Dependency>libetpan</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>fftw3</Dependency>
+            <Dependency>upower</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+        </Conflicts>
+        <Replaces>
+        </Replaces>
+        <Files>
+            <Path fileType="data">/usr/share/cairo-dock</Path>
+            <Path fileType="data">/usr/share/vala-0.14</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2011-11-14</Date>
+            <Version>2.4.0</Version>
+            <Comment>version bump from 2.4.0~2 to 2.4.0~2.1</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-10-07</Date>
+            <Version>2.4.0</Version>
+            <Comment>version bump from 2.4.0~1 to 2.4.0~2</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-10-03</Date>
+            <Version>2.4.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-08-02</Date>
+            <Version>2.3.0</Version>
+            <Comment>Added few build dependencies to compile more plugins.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-07-28</Date>
+            <Version>2.3.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-02-22</Date>
+            <Version>2.2.0</Version>
+            <Comment>first version: cairo-dock is now glx-dock</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

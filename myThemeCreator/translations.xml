@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>myThemeCreator</Name>
+        <Summary xml:lang="de">Software zum erstellen von eigenen Themes für Sony Ericsson Handys</Summary>
+        <Description xml:lang="de">myThemeCreator - kurz "mTC" - ist die ultimative Themeerstellungs-Anwendung für über 80 Sony Ericsson and NOKIA Handys.</Description>
+    </Source>
+</PISI>

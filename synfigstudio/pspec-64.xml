@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>synfigstudio</Name> 
+        <Homepage>http://synfig.org/</Homepage> 
+        <Packager>
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Packager>
+        <License>GPLv2</License> 
+        <Icon>synfigstudio</Icon>
+        <PartOf>multimedia.graphics</PartOf>
+        <IsA>app:gui</IsA> 
+        <Summary>Create and edit 2D animations and compositions</Summary> 
+        <Description>Synfig Studio is a free and open-source 2D animation software, designed as powerful industrial-strength solution for creating film-quality animation using a vector and bitmap artwork. It is offering "tweening" and exportfilters to various formats.</Description> 
+        <Archive sha1sum="525c015683194d933dbf1784da1d4c179c000270" type="tarbz2">http://ignum.dl.sourceforge.net/project/synfig/binaries/linux-binaries/synfigstudio-0.63.02-20110929.master.8.x86_64.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>synfigstudio</Name> 
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>libpng12-pardususerde</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path> 
+            <Path fileType="data">/opt/synfig/share/</Path>
+            <Path fileType="lib">/opt/synfig/lib/</Path> 
+            <Path fileType="data">/opt/synfig/etc/</Path>
+            <Path fileType="data">/usr/share/pixmaps/</Path> 
+            <Path fileType="data">/usr/share/applications/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/synfig_icon.png">synfig_icon.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/synfigstudio.desktop">synfigstudio.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-12-02</Date> 
+            <Version>0.63.02</Version> 
+            <Comment>move runtimedep libpng12 to libpng12-pardususerde</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-11-15</Date> 
+            <Version>0.63.02</Version> 
+            <Comment>Version update</Comment> 
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Update>
+        <Update release="1">
+            <Date>2011-03-15</Date> 
+            <Version>0.62.02</Version> 
+            <Comment>First release</Comment> 
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+        </Update>
+    </History>
+</PISI>

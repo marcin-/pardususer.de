@@ -1,0 +1,103 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>tea</Name>
+        <Homepage>http://tea-editor.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>tea_icon_v2.png</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>editor</PartOf>
+        <Summary>Small, lightweight Qt text editor</Summary>
+        <Description>TEA is good. TEA is a text editor with the hundreds of features.</Description>
+        <Archive sha1sum="348f6a160f55e8ebee5cf9a60a2b392a84e524bc" type="tarbz2">mirrors://sourceforge/tea-editor/tea-33.1.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>aspell-devel</Dependency>
+            <Dependency>hunspell-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>tea</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>aspell</Dependency>
+            <Dependency>hunspell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/tea.desktop" permission="0644" owner="root">tea.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/tea_icon_v2.png" permission="0644" owner="root">tea_icon_v2.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="8">
+            <Date>2012-06-10</Date>
+            <Version>33.1.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2012-05-09</Date>
+            <Version>33.0.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2012-01-26</Date>
+            <Version>31.2.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-11-16</Date>
+            <Version>31.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-09-30</Date>
+            <Version>30.1.0</Version>
+            <Comment>
+                *OS/2 fixes
+                * zip library support cleanup
+                * TEA can deal with urls from Chrome addr bar //fix
+                * new stuff etc.
+            </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-06-30</Date>
+            <Version>30.0.0</Version>
+            <Comment>There are some highlights of current release. "Load user font" button at the Tune - Interface page. Yes, TEA can load fonts those are not installed system-wide. Read the Manual for the details. Labels. Mark any part of the text as a label using "[?" and "?]" marks, for example: [? dogs ?]. The "dogs" here is a label name. All labels are available at Labels menu and directly on the toolbar. To navigate through the text, just select some label. Look at the Manual to find how it works exactly. As usual, fixes, improvements, etc.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-05-24</Date>
+            <Version>29.0.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-11</Date>
+            <Version>29.0.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

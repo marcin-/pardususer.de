@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>launchy</Name>
+        <Homepage>http://www.launchy.net/</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <Icon>launchy</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>util</PartOf>
+        <Summary>Launchy is a keystroke launcher</Summary>
+        <Description>Launchy indexes the programs in your start menu and can launch your documents, project files, folders, and bookmarks with just a few keystrokes.</Description>
+        <Archive sha1sum="7a6317168fe7aa219c138fbbc0f84539be9bce9e" type="targz">http://www.launchy.net/downloads/src/launchy-2.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>launchy</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>boost</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib/launchy</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-06-17</Date>
+            <Version>2.5</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

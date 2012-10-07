@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>kde-servicemenu-kim</Name>
+        <Summary xml:lang="de">Service-Menüs für Bildbearbeitung</Summary>
+        <Description xml:lang="de">"KDE Image Menu", kurz Kim, ist ein Dolphin- und Konqueror Service-Menü mit vielen nützlichen Bildbearbeitungsfunktionen wie Komprimierung, Bilddrehung, Skalierung, Fomat-Konvertierung etc. ...</Description>
+    </Source>
+</PISI>

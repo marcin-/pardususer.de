@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>rpm2cpio</Name> 
+        <Homepage>http://www.cyberciti.biz/tips/how-to-extract-an-rpm-package-without-installing-it.html</Homepage> 
+        <Packager>
+            <Name>Antoon Tolboom</Name> 
+            <Email>atolboo@gmail.com</Email> 
+        </Packager>
+        <License>as-is</License> 
+        <PartOf>multimedia.graphics</PartOf>
+        <IsA>util.archive</IsA> 
+        <Summary>Utilities to convert RPM packages to standard CPIO archive</Summary>
+        <Description>Utilities to extract cpio archive from RPM and cpio archive  with command 'rpm2cpio myrpmfile.rpm | cpio -idmv'.</Description>
+        <Archive sha1sum="dff2f9a4c2be52df4a32d4d3e1649f2c2f078811" type="binary">http://ftp.heanet.ie/mirrors/pld-linux/pool/r/rpm-utils/rpm-utils-4.5-54.i686.rpm</Archive>
+        <BuildDependencies>
+            <Dependency>rpm2targz</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rpm2cpio</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+            <Dependency>elfutils</Dependency>
+            <Dependency>popt</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/man/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-017</Date>
+            <Version>4.5</Version>
+            <Comment>First release.</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

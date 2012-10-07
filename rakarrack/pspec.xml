@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>rakarrack</Name>
+        <Homepage>http://rakarrack.sourceforge.net/index.html</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon></Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.sound</PartOf>
+        <Summary>Versatile guitar multi-effects processor.</Summary>
+        <Description>Rakarrack is a richly featured multi-effects processor emulating a guitar effects pedalboard. </Description>
+        <Archive sha1sum="e6225b95587b77ba572a8c2704a4094e4458bc32" type="tarbz2">mirrors://sourceforge/rakarrack/rakarrack-0.6.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>fltk-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>jack-audio-connection-kit-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libsamplerate-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rakarrack</Name>
+        <RuntimeDependencies>
+            <Dependency>fltk</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libsamplerate</Dependency>
+        </RuntimeDependencies>
+    <Files>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="man">/usr/share/man</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+        <Path fileType="data">/usr/share/applications</Path>
+        <Path fileType="data">/usr/share/pixmaps</Path>
+        <Path fileType="data">/usr/share/rakarrack</Path>
+    </Files>
+    <Provides>
+        <COMAR script="package.py">System.Package</COMAR>
+    </Provides>
+</Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-07-18</Date>
+            <Version>0.6.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

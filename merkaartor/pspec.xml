@@ -1,0 +1,73 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>merkaartor</Name>
+        <Homepage>http://merkaartor.be/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>merkaartor</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>editor</PartOf>
+        <Summary>A Qt4 based map editor for the openstreetmap.org project</Summary>
+        <Description>Merkaartor has some unique features such as...
+    Map view near-WYSIWYG, anti-aliased, with road names
+    Transparent display of map features like roads, amenities and areas
+    Style editor for the map display, including multiple styles
+    Support for handling separated highways
+    Easy download and upload of OpenStreetMap data
+    Render an area with the current style (SVG or Bitmap)
+    Native application (developed with the Qt4 toolkit)
+    Import NMEA files
+    Live connection to your GPS
+    Experimental mobile device support (Pocket PCs)
+    View your GPS tracks and geotagged photos without the need to upload them
+    Easy use of Walking Papers
+	</Description>
+        <Archive sha1sum="f789141db427bf25bb3b61801fefc98ab0430012" type="tarbz2">http://merkaartor.be/attachments/download/253/merkaartor-0.17.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+	    <Dependency>libxslt-devel</Dependency>
+	    <Dependency>proj-devel</Dependency>
+	    <Dependency>gdal-devel</Dependency>
+	    <Dependency>exiv2-devel</Dependency>
+	    <Dependency>libproxy-devel</Dependency>
+	    <Dependency>gpsd-devel</Dependency>
+	    <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+	<Patches>
+            <Patch level="1">proxy.patch</Patch>
+        </Patches>
+
+    </Source>
+    <Package>
+        <Name>merkaartor</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+	    <Dependency>libxslt</Dependency>
+	    <Dependency>proj</Dependency>
+	    <Dependency>gdal</Dependency>
+	    <Dependency>exiv2</Dependency>
+	    <Dependency>libproxy</Dependency>
+	    <Dependency>gpsd</Dependency>
+	    <Dependency>boost</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-06-09</Date>
+            <Version>0.17.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

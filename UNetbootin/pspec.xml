@@ -1,0 +1,105 @@
+<PISI>
+    <Source>
+        <Name>unetbootin</Name>
+        <Homepage>http://unetbootin.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <PartOf>util.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Tool to create bootable Live USB drives for Linux distributions without burning a CD</Summary>
+        <Description>UNetbootin can create a bootable Live USB drive, or it can make a "frugal install" on your local hard disk if you don't have a USB drive. It can load distributions by automatically downloading their ISO (CD image) files, or by using existing ISO files, floppy/hard disk images, or kernel/initrd files, for installing other distributions.</Description>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="d9925d900c4c4795e18bfac5f531dc56aa061efd" type="targz">https://launchpad.net/unetbootin/trunk/575/+download/unetbootin-source-575.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>UNetbootin</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/unetbootin</Path>
+            <Path fileType="data">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/pixmaps/*</Path>
+            <Path fileType="data">/usr/share/unetbootin/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/UNetbootin.desktop" permission="0644" group="root" owner="root">UNetbootin.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/UNetbootin.png" permission="0644" group="root" owner="root">UNetbootin.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>kdebase-workspace</Dependency>
+            <Dependency>p7zip</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>syslinux</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="9">
+            <Date>2012-05-13</Date>
+            <Version>575</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="8">
+            <Date>2012-04-06</Date>
+            <Version>568</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2012-01-17</Date>
+            <Version>565</Version>
+            <Comment>Version bump</Comment>
+            <Name>Antoon Tolboo</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2011-11-17</Date>
+            <Version>563</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-09-07</Date>
+            <Version>555</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-07-17</Date>
+            <Version>549</Version>
+            <Comment>Update to newer release</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-03-31</Date>
+            <Version>527</Version>
+            <Comment>Update to newer release, fixed desktop file.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-02-24</Date>
+            <Version>494</Version>
+            <Comment>Update to newer release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-05-23</Date>
+            <Version>471</Version>
+            <Comment>First release.</Comment>
+            <Name>G端rkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

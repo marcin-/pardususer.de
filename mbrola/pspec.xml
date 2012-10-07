@@ -1,0 +1,33 @@
+<PISI>
+    <Source>
+        <Name>mbrola</Name>
+        <Homepage>http://tcts.fpms.ac.be/synthesis/mbrola.html</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:console</IsA>
+        <PartOf>multimedia.sound</PartOf>
+        <License>MBROLA</License>
+        <Summary>A phoneme-to-audio converter used by many TTS (Text-to-speech) programs.</Summary>
+        <Description>The aim of the MBROLA project, initiated by the TCTS Lab of the Faculté Polytechnique de Mons (Belgium), is to obtain a set of speech synthesizers for as many languages as possible, and provide them free for non-commercial applications.</Description>
+        <Archive sha1sum="7cd2b1a5a46384a33832343dc0fe0ce999bf84cd" type="zip">http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr301h.zip</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>mbrola</Name>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/*</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/mbrola/readme.txt</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-08-28</Date>
+            <Version>3.0.1h</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

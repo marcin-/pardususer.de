@@ -1,0 +1,18 @@
+--- recorditnow-0.8.1.orig/joschy-snapshot-23-02-10/joschycore/CMakeLists.txt
++++ recorditnow-0.8.1/joschy-snapshot-23-02-10/joschycore/CMakeLists.txt
+@@ -16,15 +16,6 @@ endif (NOT BUILD_WITH_JOSCHYCORE)
+ set(QT_DONT_USE_QTGUI true)
+ include(${QT_USE_FILE})
+ 
+-# 64 bit?
+-if (NOT WIN32)
+-    if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+-        SET(LIB_SUFFIX "")
+-    else(CMAKE_SIZEOF_VOID_P EQUAL 4)
+-        SET(LIB_SUFFIX 64)
+-    endif(CMAKE_SIZEOF_VOID_P EQUAL 4)
+-endif(NOT WIN32)
+-
+ # cflags
+ if (NOT WIN32)
+     set(CMAKE_CXX_FLAGS                  "${CMAKE_CXX_FLAGS} -Wall -Wextra")

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>deadbeef</Name>
+        <Summary xml:lang="tr">X11 arayüzü olan GNU/Linux sistemleri için bir müzik çalıcı</Summary>
+        <Description xml:lang="tr">DeaDBeeF (0xDEADBEEFteki gibi) X11 pencere sistemi olan GNU/Linux işletim sistemleri için GTK2 arayüzlü bir müzik çalıcıdır.</Description>
+    </Source>
+
+    <Package>
+        <Name>deadbeef-devel</Name>
+        <Summary xml:lang="tr">deadbeef için geliştirme dosyaları</Summary>
+    </Package>
+</PISI>

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>FreeFileSync</Name>
+        <Homepage>http://sourceforge.net/projects/freefilesync</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <PartOf>util.archive</PartOf>		
+        <License>GPLv3</License>
+        <Icon>freefilesync</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A free file sync tool without overloaded GUI</Summary>
+        <Description>FreeFileSync is an Open-Source folder comparison and synchronization tool. A special feature is the automatic syncronisation with RealtimeSync which scans permanently files and folders.</Description>
+        <Archive sha1sum="5d0d6d6d485d58f725cf58e9d7a9e0a5fe285c62"  type="zip">http://dfn.dl.sourceforge.net/project/freefilesync/freefilesync/v4.1/FreeFileSync_Sourcecode_v4.1.zip</Archive>
+        <BuildDependencies>
+             <Dependency>qt-devel</Dependency>
+             <Dependency>qt-webkit-devel</Dependency>
+             <Dependency>gtkmm-devel</Dependency>
+             <Dependency>wxGTK-devel</Dependency>
+             <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>FreeFileSync</Name>
+        <RuntimeDependencies>
+             <Dependency>qt</Dependency>
+             <Dependency>qt-webkit</Dependency>
+             <Dependency>gtkmm</Dependency>
+             <Dependency>wxGTK</Dependency>
+             <Dependency>boost</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/FreeFileSync</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/FreeFileSync.desktop">FreeFileSync.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/ffsicon.png">ffsicon.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-10-20</Date>
+            <Version>4.1</Version>
+            <Comment>Massive rework-thanks to a.palius</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-18</Date>
+            <Version>4.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

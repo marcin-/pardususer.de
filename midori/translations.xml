@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>midori</Name>
+        <Summary xml:lang="tr">GTK+ tabanlı hafif internet tarayıcısı</Summary>
+        <Description xml:lang="tr">Midori, WebkitGtk tarayıcı motorunu kullanan, hafif bir GTK+ tabanlı internet tarayıcısıdır. Birçok internet tarayıcısında olduğu gibi, Midori de sekmeleri, pencereleri ve oturum yöneticisini; XBEL ile sık kullanılanları kaydetmeyi, OpenSearch tabanlı arama kutusunu ve kullanıcı betiklerini kullanma gibi özellikleri desteklemektedir.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,25 @@
+diff -Naur kdenlive-0.9.2.orig/src/kdenlive.desktop kdenlive-0.9.2/src/kdenlive.desktop
+--- kdenlive-0.9.2.orig/src/kdenlive.desktop	2012-05-29 23:39:54.000000000 +0200
++++ kdenlive-0.9.2/src/kdenlive.desktop	2012-07-03 10:47:54.285000001 +0200
+@@ -41,8 +41,10 @@
+ GenericName[pl]=Edytor wideo
+ GenericName[pt]=Editor de Vídeo
+ GenericName[pt_BR]=Editor de Vídeo
++GenericName[ru]=Видеоредактор
+ GenericName[sk]=Editor videa
+ GenericName[sv]=Videoeditor
++GenericName[tr]=Video Düzenleyici
+ GenericName[uk]=Відеоредактор
+ GenericName[x-test]=xxVideo Editorxx
+ GenericName[zh_CN]=视频编辑器
+@@ -64,8 +66,10 @@
+ Comment[pl]=Nieliniowy edytor wideo dla KDE
+ Comment[pt]=Editor de vídeo não-linear para o KDE
+ Comment[pt_BR]=Editor de vídeo não-linear para o KDE
++Comment[ru]=Редактор нелинейного видеомонтажа для KDE
+ Comment[sk]=Nelineárny editor videa pre KDE
+ Comment[sv]=Icke-linjär videoeditor för KDE
++Comment[tr]=KDE için Nonlineer video düzenleyici
+ Comment[uk]=Нелінійний редактор відео для KDE
+ Comment[x-test]=xxNonlinear video editor for KDExx
+ Comment[zh_CN]=KDE 的非线性视频编辑器

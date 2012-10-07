@@ -1,0 +1,63 @@
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>desura</Name>
+        <Homepage>http://www.desura.com//</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <IsA>app</IsA>
+        <PartOf>game</PartOf>
+        <License>as-is</License>
+        <Summary>Desura is a community driven digital distribution service for gamers, putting the best games, mods and downloadable content from developers at gamers fingertips, ready to buy and play.</Summary>
+	<Description>Desura is a proprietary digital distribution platform developed by DesuraNET. It is used to distribute games and related media online, with a primary focus on small independent developers rather than larger software houses. Desura also offers community features, automated game updates, and developer resources.</Description> -->
+	  <!--Archive sha1sum="d7b8ebf7bea664751064a98fdcde712197decba9" type="targz">http://www.desura.com/desura-i686.tar.gz</Archive> -->
+	<Archive sha1sum="2facc9d045ea682cf3990d49e62097c0aa4eb35e" type="targz">http://www.desura.com/desura-x86_64.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>desura</Name>
+        <RuntimeDependencies>
+	    <Dependency>jpeg6</Dependency>
+	    <Dependency>libpng12-pardususerde</Dependency>
+	    <Dependency>libX11</Dependency>
+	    <Dependency>libxcb</Dependency>
+	    <Dependency>libXdmcp</Dependency>
+	    <Dependency>libXpm</Dependency>
+            <Dependency>lsb-release</Dependency>
+	    <Dependency>orbit2</Dependency>
+	    <Dependency>xdg-utils</Dependency>
+	    <!-- if you have install M.A.R.S - a ridiculous shooter -->
+	    <Dependency>glew</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/desura/</Path>
+            <Path fileType="data">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+	<AdditionalFiles>
+            <AdditionalFile target="/usr/bin/desura" permission="0755" owner="root">desura.sh</AdditionalFile>
+            <AdditionalFile target="/usr/share/applications/desura.desktop" permission="0644" owner="root">desura.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/desura.png" permission="0644" owner="root">desura.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2011-12-02</Date>
+            <Version>1</Version>
+            <Comment>move runtimedep libpng12 to libpng12-pardususerde</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-11-20</Date>
+            <Version>1</Version>
+            <Comment>First Release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

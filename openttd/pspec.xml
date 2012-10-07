@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>openttd</Name>
+        <Homepage>http://www.openttd.org/en/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>game</PartOf>
+            <Summary>OpenTTD is an open source simulation game based upon the popular Microprose game "Transport Tycoon Deluxe", written by Chris Sawyer.</Summary>
+            <Description>It attempts to mimic the original game as closely as possible while extending it with new features. http://www.openttd.org/en/about</Description>
+        <Archive sha1sum="582601e7f7f801af0bf832dcaf2ba6876680087c" type="tarxz">http://binaries.openttd.org/releases/1.2.1/openttd-1.2.1-source.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>lzo-devel</Dependency>
+            <Dependency>grfcodec</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">default_font.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>openttd</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>lzo</Dependency>
+            <Dependency>grfcodec</Dependency>
+            <Dependency>openttd-opensfx</Dependency>
+            <Dependency>openttd-opengfx</Dependency>
+            <Dependency>openttd-openmsx</Dependency>
+<!--        <Dependency release="current">openttd-data</Dependency> -->
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>openttd-data</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="binary">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/openttd</Path>
+        </Files>
+        <Provides>
+             <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+<!--<Package>
+        <Name>openttd-data</Name>
+        <Summary>Data resources for OpenTTD game.</Summary>
+        <RuntimeDependencies>
+            <Dependency>openttd-opensfx</Dependency>
+            <Dependency>openttd-opengfx</Dependency>
+            <Dependency>openttd-openmsx</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/openttd</Path>
+        </Files>
+    </Package>  http://forum.pardususer.de/index.php?topic=2034.msg26960#msg26960-->
+
+    <History>
+        <Update release="10">
+            <Date>2012-06-02</Date>
+            <Version>1.2.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="9">
+            <Date>2012-04-23</Date>
+            <Version>1.2.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="8">
+            <Date>2012-01-14</Date>
+            <Version>1.1.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2011-12-18</Date>
+            <Version>1.1.4</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2011-11-19</Date>
+            <Version>1.1.3</Version>
+            <Comment>Merge package with openttd-data. The reason for the appearance of the package in the official repositories.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-09-16</Date>
+            <Version>1.1.3</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-08-14</Date>
+            <Version>1.1.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-06-01</Date>
+            <Version>1.1.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-05-04</Date>
+            <Version>1.1.0</Version>
+            <Comment>Added default_font.patch</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-23</Date>
+            <Version>1.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

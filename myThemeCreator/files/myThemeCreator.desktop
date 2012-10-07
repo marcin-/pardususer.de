@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=myThemeCreator (mTC)
+GenericName=Theme-Editor
+GenericName[de]=Theme-Editor
+Comment=Theme editor for Sony Ericsson phones
+Comment[de]=Theme-Editor für Sony Ericsson Handys
+Icon=myThemeCreator
+Exec=java -jar '/opt/myThemeCreator/mTC.jar'
+Categories=Development;
+Type=Application
+Terminal=false
+MultipleArgs=false
+DocPath=file:///usr/share/doc/myThemeCreator/myThemeCreator-help.html

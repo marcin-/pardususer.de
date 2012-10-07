@@ -1,0 +1,70 @@
+<PISI>
+    <Source>
+        <Name>scangearmp</Name>
+        <Homepage>http://software.canon-europe.com/</Homepage>
+        <Packager>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>as-is</License>
+        <PartOf>hardware.scanner</PartOf>
+        <IsA>driver</IsA>
+        <Summary>Scanning front-end GUI for Canon Multifunction Inkjet Printer.</Summary>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer series; mp250, mp280, mp495, mg5100, mg5200, mg6100, and mg8100.</Description>
+        <BuildDependencies>
+            <Dependency>gimp-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>sane-backends-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="9adfb9f4fc0177445489d51b03e52d60eed124dc" type="targz">http://files.canon-europe.com/files/soft40247/software/scangearmp-source-1.60-1.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">fix_gimp_header.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>scangearmp</Name>
+        <Files>
+            <Path fileType="config" permanent="0">/etc/udev/rules.d/*</Path>
+            <Path fileType="executable" permanent="0">/usr/bin/*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/*</Path>
+            <Path fileType="data" permanent="0">/usr/lib/bjlib/*</Path>
+            <Path fileType="executable" permanent="0">/usr/share/applications/*</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/scangearmp/*</Path>
+            <Path fileType="localedata" permanent="0">/usr/share/locale/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/scangearmp/pixmaps/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/scangearmp.desktop" permission="0755" group="root" owner="root">scangearmp.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/scangearmp.png" permission="0644" group="root" owner="root">scangearmp.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>gimp</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2011-10-24</Date>
+            <Version>1.60</Version>
+            <Comment>Fix gimp plugin.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-23</Date>
+            <Version>1.60</Version>
+            <Comment>First Release.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

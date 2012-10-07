@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>fotowall</Name>
+        <Homepage>http://www.enricoros.com/opensource/fotowall/</Homepage>
+        <Packager>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>fotowall</Icon>
+        <IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
+        <Summary>Fun tool for creating wallpapers with your pictures</Summary>
+        <Description>FotoWall is a creative tool that allows you to layout your photos or pictures in a personal way. You can add pictures, then resize, move, change colors, text, shadows, etc.</Description>
+        <Archive sha1sum="dfe1b041fc5fd3ab00d67f400d3796bbd1fb3f43" type="tarbz2">http://fotowall.googlecode.com/files/Fotowall-0.9.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt4-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">add_mimetype.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>fotowall</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/mime/packages</Path>
+            <Path fileType="data">/usr/share/mimelnk</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/fotowall</Path>
+            <Path fileType="localedata">/usr/share/fotowall/i18n</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/mimelnk/application/x-fotowall-layout.desktop">x-fotowall-layout.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/mime/packages/fotowall.xml">fotowall.xml</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2011-01-29</Date>
+            <Version>0.9</Version>
+            <Comment>new ftp source and bump for Pardus2011</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-06-22</Date>
+            <Version>0.9</Version>
+            <Comment>Version bump, german package information</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-05-09</Date>
+            <Version>0.6.1</Version>
+            <Comment>Version bump, mimetype support is really working now</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-04-12</Date>
+            <Version>0.5</Version>
+            <Comment>First release</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

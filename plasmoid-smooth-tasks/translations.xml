@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>plasmoid-smooth-tasks</Name>
+        <Summary xml:lang="de">Fensterumschalter nach dem Stil von Windows 7 Peek</Summary>
+        <Description xml:lang="de">Dieser Fensterumschalter stellt die selbe Funktion wie sie unter Windows 7 bekannt ist. Beim drüberfahren mit der Maus werden Fensterminiaturen dargestellt, die beim draufklicken das jeweilige Fenster öffnet.</Description>
+    </Source>
+</PISI>
+

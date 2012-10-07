@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>isowriter</Name>
+        <Homepage>http://packages.ubuntu.com/de/jaunty/usb-imagewriter</Homepage>
+        <Packager>
+            <Name>Antoon tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>EULA</License>
+        <Icon>IsoWriter</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>util.misc</PartOf>
+        <Summary>A GUI tool to write ISO files to USB device</Summary>
+        <Description>IsoWriter helps you to write ISO images of CD- or DVD's to a USB device. IsoWriter was originaly made by Ubuntu as "Ubuntu USB ImageWriter". This is a port escpecially for Pardus GNU/Linux with the new Name called "IsoWriter".</Description>
+        <Archive type="targz" sha1sum="8df6d2824c35d26b976505cf314ac0ec28e6942c">http://pakete.pardususer.de/source-files/isowriter-0.1.3_20110422.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">isowriter.py.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>isowriter</Name>
+        <RuntimeDependencies>
+            <Dependency>bash</Dependency>
+            <Dependency>coreutils</Dependency>
+            <Dependency>hal</Dependency>
+            <Dependency>kdebase</Dependency>
+            <Dependency>procps</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-kde</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="13">
+            <Date>2011-04-22</Date>
+            <Version>0.1.3</Version>
+            <Comment>Updated RU-localization</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+       <Update release="12">
+            <Date>2011-04-21</Date>
+            <Version>0.1.3</Version>
+            <Comment>Added RU-localization and menu entry</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+       <Update release="11">
+            <Date>2011-04-19</Date>
+            <Version>0.1.3</Version>
+            <Comment>Added Polish localization and bug for space in path to iso fixed</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+       <Update release="10">
+            <Date>2011-04-14</Date>
+            <Version>0.1.3</Version>
+            <Comment>final release version (modified desktop file) for p2011</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+       <Update release="9">
+            <Date>2011-04-14</Date>
+            <Version>0.1.3</Version>
+            <Comment>test version to find the finaal solution</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+       <Update release="8">
+            <Date>2011-01-29</Date>
+            <Version>0.1.3</Version>
+            <Comment>changed dependencies for P2011</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="8">
+            <Date>2010-11-05</Date>
+            <Version>0.1.3</Version>
+            <Comment>Added Spanish localization and menu entry</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2010-11-03</Date>
+            <Version>0.1.3</Version>
+            <Comment>Added Turkish localization and menu entry</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2010-10-28</Date>
+            <Version>0.1.3</Version>
+            <Comment>Added French localization and menu entry</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2010-10-10</Date>
+            <Version>0.1.3</Version>
+            <Comment>Reworked de translation</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="4">
+            <Date>2010-10-26</Date>
+            <Version>0.1.3</Version>
+            <Comment>Switch from kdesu to gksu, move menu entry System>Utility and update localization: de</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-10-04</Date>
+            <Version>0.1.3</Version>
+            <Comment>Update for localizations: nl, de</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2010-09-20</Date>
+            <Version>0.1.3</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

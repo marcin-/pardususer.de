@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Icon=/usr/share/pixmaps/AutoStitch.png
+Exec=AutoStitch
+Categories=KDE;Application;Graphics;2DGraphics;RasterGraphics
+Type=Application
+Terminal=false
+MultipleArgs=false
+DocPath=file:///usr/share/doc/AutoStitch/AutoStitch.html
+Name=AutoStitch
+Comment[de]=Panoramabilder erstellen
+Comment=Panoramabilder erstellen
+GenericName[de]=Stitching-Programm
+GenericName=Stitching-Programm

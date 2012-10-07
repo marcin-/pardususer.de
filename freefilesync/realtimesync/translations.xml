@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>RealtimeSync</Name>
+        <Summary xml:lang="de">Automatische Synchronisierung für FreeFileSync.</Summary>
+        <Description xml:lang="de">RealtimeSync ist eine mächtige und relativ unbekannte Funktion für FreeFileSync. RealtimeSync sorgt dafür, dass Ordern und Dateien bei jeder Änderung einer Datei automatisch synchronisiert werden.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,135 @@
+<PISI>
+    <Source>
+        <Name>scangearmp</Name>
+        <Homepage>http://software.canon-europe.com/software/0040874.asp</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>as-is</License>
+        <PartOf>hardware.scanner</PartOf>
+        <IsA>driver</IsA>
+        <Summary>Scanning front-end GUI for Canon Multifunction Inkjet Printer.</Summary>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer.</Description>
+        <BuildDependencies>
+            <Dependency>gimp-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>sane-backends-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="d26e5abc12beaa3865a8aa54bb5fcc8238060a46" type="targz">http://files.canon-europe.com/files/soft40874/software/scangearmp-source-1.70-1.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">fix_gimp_header.patch</Patch>
+        </Patches>
+    </Source>
+    
+    <Package>
+        <Name>scangearmp-common</Name>
+        <Files>
+            <Path fileType="config">/etc/udev/rules.d/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib/libcncpmsimg.so</Path>
+            <Path fileType="library">/usr/lib/libcncpmslld.so</Path>
+            <Path fileType="library">/usr/lib/libcncpnet.so</Path>
+            <Path fileType="library">/usr/lib/libcncpmsui.so</Path>
+            <Path fileType="library">/usr/lib/libcncpcmcm.so</Path>
+            <Path fileType="library">/usr/lib/libsane*so*</Path>
+            <Path fileType="library">/usr/lib/gimp</Path>
+            <Path fileType="data">/usr/lib/bjlib/canon_mfp.conf</Path>
+            <Path fileType="executable">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/scangearmp/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="data">/usr/share/scangearmp/pixmaps/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/scangearmp.desktop" permission="0755" group="root" owner="root">scangearmp.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>gimp</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>scangearmp-common-1.70</Package>
+        </Replaces>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mx360series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mx360 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*380*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*380*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*360*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*174d*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.70">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mx410series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mx410 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*381*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*381*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*410*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*174e*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.70">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mx420series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mx420 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*382*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*382*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*420*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*174f*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.70">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mx880series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mx880 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*383*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*383*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*880*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*1750*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.70">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>2012-05-01</Date>
+            <Version>1.70</Version>
+	    <Comment>icon changed and runtimedep version>versionFrom.</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-05-01</Date>
+            <Version>1.70</Version>
+            <Comment>First Release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

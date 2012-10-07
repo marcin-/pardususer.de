@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>razor-qt</Name>
+        <Homepage>http://razor-qt.sf.net/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>LGPLv3</License>
+        <Icon>razor-qt</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.razor</PartOf>
+        <Summary>free and lightweight desktop environment</Summary>
+        <Description>Razor-qt is an advanced, easy-to-use, and fast desktop environment based on Qt technologies. Unlike most desktop environments, Razor-qt also works fine with weak machines.</Description>
+        <Archive type="tarbz2" sha1sum="bdc2e32af8fbe348207b77a37491f3791bd961fc">http://razor-qt.org/downloads/razorqt-0.4.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>qconf</Dependency>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>razor-qt</Name>
+        <RuntimeDependencies>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>libXrender</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+	    <Path fileType="data">/etc/xdg/menus/</Path>
+	    <Path fileType="data">/usr/include/</Path>
+	    <Path fileType="library">/usr/lib/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/razor.desktop">razor.desktop</AdditionalFile>
+            <AdditionalFile target="/etc/xdg/menus/applications-merged/razor.menu" permission="0644">razor.menu</AdditionalFile>
+            <AdditionalFile target="/usr/share/desktop-directories/Razor.directory" permission="0644">Razor.directory</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-19</Date>
+            <Version>0.4</Version>
+            <Comment>fist version</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>
+

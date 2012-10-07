@@ -1,0 +1,135 @@
+<PISI>
+    <Source>
+        <Name>kadu</Name>
+        <Homepage>http://www.kadu.net/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <PartOf>network.chat</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Polish instant messenger.</Summary>
+        <Description>Dynamically evolving instant messenger compatible with the Gadu-Gadu and XMPP protocol. It can be run on all platforms supported by the Qt toolkit.</Description>
+        <BuildDependencies>
+            <Dependency>aspell-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency versionFrom="1.11.1">libgadu-devel</Dependency>
+            <Dependency>phonon-devel</Dependency>
+            <Dependency>qca2-devel</Dependency>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>qt-webkit-devel</Dependency>
+            <Dependency>libmpdclient-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="a3292b047ffb4a5e16e907fc883658189d35f4ae" type="tarbz2">http://download.kadu.im/stable/kadu-0.12.0.tar.bz2</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>kadu</Name>
+        <RuntimeDependencies>
+            <Dependency>aspell</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency versionFrom="1.11.1">libgadu</Dependency>
+            <Dependency>phonon</Dependency>
+            <Dependency>qca2</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>qt-webkit</Dependency>
+            <Dependency>libmpdclient</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/kadu</Path>
+            <Path fileType="library">/usr/lib/kadu/plugins</Path>
+            <Path fileType="data">/usr/share/applications/kadu.desktop</Path>
+            <Path fileType="data">/usr/share/cmake/Modules/FindKadu.cmake</Path>
+            <Path fileType="doc">/usr/share/doc/kadu</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/kadu</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>kadu-devel</Name>
+        <Summary>Development files for kadu</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kadu</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="10">
+            <Date>2012-07-07</Date>
+            <Version>0.12.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="9">
+            <Date>2012-05-03</Date>
+            <Version>0.11.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="8">
+            <Date>2012-04-06</Date>
+            <Version>0.11.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2012-03-03</Date>
+            <Version>0.11.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2012-02-11</Date>
+            <Version>0.11.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-11-02</Date>
+            <Version>0.10.1</Version>
+            <Comment>Version bump to 0.10.1</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-09-08</Date>
+            <Version>0.10.0</Version>
+            <Comment>Version bump to 0.10.0</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-05-17</Date>
+            <Version>0.9.2</Version>
+            <Comment>Version bump to 0.9.2</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-04-13</Date>
+            <Version>0.9.1</Version>
+            <Comment>Version bump to 0.9.1</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-03-21</Date>
+            <Version>0.9.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

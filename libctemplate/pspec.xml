@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libctemplate</Name>
+        <Homepage>http://code.google.com/p/google-ctemplate/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+	<PartOf>programming.misc</PartOf>
+        <Summary>CTemplate is a simple but powerful template language for C++.</Summary>
+        <Description>It emphasizes separating logic from presentation: it is impossible to embed application logic in this template language.</Description>
+        <Archive sha1sum="c577432a9bdc7169ae420e50998d955f5cf85a0c" type="targz">http://ctemplate.googlecode.com/files/ctemplate-2.0.tar.gz</Archive>
+        <BuildDependencies>
+	  <!-- <Dependency>glibc</Dependency> -->
+	</BuildDependencies>
+</Source>
+
+    <Package>
+        <Name>libctemplate</Name>
+        <RuntimeDependencies>
+	  <!--    <Dependency>glibc</Dependency> -->
+        </RuntimeDependencies>
+        <Files>
+	    <Path fileType="binary">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libctemplate-devel</Name>
+	<Summary>Development files for libctemplate</Summary>
+        <RuntimeDependencies>
+	    <Dependency release="current">libctemplate</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="3">
+            <Date>2012-01-26</Date>
+            <Version>2.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+	<Update release="2">
+            <Date>2011-09-08</Date>
+            <Version>1.0</Version>
+            <Comment>
+		* ctemplate: version 1.0 release
+		* No changes since 1.0rc2
+		* ctemplate: version 1.0rc2 release
+		* BUGFIX: removed #includes of non-installed headers from installed ones
+		* BUGFIX: Make compile-test test against an install
+		* ctemplate: version 1.0rc1 release
+		* BUGFIX: Dumpers were ignoring a tpl-string 'length' (csilvers)
+		* BUGFIX: Add a needed $(top_srcdir) to Makefile.am
+		* Replace 0x00-0x1F with space in xml_escape (alexvod)
+		* Fix xml encoding to handle form-feed properly (ghurley)
+		* DOCUMENTATION: Wer missing some docs in the tarball (csilvers)
+		* BUILD: Update acx_pthread.m4 for nostdlib (Kacper)
+		* BUGFIX: Make CreateSectionIterator check tpl-globals (williasr)
+		* PORTING: Fix solaris build by getting rid of PATH_MAX (csilvers)
+	    </Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-21</Date>
+            <Version>0.99</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

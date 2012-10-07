@@ -1,0 +1,11 @@
+diff -Naur comm-release.orig/mozilla/toolkit/crashreporter/tools/symbolstore.py comm-release/mozilla/toolkit/crashreporter/tools/symbolstore.py
+--- comm-release.orig/mozilla/toolkit/crashreporter/tools/symbolstore.py	2012-04-21 00:40:25.000000000 +0200
++++ comm-release/mozilla/toolkit/crashreporter/tools/symbolstore.py	2012-04-30 11:56:58.591000050 +0200
+@@ -381,6 +381,7 @@
+     return {'win32': Dumper_Win32,
+             'cygwin': Dumper_Win32,
+             'linux2': Dumper_Linux,
++	    'linux3': Dumper_Linux,
+             'sunos5': Dumper_Solaris,
+             'darwin': Dumper_Mac}[sys.platform](**kwargs)
+ 

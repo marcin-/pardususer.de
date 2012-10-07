@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tomb</Name>
+        <Homepage>http://tomb.dyne.org/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <Icon>tomb</Icon>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <PartOf>hardware.disk</PartOf>
+        <Summary>A simple and easy to use tool to manage encrypted storage</Summary>
+        <Description>Tomb aims to be a free and open source system for easy encryption and backup of personal files. Tomb generates 'key files' and protects them with a password choosen by the user. The Tool is well integrated into the System.</Description>
+        <Archive type="targz" sha1sum="98d52a167e0f527c7a7efc0724d73c3e786f8733">http://ftp.dyne.org/tomb/releases/Tomb-1.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>bc</Dependency>
+            <Dependency>cryptsetup-luks-devel</Dependency>
+            <Dependency>gnupg</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>pinentry-gtk</Dependency>
+            <Dependency>pinentry-qt</Dependency>
+            <Dependency>pinentry</Dependency>
+            <Dependency>sudo</Dependency>
+            <Dependency>zsh</Dependency>
+            <Dependency>wipe</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tomb</Name>
+        <RuntimeDependencies>
+            <Dependency>bc</Dependency>
+            <Dependency>cryptsetup-luks</Dependency>
+            <Dependency>gnupg</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>pinentry-gtk</Dependency>
+            <Dependency>pinentry-qt</Dependency>
+            <Dependency>pinentry</Dependency>
+            <Dependency>sudo</Dependency>
+            <Dependency>zsh</Dependency>
+            <Dependency>wipe</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/applications/</Path>
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="data">/usr/share/icons/</Path>
+            <Path fileType="data">/usr/share/themes/</Path>
+            <Path fileType="data">/usr/share/mime/</Path>
+            <Path fileType="data">/usr/share/app-install/</Path>
+            <Path fileType="data">/usr/share/application-registry/</Path>
+            <Path fileType="data">/usr/share/mime-info/</Path>
+            <Path fileType="data">/usr/share/menu/tomb</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2012-01-19</Date>
+            <Version>1.2</Version>
+            <Comment>v_b</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-06-29</Date>
+            <Version>1.1</Version>
+            <Comment>initial release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

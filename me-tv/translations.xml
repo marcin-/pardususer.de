@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>me-tv</Name>
+        <Summary xml:lang="de">Fernsehen am Computer (dvb)</Summary>
+        <Description xml:lang="de">Mit Me-TV kann man am Computer Fernsehen, aufnehmen und elektronische Programmzeitschriften (EPG) nutzen. Me-TV arbeitet mit allen DVB-T, DVB-S, DVB-C und ATSC Geräten welche vom Linux Kernel unterstützt werden.</Description>
+    </Source>
+</PISI>

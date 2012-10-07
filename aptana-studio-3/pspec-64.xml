@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>aptana-studio-3</Name>
+        <Homepage>http://www.aptana.com/products/studio3</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>aptana-studio-3</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>editor.web</PartOf>
+        <Summary>Professional, open source web-development tool</Summary>
+        <Description>Aptana Studio is an open source integrated development environment (IDE) for building web applications. It includes support for latest browser technology spec such as HTML 5, CSS 3, JavaScript; and Ruby, Rails, PHP and Python on the server side. Additional plugins allow Aptana Studio to be extended to support Perl, Adobe AIR, Apple iPhone and Nokia WRT (Web Runtime).</Description>
+        <Archive type="zip" sha1sum="e613a26b00acc8138ec5e4337e985c2cab641520">http://download.aptana.com/studio3/standalone/3.1.3/linux/Aptana_Studio_3_Setup_Linux_x86_64_3.1.3.zip</Archive>
+        <Patches>
+            <Patch>studio3.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>aptana-studio-3</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+            <Dependency>jpeg6</Dependency>
+            <Dependency>libpng12-pardususerde</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/opt/AptanaStudio3/</Path>
+            <Path fileType="data">/usr/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/aptana-studio-3.desktop">aptana-studio-3.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/aptana-studio-3.png">aptana-studio-3.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="5">
+            <Date>2012-06-01</Date>
+            <Version>3.1.3</Version>
+            <Comment>Version update</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2012-01-19</Date>
+            <Version>3.0.7</Version>
+            <Comment>Version update: 3.0.7 (BUILD 201112281312)</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-05-03</Date>
+            <Version>3.0.1</Version>
+            <Comment>New release: 3.0.1 (Build 201104291443)</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-04-24</Date>
+            <Version>3.0</Version>
+            <Comment>New official build update: 3.0.0.201104201358</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-11</Date>
+            <Version>3.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

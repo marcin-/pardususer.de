@@ -1,0 +1,12 @@
+﻿#!/bin/bash
+
+#############################################################################
+#
+# Startscript for winetricks
+#
+#############################################################################
+
+env WINEPREFIX=~/.wine         #gives winetricks the info where wine is located
+
+cd /usr/share/winetrick/
+./winetricks

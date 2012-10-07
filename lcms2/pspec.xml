@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>lcms2</Name>
+        <Homepage>http://sourceforge.net/projects/lcms/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>A color management library.</Summary>
+        <Description>Little cms is a color management library. Implements fast transforms between ICC profiles. It is focused on speed, and is portable across several platforms.</Description>
+        <Archive sha1sum="67d5fabda2f5777ca8387766539b9c871d993133" type="targz">mirrors://sourceforge/lcms/lcms2-2.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lcms2</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>tiff</Dependency>
+        </RuntimeDependencies>
+    <Files>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="library">/usr/lib</Path>
+        <Path fileType="man">/usr/share/man</Path>
+        <Path fileType="doc">/usr/share/doc/lcms2/AUTHORS</Path>
+        <Path fileType="doc">/usr/share/doc/lcms2/ChangeLog</Path>
+        <Path fileType="doc">/usr/share/doc/lcms2/COPYING</Path>
+    </Files>
+    </Package>
+    <Package>
+        <Name>lcms2-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">lcms2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>lcms2-doc</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">lcms2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/lcms2/*.pdf</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-12-23</Date>
+            <Version>2.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-07-08</Date>
+            <Version>2.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

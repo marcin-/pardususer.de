@@ -1,0 +1,28 @@
+--- WordNet-3.0.orig/dict/Makefile	2011-04-04 12:56:28.000000000 +0200
++++ WordNet-3.0/dict/Makefile	2011-04-04 14:37:02.703000047 +0200
+@@ -136,7 +136,7 @@
+ sharedstatedir = ${prefix}/com
+ sysconfdir = ${prefix}/etc
+ target_alias = 
+-dictdir = $(prefix)/dict
++dictdir = $(prefix)/share/wordnet/dict
+ dict_DATA = adj.exc adv.exc cntlist cntlist.rev data.adj data.adv data.noun data.verb frames.vrb index.adj index.adv index.noun index.sense index.verb log.grind.3.0 noun.exc sentidx.vrb sents.vrb verb.Framestext verb.exc lexnames
+ all: all-am
+ 
+--- WordNet-3.0.orig/dict/Makefile.am	2006-12-18 22:30:07.000000000 +0100
++++ WordNet-3.0/dict/Makefile.am	2011-04-04 14:45:07.578000063 +0200
+@@ -1,2 +1,2 @@
+-dictdir = $(prefix)/dict
++dictdir = $(prefix)/share/wordnet/dict
+ dict_DATA = adj.exc adv.exc cntlist cntlist.rev data.adj data.adv data.noun data.verb frames.vrb index.adj index.adv index.noun index.sense index.verb log.grind.3.0 noun.exc sentidx.vrb sents.vrb verb.Framestext verb.exc lexnames
+--- WordNet-3.0.orig/dict/Makefile.in	2007-01-20 21:54:18.000000000 +0100
++++ WordNet-3.0/dict/Makefile.in	2011-04-04 14:51:45.783000063 +0200
+@@ -136,7 +136,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-dictdir = $(prefix)/dict
++dictdir = $(prefix)/share/wordnet/dict
+ dict_DATA = adj.exc adv.exc cntlist cntlist.rev data.adj data.adv data.noun data.verb frames.vrb index.adj index.adv index.noun index.sense index.verb log.grind.3.0 noun.exc sentidx.vrb sents.vrb verb.Framestext verb.exc lexnames
+ all: all-am
+ 

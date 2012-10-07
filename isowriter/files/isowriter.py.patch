@@ -1,0 +1,31 @@
+--- isowriter-0.1.3.orig/lib/isowriter.py	2010-09-20 00:30:49.000000000 +0200
++++ isowriter-0.1.3/lib/isowriter.py	2011-04-19 12:03:21.728000008 +0200
+@@ -25,6 +25,7 @@
+ from subprocess import Popen,PIPE,call,STDOUT
+ import os
+ import signal
++import re
+ 
+ import gettext
+ from gettext import gettext as _
+@@ -110,7 +111,7 @@
+             dialog.hide()
+             while gtk.events_pending():
+                 gtk.main_iteration(True)
+-            self.raw_write(source, target)
++            self.raw_write(source.replace(' ', '\ '), target)
+         else:
+             self.close('dummy')
+ 
+@@ -161,8 +162,10 @@
+             line = output.stdout.readline().strip()
+             while gtk.events_pending():
+                 gtk.main_iteration(True)
+-            if line.endswith('MB/s'):
++            if re.search('MB/.$', line):
+                 target_size = line.split()[0]
++                if target_size.isdigit() == False:
++                    target_size = line.split()[1]
+                 self.logger(_('Wrote: ')+target_size+' bytes')
+                 size = float(target_size)*100/float(src_size)
+                 while gtk.events_pending():

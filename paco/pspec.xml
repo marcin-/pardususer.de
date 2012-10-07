@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>paco</Name>
+        <Homepage>http://www.pardususer.de/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>paco</Icon>
+        <PartOf>multimedia.converter</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Pardus Converter allows easy converting of video- and audiofiles.</Summary>
+        <Description>PaCo is an easy to use GUI for FFmpeg. You can convert video- and audiofiles in various formats with just a few clicks. The tool is under developement and translation will be done later.</Description>
+        <Archive type="targz" sha1sum="aa42d759b93ae02df8f23f801ba981d5ef8bd162">http://pakete.pardususer.de/source-files/paco-0.7.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>paco</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path> 
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path> 
+            <Path fileType="data">/usr/share/paco</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/source</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/paco">paco</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/paco.png">paco.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/paco.desktop">paco.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/paco/Signal.WAV">Signal.WAV</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2011-03-05</Date>
+            <Version>0.7.0</Version>
+            <Comment>Version bump english lokalisation of PaCo</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+       <Update release="2">
+            <Date>2011-02-15</Date>
+            <Version>0.6.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-02-06</Date>
+            <Version>0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

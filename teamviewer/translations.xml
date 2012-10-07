@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>teamviewer</Name>
+        <Summary xml:lang="de">Benutzerfreundliche Ferwartungs-Software</Summary>
+        <Description xml:lang="de">TeamViewer ist eine Desktop-Sharing-Software für Fernwartungen, Online-Präsentationen, Dateitransfer und VPN, die durch Firewalls und NAT sowie Proxy-Server hindurch arbeitet. Im Gegensatz zu VNC handelt es sich um ein proprietäres Protokoll. eitere Funktionen sind ein Chat sowie Audio- und Videoübertragungen mit zwei oder mehr Benutzern. Für Privatanwender ist TeamViewer kostenlos nutzbar. Lizenzen für kommerzielle Nutzung kann man auf der TeamViewer Homepage http://www.teamviewer.com/ erwerben.</Description>
+    </Source>
+</PISI>

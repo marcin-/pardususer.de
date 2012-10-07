@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/pardus/!svn/ver/123140/2011/devel/multimedia/video/ffmpeg/files
+END
+disable_wma_simd.patch
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/pardus/!svn/ver/99010/2011/devel/multimedia/video/ffmpeg/files/disable_wma_simd.patch
+END
+print-cpucaps.patch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/100260/2011/devel/multimedia/video/ffmpeg/files/print-cpucaps.patch
+END
+atom_generic_arch.patch
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pardus/!svn/ver/109640/2011/devel/multimedia/video/ffmpeg/files/atom_generic_arch.patch
+END
+00_configure.diff
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/pardus/!svn/ver/109640/2011/devel/multimedia/video/ffmpeg/files/00_configure.diff
+END
+x264_revert.patch
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/pardus/!svn/ver/98653/2011/devel/multimedia/video/ffmpeg/files/x264_revert.patch
+END
+cast_float_to_int.patch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/98740/2011/devel/multimedia/video/ffmpeg/files/cast_float_to_int.patch
+END
+fix_pthread.patch
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/pardus/!svn/ver/98653/2011/devel/multimedia/video/ffmpeg/files/fix_pthread.patch
+END
+no-rle-warning.patch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/98653/2011/devel/multimedia/video/ffmpeg/files/no-rle-warning.patch
+END
+build.patch
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/pardus/!svn/ver/98653/2011/devel/multimedia/video/ffmpeg/files/build.patch
+END
+dont-print-config.patch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/98653/2011/devel/multimedia/video/ffmpeg/files/dont-print-config.patch
+END
+03_doc_filters.diff
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/109640/2011/devel/multimedia/video/ffmpeg/files/03_doc_filters.diff
+END
+01_build.diff
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/pardus/!svn/ver/109640/2011/devel/multimedia/video/ffmpeg/files/01_build.diff
+END
+ffmpeg.git-89f903b3d5ec38c9c5d90fba7e626fa0eda61a32.patch
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/pardus/!svn/ver/119753/2011/devel/multimedia/video/ffmpeg/files/ffmpeg.git-89f903b3d5ec38c9c5d90fba7e626fa0eda61a32.patch
+END
+ffmpeg.git-c5cbda50793e311aa73489d12184ffd6761c9fbf.patch
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/pardus/!svn/ver/123140/2011/devel/multimedia/video/ffmpeg/files/ffmpeg.git-c5cbda50793e311aa73489d12184ffd6761c9fbf.patch
+END
+remove_vfw_bframe_warning.patch
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/pardus/!svn/ver/98653/2011/devel/multimedia/video/ffmpeg/files/remove_vfw_bframe_warning.patch
+END

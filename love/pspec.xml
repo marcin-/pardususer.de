@@ -1,0 +1,64 @@
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>love</Name>
+        <Homepage>http://love2d.org/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <IsA>library</IsA>
+        <PartOf>game</PartOf>
+        <License>ZLIB</License>
+        <Summary>2D game development framework based on Lua and OpenGL</Summary>
+        <Description>LÖVE was created to be a user-friendly engine in which simple (or complicated) games could be made without having extensive knowledge of system or graphics functions and without having to dedicate time towards developing the same engine features time and time again. 
+Developed with cross-platform implementation in mind, it utilizes the latest open source libraries to deliver a similar game experience, independent of operating system. By relying on the Lua scripting language for game-specific programming, it allows even the novice game creator to quickly and efficiently develop an idea into a fully working game. </Description>
+        <Archive sha1sum="876f527fc6908a6dd462080aa599ffa1ad47afa5" type="targz">http://cdn.bitbucket.org/rude/love/downloads/love-0.7.2-linux-src.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>DevIL-devel</Dependency>
+            <Dependency>lua-devel</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>physfs-devel</Dependency>
+	    <Dependency>openal-devel</Dependency>
+	    <Dependency>mpg123-devel</Dependency>
+	    <Dependency>libvorbis-devel</Dependency>
+	    <Dependency>libmodplug-devel</Dependency>
+	    <Dependency>freetype-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>love</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>DevIL</Dependency>
+            <Dependency>lua</Dependency>
+            <Dependency>libsdl</Dependency>
+	    <Dependency>physfs</Dependency>
+	    <Dependency>openal</Dependency>
+	    <Dependency>mpg123</Dependency>
+	    <Dependency>libvorbis</Dependency>
+	    <Dependency>libmodplug</Dependency>
+	    <Dependency>freetype</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+	<AdditionalFiles>
+            <AdditionalFile target="/usr/share/icons/hicolor/scalable/apps/love.svg" permission="0644" owner="root">app.svg</AdditionalFile>
+	    <AdditionalFile target="/usr/share/icons/hicolor/scalable/mimetypes/application-x-love-game.svg" permission="0644" owner="root">game.svg</AdditionalFile>
+	    <AdditionalFile target="/usr/share/applications/love.desktop" permission="0644" owner="root">love.desktop</AdditionalFile>
+	    <AdditionalFile target="/usr/share/mime/packages/love.xml" permission="0644" owner="root">love.xml</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-09-06</Date>
+            <Version>0.7.2</Version>
+            <Comment>First Release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,87 @@
+<PISI>
+    <Source>
+        <Name>milena</Name>
+        <Homepage>http://milena.polip.com/index.shtml</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>LGPLv2</License>
+        <PartOf>multimedia.sound</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Milena is a Polish speech synthesizer for Linux</Summary>
+        <Description>Milena is a Polish speech synthesizer for Linux</Description>
+        <BuildDependencies>
+            <Dependency>libao-devel</Dependency>
+            <Dependency>mbrola-voices-pl1</Dependency>
+            <Dependency versionFrom="0.2.52">milena-data</Dependency>
+            <Dependency>sox</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="22d63593b4268f4b779cd0701a508bde1878eb93" type="targz">http://tts.polip.com/files/milena-dist-0.2.52.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">fix_sandbox_violation_pulse.patch</Patch>
+            <Patch level="1">makefile.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>milena</Name>
+        <RuntimeDependencies>
+            <Dependency>antiword</Dependency>
+            <Dependency>enca</Dependency>
+            <Dependency>lame</Dependency>
+            <Dependency>libao</Dependency>
+            <Dependency>mbrola-voices-pl1</Dependency>
+            <Dependency versionFrom="0.2.52">milena-data</Dependency>
+            <Dependency>poppler-utils</Dependency>
+            <Dependency>sox</Dependency>
+            <Dependency>vorbis-tools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="header">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/milena/*</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+    <History>
+        <Update release="5">
+            <Date>2012-01-20</Date>
+            <Version>0.2.52</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2012-01-06</Date>
+            <Version>0.2.51</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-11-24</Date>
+            <Version>0.2.50</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-09-30</Date>
+            <Version>0.2.48.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-08-28</Date>
+            <Version>0.2.48</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

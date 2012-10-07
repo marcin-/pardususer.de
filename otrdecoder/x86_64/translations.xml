@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>otrdecoder</Name>
+        <Summary xml:lang="de">Otr-Dekoder ist die Dekodiersoftware um Filme vom Format .otrkey nach .avi zu dekodieren</Summary>
+        <Description xml:lang="de">Mit Otr-Dekoder werden kodierte Filme die mit dem OnlineTvRecorder aufgezeichnet und downgeloadet wurden dekodiert. Die Kodierung muss sein, damit es nach deutschem Recht ein legaler Service ist. Nach dem dekodieren liegen die Filme entweder als .avi, .mp4, oder .mkv vor und sind abspielbereit.</Description>
+    </Source>
+</PISI>

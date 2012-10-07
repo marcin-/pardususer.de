@@ -1,0 +1,75 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>kaption</Name>
+        <Homepage>http://opendesktop.org/content/show.php?content=139302</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>GPLv2</License>
+        <Icon>kaption</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A handy Screenshot tool sitting in the systray</Summary>
+        <Description>With left clicking on the icon you can capture a screen region and draw arrows, boxes and textboxes on it.</Description>
+        <Archive sha1sum="54cd04c3dbe1acbee477f1bcd052ba07b20ac301" type="tarbz2">http://kaption.googlecode.com/files/kaption-0.1.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="4.6.2">qt-devel</Dependency>
+            <Dependency versionFrom="4.4.4">kdelibs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>kaption</Name>
+        <RuntimeDependencies>
+            <Dependency versionFrom="4.4.4">kdelibs</Dependency>
+            <Dependency versionFrom="4.6.2">qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications/kde4/</Path>
+            <Path fileType="data">/usr/share/config.kcfg/</Path>
+            <Path fileType="data">/usr/share/kde4/apps/kaption/</Path>
+            <Path fileType="data">/usr/share/locale/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="5">
+            <Date>2011-09-15</Date>
+            <Version>0.1.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-04-24</Date>
+            <Version>0.0.9</Version>
+            <Comment>version bump</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-03-31</Date>
+            <Version>0.0.7</Version>
+            <Comment>some corrections</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-03-31</Date>
+            <Version>0.0.7</Version>
+            <Comment>Version 0.7 updated, locales updated.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-03-13</Date>
+            <Version>0.0.5</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

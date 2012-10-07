@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+    <Name>WordNet</Name>
+    <Homepage>http://</Homepage>
+    <Packager>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Packager>
+    <License>Princeton</License>
+    <License>as-is</License>
+    <IsA>app:console</IsA>
+    <Summary>A lexical database for the English language.</Summary>
+    <Description>WordNet is a large lexical database of English, developed under the direction of George A. Miller.</Description>
+    <Archive sha1sum="aeb7887cb4935756cf77deb1ea86973dff0e32fb" type="tarbz2">http://wordnetcode.princeton.edu/3.0/WordNet-3.0.tar.bz2</Archive>
+    <BuildDependencies>
+        <Dependency>tcl-devel</Dependency>
+	<Dependency>tcltk-devel</Dependency>
+    </BuildDependencies>
+    <Patches>
+        <Patch level="1">fix_dict_path.patch</Patch>
+        <Patch level="1">fix_wnres_path.patch</Patch>
+        <Patch level="1">wnb.patch</Patch>
+        <Patch level="1">configure.ac.patch</Patch>
+    </Patches>
+</Source>
+
+<Package>
+    <Name>wordnet</Name>
+    <PartOf>office.misc</PartOf>
+    <RuntimeDependencies>
+        <AnyDependency>
+            <Dependency>tcl</Dependency>
+	    <Dependency>tcl-tk</Dependency>
+        </AnyDependency>
+    </RuntimeDependencies>
+    <Files>
+        <Path fileType="data">/etc/profile.d</Path>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="header">/usr/include</Path>
+        <Path fileType="library">/usr/lib</Path>
+        <Path fileType="localedata">/usr/share/locale</Path>
+        <Path fileType="man">/usr/share/man</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+	<Path fileType="data">/usr/share/wordnet/dict</Path>
+	<Path fileType="data">/usr/share/wordnet/wnres</Path>
+    </Files>
+</Package>
+
+<History>
+    <Update release="1">
+        <Date>2011-04-04</Date>
+        <Version>3.0</Version>
+        <Comment>First release.</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+</History>
+</PISI>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>handbrake</Name> 
+        <Homepage>http://handbrake.fr/</Homepage> 
+        <Packager>
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+            </Packager>
+        <License>GPLv2</License> 
+        <Icon>handbrake</Icon> 
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.converter</PartOf>
+        <Summary>HandBrake is a video transcoder</Summary> 
+        <Description>The program is also used to convert DVDs so they can be viewed on iPods, iPhones and most media players.</Description> 
+        <Archive type="binary" sha1sum="25f2c06f5045ac3e6712e7036937c42fa6beea50">ftp://ftp.pbone.net/mirror/ftp.mandrivauser.de/rpm/GPL/2010.1/x86_64/release/handbrake-0.9.5-2mud2010.2.x86_64.rpm</Archive>
+        <BuildDependencies>
+            <Dependency>rpm2targz</Dependency>
+            <Dependency>tar</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>handbrake</Name> 
+        <RuntimeDependencies>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>libpng12-pardususerde</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-ffmpeg</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path> 
+            <Path fileType="data">/usr/share/applications/</Path>
+            <Path fileType="icons">/usr/share/icons/hicolor/</Path> 
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="man">/usr/share/man/</Path>        
+        </Files>
+    </Package>
+  
+    <History>
+        <Update release="2">
+            <Date>2011-12-02</Date> 
+            <Version>0.9.5</Version> 
+            <Comment>move runtimedep libpng12 to libpng12-pardususerde</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+            </Update>
+        <Update release="1">
+            <Date>2011-03-08</Date> 
+            <Version>0.9.5</Version> 
+            <Comment>First release</Comment> 
+            <Name>Stefan Wilhelm</Name> 
+            <Email>sw@pardususer.de</Email> 
+            </Update>
+    </History>
+</PISI>

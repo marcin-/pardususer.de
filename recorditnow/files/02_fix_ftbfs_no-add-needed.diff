@@ -1,0 +1,15 @@
+--- recorditnow-0.8.1.orig/src/CMakeLists.txt
++++ recorditnow-0.8.1/src/CMakeLists.txt
+@@ -121,7 +121,11 @@ target_link_libraries(recorditnow ${KDE4
+                                   recorditnow_recorder
+                                   recorditnow_encoder
+                                   recorditnow_keymon
+-                                  ${X11_Xcursor_LIB})
++                                  recorditnow_plugin
++                                  ${X11_X11_LIB}
++                                  ${X11_Xcursor_LIB}
++                                  ${X11_Xfixes_LIB}
++                                  ${X11_Xext_LIB})
+ 
+ if (BUILD_WITH_JOSCHY)
+     target_link_libraries(recorditnow ${JOSCHY_SNAPSHOT_LIBRARIES})

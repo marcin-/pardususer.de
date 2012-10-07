@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>paco</Name>
+        <Summary xml:lang="de">Pardus Converter erlaubt das einfache konvertieren von Video- und Audiodateien</Summary>
+        <Description xml:lang="de">PaCo ist eine grafische Benutzeroberfläche für ffmpeg und ermöglicht nur mit wenigen Mausklicks das umwandeln von Videodateien in ein anderes Format.</Description>
+    </Source>
+</PISI>

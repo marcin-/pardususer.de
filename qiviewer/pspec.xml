@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>qiviewer</Name>
+	<Homepage>http://code.google.com/p/qiviewer</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>qiviewer</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>A Qt image viewer, designed to be fast and lightweight</Summary>
+        <Description>This program has been written with help of Qt library, to be a lightweight image viewer, similar to eog or viewnior for Gnome. Supported formats: BMP, GIF, JPG, JPEG, PNG, PBM, PGM, PPM,  XBM, XPM, SVG, SVGZ, WEBP (experimental). </Description>
+        <Archive sha1sum="a9f0124c572bf56d893f0bb9a5f892eb17ec4ba8" type="tarbz2">http://qiviewer.googlecode.com/files/qiviewer-0.5.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>qiviewer</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	    <!-- <Path fileType="header">/usr/include</Path>-->
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-05-22</Date>
+            <Version>0.5.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

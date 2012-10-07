@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TrueCrypt Install
+GenericName=TrueCrypt Install
+Comment=Install TrueCrypt
+Exec=xdg-su -c /usr/bin/truecrypt-setup
+Icon=truecrypt.xpm
+Terminal=false
+Type=Application
+Categories=Encryption;Encryption Tools;Utility;

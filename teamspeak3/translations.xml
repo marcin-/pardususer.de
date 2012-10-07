@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>teamspeak3</Name>
+        <Summary xml:lang="de">VoIP-Sprachkonferenzsoftware für GNU/Linux</Summary>
+        <Summary xml:lang="nl">VoIP-spraakcommunicatie voor GNU/Linux</Summary>
+        <Description xml:lang="de">TeamSpeak ist eine proprietäre Sprachkonferenzsoftware, welche den Benutzern ermöglicht, über das Internet oder ein LAN miteinander zu reden. TeamSpeak ist für die Nutzung in Online-Spielen optimiert, es hat geringe Prozessorauslastung und Datentransfer.</Description>
+        <Description xml:lang="nl">Teamspeak3 is een comleet nieuwe ervaring in spraakcommunicatie voor GNU/Linux.</Description>
+    </Source>
+</PISI>

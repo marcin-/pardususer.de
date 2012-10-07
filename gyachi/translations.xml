@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gyachi</Name>
+        <Summary xml:lang="tr">Linux için Yahoo! istemcisi</Summary>
+        <Summary xml:lang="de">GYachI ist ein alternativer Client für den Yahoo! Messenger Dienst</Summary>        
+        <Description xml:lang="tr">GyachE Improved (GyachI), Gyach Enhanced Yahoo! istemcisi üzerinden geliştirilmiş bir Yahoo! istemcisidir. Resmi Windows Yahoo! istemcisinin nerdeyse bütün özelliklerini taşır.</Description>
+        <Description xml:lang="de">GYachI bringt den Yahoo! Messenger mit seinen Multimedia Funktionen auf den Linux-Desktop.</Description>
+    </Source>
+</PISI>

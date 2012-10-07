@@ -1,0 +1,65 @@
+<PISI>
+    <Source>
+        <Name>mp</Name>
+        <Homepage>http://triptico.com/software/mp.html</Homepage>
+        <Packager>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>editor</PartOf>
+        <IsA>app:gui</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>A text editor for programmers</Summary>
+        <Description>Fully scriptable using a C-like scripting language.
+Unlimited undo levels.
+Complete Unicode support.
+Multiple files can be edited at the same time and blocks copied and pasted among them.
+Syntax highlighting for many popular languages / file formats: C, C++, Perl, Shell Scripts, Ruby, Php, Python, HTML...
+Creative use of tags: tags created by the external utility ctags are used to move instantaneously to functions or variables inside your current source tree. Tags are visually highlighted (underlined), and symbol completion can be triggered to avoid typing your own function names over and over.
+Intelligent help system: pressing F1 over any word of a text being edited triggers the underlying system help (calling man when editing C or Shell files, perldoc with Perl, ri on Ruby...).
+Understandable interface: drop-down menus, reasonable default key bindings.
+Configurable keys, menus and colors.
+Text templates can be easily defined / accessed.
+Multiplatform: Console/curses, Qt4, KDE4, GTK+, MS Windows.
+Automatic indentation, word wrapping, internal grep, learning / repeating functions.
+Spellchecking support (via the ispell package).
+Multilingual.
+Password-protected, encrypted text files (using the ARCFOUR algorithm).
+It helps you abandon vi, emacs and other six-legged freaks definitely.</Description>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="9139b714225938c319fba7d051faf80b696d9204" type="targz">http://triptico.com/download/mp-5.2.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>mp</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="data">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="man">/usr/share/man/*</Path>
+            <Path fileType="data">/usr/share/mp-5/*</Path>
+            <Path fileType="data">/usr/share/pixmaps/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/mp.desktop" permission="0755" group="root" owner="root">mp.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/mp.png" permission="0644" group="root" owner="root">mp.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-12-31</Date>
+            <Version>5.2.1</Version>
+            <Comment>First Relese</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

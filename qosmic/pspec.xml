@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>qosmic</Name>
+        <Homepage>http://code.google.com/p/qosmic</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>qosmic</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>Qosmic is graphical interface for creating, editing, and rendering flam3 fractal images.</Summary>
+        <Description>Fractal images created with this application can be used to contribute new artwork to the electricsheep distributed computing platform.</Description>
+        <Archive sha1sum="d23b1e9fe6210acab411d6f1bb37e56c61902204" type="tarbz2">http://qosmic.googlecode.com/files/qosmic-1.5.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>flam3-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>lua-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>qosmic</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>flam3</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	        <!-- <Path fileType="header">/usr/include</Path>-->
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-10-23</Date>
+            <Version>1.5.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

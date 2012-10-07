@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>wipe</Name>
+        <Summary xml:lang="de">Dateien und Partitionen unwiederbringlich löschen bzw. leeren</Summary>
+        <Description xml:lang="de">Für jede Partition (inkl. SWAP) einfach folgendes Kommando eingeben: sudo wipe /dev/partition. Der vollständige Löschvorgang wird einige Stunden in Anspruch nehmen.</Description>
+    </Source>
+</PISI>

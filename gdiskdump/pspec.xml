@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+	<Name>gdiskdump</Name>
+	<Homepage>https://launchpad.net/gdiskdump</Homepage>
+	<Packager>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Packager>
+	<Summary>GUI for diskdump (dd). Harddrive clone and imaging tool.</Summary>
+	<Description>This is a open source Graphical User Interface for the Unix Command dd. You can easily select the Input- and Outputstream, so you can clone or image your Harddrive or Partition.</Description>
+	<IsA>app:gui</IsA>
+	<PartOf>util</PartOf>
+	<License>GPLv3</License>
+	<Archive sha1sum="d62d20c709c770a4a153e1f637328d5edb8f3a2c" type="targz">http://launchpad.net/gdiskdump/trunk/0.8/+download/gdiskdump-0.8.tar.gz</Archive>
+	<BuildDependencies>
+	    <Dependency>python</Dependency>
+	    <Dependency>notify-python</Dependency>
+	    <Dependency>python-distutils-extra</Dependency>
+	</BuildDependencies>
+	<Patches>
+	      <Patch level="1">desktop.patch</Patch>
+	</Patches>
+    </Source>
+    <Package>
+	<Name>gdiskdump</Name>
+	<RuntimeDependencies>
+	    <Dependency>python-pygobject</Dependency>
+	    <Dependency>notify-python</Dependency>
+	    <Dependency>python-gtk</Dependency>
+	</RuntimeDependencies>
+	<Files>
+	    <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="data">/usr/share</Path>
+	    <Path fileType="data">/usr/lib</Path>
+	</Files>
+	<!-- <AdditionalFiles>
+	    <AdditionalFile target="/usr/share/applications/gdiskdump.desktop" permission="0644" owner="root">gdiskdump.desktop</AdditionalFile>
+	  </AdditionalFiles> -->
+    </Package>
+    <History>
+	<Update release="3">
+	    <Date>2011-12-02</Date>
+	    <Version>0.8</Version>
+	    <Comment>Initial release.</Comment>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Update>
+	<Update release="2">
+	    <Date>2011-06-25</Date>
+	    <Version>0.7.1</Version>
+	    <Comment>Initial release.</Comment>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Update>
+	<Update release="1">
+	    <Date>2011-06-04</Date>
+	    <Version>0.7</Version>
+	    <Comment>First release.</Comment>
+	    <Name>Alexey Ivanov</Name>
+	    <Email>alexey.ivanes@gmail.com</Email>
+	</Update>
+    </History>
+</PISI>

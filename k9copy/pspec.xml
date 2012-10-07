@@ -1,0 +1,64 @@
+<PISI>
+    <Source>
+        <Name>k9copy</Name>
+        <Homepage>http://k9copy.sourceforge.net/web/index.php/en/</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>GPLv2y</License>
+        <PartOf>multimedia.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>K9Copy facilitates several methods for backing up a DVD.</Summary>
+        <Description>K9Copy enables direct backup of a single layer DVD-5 or a dual layer DVD-9. It can fit the contents of a dual layer DVD-9 onto a single layer DVD-5 and includes basic DVD authoring capabilities.</Description>
+        <Archive sha1sum="15c9900c689d4d98d8ebae9fbe6e7f7de158cc32" type="targz">http://switch.dl.sourceforge.net/project/k9copy/k9copy-kde4/2.3.8/k9copy-2.3.8-Source.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cdrtools</Dependency>
+            <Dependency>dvdauthor</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>k3b</Dependency>
+            <Dependency>kdelibs-devel</Dependency>
+            <Dependency>libdvdread-devel</Dependency>
+            <Dependency>libmpeg2-devel</Dependency>
+            <Dependency>mplayer</Dependency>
+            <Dependency>phonon-devel</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>xine-lib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>k9copy</Name>
+        <RuntimeDependencies>
+            <Dependency>cdrtools</Dependency>
+            <Dependency>dvdauthor</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>k3b</Dependency>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>libdvdread</Dependency>
+            <Dependency>libmpeg2</Dependency>
+            <Dependency>mplayer</Dependency>
+            <Dependency>phonon</Dependency>
+            <Dependency>qt</Dependency>
+            <Dependency>xine-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="data">/usr/share/applications/kde4/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/icons/*</Path>
+            <Path fileType="data">/usr/share/kde4/apps/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-01-06</Date>
+            <Version>2.3.8</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

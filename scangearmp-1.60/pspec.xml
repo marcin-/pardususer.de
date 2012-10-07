@@ -1,0 +1,187 @@
+<PISI>
+    <Source>
+        <Name>scangearmp</Name>
+        <Homepage>http://software.canon-europe.com/</Homepage>
+        <Packager>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>as-is</License>
+        <PartOf>hardware.scanner</PartOf>
+        <IsA>driver</IsA>
+        <Summary>Scanning front-end GUI for Canon Multifunction Inkjet Printer.</Summary>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer series; mp250, mp280, mp495, mg5100, mg5200, mg6100, and mg8100.</Description>
+        <BuildDependencies>
+            <Dependency>gimp-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <!-- <Dependency>libpng-devel</Dependency> -->
+            <!-- <Dependency>libusb-devel</Dependency> -->
+            <Dependency>sane-backends-devel</Dependency>
+            <!-- <Dependency>zlib-devel</Dependency> -->
+        </BuildDependencies>
+        <Archive sha1sum="9adfb9f4fc0177445489d51b03e52d60eed124dc" type="targz">http://files.canon-europe.com/files/soft40247/software/scangearmp-source-1.60-1.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">fix_gimp_header.patch</Patch>
+        </Patches>
+    </Source>
+    
+    <Package>
+        <Name>scangearmp-common</Name>
+        <Files>
+            <Path fileType="config">/etc/udev/rules.d/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib/libcncpmsimg.so</Path>
+            <Path fileType="library">/usr/lib/libcncpmslld.so</Path>
+            <Path fileType="library">/usr/lib/libcncpnet.so</Path>
+            <Path fileType="library">/usr/lib/libcncpmsui.so</Path>
+            <Path fileType="library">/usr/lib/libcncpcmcm.so</Path>
+            <Path fileType="library">/usr/lib/libsane*so*</Path>
+            <Path fileType="library">/usr/lib/gimp</Path>
+            <Path fileType="data">/usr/lib/bjlib/canon_mfp.conf</Path>
+            <Path fileType="executable">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/scangearmp/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="data">/usr/share/scangearmp/pixmaps/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/scangearmp.desktop" permission="0755" group="root" owner="root">scangearmp.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>gimp</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>scangearmp</Package>
+        </Replaces>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mp250series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mp250 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*356*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*356*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*250*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*173a*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mp280series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mp280 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*370*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*370*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*280*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*1746*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mp495series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mp495 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*369*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*369*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*495*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*1747*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mg5100series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mg5100 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*373*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*373*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*5100*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*1748*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mg5200series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mg5200 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*374*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*374*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*5200*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*1749*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mg6100series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mg6100 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*376*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*376*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*6100*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*174a*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>scangearmp-mg8100series</Name>
+        <Description>This ScanGear MP provides scanning functions for Canon Multifunction Inkjet Printer mg8100 series.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/*377*so*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*377*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*8100*</Path>
+            <Path fileType="data">/usr/lib/bjlib/*174b*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.60">scangearmp-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="3">
+            <Date>2012-05-08</Date>
+            <Version>1.60</Version>
+            <Comment>Rebuild for other printers in the 1.60 range.</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-10-24</Date>
+            <Version>1.60</Version>
+            <Comment>Fix gimp plugin.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-10-23</Date>
+            <Version>1.60</Version>
+            <Comment>First Release.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

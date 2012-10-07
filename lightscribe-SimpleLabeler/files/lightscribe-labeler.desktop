@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Simple Text Labeler
+GenericName=LightScribe Writer
+Type=Application
+Exec=xdg-su -c /opt/lightscribeApplications/SimpleLabeler/SimpleLabeler
+Icon=lightscribe
+X-KDE-StartupNotify=true
+Terminal=false
+Categories=Qt;Application;AudioVideo;
+Comment=Tool for writing picture on lightscribe CD/DVD

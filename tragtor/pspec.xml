@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+
+
+- 	<Source>
+		<Name>tragtor</Name> 
+		<Homepage></Homepage> 
+- 			<Packager>
+				<Name>Stefan Wilhelm</Name> 
+				<Email>sw@pardususer.de</Email> 
+			</Packager>
+		<License>GPLv2</License> 
+		<Icon>tragtor</Icon>
+		<PartOf>multimedia.converter</PartOf>
+		<IsA>app:gui</IsA> 
+		<Summary>tragtor - a GUI for FFmpeg for audio and video-conversion</Summary> 
+		<Description>With tragtor You can easily controll ffmpeg to convert media content in different formats using various container and codecs.</Description> 
+		<Archive sha1sum="ea44560a50a8a51ea96dece83891cd27c7c02be5" type="targz">http://repository.mein-neues-blog.de:9000/latest/tragtor.tar.gz</Archive>
+	</Source>
+
+
+- <Package>
+		<Name>tragtor</Name> 
+- 		<RuntimeDependencies>
+			<Dependency>ffmpeg</Dependency>
+			<Dependency>id3lib</Dependency>
+			<Dependency>id3v2</Dependency>
+		</RuntimeDependencies>
+- 	<Files>
+		<Path fileType="executable">/usr/bin/</Path> 
+		<Path fileType="data">/usr/share/applications</Path>
+		<Path fileType="data">/usr/share/pixmaps</Path> 
+		<Path fileType="data">/usr/share/tragtor</Path>
+	</Files>
+	<AdditionalFiles>
+		<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/tragtor.desktop">tragtor.desktop</AdditionalFile>
+	</AdditionalFiles>
+  </Package>
+
+  
+- 		<History>
+- 			<Update release="3">
+			<Date>2011-02-02</Date> 
+			<Version>0.8.31</Version> 
+			<Comment>Updated tragtor.desktop file</Comment> 
+			<Name>Antoon Tolboom</Name> 
+			<Email>atolboo@gmail.com</Email> 
+			</Update>
+- 			<Update release="2">
+			<Date>2011-02-02</Date> 
+			<Version>0.8.31</Version> 
+			<Comment>New release</Comment> 
+			<Name>Antoon Tolboom</Name> 
+			<Email>atolboo@gmail.com</Email> 
+			</Update>
+		</History>
+- 		<History>
+- 			<Update release="1">
+			<Date>2011-02-02</Date> 
+			<Version>0.8.24</Version> 
+			<Comment>First release</Comment> 
+			<Name>Stefan Wilhelm</Name> 
+			<Email>sw@pardususer.de</Email> 
+			</Update>
+		</History>
+  </PISI>

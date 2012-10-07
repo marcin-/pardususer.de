@@ -1,0 +1,10 @@
+--- myagent-im.orig/src/myagent-im.desktop	2011-06-17 12:53:32.874000009 +0200
++++ myagent-im/src/myagent-im.desktop	2011-06-17 12:57:08.272000013 +0200
+@@ -2,6 +2,7 @@
+ Name=MyAgent-IM
+ Comment=Instant Messenger for Mail.ru
+ Comment[ru]=Клиент мгновенных сообщений Mail.ru
++Comment[pl]=Klient wiadomości błyskawicznych Mail.ru
+ Exec=myagent-im
+ Icon=myagent-im
+ Terminal=false

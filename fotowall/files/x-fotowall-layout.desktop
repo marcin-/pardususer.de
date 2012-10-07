@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Fotowall layout
+Name[tr]=Fotowall projesi
+Comment=Fotowall layout
+Comment[tr]=Fotowall proje dosyası
+Icon=/usr/share/pixmaps/fotowall.png
+MimeType=application/x-fotowall-layout;
+Patterns=*.fotowall;
+Type=MimeType

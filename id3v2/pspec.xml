@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>id3v2</Name>
+        <Homepage>http://sourceforge.net/projects/id3v2/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>multimedia.misc</PartOf>
+        <Summary>id3v2 is a command line id3v2 tag editor</Summary>
+        <Description>You can add/modifiy/delete id3v2 tags and convert id3v1 tags to id3v2 tags. It's uses id3lib.</Description>
+        <Archive sha1sum="8f42153b2f53098c221da2e8fe42170e727cd9ad" type="targz">http://netcologne.dl.sourceforge.net/project/id3v2/id3v2/0.1.12/id3v2-0.1.12.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>id3lib-devel</Dependency>	
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>id3v2</Name>
+        <RuntimeDependencies>
+            <Dependency>bash</Dependency>
+            <Dependency>id3lib</Dependency>	
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="bin">/usr/bin/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>			
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>2011-03-09</Date>
+            <Version>0.1.12</Version>
+            <Comment>correct building from source</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-02-02</Date>
+            <Version>0.1.12</Version>
+            <Comment>First release.</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,48 @@
+<PISI>
+    <Source>
+        <Name>coolreader</Name>
+        <Homepage>http://coolreader.org/e-index.htm</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>office.misc</PartOf>
+        <License>GPLv2</License>
+        <Summary>E-book reader for Linux</Summary>
+        <Description>CoolReader is fast and small cross-platform XML/CSS based E-Book reader for desktops and handheld devices. Supported formats: FB2, TXT, RTF, DOC, TCR, HTML, EPUB, CHM, PDB.</Description>
+        <BuildDependencies>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="49fca2d25356c4a02e59eeaadc3c47c67d6d3ef6" type="targz">mirrors://sourceforge/crengine/cr3_3.0.50.orig.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>coolreader</Name>
+        <RuntimeDependencies>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="0">/usr/bin/cr3</Path>
+            <Path fileType="data" permanent="0">/usr/share/applications/cr3.desktop</Path>
+            <Path fileType="data" permanent="0">/usr/share/coolreader/*</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/coolreader/*</Path>
+            <Path fileType="man" permanent="0">/usr/share/man/*</Path>
+            <Path fileType="data" permanent="0">/usr/share/pixmaps/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-08-25</Date>
+            <Version>3.0.50</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

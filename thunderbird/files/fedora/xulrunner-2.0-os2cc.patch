@@ -1,0 +1,12 @@
+diff -Naur comm-release.orig/mozilla/gfx/ots/src/os2.cc comm-release/mozilla/gfx/ots/src/os2.cc
+--- comm-release.orig/mozilla/gfx/ots/src/os2.cc	2012-04-21 00:40:02.000000000 +0200
++++ comm-release/mozilla/gfx/ots/src/os2.cc	2012-04-30 12:12:47.379000050 +0200
+@@ -2,6 +2,8 @@
+ // Use of this source code is governed by a BSD-style license that can be
+ // found in the LICENSE file.
+ 
++#include <cstddef>
++
+ #include "os2.h"
+ 
+ #include "head.h"

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=winetricks
+GenericName=improve wine
+GenericName[de]=Wine verbessern
+Comment=script for better wine
+Commen[de]=script für ein besseres wine
+Type=Application
+Exec=winetrick
+Icon=wine
+Categories=Application;X-Wine;

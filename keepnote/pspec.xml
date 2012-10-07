@@ -1,0 +1,93 @@
+<PISI>
+    <Source>
+        <Name>keepnote</Name>
+        <Homepage>http://keepnote.org/keepnote/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>office.misc</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Stores your notes in simple and easy to manipulate file formats (HTML and XML).</Summary>
+        <Description>Archiving and transferring your notes is as easy as zipping or copying a folder.</Description>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="6fa0c050ec7b5b37e1d7099726fa87a4d65f8940" type="targz">http://keepnote.org/download/keepnote-0.7.8.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>keepnote</Name>
+        <RuntimeDependencies>
+            <Dependency>gtkspell</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="8">
+            <Date>2012-04-06</Date>
+            <Version>0.7.8</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="7">
+            <Date>2012-01-10</Date>
+            <Version>0.7.7</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2011-11-13</Date>
+            <Version>0.7.6</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-09-22</Date>
+            <Version>0.7.5</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-07-17</Date>
+            <Version>0.7.4</Version>
+            <Comment>Version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-06-26</Date>
+            <Version>0.7.3</Version>
+            <Comment>Version bump</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-05-20</Date>
+            <Version>0.7.2</Version>
+            <Comment>Version bump and removed AnyDependency tag</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-27</Date>
+            <Version>0.7.1</Version>
+            <Comment>First release.</Comment>
+            <Name>marcin bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

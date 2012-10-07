@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" ?>
+<PISI>
+<Source>
+<Name>areca</Name>
+<Summary xml:lang="de">Backup Programm für GNU/Linux</Summary>
+<Summary xml:lang="nl">Backup toepassing voor GNU/Linux</Summary>
+<Description xml:lang="de">Areca Backup ist eine umfassende und verlässliche Backuplösung. Obwohl die Benutzeroberfäche so einfach wie möglich gehalten ist, ist das Programm trotzdem sehr vielseitig.</Description>
+<Description xml:lang="nl">Areca Backup is een veelomvattende en betrouwbare oplossing voor backup. Ofschoon de interface eenvoudig is gehouden, is de toepassing niettemin zeer veelzijdig.</Description>
+</Source>
+</PISI>

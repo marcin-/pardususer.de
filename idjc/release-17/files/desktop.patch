@@ -1,0 +1,25 @@
+diff -Naur idjc-0.8.7.orig/idjc.desktop.in.in idjc-0.8.7-desktop/idjc.desktop.in.in
+--- idjc-0.8.7.orig/idjc.desktop.in.in	2011-12-18 19:43:36.000000000 +0100
++++ idjc-0.8.7-desktop/idjc.desktop.in.in	2012-02-21 12:40:04.961000003 +0100
+@@ -1,17 +1,19 @@
+ [Desktop Entry]
+-Categories=GNOME;Network;
++Categories=GNOME;Application;AudioVideo;Audio;
+ Comment=Create your live radio show or podcast
++Comment[tr]=Canlı radyo yayını veya podcast hazırlayın
+ Comment[en_GB]=Create your live radio show or podcast
+ Comment[it]=Crea la tua live radio o podcast
+ Comment[de]=Erstelle deine eigene Radiosendung oder Podcasts
+ Comment[fr]=Créez votre spectacle radio en direct ou votre podcast
+ Exec=@bindir@/@PACKAGE_NAME@
+ GenericName=Graphical shoutcast/icecast client
++GenericName[tr]=Shoutcast / Icecast İstemcisi
+ GenericName[en_GB]=Graphical shoutcast/icecast client
+ GenericName[it]=Client grafico shoutcast/icecast
+ GenericName[de]=Grafischer Shoutcast/Icecast Client
+ GenericName[fr]=Client graphique shoutcast/icecast
+-Icon=${prefix}/share/pixmaps/@PACKAGE_NAME@.png
++Icon=idjc
+ MimeType=
+ Name=Internet DJ Console
+ Path=

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dropbox</Name>
+        <Homepage>http://www.dropbox.com</Homepage>
+        <Packager>
+            <Name>Anıl Özbek</Name>
+            <Email>ozbekanil@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <Icon>dropbox</Icon>
+        <IsA>app:gui</IsA>
+	<PartOf>network.share</PartOf>
+        <Summary>A Dropbox client</Summary>
+        <Description>Dropbox is a Web-based file hosting service which uses cloud computing to enable users to store and share files and folders with others across the Internet using file synchronization.</Description>
+        <Archive sha1sum="71c343d67f91d2de584ef0d9eb4bc059d4222328" type="targz" target="i686">http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.0.20.tar.gz</Archive>
+        <Archive sha1sum="9191bf6e16adeab520cdc7e9d135a82dbed0bbae" type="targz" target="x86_64">http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-1.0.20.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>dropbox</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/opt/dropbox</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/dropbox.desktop">dropbox.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/dropbox.png">dropbox.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/dropbox/POLICIES">POLICIES</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-01-19</Date>
+            <Version>1.0.20</Version>
+            <Comment>First release.</Comment>
+            <Name>Anıl Özbek</Name>
+            <Email>ozbekanil@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

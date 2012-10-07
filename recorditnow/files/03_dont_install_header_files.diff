@@ -1,0 +1,10 @@
+--- recorditnow-0.8.1.orig/joschy-snapshot-23-02-10/joschycore/joschycore/CMakeLists.txt
++++ recorditnow-0.8.1/joschy-snapshot-23-02-10/joschycore/joschycore/CMakeLists.txt
+@@ -39,7 +39,6 @@ QT4_AUTOMOC(${SRCS})
+ add_library(joschycore SHARED ${SRCS})
+ target_link_libraries(joschycore ${QT_LIBRARIES})
+ INSTALL(TARGETS joschycore DESTINATION ${JOSCHY_LIBRARY_INSTALL_DIR})
+-install(FILES ${HEADERS} DESTINATION ${JOSCHY_INCLUDE_INSTALL_DIR} COMPONENT Devel)
+ 
+ #add_subdirectory(qt)
+ #add_subdirectory(provider)

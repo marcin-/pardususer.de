@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=AnmanieSMP
+GenericName=skew and warp pictures
+GenericName[de]=Bilder verformen
+Comment=ceasily create caricatures
+Comment[de]=Karikaturen ganz einfach erstellen
+Icon=/usr/share/pixmaps/anmanie.png
+Exec=anmanie
+Categories=Application;Graphics;
+Type=Application
+Terminal=false
+MultipleArgs=false

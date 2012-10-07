@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+	<Source>
+		<Name>kdirstat-git</Name>
+		<Summary xml:lang="de">Ein Werkzeug um die Festplattennutzung grafisch darzustellen</Summary>
+		<Description xml:lang="de">kdirstat kann die Belegung der Festplatte übersichtlich darstellen. Somit ist es einfach möglich "große" Dateien und Ordner zu finden, die viel Speicherplatz belegen.</Description>
+	</Source>
+</PISI>

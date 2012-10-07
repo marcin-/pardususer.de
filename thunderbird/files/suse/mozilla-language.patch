@@ -1,0 +1,25 @@
+diff -Naur comm-release.orig/mozilla/intl/locale/src/nsLocaleService.cpp comm-release/mozilla/intl/locale/src/nsLocaleService.cpp
+--- comm-release.orig/mozilla/intl/locale/src/nsLocaleService.cpp	2012-04-21 00:40:04.000000000 +0200
++++ comm-release/mozilla/intl/locale/src/nsLocaleService.cpp	2012-04-30 11:50:24.283000049 +0200
+@@ -165,7 +165,8 @@
+ #else
+     // Get system configuration
+     const char* lang = getenv("LANG");
+-#endif
++    const char* language = getenv("LANGUAGE");
++    #endif
+ 
+     nsAutoString xpLocale, platformLocale;
+     nsAutoString category, category_platform;
+@@ -193,6 +194,11 @@
+         if (NS_FAILED(result)) {
+             return;
+         }
++        // LANGUAGE is overriding LC_MESSAGES
++        if (i == LC_MESSAGES && language && *language) {
++          CopyASCIItoUTF16(language, platformLocale);
++          result = nsPosixLocale::GetXPLocale(language, xpLocale);
++        }
+         resultLocale->AddCategory(category, xpLocale);
+         resultLocale->AddCategory(category_platform, platformLocale);
+     }

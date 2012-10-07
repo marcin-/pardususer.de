@@ -1,0 +1,31 @@
+diff -Naur idjc-0.8.7.orig/configure idjc-0.8.7-check-pygtk/configure
+--- idjc-0.8.7.orig/configure	2011-12-24 22:33:53.000000000 +0100
++++ idjc-0.8.7-check-pygtk/configure	2012-02-21 14:24:55.424000004 +0100
+@@ -7907,7 +7907,6 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_PYGTK_CFLAGS=`$PKG_CONFIG --cflags "pygtk-2.0 >= 2.6.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+ fi
+@@ -7924,7 +7923,6 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_PYGTK_LIBS=`$PKG_CONFIG --libs "pygtk-2.0 >= 2.6.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+ fi
+@@ -7944,9 +7942,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        PYGTK_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "pygtk-2.0 >= 2.6.0" 2>&1`
++	        PYGTK_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "pygtk-2.0 >= 2.6.0" 2>&1`
+         else
+-	        PYGTK_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "pygtk-2.0 >= 2.6.0" 2>&1`
++	        PYGTK_PKG_ERRORS=`$PKG_CONFIG --print-errors "pygtk-2.0 >= 2.6.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$PYGTK_PKG_ERRORS" >&5

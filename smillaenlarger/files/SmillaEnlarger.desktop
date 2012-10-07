@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=SmillaEnlarger
+GenericName=Enlarge Photos
+GenericName[de]=Fotos vergrößern
+Comment=Enlarge photos without loosing so much quality.
+Comment[de]=Bilder ohne viel Qualitätsverlust vergrößern.
+Exec=SmillaEnlarger
+Terminal=false
+Type=Application
+Icon=smilla.png
+Categories=Application;Multimedia;Graphics;
+ 

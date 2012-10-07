@@ -1,0 +1,52 @@
+<PISI>
+    <Source>
+        <Name>virtualgl</Name>
+        <Homepage>http://virtualgl.org</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <PartOf>x11</PartOf>
+        <IsA>library</IsA>
+        <Summary>Redirects 3D commands from an OpenGL application onto a server-side 3D graphics card</Summary>
+        <Description>VirtualGL is an open source package that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration.</Description>
+        <BuildDependencies>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>turbojpeg</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="6f7f91cfbb14ec1e4d7b7b790e6fb01e02bb4cef" type="targz">http://downloads.sourceforge.net/project/virtualgl/VirtualGL/2.3/VirtualGL-2.3.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>virtualgl</Name>
+        <RuntimeDependencies>
+            <Dependency>jpeg</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>turbojpeg</Dependency>
+            <Dependency>virtualgl32-bin</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/opt/VirtualGL/bin/*</Path>
+            <Path fileType="doc">/opt/VirtualGL/doc/*</Path>
+            <Path fileType="library">/opt/VirtualGL/fakelib/*</Path>
+            <Path fileType="data">/opt/VirtualGL/include/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2012-01-25</Date>
+            <Version>2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

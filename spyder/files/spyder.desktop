@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=spyder
+Name=Spyder
+GenericName=Scientific Python Development Environment
+Comment=A simple and lightweighted python IDE with MATLAB-like features
+Icon=spyder
+Terminal=false
+MimeType=application/x-foo;
+Categories=Development;IDE;Qt;

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=MakeMKV
+Exec=makemkv
+GenericName=Encode DVD and Blue-ray
+GenericName[de]=DVD und Blue-ray rippen
+GenericName[pl]=Konwerter DVD i Blue-ray do formatu mkv
+Icon=makemkv
+Type=Application
+StartupNotify=true
+Terminal=false
+Categories=Application;AudioVideo;Video;
+
+
+

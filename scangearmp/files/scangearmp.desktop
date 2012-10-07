@@ -1,0 +1,16 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Version=1.60
+Encoding=UTF-8
+Name=ScanGearMP
+Name[tr]=ScanGearMP
+GenericName=Canon Scanner Utility
+GenericName[tr]=Canon Tarayıcı Programı
+Comment=Scanning front-end GUI for Canon Multifunction Inkjet Printer.
+Comment[tr]=Canon'un çok fonksiyonlu mürekkep püskürtmeli yazıcısından tarama yapan program.
+Icon=scangearmp.png
+Exec=scangearmp
+Terminal=false
+StartupNotify=false
+Categories=Application;Graphics;

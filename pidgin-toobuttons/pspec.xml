@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pidgin-toobuttons</Name>
+        <Homepage>http://vayurik.ru/wordpress/en/toobuttons</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>network.chat</PartOf>
+        <Summary>Plugin adds “Send” and “Close” buttons to conversation window.</Summary>
+        <Description>Plugin adds “Send” and “Close” buttons to conversation window.</Description>
+        <Archive sha1sum="e8265003ca0ddd48aab9bd358f4a1fccf052e980" type="targz">http://vayurik.ru/wordpress/wp-content/uploads/toobuttons/1.5/pidgin-toobuttons-1.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pidgin-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pidgin-toobuttons</Name>
+        <RuntimeDependencies>
+            <Dependency>pidgin</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pidgin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-08-17</Date>
+            <Version>1.5</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

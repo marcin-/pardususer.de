@@ -1,0 +1,13 @@
+<PISI>
+    <Source>
+        <Name>mp</Name>
+        <Summary xml:lang="tr">Programcılar için metin düzenleyici</Summary>
+        <Description xml:lang="tr">Komut satırından ve grafik arabiriminden çalışır. 
+C benzeri betik ile programlanaiblir. 
+Tam Unicode desteği sunar.
+Birden fazla dosyayı aynı anda düzenleyebilir.
+Popüler programlama dilleri için renklendirme sunar.</Description>
+    </Source>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

@@ -1,0 +1,145 @@
+<PISI>
+    <Source>
+        <Name>pisido</Name>
+        <Homepage>http://huseyinkozan.com.tr</Homepage>
+        <Packager>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>programming.environment</PartOf>
+        <License>GPLv3+</License>
+        <Summary>A pisi packager from GUI</Summary>
+        <Description>You can make pisi packages with a GUI. Also, you can import your existing build files.</Description>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>qtermwidget-devel</Dependency>
+            <Dependency>qscintilla2-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="83a6d5bb77a9c64f604a400c79175528e3a898c0" type="targz">mirrors://sourceforge/pisido/src/2.x/pisido-2.0b.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>pisido</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>qtermwidget</Dependency>
+            <Dependency>qscintilla2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="12">
+            <Date>2011-11-12</Date>
+            <Version>2.0b</Version>
+            <Comment>
+                Version increased.
+                A new logo design.
+                Able to create and import translation.xml.
+                New Installed files tree view.
+                New Actions API java template.
+                Prevent importing multi-package build files.
+                Removed menu icon creator.
+                Fixed permanent file bug.
+            </Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="11">
+            <Date>2011-09-09</Date>
+            <Version>2.0a</Version>
+            <Comment>
+                Fixed; xml does not care while importing additional files.
+                Asking for deleting menu files.
+                Improved directory and web page opening codes.
+            </Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="10">
+            <Date>2011-09-07</Date>
+            <Version>2.0a</Version>
+            <Comment>
+                Added multiple License and IsA support.
+                Fix multiple archive bug.
+                Fix clearing archive widgets bug after import.
+                Fix AdditionalFile[s] tags spelling.
+                Fix actions import bug.
+            </Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="9">
+            <Date>2011-08-28</Date>
+            <Version>2.0a</Version>
+            <Comment>Fixed patch bug.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="8">
+            <Date>2011-08-20</Date>
+            <Version>2.0a</Version>
+            <Comment>Version increased.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="7">
+            <Date>2011-07-20</Date>
+            <Version>1.5</Version>
+            <Comment>Version increased.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="6">
+            <Date>2011-07-13</Date>
+            <Version>1.4</Version>
+            <Comment>Recompile for qscintilla2 upgrade.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-07-07</Date>
+            <Version>1.4</Version>
+            <Comment>Version increased.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-06-20</Date>
+            <Version>1.3</Version>
+            <Comment>Version increased.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-06-06</Date>
+            <Version>1.2</Version>
+            <Comment>
+	      Version increased.
+	      Desktop file permission changed.
+	      Desktop file updated.
+	    </Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-06-06</Date>
+            <Version>1.1</Version>
+            <Comment>Version increased.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-05-05</Date>
+            <Version>1.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Hüseyin Kozan</Name>
+            <Email>posta@huseyinkozan.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

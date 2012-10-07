@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dvb-apps</Name>
+        <Homepage>http://linuxtv.org/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>multimedia.video</PartOf>
+        <Summary>A collection of DVB commandline-apps</Summary>
+        <Description>Linux DVB API test/demo applications and utilities.</Description>
+        <Archive sha1sum="8ada40ff97a623382e4b2228859fa2b66ca43f44" type="targz">http://linuxtv.org/hg/dvb-apps/archive/tip.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>dvb-apps</Name>
+        <RuntimeDependencies>
+            <Dependency>bash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/dvb/</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-06</Date>
+            <Version>1.1.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

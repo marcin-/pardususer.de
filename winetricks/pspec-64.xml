@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>Winetricks</Name>
+        <Homepage>http://code.google.com/p/winetricks/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>winetricks</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>hardware.emulator</PartOf>
+        <Summary>improve compatibility of wine</Summary>
+        <Description>winetricks is a quick and dirty script to download and install various redistributable runtime libraries sometimes needed to run programs in Wine. For some libs You must have a valid windows license! Also You can install various windows programms like Google Sketchup, Firefox, VLC, Benchmarks, ....</Description>
+        <Archive type="zip" sha1sum="06e0357207c18202f7fea04df5570de1845ddd28">http://pakete.pardususer.de/source-files/dummy.zip</Archive>
+        <BuildDependencies>
+            <Dependency>bash</Dependency>
+            <Dependency>wget</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>Winetricks</Name>
+        <Replaces>
+            <Package>winetricks</Package>
+        </Replaces>
+        <RuntimeDependencies>
+            <Dependency>wine</Dependency>
+            <Dependency>bash</Dependency>
+            <Dependency>unzip</Dependency>
+            <Dependency>wget</Dependency>
+            <Dependency>kdebase</Dependency>
+            <Dependency>p7zip</Dependency>
+            <Dependency>cabextract</Dependency>
+            <Dependency>wine-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/applications/wine/</Path>
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="data">/usr/share/winetrick/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/winetrick">winetrick</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/wine/winetricks.desktop">winetricks.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+
+    <History>
+        <Update release="4">
+            <Date>2011-07-13</Date>
+            <Version>20110629</Version>
+            <Comment>Version update</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-05-02</Date>
+            <Version>20110429</Version>
+            <Comment>Removed conflict of wine and renamed package from winetricks to Winetricks and  because wine is already including a winetricks version. So new startcommand is "winetrick" also version bump</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-04-25</Date>
+            <Version>20110417</Version>
+            <Comment>Added conlicts information with wine-package and reformated build files (4 spaces instead of tabulator).</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-19</Date>
+            <Version>20110417</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

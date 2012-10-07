@@ -1,0 +1,78 @@
+# HG changeset patch
+# Parent d6bb5c163142d233d00e739e21aa9df16077873e
+
+diff --git a/browser/app/Makefile.in b/browser/app/Makefile.in
+--- a/browser/app/Makefile.in
++++ b/browser/app/Makefile.in
+@@ -164,16 +164,21 @@ endif # LIBXUL_SDK
+ DEFINES += -DFIREFOX_ICO=\"$(DIST)/branding/firefox.ico\" -DDOCUMENT_ICO=\"$(DIST)/branding/document.ico\"
+ 
+ ifeq ($(MOZ_WIDGET_TOOLKIT),gtk2)
+ libs::
+ 	$(INSTALL) $(IFLAGS1) $(DIST)/branding/mozicon128.png $(DIST)/bin/icons
+ 	$(INSTALL) $(IFLAGS1) $(DIST)/branding/default16.png  $(DIST)/bin/chrome/icons/default
+ 	$(INSTALL) $(IFLAGS1) $(DIST)/branding/default32.png  $(DIST)/bin/chrome/icons/default
+ 	$(INSTALL) $(IFLAGS1) $(DIST)/branding/default48.png  $(DIST)/bin/chrome/icons/default
++ifdef MOZ_OFFICIAL_BRANDING
++	$(INSTALL) $(IFLAGS1) $(DIST)/branding/default22.png  $(DIST)/bin/chrome/icons/default
++	$(INSTALL) $(IFLAGS1) $(DIST)/branding/default24.png  $(DIST)/bin/chrome/icons/default
++	$(INSTALL) $(IFLAGS1) $(DIST)/branding/default256.png  $(DIST)/bin/chrome/icons/default
++endif
+ endif
+ 
+ libs:: $(srcdir)/profile/prefs.js
+ 	$(INSTALL) $(IFLAGS1) $^ $(DIST)/bin/defaults/profile
+ 
+ libs:: $(srcdir)/blocklist.xml
+ 	$(INSTALL) $(IFLAGS1) $^ $(DIST)/bin
+ 
+diff --git a/browser/branding/official/Makefile.in b/browser/branding/official/Makefile.in
+--- a/browser/branding/official/Makefile.in
++++ b/browser/branding/official/Makefile.in
+@@ -65,18 +65,21 @@ OSX_BRANDING_FILES = \
+ 	firefox.icns \
+ 	disk.icns \
+ 	document.icns \
+ 	dsstore \
+ 	$(NULL)
+ 
+ LINUX_BRANDING_FILES = \
+ 	default16.png \
++	default22.png \
++	default24.png \
+ 	default32.png \
+ 	default48.png \
++	default256.png \
+ 	mozicon128.png \
+ 	$(NULL)
+ 
+ OS2_BRANDING_FILES = \
+ 	firefox-os2.ico \
+ 	document-os2.ico \
+ 	$(NULL)
+ 
+diff --git a/browser/installer/package-manifest.in b/browser/installer/package-manifest.in
+--- a/browser/installer/package-manifest.in
++++ b/browser/installer/package-manifest.in
+@@ -432,18 +432,21 @@
+ @BINPATH@/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
+ #ifdef SHIP_FEEDBACK
+ @BINPATH@/distribution/extensions/testpilot@labs.mozilla.com.xpi
+ #endif
+ @BINPATH@/chrome/toolkit@JAREXT@
+ @BINPATH@/chrome/toolkit.manifest
+ #ifdef MOZ_GTK2
+ @BINPATH@/chrome/icons/default/default16.png
++@BINPATH@/chrome/icons/default/default22.png
++@BINPATH@/chrome/icons/default/default24.png
+ @BINPATH@/chrome/icons/default/default32.png
+ @BINPATH@/chrome/icons/default/default48.png
++@BINPATH@/chrome/icons/default/default256.png
+ #endif
+ 
+ ; shell icons
+ #ifdef XP_UNIX
+ #ifndef XP_MACOSX
+ @BINPATH@/icons/*.xpm
+ @BINPATH@/icons/*.png
+ #endif

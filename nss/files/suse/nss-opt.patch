@@ -1,0 +1,20 @@
+Index: security/coreconf/Linux.mk
+===================================================================
+RCS file: /cvsroot/mozilla/security/coreconf/Linux.mk,v
+retrieving revision 1.45.2.1
+diff -u -r1.45.2.1 Linux.mk
+--- security/coreconf/Linux.mk	31 Jul 2010 04:23:37 -0000	1.45.2.1
++++ security/coreconf/Linux.mk	5 Aug 2010 07:35:06 -0000
+@@ -112,11 +112,7 @@
+ endif
+ 
+ ifdef BUILD_OPT
+-ifeq (11,$(ALLOW_OPT_CODE_SIZE)$(OPT_CODE_SIZE))
+-	OPTIMIZER = -Os
+-else
+-	OPTIMIZER = -O2
+-endif
++	OPTIMIZER = $(OPT_FLAGS)
+ ifdef MOZ_DEBUG_SYMBOLS
+ 	ifdef MOZ_DEBUG_FLAGS
+ 		OPTIMIZER += $(MOZ_DEBUG_FLAGS)

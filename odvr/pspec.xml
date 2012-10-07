@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+    <Name>odvr</Name>
+    <Homepage>http://code.google.com/p/odvr/</Homepage>
+    <Packager>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Packager>
+    <License>GPLv3</License>
+    <Icon>media-tape</Icon>
+    <PartOf>multimedia.misc</PartOf>
+    <IsA>driver</IsA>
+    <IsA>app:gui</IsA>
+    <Summary>Olympus DVR driver.</Summary>
+    <Description>odvr is a user-space driver for USB-enabled Olympus DVRs that do not support the USB Mass Storage specification.</Description>
+    <Archive sha1sum="12fc0b2caa58a7b6cdbeb52bbd206f102d2d39fa" type="targz">http://odvr.googlecode.com/files/odvr-0.1.5.tar.gz</Archive>
+    <BuildDependencies>
+        <Dependency>libusb-devel</Dependency>
+        <Dependency>libsndfile-devel</Dependency>
+        <Dependency>gtk2-devel</Dependency>
+    </BuildDependencies>
+</Source>
+
+<Package>
+    <Name>odvr</Name>
+    <RuntimeDependencies>
+        <Dependency>gtk2</Dependency>
+        <Dependency>libusb</Dependency>
+        <Dependency>libsndfile</Dependency>
+        <Dependency>icon-theme-oxygen-png</Dependency>
+    </RuntimeDependencies>
+    <Files>
+        <Path fileType="config">/etc</Path>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+        <Path fileType="data">/usr/share/applications</Path>
+    </Files>
+    <AdditionalFiles>
+        <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/odvr-gui.desktop">odvr-gui.desktop</AdditionalFile>
+    </AdditionalFiles>
+</Package>
+
+<History>
+    <Update release="1">
+        <Date>2011-05-25</Date>
+        <Version>0.1.5</Version>
+        <Comment>First release.</Comment>
+        <Name>marcin bojara</Name>
+        <Email>marcin.bojara@gmail.com</Email>
+    </Update>
+</History>
+</PISI>

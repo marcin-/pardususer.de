@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<!DOCTYPE PISI SYSTEM 'http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>flam3</Name>
+        <Homepage>http://code.google.com/p/flam3</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>Command-line tools and API to manipulate and render genomes for the Electric Sheep.</Summary>
+        <Description> It reads XML parameter sets and writes PNG images. It can also run the genetic algorithm including mutation and crossover. See our wiki for documentation.</Description>
+        <Archive sha1sum="8814515f2e49e034e47cf97e9d2c0e932844abb9" type="targz">http://flam3.googlecode.com/files/flam3-3.0.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>jpeg6-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>flam3</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+            <Dependency>jpeg6</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	    <!-- <Path fileType="header">/usr/include</Path>-->
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>flam3-devel</Name>
+        <Summary>Development files for flam3</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">flam3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2011-10-23</Date>
+            <Version>3.0.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

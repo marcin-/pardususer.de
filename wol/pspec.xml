@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wol</Name>
+        <Homepage>http://wake-on-lan.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>network.misc</PartOf>
+        <Summary>Tool for Wake On LAN</Summary>
+        <Description>WOL (=Wake On LAN) sends a special string (MagicPacket) and starts a computer via network card</Description>
+        <Archive sha1sum="7edd1a8c2d4baffc3b6baf8fcd12e786f9fc1fbd" type="targz">http://mesh.dl.sourceforge.net/project/wake-on-lan/wol/0.7.1/wol-0.7.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>wol</Name>
+        <RuntimeDependencies>
+            <Dependency>bash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+            <Path fileType="locale">/usr/share/locale/</Path>
+            <Path fileType="info">/usr/share/info/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+                <Date>2010-04-03</Date>
+                <Version>0.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Wilhelm</Name>
+                <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

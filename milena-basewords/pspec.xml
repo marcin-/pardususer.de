@@ -1,0 +1,33 @@
+<PISI>
+    <Source>
+        <Name>milena-basewords</Name>
+        <Homepage>http://milena.polip.com/index.shtml</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>multimedia.misc</PartOf>
+        <IsA>data</IsA>
+        <Summary>basewords for audiobook creator milena-abc</Summary>
+        <Description>Milena is a Polish speech synthesizer for Linux (basewords).</Description>
+        <Archive sha1sum="c013fc9fd203f92f0185ec9a9dd73e38ec95f011" type="targz">http://tts.polip.com/files/milena-basewords-0.2.10.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>milena-basewords</Name>
+        <Files>
+            <Path fileType="data">/usr/share/milena-words/pl_basewords.dat</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-01-06</Date>
+            <Version>0.2.10</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

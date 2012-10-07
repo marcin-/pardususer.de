@@ -1,0 +1,46 @@
+Author: Philip Rinn <rinni@gmx.net>
+Description: Hard-code version as we don't ship the whole repository
+--- a/About-Linux.cmake
++++ b/About-Linux.cmake
+@@ -1,27 +1,13 @@
+ # cmakefile executed within a makefile target
+ 
+-# we look for the hg command in this paths by order of preference
+-find_file(HG_CMD hg)
+-
+-
+-# the hg command is looked for again, at build time
+-if (HG_CMD STREQUAL HG_CMD-NOTFOUND)
+-  message(FATAL_ERROR "hg command not found!")
+-else (HG_CMD STREQUAL HG_CMD-NOTFOUND)
+-  message(STATUS "hg command found: ${HG_CMD}")
+-endif (HG_CMD STREQUAL HG_CMD-NOTFOUND)
+-
+ set (OUT_FILE "${SRC_DIR}/AboutThisBuild.txt")
+ set (SHELL "/bin/bash")
+ # there should be a better way of getting the compiler + compiler version, not restrained to Gcc
+ execute_process(COMMAND gcc -dumpversion OUTPUT_VARIABLE GCC_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE)
+-execute_process(COMMAND ${HG_CMD} -R ${SRC_DIR} branch OUTPUT_VARIABLE HG_BRANCH OUTPUT_STRIP_TRAILING_WHITESPACE)
+-execute_process(COMMAND ${HG_CMD} parents --template={latesttag}.{latesttagdistance} WORKING_DIRECTORY ${SRC_DIR} OUTPUT_VARIABLE HG_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE)
+-execute_process(COMMAND ${HG_CMD} parents --template={node|short} WORKING_DIRECTORY ${SRC_DIR} OUTPUT_VARIABLE HG_CHANGESET OUTPUT_STRIP_TRAILING_WHITESPACE)
+-execute_process(COMMAND ${HG_CMD} parents --template={latesttagdistance} WORKING_DIRECTORY ${SRC_DIR} OUTPUT_VARIABLE HG_TAGDISTANCE OUTPUT_STRIP_TRAILING_WHITESPACE)
+-if (CACHE_NAME_SUFFIX STREQUAL "")
+-  execute_process(COMMAND ${HG_CMD} parents --template={latesttag} WORKING_DIRECTORY ${SRC_DIR} OUTPUT_VARIABLE CACHE_NAME_SUFFIX OUTPUT_STRIP_TRAILING_WHITESPACE)
+-endif ()
++set (HG_BRANCH branch_3.0)
++set (HG_VERSION 3.0.0)
++set (HG_CHANGESET f375835d4ed1)
++set (HG_TAGDISTANCE 0)
+ 
+ # build version.h from template
+ configure_file (${SRC_DIR}/rtgui/version.h.in ${SRC_DIR}/rtgui/version.h)
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -250,7 +250,6 @@
+               -P ${CMAKE_CURRENT_SOURCE_DIR}/About-Linux.cmake
+       COMMENT "Creating the about file"
+     )
+-    find_file(HG_CMD hg)
+ 
+   endif (WIN32)
+  

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>glabels</Name>
+        <Summary xml:lang="de">Etiketten, Visitenkarten, Barcodes und CD-Cover erstellen</Summary>
+        <Description xml:lang="de">gLabels  ist ein Programm, mit dessen Hilfe das Erstellen von Visitenkarten, Etiketten und Booklets erleichtert wird. Aus einer Reihe von fertigen Vorlagen für zahlreiche Produkte verschiedener Hersteller kann eine gewählt und die Beschriftung vorgenommen werden.</Description>
+    </Source>
+</PISI>

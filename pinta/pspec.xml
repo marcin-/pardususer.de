@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pinta</Name>
+        <Homepage>http://pinta-project.com/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>as-is</License>
+        <Icon>pinta</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <Summary>A drawing/editing program modeled after Paint.NET.</Summary>
+        <Description>Pinta goal is to provide users with a simple yet powerful way to draw and manipulate images on Linux, Mac, and Windows. </Description>
+        <Archive sha1sum="f699da6310b8904c5765d4daf40e4e0a4f42e3c8" type="targz">http://github.com/downloads/jpobst/Pinta/pinta-1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mono-devel</Dependency>
+            <Dependency>gtk-sharp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pinta</Name>
+        <RuntimeDependencies>
+            <Dependency>mono-runtime</Dependency>
+            <Dependency>gtk-sharp</Dependency>
+        </RuntimeDependencies>
+    <Files>
+        <Path fileType="executable">/usr/bin</Path>
+        <Path fileType="library">/usr/lib</Path>
+        <Path fileType="localedata">/usr/share/locale</Path>
+        <Path fileType="man">/usr/share/man</Path>
+        <Path fileType="doc">/usr/share/doc</Path>
+        <Path fileType="data">/usr/share/applications</Path>
+        <Path fileType="data">/usr/share/icons</Path>
+        <Path fileType="data">/usr/share/pixmaps</Path>
+    </Files>
+</Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-07-01</Date>
+            <Version>1.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

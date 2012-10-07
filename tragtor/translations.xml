@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tragtor</Name>
+        <Summary xml:lang="de">Programm zum Konvertieren diverser Medienformate (Audio und Video)</Summary>
+        <Description xml:lang="de">Mit tragtor kann sehr einfach ffmpeg mit einer grafischen Benutzeroberfläche bedient werden, um verschiedene Multimediaformate in zahlreiche Formate zu konvertieren.</Description>
+    </Source>
+</PISI>

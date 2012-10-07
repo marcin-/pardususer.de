@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Aptana Studio 3
+GenericName=Develop web applications (IDE)
+GenericName[de]=Web-Anwendungen entwickeln (IDE)
+Icon=aptana-studio-3
+Exec=AptanaStudio3
+Categories=Development;WebDevelopment;
+Type=Application
+Terminal=false
+MultipleArgs=false

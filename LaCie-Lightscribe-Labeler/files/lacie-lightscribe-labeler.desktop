@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=LaCie Labeler
+GenericName=LightScribe Picture Writer
+Type=Application
+Exec=xdg-su -c 4L-gui
+Icon=lacie-lightscribe
+X-KDE-StartupNotify=true
+Terminal=false
+Categories=Qt;Application;AudioVideo;
+Comment=Tool for writing picture on lightscribe CD/DVD

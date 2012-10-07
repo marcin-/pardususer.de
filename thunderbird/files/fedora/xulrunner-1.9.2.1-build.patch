@@ -1,0 +1,12 @@
+diff -Naur comm-release.orig/mozilla/layout/generic/nsFrame.h comm-release/mozilla/layout/generic/nsFrame.h
+--- comm-release.orig/mozilla/layout/generic/nsFrame.h	2012-04-21 00:40:12.000000000 +0200
++++ comm-release/mozilla/layout/generic/nsFrame.h	2012-04-30 12:07:18.774000050 +0200
+@@ -152,7 +152,7 @@
+   // Left undefined; nsFrame objects are never allocated from the heap.
+   void* operator new(size_t sz) CPP_THROW_NEW;
+ 
+-protected:
++public:
+   // Overridden to prevent the global delete from being called, since
+   // the memory came out of an arena instead of the heap.
+   //

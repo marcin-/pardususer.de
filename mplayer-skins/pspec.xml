@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mplayer-skins</Name>
+        <Homepage>http://www.mplayerhq.hu/MPlayer/skins/</Homepage>
+        <Packager>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>mplayer</Icon>
+        <IsA>data</IsA>
+        <PartOf>applications.multimedia</PartOf>
+        <Summary>Skin collection for MPlayer.</Summary>
+        <Description>This collection contains lots of various skins for MPlayer (actually 71 skins).</Description>
+        <Archive type="binary" sha1sum="bb3ce01f133b5a6c0b2383eabab83a4ce3d5f835">http://pakete.pardususer.de/source-files/mplayer-skins-2011.05.02.7z</Archive>
+        <BuildDependencies>
+            <Dependency>p7zip</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mplayer-skins</Name>
+        <RuntimeDependencies>
+            <Dependency>mplayer-gui</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/mplayer/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-05-02</Date>
+            <Version>2011.05.02</Version>
+            <Comment>Release for Pardus 2011; Added some new skins; Changed version number to date of source file; Source file is compressed with 7zip now (for smaller file size) ;-)</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-12-06</Date>
+            <Version>1.0</Version>
+            <Comment>First release - contains 68 skins.</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,44 @@
+<PISI>
+    <Source>
+        <Name>nspluginwrapper</Name>
+        <Homepage>http://nspluginwrapper.org/</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>util.misc</PartOf>
+        <IsA>library</IsA>
+        <Summary>Proxy plug-in and viewer for NPAPI browser plug-ins</Summary>
+        <Description>Allows browsers to run foreign plug-ins built for a different architecture, most commonly to run a 32-bit plug-in in a 64-bit browser.</Description>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXv-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="ffb271a741215874808d4a77d0a0dd65588a8440" type="targz">http://nspluginwrapper.org/download/nspluginwrapper-1.4.4.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>nspluginwrapper</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libXt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-05-12</Date>
+            <Version>1.4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

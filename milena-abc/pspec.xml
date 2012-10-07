@@ -1,0 +1,95 @@
+<PISI>
+    <Source>
+        <Name>milena-abc</Name>
+        <Homepage>http://milena.polip.com/abc.shtml</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>multimedia.editor</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>GUI for audiobook creator from Milena speech synthesizer</Summary>
+        <Description>GUI for audiobook creator from Milena speech synthesizer</Description>
+        <BuildDependencies>
+            <Dependency>ebook-tools-devel</Dependency>
+            <Dependency>enca-devel</Dependency>
+            <Dependency>faac-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtksourceview-devel</Dependency>
+            <Dependency>lame-devel</Dependency>
+            <Dependency>libao-devel</Dependency>
+            <Dependency>libsamplerate-devel</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libtasn1-devel</Dependency>
+            <Dependency>milena</Dependency>
+            <Dependency>mpg123-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>webkit-gtk-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="c262f228649e61510b7df305613ad70fd99fe1e3" type="targz">http://tts.polip.com/files/milena_abc-0.3.21.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>milena-abc</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>ebook-tools</Dependency>
+            <Dependency>enca</Dependency>
+            <Dependency>faac</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtksourceview</Dependency>
+            <Dependency>lame</Dependency>
+            <Dependency>libao</Dependency>
+            <Dependency>libsamplerate</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>milena</Dependency>
+            <Dependency>mpg123</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>webkit-gtk</Dependency>
+            <Dependency>milena-basewords</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/milena_abc</Path>
+            <Path fileType="data">/usr/share/applications/milena_abc.desktop</Path>
+            <Path fileType="data">/usr/share/milena_abc/*</Path>
+            <Path fileType="data">/usr/share/pixmaps/milena_abc.xpm</Path>
+            <Path fileType="doc">/usr/share/doc/milena_abc/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2012-01-06</Date>
+            <Version>0.3.21</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2011-11-24</Date>
+            <Version>0.3.19</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2011-09-30</Date>
+            <Version>0.3.15</Version>
+            <Comment>Version bump</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-09-13</Date>
+            <Version>0.3.13</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

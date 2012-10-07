@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=PDFSam (enhanced)
+GenericName=PDF-Editor
+GenericName[de]=PDF-Editor
+Comment=Editing PDF files
+Comment[de]=PDF-Dateien bearbeiten
+Icon=pdfsam-enhanced
+Exec=pdfsam
+Categories=Office;
+Type=Application
+Terminal=false
+MultipleArgs=false
+DocPath=file:///usr/share/doc/pdfsam-enhanced/pdfsam-enhanced-help-index.html

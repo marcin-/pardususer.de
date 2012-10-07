@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>dvb-apps</Name>
+        <Summary xml:lang="de">DVB API Test- und Demo-Programme/Werkzeuge.</Summary>
+        <Description xml:lang="de">Eine Sammlung von DVB-Programmen für die Kommandozeile (ohne grafische Oberfläche).</Description>
+    </Source>
+</PISI>

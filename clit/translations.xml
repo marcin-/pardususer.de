@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>clit</Name>
+        <Summary xml:lang="de">eBook-Konverter für Microsoft Reader</Summary>
+        <Description xml:lang="de">Mit Hilfe dieses Programms können Dateien im Microsoft Reader - Format in ein offenes Format konvertiert werden. Auf diese Weise können die konvertierten Daten in alternativen Programmen oder Geräte, die den Microsoft Reader nicht unterstützen, dargestellt werden.</Description>
+    </Source>
+</PISI>
+

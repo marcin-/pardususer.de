@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>exaile</Name>
+        <Summary xml:lang="tr">Gtk ve Python ile yazılmış müzik çalar</Summary>
+        <Description xml:lang="tr">Amarok benzeri bir medya oynatıcı fakat GTK+ için</Description>
+    </Source>
+</PISI>
+

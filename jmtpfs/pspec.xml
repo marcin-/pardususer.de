@@ -1,0 +1,41 @@
+<PISI>
+    <Source>
+        <Name>jmtpfs</Name>
+        <Homepage>http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>hardware.misc</PartOf>
+        <IsA>library</IsA>
+        <Summary>mtpfs with better support for Android</Summary>
+        <Description>Exchanging files between Android devices with MTP access and Linux.</Description>
+        <BuildDependencies>
+            <Dependency>fuse-devel</Dependency>
+            <Dependency versionFrom="1.1.0">libmtp-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="7c38ca1fe84e3ce11c6b8a8e91681e6225610ace" type="targz">http://research.jacquette.com/wp-content/uploads/2012/05/jmtpfs-0.4.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>jmtpfs</Name>
+        <RuntimeDependencies>
+            <Dependency>fuse</Dependency>
+            <Dependency versionFrom="1.1.0">libmtp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-07-01</Date>
+            <Version>0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

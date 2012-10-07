@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libpng12</Name>
+        <Homepage>http://www.libpng.org</Homepage>
+        <Packager>
+            <Name>Onur Küçük</Name>
+            <Email>onur@pardus.org.tr</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <PartOf>library</PartOf>
+        <Summary>Portable Network Graphics library</Summary>
+        <Description>The Portable Network Graphics (PNG) format was designed to replace the older and simpler GIF format and, to some extent, the much more complex TIFF format. Project's main aim is to concentrate on two major uses: the World Wide Web (WWW) and image-editing.</Description>
+        <Archive sha1sum="07bd9d67c6e6076416a951451e1b05c2660e9d0d" type="tarbz2">mirrors://sourceforge/libpng/libpng-1.2.44.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">pngconf-setjmp.patch</Patch>
+            <Patch level="1">apng.patch</Patch>
+            <Patch level="1">constantize.patch</Patch>
+            <Patch level="1">CVE-2011-2501.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libpng12-pardususerde</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libpng12</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libpng12-devel-pardususerde</Name>
+        <PartOf>library</PartOf>
+        <Summary>Development files for libpng12</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpng12-pardususerde</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libpng12-32bit-pardususerde</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libpng12</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>zlib-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libpng12-pardususerde</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-07-10</Date>
+            <Version>1.2.44</Version>
+            <Comment>
+	        Build for pardususer.de by atolboo@gmail.com 2011-12-02
+                Rename libpng package as libpng12 and add lib32 package for libpng12
+                Thanks Onur Küçük, Ozan Çağlayan, Eren Türkay, Pınar Yanardağ,
+                İsmail Dönmez, and S.Çağlar Onur for their previous work on libpng
+            </Comment>
+            <Name>Anıl Özbek</Name>
+            <Email>ozbekanil@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>openttd-opensfx</Name>
+        <Homepage>http://dev.openttdcoop.org/projects/opensfx</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>CCSP1.0</License>
+        <IsA>data</IsA>
+	<PartOf>game</PartOf>
+        <Summary>OpenSFX replacement sounds for OpenTTD. The last required step to make OpenTTD independent..</Summary>
+        <Description>The OpenSFX project for OpenTTD: a free replacement of the base sounds so that OpenTTD can be shipped finally fully functional without the need for non-free files.</Description>
+	<Archive sha1sum="6271761869df0ad410ca53e9ab900c2fb26c288d" type="targz">http://binaries.openttd.org/extra/opensfx/0.2.3/opensfx-0.2.3-source.tar.gz</Archive>
+        <BuildDependencies>
+	  <Dependency>catcodec</Dependency>
+	</BuildDependencies>
+</Source>
+
+    <Package>
+        <Name>openttd-opensfx</Name>
+        <RuntimeDependencies>
+	  <!-- <Dependency>openttd-data</Dependency>   # <class 'pisi.graph.CycleException'>: Encountered cycle?-->
+        </RuntimeDependencies>
+        <Files>
+	  <Path fileType="data">/usr/share/openttd/data</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-23</Date>
+	    <Version>0.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

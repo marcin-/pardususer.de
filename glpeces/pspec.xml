@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>glpeces</Name>
+        <Homepage>http://kde-apps.org/content/show.php?content=123490</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>game.puzzle</PartOf>
+        <Summary>Tangram (puzzle) game clone</Summary>
+        <Description>The Tangram is an ancient Chinese puzzle game where the player has to arrange a set of figures with 7 polygonal pieces. Peces allows playing 33 different modalities of tangram and it includes more than 4600 figures to solve. It is especially designed to use in education.</Description>
+        <Archive type="targz" sha1sum="be2b05b2f44ad8a7c2302db3d0c7d3a7a07762dc">http://sourceforge.net/projects/pecesjocdetangr/files/version%204.1%20%28April%2C%202011%29/glpeces-4.1.tar.gz/download</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>glpeces</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-04-08</Date>
+            <Version>4.1</Version>
+            <Comment>Added symlink from /usr/games/glpeces to /usr/bin/glpeces</Comment>
+            <Name>Gürkan ZENGIN</Name>
+            <Email>gurkan@pardususer.de</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-04-05</Date>
+            <Version>4.1</Version>
+            <Comment>Fist version.</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

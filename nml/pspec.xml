@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>nml</Name>
+        <Homepage>https://dev.openttdcoop.org/projects/nml</Homepage>
+        <Packager>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>ZPLv2.1</License>
+        <PartOf>programming.tool</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>A tool to convert a meta-language to grf and/or nfo files, making newgrf coding easier.</Summary>
+        <Description>A tool to convert a meta-language to grf and/or nfo files, making newgrf coding easier.</Description>
+        <Archive sha1sum="970ab868d8a94db6bd9459e4e45451805d5d7671" type="targz">http://bundles.openttdcoop.org/nml/releases/0.2.3/nml-0.2.3.src.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>nml</Name>
+        <RuntimeDependencies>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>python-ply</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/nmlc</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/*</Path>
+            <Path fileType="doc">/usr/share/doc/nml/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2012-02-24</Date>
+            <Version>0.2.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2012-01-29</Date>
+            <Version>0.2.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-12-27</Date>
+            <Version>0.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin.bojara@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->

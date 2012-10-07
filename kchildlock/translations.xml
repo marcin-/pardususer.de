@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>kchildlock</Name>
+        <Summary xml:lang="de">Mit kchildlock kann man die Zeit, die Kinder am Computer verbringen beschränken.</Summary>
+        <Description xml:lang="de">Die Zeit kann wie folgt definiert werden: Tage pro Woche, maximale tägliche und wöchentliche Nutzung, sowie ein Zeitfenster kann definiert werden.ben. Die gleichen Einschränkungen können jedem Benutzer und einzelnen Programmen zugewiesen werden.</Description>
+    </Source>
+</PISI>

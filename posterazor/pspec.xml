@@ -1,0 +1,45 @@
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>posterazor</Name>
+        <Homepage>http://posterazor.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Packager>
+        <IsA>app:gui</IsA>
+        <PartOf>multimedia.graphics</PartOf>
+        <License>GPLv3</License>
+        <Summary>Print Your own poster at home</Summary>
+        <Description>PosteRazor cuts a raster image into pieces which can be printed and assembled to a poster.</Description>
+        <Archive sha1sum="23028a2b5eaba0dd74c125c3547841bac9005d27" type="targz">http://pakete.pardususer.de/source-files/posterazor-1.9.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>posterazor</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="All">/</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+     
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/posterazor.desktop">posterazor.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/posterazor.png">posterazor.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2011-10-05</Date>
+            <Version>1.9.6</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Wilhelm</Name>
+            <Email>sw@pardususer.de</Email>
+        </Update>
+    </History>
+</PISI>

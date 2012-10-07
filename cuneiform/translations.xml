@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cuneiform</Name>
+        <Summary xml:lang="de">Kommandozeilen OCR-System für mehr als 20 Sprachen</Summary>
+        <Description xml:lang="de">Cuneiform ist ein Texterkennungsprogramm. Es unterstützt nur gedruckte Zeichen und kann keine Handschrift erkennen.</Description>
+    </Source>
+</PISI>

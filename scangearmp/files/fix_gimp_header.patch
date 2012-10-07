@@ -1,0 +1,44 @@
+diff -crB scangearmp-source-1.60-1-original/scangearmp/configure.in scangearmp-source-1.60-1-modified/scangearmp/configure.in
+*** scangearmp-source-1.60-1-original/scangearmp/configure.in	2010-02-17 03:22:34.000000000 +0100
+--- scangearmp-source-1.60-1-modified/scangearmp/configure.in	2011-10-24 13:42:27.309135918 +0200
+***************
+*** 39,46 ****
+  AC_CHECK_HEADERS(png.h)
+  
+  AC_CHECK_HEADERS(stdio.h)
+! AC_CHECK_HEADERS(libgimp/gimp.h)
+! AC_CHECK_HEADERS(libgimp/gimpcompat.h)
+  
+  AC_CHECK_HEADERS(sane/sane.h)
+  
+--- 39,46 ----
+  AC_CHECK_HEADERS(png.h)
+  
+  AC_CHECK_HEADERS(stdio.h)
+! AC_CHECK_HEADERS(gimp-2.0/libgimp/gimp.h)
+! AC_CHECK_HEADERS(gimp-2.0/libgimp/gimpcompat.h)
+  
+  AC_CHECK_HEADERS(sane/sane.h)
+  
+diff -crB scangearmp-source-1.60-1-original/scangearmp/src/scangimp.c scangearmp-source-1.60-1-modified/scangearmp/src/scangimp.c
+*** scangearmp-source-1.60-1-original/scangearmp/src/scangimp.c	2010-05-25 13:13:09.000000000 +0200
+--- scangearmp-source-1.60-1-modified/scangearmp/src/scangimp.c	2011-10-24 14:21:16.559263236 +0200
+***************
+*** 42,49 ****
+  //#include <stdio.h>
+  //#include <string.h>
+  //#include <gtk/gtk.h>
+! #include <libgimp/gimp.h>
+! #include <libgimp/gimpcompat.h>
+  #include <dlfcn.h>
+  
+  #include "cnmstype.h"
+--- 42,49 ----
+  //#include <stdio.h>
+  //#include <string.h>
+  //#include <gtk/gtk.h>
+! #include <gimp-2.0/libgimp/gimp.h>
+! #include <gimp-2.0/libgimp/gimpcompat.h>
+  #include <dlfcn.h>
+  
+  #include "cnmstype.h"

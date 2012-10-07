@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>liblinebreak</Name>
+        <Homepage>http://vimgadgets.sourceforge.net/liblinebreak/</Homepage>
+        <Packager>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+	<PartOf>programming.misc</PartOf>
+        <Summary>An implementation of the line breaking algorithm</Summary>
+        <Description>An implementation of the line breaking algorithm as described in Unicode 5.2.0 Standard Annex 14, Revision 24</Description>
+	<Archive sha1sum="ee73de967b20b525f45c9ad7a929fab708253853" type="targz">mirrors://sourceforge/vimgadgets/liblinebreak-2.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glibc</Dependency>
+	</BuildDependencies>
+</Source>
+
+    <Package>
+        <Name>liblinebreak</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>liblinebreak-devel</Name>
+        <RuntimeDependencies>
+	    <Dependency>liblinebreak</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+         <Update release="2">
+            <Date>2011-09-30</Date>
+            <Version>2.1</Version>
+            <Comment>
+            	* README: Update the reference to UAX #14-26, for Unicode 6.0.0.
+                * configure.ac (AC_INIT): Increase the version to 2.1.
+        		* Makefile.am (liblinebreak_la_LDFLAGS): Set the version-info to `2:1'
+                * LICENCE: Update the copyright year.
+            	Update for the 2.1 release.
+        		* Doxyfile (PROJECT_NUMBER): Set to `2.1'.
+        		* NEWS: Add information about the 2.1 release.
+        		* linebreak.h (LINEBREAK_VERSION): Set to `0x0201'.
+        		* linebreak.h: Update comments.
+        		* linebreak.c: Ditto.
+        		* linebreakdef.h: Ditto.
+        		* linebreakdef.c: Ditto.
+                * linebreakdata.c: Regenerate from LineBreak-6.0.0.txt.
+       			* linebreak.c (set_linebreaks): Fix the assertion failure when
+       			U+FFFC (OBJECT REPLACEMENT CHARACTER) appears at the beginning of a
+        		line (thanks to Tom Hacohen).
+			</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-03-18</Date>
+            <Version>2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Alexey Ivanov</Name>
+            <Email>alexey.ivanes@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
