@@ -27,6 +27,9 @@ def build():
     autotools.make()
 
 def install():
+    # Create nss.pc and nss-config dynamically
+    shelltools.system("./generate-pc-config.sh")
+
     shelltools.cd("build")
 
     pisitools.insinto("/usr/lib","dist/lib/*.so",sym=False)

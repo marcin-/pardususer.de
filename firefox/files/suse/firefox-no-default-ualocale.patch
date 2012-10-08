@@ -1,7 +1,17 @@
-diff -Naur mozilla-release.orig/browser/app/profile/firefox.js mozilla-release/browser/app/profile/firefox.js
---- mozilla-release.orig/browser/app/profile/firefox.js	2012-06-01 14:03:47.000000000 +0200
-+++ mozilla-release/browser/app/profile/firefox.js	2012-06-06 13:29:23.801000003 +0200
-@@ -236,7 +236,7 @@
+# HG changeset patch
+# User Wolfgang Rosenauer <wr@rosenauer.org>
+# Parent be9f4eae7dc69ed989cc9f9259b3bb73d1f5dbf9
+Do not overwrite the locale dynamic pref from xulrunner's all.js with a wrong default value
+
+diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -231,17 +231,17 @@ pref("xpinstall.whitelist.add.36", "getp
+ 
+ pref("lightweightThemes.update.enabled", true);
+ 
+ pref("keyword.enabled", true);
+ // Override the default keyword.URL. Empty value means
  // "use the search service's default engine"
  pref("keyword.URL", "");
  
@@ -10,3 +20,8 @@ diff -Naur mozilla-release.orig/browser/app/profile/firefox.js mozilla-release/b
  pref("general.skins.selectedSkin", "classic/1.0");
  
  pref("general.smoothScroll", true);
+ #ifdef UNIX_BUT_NOT_MAC
+ pref("general.autoScroll", false);
+ #else
+ pref("general.autoScroll", true);
+ #endif

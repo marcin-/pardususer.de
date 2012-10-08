@@ -17,16 +17,9 @@ WorkDir = "mozilla-release"
 # config.guess returns 'x86_64-unknown-linux-gnu' on x86_64 machines, and 'i686-pc-linux-gnu' on x86 machines
 ObjDir = "obj-%s-unknown-linux-gnu" % get.ARCH() if get.ARCH() == "x86_64" else "obj-%s-pc-linux-gnu" % get.ARCH()
 
-locales = ["be", "ca", "de", "es-AR", "es-ES", "fr", "hu", "it", "nl", "pl", "ru", "sv-SE", "tr"]
+locales = ["ca", "de", "es-AR", "es-ES", "fr", "hu", "it", "nl", "pl", "ru", "sv-SE", "tr"]
 
 def setup():
-    shelltools.system("./create-locale.sh")
-    shelltools.system("patch -p0 < fix-double-turkish-option.patch")
-    shelltools.system("patch -p0 < fix-missing-hu-files-strings.patch")
-    shelltools.system("patch -p0 < fix-missing-pl-files-strings.patch")
-    shelltools.system("patch -p0 < fix-missing-tr-files-strings.patch")
-    shelltools.system("rm create-locale.sh fix-double-turkish-option.patch ")
-    shelltools.system("rm fix-missing-hu-files-strings.patch fix-missing-pl-files-strings.patch fix-missing-tr-files-strings.patch ")
     # Mozilla sticks on with autoconf-213
     shelltools.chmod("autoconf-213/autoconf-2.13", 0755)
 

@@ -1,13 +1,13 @@
 # HG changeset patch
 # User Wolfgang Rosenauer <wr@rosenauer.org>
-# Parent de9c23d6bfd0b0a30aa3dfc55377658756ec6f70
+# Parent 2f0c475e3ea9ba2309ab4ff7debb8bd0d6850a14
 Add searchplugins to chrome packaging for proper localization
 
 diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
 --- a/browser/app/profile/firefox.js
 +++ b/browser/app/profile/firefox.js
-@@ -341,16 +341,20 @@ pref("browser.download.manager.scanWhenD
- pref("browser.download.manager.resumeOnWakeDelay", 10000);
+@@ -332,16 +332,20 @@ pref("browser.download.useToolkitUI", tr
+ pref("browser.download.panel.removeFinishedDownloads", false);
  
  // search engines URL
  pref("browser.search.searchEnginesURL",      "https://addons.mozilla.org/%LOCALE%/firefox/search-engines/");
@@ -30,7 +30,7 @@ diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
 diff --git a/browser/locales/Makefile.in b/browser/locales/Makefile.in
 --- a/browser/locales/Makefile.in
 +++ b/browser/locales/Makefile.in
-@@ -153,39 +153,48 @@ libs:: $(call MERGE_FILES,$(addprefix pr
+@@ -121,39 +121,48 @@ libs:: $(call MERGE_FILES,$(addprefix pr
  install:: $(DESTDIR)$(mozappdir)/defaults/profile/bookmarks.html ;
  
  install:: $(addprefix generic/profile/,$(PROFILE_FILES))
@@ -95,7 +95,7 @@ diff --git a/browser/locales/Makefile.in b/browser/locales/Makefile.in
 diff --git a/browser/locales/jar.mn b/browser/locales/jar.mn
 --- a/browser/locales/jar.mn
 +++ b/browser/locales/jar.mn
-@@ -97,11 +97,12 @@
+@@ -108,16 +108,17 @@
      locale/browser-region/region.properties        (%chrome/browser-region/region.properties)
  # the following files are browser-specific overrides
  *   locale/browser/netError.dtd                (%chrome/overrides/netError.dtd)
@@ -108,3 +108,8 @@ diff --git a/browser/locales/jar.mn b/browser/locales/jar.mn
  % locale testpilot @AB_CD@ %locale/feedback/
      locale/feedback/main.dtd                       (%feedback/main.dtd)
      locale/feedback/main.properties                (%feedback/main.properties)
+ % locale pdf.js @AB_CD@ %locale/pdfviewer/
+     locale/pdfviewer/viewer.properties             (%pdfviewer/viewer.properties)
+     locale/pdfviewer/chrome.properties             (%pdfviewer/chrome.properties)
+ #ifdef MOZ_WEBAPP_RUNTIME
+ % locale webapprt @AB_CD@ %locale/webapprt/

@@ -1,8 +1,9 @@
 #!/bin/bash
 
 CHANNEL="release"
-RELEASE_TAG="THUNDERBIRD_12_0_RELEASE"
-VERSION="12.0"
+BRANCH="releases/comm-$CHANNEL"
+RELEASE_TAG="THUNDERBIRD_15_0_RELEASE"
+VERSION="15.0"
 
 # These are Pardus supported languages. This list may changed by time to time
 LOCALES="ca da de es-AR es-ES fr hu it nl pl pt-BR ru sv-SE tr"
@@ -14,4 +15,4 @@ do
     [ "$RELEASE_TAG" == "default" ] || hg -R l10n/$locale up -C -r $RELEASE_TAG
 done
 
-cp -r l10n/tr/browser/searchplugins l10n/tr/mail
+tar cjf thunderbird-l10n-$VERSION.tar.bz2 --exclude=.hgtags --exclude=.hgignore --exclude=.hg --exclude=browser --exclude=calendar --exclude=suite l10n

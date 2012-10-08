@@ -14,7 +14,7 @@
         <Summary>Video DVD creation software</Summary>
         <Description>2ManDVD is a tool for generating video DVDs, it is the successor of ManDVD</Description>
         <BuildDependencies>
-            <Dependency versionFrom="0.11">ffmpeg-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
             <Dependency>qconf</Dependency>
             <Dependency>qt-devel</Dependency>
         </BuildDependencies>
@@ -37,7 +37,7 @@
             <Dependency>dejavu-fonts</Dependency>
             <Dependency>dvdauthor</Dependency>
             <Dependency>exif</Dependency>
-            <Dependency versionFrom="0.11">ffmpeg</Dependency>
+            <Dependency>ffmpeg</Dependency>
             <Dependency>ffmpegthumbnailer</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>mjpegtools</Dependency>

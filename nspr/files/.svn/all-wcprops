@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pardus/!svn/ver/1024/playground/e.gultekin/network/nspr/files
+END
+pkgconfig.patch
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/pardus/!svn/ver/1024/playground/e.gultekin/network/nspr/files/pkgconfig.patch
+END
+generate-pc-config.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/1024/playground/e.gultekin/network/nspr/files/generate-pc-config.sh
+END
+prdtoa.patch
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/pardus/!svn/ver/1024/playground/e.gultekin/network/nspr/files/prdtoa.patch
+END
+nspr.pc.in
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/pardus/!svn/ver/1024/playground/e.gultekin/network/nspr/files/nspr.pc.in
+END

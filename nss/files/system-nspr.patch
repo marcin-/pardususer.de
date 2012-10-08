@@ -1,6 +1,5 @@
-diff -Naur security/nss/Makefile security/nss/Makefile
---- security/nss/Makefile	2011-11-05 23:59:15.000000000 +0100
-+++ security/nss/Makefile	2012-06-10 10:40:11.624000002 +0200
+--- security/nss/Makefile
++++ security/nss/Makefile
 @@ -78,7 +78,7 @@
  # (7) Execute "local" rules. (OPTIONAL).                              #
  #######################################################################
@@ -8,5 +7,5 @@ diff -Naur security/nss/Makefile security/nss/Makefile
 -nss_build_all: build_coreconf build_nspr build_dbm all
 +nss_build_all: build_coreconf build_dbm all
  
- nss_clean_all: clobber_coreconf clobber_nspr clobber_dbm clobber
- 
+ build_coreconf:
+ 	cd $(CORE_DEPTH)/coreconf ;  $(MAKE)

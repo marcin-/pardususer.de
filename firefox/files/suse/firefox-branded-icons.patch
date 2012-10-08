@@ -1,11 +1,11 @@
 # HG changeset patch
-# Parent d6bb5c163142d233d00e739e21aa9df16077873e
+# Parent 7272ee3a4df832b885fec122f02d32f23dcc9cdb
 
 diff --git a/browser/app/Makefile.in b/browser/app/Makefile.in
 --- a/browser/app/Makefile.in
 +++ b/browser/app/Makefile.in
-@@ -164,16 +164,21 @@ endif # LIBXUL_SDK
- DEFINES += -DFIREFOX_ICO=\"$(DIST)/branding/firefox.ico\" -DDOCUMENT_ICO=\"$(DIST)/branding/document.ico\"
+@@ -127,16 +127,21 @@ endif
+ endif #} LIBXUL_SDK
  
  ifeq ($(MOZ_WIDGET_TOOLKIT),gtk2)
  libs::
@@ -23,13 +23,13 @@ diff --git a/browser/app/Makefile.in b/browser/app/Makefile.in
  libs:: $(srcdir)/profile/prefs.js
  	$(INSTALL) $(IFLAGS1) $^ $(DIST)/bin/defaults/profile
  
- libs:: $(srcdir)/blocklist.xml
- 	$(INSTALL) $(IFLAGS1) $^ $(DIST)/bin
- 
+ ifndef LIBXUL_SDK
+ # channel-prefs.js is handled separate from other prefs due to bug 756325
+ libs:: $(srcdir)/profile/channel-prefs.js
 diff --git a/browser/branding/official/Makefile.in b/browser/branding/official/Makefile.in
 --- a/browser/branding/official/Makefile.in
 +++ b/browser/branding/official/Makefile.in
-@@ -65,18 +65,21 @@ OSX_BRANDING_FILES = \
+@@ -35,18 +35,21 @@ OSX_BRANDING_FILES = \
  	firefox.icns \
  	disk.icns \
  	document.icns \
@@ -54,8 +54,8 @@ diff --git a/browser/branding/official/Makefile.in b/browser/branding/official/M
 diff --git a/browser/installer/package-manifest.in b/browser/installer/package-manifest.in
 --- a/browser/installer/package-manifest.in
 +++ b/browser/installer/package-manifest.in
-@@ -432,18 +432,21 @@
- @BINPATH@/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
+@@ -496,18 +496,21 @@
+ @BINPATH@/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
  #ifdef SHIP_FEEDBACK
  @BINPATH@/distribution/extensions/testpilot@labs.mozilla.com.xpi
  #endif

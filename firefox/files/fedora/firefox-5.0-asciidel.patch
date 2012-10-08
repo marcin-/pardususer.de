@@ -1,7 +1,9 @@
-diff -Naur mozilla-release.orig/browser/base/Makefile.in mozilla-release/browser/base/Makefile.in
---- mozilla-release.orig/browser/base/Makefile.in	2012-06-01 14:03:47.000000000 +0200
-+++ mozilla-release/browser/base/Makefile.in	2012-06-06 13:35:49.192000002 +0200
-@@ -53,7 +53,7 @@
+Patch from: Bill Nottingham <notting@redhat.com>
+
+diff -up mozilla-release/browser/base/Makefile.in.fu mozilla-release/browser/base/Makefile.in
+--- mozilla-release/browser/base/Makefile.in.fu	2011-06-24 16:50:23.802042086 -0400
++++ mozilla-release/browser/base/Makefile.in	2011-06-24 16:50:42.324042096 -0400
+@@ -62,7 +62,7 @@ EXTRA_JS_MODULES = \
  
  include $(topsrcdir)/config/rules.mk
  
@@ -10,3 +12,4 @@ diff -Naur mozilla-release.orig/browser/base/Makefile.in mozilla-release/browser
  
  DEFINES += \
  	-DMOZ_APP_VERSION=$(MOZ_APP_VERSION) \
+

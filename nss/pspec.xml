@@ -13,39 +13,45 @@
         <IsA>library</IsA>
         <Summary>Network Security Services</Summary>
         <Description>Network Security Services (NSS) is a set of libraries designed to support cross-platform development of security-enabled client and server applications. Applications built with NSS can support SSL v2 and v3, TLS, PKCS #5, PKCS #7, PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates, and other security standards.</Description>
-        <Archive sha1sum="22cfe2cbccc93189699e6eed283eca288b45f6cb" type="targz">http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_13_5_RTM/src/nss-3.13.5.tar.gz</Archive>
+        <Archive sha1sum="1f86a7c787e8fe3ebd1dd1cce127e57fb347dac3" type="targz">http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_13_6_RTM/src/nss-3.13.6.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="dist/pkgconfig/nss.pc.in">nss.pc.in</AdditionalFile>
             <AdditionalFile target="dist/pkgconfig/nss-config.in">nss-config.in</AdditionalFile>
             <AdditionalFile permission="0755" target="generate-pc-config.sh">generate-pc-config.sh</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency versionFrom="4.8.9">nspr-devel</Dependency>
+            <Dependency versionFrom="4.9.2">nspr-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">include-fix.patch</Patch>
+            <Patch>cflags.patch</Patch>
             <Patch>char.patch</Patch>
             <Patch>system-nspr.patch</Patch>
 
+            <!-- Patches from Fedora -->
+            <Patch>nss-no-rpath.patch</Patch>
+            <!--<Patch level="1">nss-nolocalsql.patch</Patch> -->
+
             <!-- Fedora patches -->
-            <Patch>fedora/nss-no-rpath.patch</Patch>
-            <Patch level="1">fedora/nss-nolocalsql.patch</Patch>
+            <!-- Patches from Fedora -->
+            <Patch level="1">fedora/add-relro-linker-option.patch</Patch> 
+            <Patch level="2">fedora/Bug-772628-nss_Init-leaks-memory.patch</Patch>
+            <Patch level="2">fedora/Bug-800674-Unable-to-contact-LDAP-Server-during-winsync.patch</Patch>
+            <Patch level="2">fedora/Bug-800682-Qpid-AMQP-daemon-fails-to-load-after-nss-update.patch</Patch>
+            <Patch level="1">fedora/bz784672-protect-against-calls-before-nss_init.patch</Patch>
+            <Patch level="2">fedora/nofipstest.patch</Patch>
             <Patch level="2">fedora/nss-539183.patch</Patch>
             <Patch level="2">fedora/nss-646045.patch</Patch>
-            <Patch level="1">fedora/renegotiate-transitional.patch</Patch>
-
-            <!-- openSuse patches -->
-            <Patch>suse/malloc.patch</Patch>
-            <Patch>suse/nss-no-rpath.patch</Patch>
-            <Patch>suse/nss-opt.patch</Patch>
-
+            <Patch level="2">fedora/nss-enable-pem.patch</Patch>
+            <Patch level="1">fedora/nss-nolocalsql.patch</Patch>
+            <Patch level="2">fedora/nss-ssl-cbc-random-iv-off-by-default.patch</Patch>
         </Patches>
     </Source>
 
     <Package>
         <Name>nss</Name>
         <RuntimeDependencies>
-            <Dependency versionFrom="4.8.9">nspr</Dependency>
+            <Dependency versionFrom="4.9.2">nspr</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -67,7 +73,7 @@
         <Summary>Development files for nss</Summary>
         <RuntimeDependencies>
             <Dependency release="current">nss</Dependency>
-            <Dependency>nspr-devel</Dependency>
+            <Dependency versionFrom="4.9.2">nspr-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/nss-config</Path>
@@ -78,6 +84,13 @@
     </Package>
 
     <History>
+        <Update release="49">
+            <Date>2012-09-107</Date>
+            <Version>3.13.6</Version>
+            <Comment>Version bump</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
         <Update release="47">
             <Date>2012-06-10</Date>
             <Version>3.13.5</Version>

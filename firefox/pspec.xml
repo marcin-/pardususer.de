@@ -11,24 +11,23 @@
         <License>MPL-1.1</License>
         <License>NPL-1.1</License>
         <License>GPLv2</License>
-        <Icon>firefox</Icon>
 	<PartOf>network.web</PartOf>
+        <Icon>firefox</Icon>
         <IsA>app:gui</IsA>
         <Summary>Firefox Web Browser</Summary>
         <Description>It is more secure and faster to browse the web with Firefox web browser. You can personalize your web browser with many specifications that is not enough to explain in two sentences.</Description>
+
         <!-- Use tools/{create-source.sh, create-locale.sh} scripts to create tarballs for both firefox source and l10n -->
-        <Archive sha1sum="3752f13f26a51dd2e42d2805a707a842e6f8d1b1" type="tarbz2">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/13.0.1/source/firefox-13.0.1.source.tar.bz2</Archive>
+        <Archive sha1sum="bdbc4b6656c59b926e18f99b3335484427d08641" type="tarbz2">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/15.0.1/source/firefox-15.0.1.source.tar.bz2</Archive>
+	<Archive sha1sum="b51cd667ad094c3ed67576a209759edf9e18f1af" type="tarbz2" target="mozilla-release">http://pakete.pardususer.de/source-files/compare-locales-15.0.1.tar.bz2</Archive>
+	<Archive sha1sum="e451c694ab334d9b047fa49e961d9f8748d1c8ff" type="tarbz2" target="mozilla-release">http://pakete.pardususer.de/source-files//firefox-l10n-15.0.1.tar.bz2</Archive>
         <AdditionalFiles>
 
             <!--Our main configure script. Configure paramters are stored here.-->
             <AdditionalFile target=".mozconfig" permission="0644">mozconfig</AdditionalFile>
-            <AdditionalFile permission="0755" target="create-locale.sh">tools/create-locale.sh</AdditionalFile>
-            <AdditionalFile target="fix-double-turkish-option.patch">pardus/fix-double-turkish-option.patch</AdditionalFile>
-            <AdditionalFile target="fix-missing-hu-files-strings.patch">pardususerde/fix-missing-hu-files-strings.patch</AdditionalFile>
-            <AdditionalFile target="fix-missing-pl-files-strings.patch">pardususerde/fix-missing-pl-files-strings.patch</AdditionalFile>
-            <AdditionalFile target="fix-missing-tr-files-strings.patch">pardususerde/fix-missing-tr-files-strings.patch</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
+	    <Dependency versionFrom="15.0.1">xulrunner-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency versionFrom="2.18.5">gtk2-devel</Dependency>
             <Dependency>pango-devel</Dependency>
@@ -40,8 +39,8 @@
             <Dependency>dbus-glib-devel</Dependency>
             <Dependency>hunspell-devel</Dependency>
             <Dependency versionFrom="0.4.0">libproxy-devel</Dependency>
-            <Dependency versionFrom="4.9">nspr-devel</Dependency>
-            <Dependency versionFrom="3.13.4">nss-devel</Dependency>
+            <Dependency versionFrom="4.9.2">nspr-devel</Dependency>
+            <Dependency versionFrom="3.13.6">nss-devel</Dependency>
             <Dependency>libevent-devel</Dependency>
             <Dependency>libvpx-devel</Dependency>
             <Dependency>atk-devel</Dependency>
@@ -54,62 +53,50 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libXt-devel</Dependency>
-            <Dependency>mit-kerberos</Dependency>
-            <Dependency versionFrom="1.2.0">yasm</Dependency>
+	    <Dependency>valgrind</Dependency>
 
             <!-- Those are checked by configure -->
             <Dependency>mesa-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libXt-devel</Dependency>
-            <Dependency>mercurial</Dependency>
         </BuildDependencies>
-        <Patches>
-            <!-- <Patch level="1">suse/mozilla-kde.patch</Patch> is replaced by modified-ff12-mozilla-kde.patch-->
-            <Patch level="1">suse/modified-ff12-mozilla-kde.patch</Patch>
-            <Patch level="1">suse/mozilla-language.patch</Patch>
-            <!-- <Patch level="1">suse/mozilla-nongnome-proxies.patch</Patch> is now implemented -->
-            <Patch level="1">suse/mozilla-disable-neon-option.patch</Patch>
-            <Patch level="1">suse/mozilla-dump_syms-static.patch</Patch>
-            <Patch level="1">suse/mozilla-ntlm-full-path.patch</Patch>
-            <Patch level="1">suse/mozilla-preferences.patch</Patch>
-            <Patch level="1">suse/mozilla-shared-nss-db.patch</Patch>
-            <Patch level="1">suse/mozilla-linux3.patch</Patch>
-            <Patch level="1">suse/mozilla-prefer_plugin_pref.patch</Patch>
-
-            <!--These are mainly integrations stuff like default browser-->
-            <Patch level="1">suse/firefox-browser-css.patch</Patch>
-            <Patch level="1">suse/firefox-cross-desktop.patch</Patch>
+     <Patches>
             <Patch level="1">suse/firefox-branded-icons.patch</Patch>
+            <Patch level="1">suse/firefox-browser-css.patch</Patch>
+            <Patch level="1">suse/firefox-multilocale-chrome.patch</Patch>    
             <Patch level="1">suse/firefox-no-default-ualocale.patch</Patch>
-            <Patch level="1">suse/firefox-multilocale-chrome.patch</Patch>
-            <Patch level="1">suse/firefox-no-sync-l10n.patch</Patch>
-            <Patch level="1">suse/toolkit-download-folder.patch</Patch>
-            <Patch level="1">suse/mozilla-libnotify.patch</Patch>
-            <Patch level="1">suse/mozilla-revert_621446.patch</Patch>
+            <Patch level="1">suse/mozilla-crashreporter-restart-args.patch</Patch>
+	    <Patch level="1">suse/mozilla-gstreamer.patch</Patch>	    
+            <Patch level="1">suse/mozilla-kde.patch</Patch>
+            <Patch level="1">suse/mozilla-language.patch</Patch>
+            <Patch level="1">suse/mozilla-nongnome-proxies.patch</Patch>
+            <Patch level="1">suse/mozilla-ntlm-full-path.patch</Patch>
+            <Patch level="1">suse/mozilla-ppc.patch</Patch>
+            <Patch level="1">suse/mozilla-preferences.patch</Patch>
+            <Patch level="1">suse/mozilla-prefer_plugin_pref.patch</Patch>
+	    <Patch level="1">suse/mozilla-shared-nss-db.patch</Patch>
+	    <Patch level="1">suse/mozilla-sle11.patch</Patch>
 
+            <Patch level="1">mageia/firefox-13-fix-cairo-build.patch</Patch>
+            <Patch level="1">mageia/firefox-15b2-native-nss-nspr.patch</Patch>	    
+	    
             <Patch level="1">fedora/firefox-5.0-asciidel.patch</Patch>
-
-            <!-- Disable addon check UI, non-advanced users might end up non-localized Firefox redhat#753551  -->
-            <Patch level="2">fedora/firefox-8.0-enable-addons.patch</Patch>
-
-            <!--
-            Add as needed patch to put .a files before libraries, especially -lplc4
-            check-sync-dirs.py does not allow differences between config files since 9.0, so apply changes both to {config, js/src/config}/rules.mk
-            -->
-            <Patch level="1">pardus/as-needed.diff</Patch>
-
+            <Patch level="2">fedora/firefox-15.0-enable-addons.patch</Patch>
+	    
             <Patch level="1">pardus/autoconf-213-hack.diff</Patch>
-
             <!-- Disable for now on, needs more investigation -->
-            <!--Patch level="0">pardus/zemberek-firefox5.patch</Patch
-            <Patch level="1">pardus/add-twitter-search.diff</Patch>-->
-            <Patch level="1">pardususerde/inspector-treepanel-toolbutton.patch</Patch>
-        </Patches>
+            <!--Patch level="0">pardus/zemberek-firefox5.patch</Patch-->
+            <Patch level="0">pardus/fix-double-turkish-option.diff</Patch>
+            <!--<Patch level="1">pardus/fix-langpack-prefs-path.patch</Patch>-->
+	    <Patch level="1">pardus/add-twitter-search.diff</Patch>
+	    <!--<Patch level="0">pardus/hg-changeset.diff</Patch>-->
+    </Patches>
     </Source>
 
     <Package>
         <Name>firefox</Name>
         <RuntimeDependencies>
+	    <Dependency versionFrom="15.0.1">xulrunner</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency versionFrom="2.18.5">gtk2</Dependency>
             <Dependency>pango</Dependency>
@@ -119,9 +106,9 @@
             <Dependency>dbus-glib</Dependency>
             <Dependency>hunspell</Dependency>
             <Dependency versionFrom="0.4.0">libproxy</Dependency>
-            <Dependency versionFrom="4.8.9">nspr</Dependency>
-            <Dependency versionFrom="3.13.4">nss</Dependency>
-            <Dependency versionFrom="2.0.12">libevent</Dependency>
+            <Dependency versionFrom="4.9.2">nspr</Dependency>
+            <Dependency versionFrom="3.13.6">nss</Dependency>
+            <Dependency>libevent</Dependency>
             <Dependency>libvpx</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>jpeg</Dependency>
@@ -134,13 +121,13 @@
             <Dependency>gnome-vfs</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libXrender</Dependency>‪
+            <Dependency>libXrender</Dependency>
+	    <Dependency>valgrind</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/lib/MozillaFirefox</Path>
-            <Path fileType="executable">/usr/lib/firefox-10.0</Path>
             <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -179,7 +166,7 @@
             <!-- Mimetype for XPI files -->
             <AdditionalFile target="/usr/share/mime/packages/firefox.xml" permission="0644" owner="root">suse/firefox-mimeinfo.xml</AdditionalFile>
 
-            <AdditionalFile target="/usr/lib/MozillaFirefox/defaults/preferences/lockdown.js" permission="0644" owner="root">suse/firefox-lockdown.js</AdditionalFile>
+            <!-- <AdditionalFile target="/usr/lib/MozillaFirefox/defaults/preferences/lockdown.js" permission="0644" owner="root">suse/firefox-lockdown.js</AdditionalFile> -->
         </AdditionalFiles>
         <Provides>
             <COMAR script='package.py'>System.Package</COMAR>
@@ -200,6 +187,27 @@
     </Package>
 
     <History>
+        <Update release="176">
+            <Date>2012-09-07</Date>
+            <Version>15.0.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="175">
+            <Date>2012-08-28</Date>
+            <Version>15.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+        <Update release="174">
+            <Date>2012-07-18</Date>
+            <Version>14.0.1</Version>
+            <Comment>Version bump + add compare-locales</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@gmail.com</Email>
+        </Update>
        <Update release="173">
             <Date>2012-06-16</Date>
             <Version>13.0.1</Version>

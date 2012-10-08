@@ -13,17 +13,9 @@ from pisi.actionsapi import shelltools
 WorkDir = "comm-release"
 MOZAPPDIR= "/usr/lib/MozillaThunderbird"
 
-locales = ["ca", "de", "es-AR", "es-ES", "fr", "hu", "it", "nl", "pl", "ru", "sv-SE", "tr"]
+locales = ["ca", "da", "de", "es-AR", "es-ES", "fr", "hu", "it", "nl", "pl", "pt-BR", "ru",]
 
 def setup():
-    shelltools.system("./create-locale.sh")
-    # add missing searchplugins = previous missing-l10n-TR-mail-searchplugins.patch
-    shelltools.echo("%s/%s/l10n/tr/mail/searchplugins/list.txt" % (get.workDIR(), WorkDir), "aol-web-search")
-    shelltools.echo("%s/%s/l10n/tr/mail/searchplugins/list.txt" % (get.workDIR(), WorkDir), "bing")
-    shelltools.echo("%s/%s/l10n/tr/mail/searchplugins/list.txt" % (get.workDIR(), WorkDir), "twitter")
-    shelltools.echo("%s/%s/l10n/tr/mail/searchplugins/list.txt" % (get.workDIR(), WorkDir), "wikipedia")
-    shelltools.echo("%s/%s/l10n/tr/mail/searchplugins/list.txt" % (get.workDIR(), WorkDir), "yahoo")
-
     # Use autoconf 2.13, pff
     shelltools.chmod("autoconf-213/autoconf-2.13", 0755)
 
@@ -35,9 +27,6 @@ def setup():
 
 def build():
     autotools.make("-f client.mk build")
-
-    # Compile language files
-    locales = ["ca", "de", "es-AR", "es-ES", "fr", "hu", "it", "nl", "pl", "ru", "sv-SE", "tr"]
 
     for locale in locales:
         autotools.make("-C mail/locales langpack-%s" % locale)
@@ -78,26 +67,28 @@ def install_enigmail():
 
 
 def install():
-    autotools.make("-f client.mk DESTDIR='%s' install" % get.installDIR())
-
     pisitools.insinto("/usr/lib/", "mozilla/dist/bin", "MozillaThunderbird", sym=False)
+
     # Install language packs
     for locale in locales:
         pisitools.insinto("/usr/lib/MozillaThunderbird/extensions/langpack-%s@thunderbird.mozilla.org" % locale, "mozilla/dist/xpi-stage/locale-%s/*" % locale, sym=False)
-
-    #install_enigmail()
-
-    # Install default-prefs.js
+        
+    # Install fix language packs
+    pisitools.insinto("/usr/lib/MozillaThunderbird/extensions", "./fix-language/*")
+   
+   # Install default-prefs.js
     pisitools.insinto("%s/defaults/pref" % MOZAPPDIR, ".pardus-default-prefs.js", "all-pardus.js")
-
+    
     # Empty fake files to get Turkish spell check support working
-    pisitools.dodir("%s/extensions/langpack-tr@thunderbird.mozilla.org/dictionaries" % MOZAPPDIR)
-    shelltools.touch("%s/%s/%s/dictionaries/tr-TR.aff" % (get.installDIR(), MOZAPPDIR, "extensions/langpack-tr@thunderbird.mozilla.org"))
-    shelltools.touch("%s/%s/%s/dictionaries/tr-TR.dic" % (get.installDIR(), MOZAPPDIR, "extensions/langpack-tr@thunderbird.mozilla.org"))
-
+    #pisitools.dodir("%s/extensions/langpack-tr@thunderbird.mozilla.org/dictionaries" % MOZAPPDIR)
+    #shelltools.touch("%s/%s/%s/dictionaries/tr-TR.aff" % (get.installDIR(), MOZAPPDIR, "extensions/langpack-tr@thunderbird.mozilla.org"))
+    #shelltools.touch("%s/%s/%s/dictionaries/tr-TR.dic" % (get.installDIR(), MOZAPPDIR, "extensions/langpack-tr@thunderbird.mozilla.org"))
+    
     pisitools.removeDir("%s/dictionaries" % MOZAPPDIR)
     pisitools.dosym("/usr/share/hunspell", "%s/dictionaries" % MOZAPPDIR)
 
+    # Remove useless file
+    pisitools.remove("/usr/lib/MozillaThunderbird/.purgecaches")
 
     # Remove this to avoid spellchecking dictionary detection problems
     pisitools.remove("/usr/lib/MozillaThunderbird/defaults/pref/all-l10n.js")
@@ -111,8 +102,3 @@ def install():
 
     # Install docs
     pisitools.dodoc("mozilla/LEGAL", "mozilla/LICENSE")
-
-    # Remove useless file
-    pisitools.remove("/usr/lib/MozillaThunderbird/.purgecaches")
-    pisitools.removeDir("/usr/local")
-    

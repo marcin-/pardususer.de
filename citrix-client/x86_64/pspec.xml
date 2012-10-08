@@ -1,0 +1,65 @@
+<PISI>
+    <Source>
+        <Name>citrix-client</Name>
+        <Homepage>http://www.citrix.com</Homepage>
+        <Packager>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Packager>
+        <License>CAL</License>
+        <PartOf>network.remoteshell</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Provides XenApp (ICAClient) for Linux</Summary>
+        <Description>Provides XenApp (Citrix) for Linux</Description>
+        <Archive sha1sum="d6ffbb91aad69175ba11becfb448a69dd401550b" type="binary">http://pakete.pardususer.de/source-files/ICAClient_12.1.0-0.x86_64.rpm</Archive>
+        <BuildDependencies>
+            <Dependency>rpm2targz</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>citrix-client</Name>
+        <AdditionalFiles>
+            <AdditionalFile target="/opt/Citrix/ICAClient/desktop/wfcmgr.desktop" permission="0644" group="root" owner="root">wfcmgr.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib-32bit</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libXaw-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXft-32bit</Dependency>
+            <Dependency>libXpm-32bit</Dependency>
+            <Dependency>libXt-32bit</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>nspluginwrapper</Dependency>
+            <Dependency>libXinerama-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+            <Dependency>openmotif-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/Citrix/*</Path>
+	    <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2012-08-09</Date>
+            <Version>12.1</Version>
+            <Comment>added missing 32-bit depandencies</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+    <History>
+        <Update release="1">
+            <Date>2012-08-09</Date>
+            <Version>12.1</Version>
+            <Comment>First release</Comment>
+            <Name>Antoon Tolboom</Name>
+            <Email>atolboo@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+<!-- By PiSiDo 2.0.0 -->
